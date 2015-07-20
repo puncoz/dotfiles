@@ -1,0 +1,57 @@
+[user]
+    name = Luke Murphy
+    email = lukewm@riseup.net
+
+[core]
+    autocrlf = false
+    safecrlf = true
+    excludesfile = .ropeproject
+    editor = vim
+
+[merge]
+    tool = meld
+
+[alias]
+    st = status
+    ci = commit
+    cim = commit -m
+    cia = commit --amend
+    co = checkout
+    br = branch
+    sb = show-branch
+    cp = cherry-pick
+    staged = diff --cached
+    rb = rebase
+    rbc = rebase --continue
+    rbs = rebase --skip
+    rl = reflog
+    rs = remote show
+    rt = remote
+    rtv = remote -v
+    ru = remote update
+    rp = remote prune
+    sm = submodule
+    lgp = "log -p"
+    lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+    lga = "log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+    cbt = "config --bool core.bare true"
+
+[credential]
+    helper = cache --timeout=3600
+
+[push]
+    default = matching
+
+[github]
+    user = lwm
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold

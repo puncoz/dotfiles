@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+
+USER=`whoami`
+EMAIL="lukewm@riseup.net"
+DOTDIR=~/braindump/dotfiles
+ZSHDIR=~/.oh-my-zsh
+
+read -p "Run update? [yn] " answer
+if [[ $answer = y ]] ; then
+  sudo apt-get update
+fi
+
+read -p "Install git, zsh, tmux, irssi, xclip? [yn] " answer
+if [[ $answer = y ]] ; then
+  sudo apt-get install -y git zsh tmux irssi xclip
+fi
+
+read -p "Generate SSH keys for Github? [yn] " answer
+if [[ $answer = y ]] ; then
+  mkdir ~/.ssh && cd $_
+  ssh-keygen -t rsa -C $EMAIL
+  eval `ssh-agent -s`
+  ssh-add ~/.ssh/id_rsa
+  xclip -sel ~/.ssh/id_rsa.pub
+  read -p "Go add github key @ github.com/settings/ssh. Press [Enter] to continue ..."
+fi
+
+# @todo clone dotfiles
+
+read -p "Symlink dotfiles? [yn] " answer
+if [[ $answer = y ]] ; then
+  cd $DOTDIR
+
+  # delete all dotfiles present, suppress stderr
+  for f in *; do
+    if [[ $f = "config" ]] ; then rm ~/.irssi/$f 2> /dev/null; fi
+    rm ~/.$f 2> /dev/null;
+  done
+
+  # symlink all dotfiles
+  for f in *; do
+    if [[ $f = "config" ]] ;
+      then
+        ln -s $(realpath ./$f) ~/.irssi/$f
+        file ~/.irssi/$f
+      else
+        ln -s $(realpath ./$f) ~/.$f
+        file ~/.$f
+    fi
+  done
+fi
+
+read -p "Install oh-my-zsh? [yn] " answer
+if [[ $answer = y ]] ; then
+  git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $ZSHDIR
+fi
+
+read -p "Install Vim + Addons [yn] " answer
+if [[ $answer = y ]] ; then
+  sudo apt-get remove vim vim-runtime gvim  vim-tiny vim-common vim-gui-common
+  sudo apt-get install -y vim-nox
+  cd && git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+fi
+
+read -p "Install YCM? [yn] " answer
+if [[ $answer = y ]] ; then
+  echo "Remember! This is CPU intensive, close things now ..."
+  sudo apt-get install -y build-essential cmake python-dev libclang-common-3.5-dev libclang-dev
+  cd ~/.vim/bundle/YouCompleteMe
+  ./install.sh
+  cd
+fi
+
+read -p "Do you want to install pip, virtualenv and ipython? [yn] " answer
+if [[ $answer = y ]] ; then
+  cd /tmp && wget https://bootstrap.pypa.io/get-pip.py
+  sudo -H python get-pip.py
+  cd $HOME && pip install --user ipython virtualenvwrapper
+fi
+
+read -p "Do you want to install rainbowstream [yn] " answer
+if [[ $answer = y ]] ; then
+  pip install --user rainbowstream
+  echo "You need to run rainbowstream to get oAuth configured!"
+fi
+
+read -p "Do you want to install haskell-platform [yn] " answer
+if [[ $answer = y ]] ; then
+  sudo apt-get install haskell-platform
+  cabal update
+  cabal install cabal
+fi
+
+read -p "Change shell to Zsh? [yn] " answer
+if [[ $answer = y ]] ; then
+  chsh -s `which zsh`
+  echo "logout/in and you are ready to go!"
+fi

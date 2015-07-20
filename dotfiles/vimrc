@@ -1,0 +1,313 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+" git 
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-git'
+Plugin 'sjl/gundo.vim.git'
+
+" text operations
+Plugin 'tpope/vim-commentary'
+Plugin 'godlygeek/tabular'
+Plugin 'Raimondi/delimitMate'
+
+" navigation
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+
+" motion
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ervandew/supertab'
+
+" coding
+"" syntax checker
+Plugin 'scrooloose/syntastic'
+
+"" html
+Plugin 'mattn/emmet-vim'
+
+"" code completion
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+"" syntax color / colorschemes
+Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plugin 'luochen1990/rainbow'
+Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
+
+"" python
+Plugin 'davidhalter/jedi-vim'
+
+"" haskell
+Plugin 'eagletmt/neco-ghc'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'Shougo/vimproc.vim'
+
+"" elm
+Plugin 'lambdatoast/elm.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+" set leader key
+let mapleader = ","
+
+" ultisnip mappings
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" paste mode
+set pastetoggle=<F12>
+set t_Co=256
+set term=screen-256color
+syntax enable
+au FileType * setlocal formatoptions-=cro
+
+" getting some better colours with this option
+colorscheme Tomorrow-Night-Eighties
+" colorscheme molokai
+" colorscheme solarized
+
+" tabular.vim
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
+nmap <Leader>a& :Tabularize /&<CR>
+vmap <Leader>a& :Tabularize /&<CR>
+nmap <Leader>a:: :Tabularize /:\zs<CR>
+vmap <Leader>a:: :Tabularize /:\zs<CR>
+nmap <Leader>a, :Tabularize /,<CR>
+vmap <Leader>a, :Tabularize /,<CR>
+nmap <Leader>a,, :Tabularize /,\zs<CR>
+vmap <Leader>a,, :Tabularize /,\zs<CR>
+nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+
+" escape parens with Ctrl-e
+inoremap <C-e> <C-o>A
+
+" strip all whitespace with ,WW
+nnoremap <leader>WW :%s/\s\+$//<cr>:let @/=''<CR>
+
+" source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+" edit .vimrc on the fly
+noremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+" spell check ',s'
+nmap <silent> <leader>s :set spell!<CR>
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
+
+" better tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+" Ctrl-P.vim mappings
+let g:ctrlp_max_height=30
+let g:ctrlp_max_files = 1000
+let g:ctrlp_max_depth = 10
+let g:ctrlp_lazy_update = 1
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc
+let g:ctrlp_extensions = ['funky']
+nnoremap <Leader>cf :CtrlPFunky<Cr>
+let g:ctrlp_use_caching = 1
+let g:ctrlp_by_filename = 1
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'ra'
+
+" end of line chars
+set list
+set listchars=tab:▸\ ,eol:¬
+
+" save when I tab away
+au FocusLost * :wa
+
+" remap Esc
+imap jk <Esc>
+
+" moving between tabs
+nnoremap <silent> <C-t> :tabnew<CR>
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" options galore
+set encoding=utf-8
+set expandtab
+set autoindent
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set tabstop=4
+set textwidth=0
+set nocompatible
+set nobackup
+set nowritebackup
+set noswapfile
+set history=999
+set backspace=indent,eol,start
+set ruler
+set showmode
+set laststatus=2
+set scrolloff=10
+set ch=2
+set hlsearch
+set gdefault
+set number
+set hidden
+set whichwrap+=<,>,[,]
+set wildmenu
+set title
+set incsearch
+set ignorecase
+set ttyfast
+set virtualedit=onemore
+set fileencodings=.
+set spelllang=en_gb
+set foldmethod=indent
+set foldlevel=99
+
+" fugitive.vim
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit --verbose<CR>
+nnoremap <silent> <leader>gam :Gcommit --verbose --amend<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>gw :Gwrite<CR>
+nnoremap <silent> <leader>gbr :Git branch<CR>
+
+" easy-motion.vim
+let g:EasyMotion_leader_key = '<space>'
+" nmap s <Plug>(easymotion-s)
+nmap s <Plug>(easymotion-s2)
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_upper = 1
+
+" bubble lines
+nmap <C-k> [e
+nmap <C-j> ]e
+vmap <C-k> [egv
+vmap <C-j> ]egv
+
+" when I close a tab, remove the buffer
+set nohidden
+
+" stop incrementing numbers by accident!
+nmap <C-a> <nop>
+nmap <C-x> <nop>
+
+" close vim if last window is nerdtree *only*
+let g:nerdtree_tabs_autoclose=1
+let g:nerdtree_tabs_open_on_console_startup=0
+let g:nerdtree_tabs_smart_startup_focus=2
+let g:nerdtree_tabs_startup_cd=1
+
+" highlight line length > than 80 chars
+augroup vimrc_autocmds
+    autocmd!
+    autocmd FileType * highlight Excess ctermbg=DarkGrey guibg=Black
+    autocmd FileType * match Excess /\%80v.*/
+    autocmd FileType * set nowrap
+augroup END
+
+" syntastic file checker
+let g:syntastic_python_checkers=['pylint']
+let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_always_populate_loc_list=1
+
+" syntastic :Errors
+function! ToggleErrors()
+    let old_last_winnr = winnr('$')
+    lclose
+    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+        Errors
+    endif
+endfunction
+nnoremap <silent> <C-x> :<C-u>call ToggleErrors()<CR>
+
+" close that scratch window after leaving insert mode
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" NERDtree mapping
+map ,<C-n> :NERDTreeToggle<CR>
+
+" better tmux scrolling
+set mouse=a
+
+" emmet trigger key + limit for html/css only
+let g:user_emmet_leader_key='<C-f>'
+autocmd FileType html,css,php EmmetInstall
+
+" rainbow.vim
+let g:rainbow_active = 1
+" https://github.com/luochen1990/rainbow
+let g:rainbow_conf = {
+\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\   'operators': '_,_',
+\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\   'separately': {
+\       '*': {},
+\       'tex': {
+\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\       },
+\       'lisp': {
+\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\       },
+\       'vim': {
+\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+\       },
+\       'html': {
+\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\       },
+\       'css': 0,
+\   }
+\}
+
+" jedi.vim
+let g:jedi#usages_command=""
+let g:jedi#popup_select_first=0
+let g:jedi#use_tabs_not_buffers=1
+let g:jedi#show_call_signatures="2"
+" Do you want the docstring everytime?
+" autocmd FileType python setlocal completeopt-=preview
+
+" supertab
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" highlighting the current line
+set cursorline
+
+" ghcmod
+" @TODO is this really working?
+setlocal omnifunc=necoghc#omnifunc
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
+
+" colorschemes
+let g:rehash256 = 1
+set background=dark
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+let g:solarized_termcolors=256

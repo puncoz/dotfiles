@@ -1,0 +1,9 @@
+*.tuc
+*.log
+
+*.html
+resume.tex
+*.swo
+*.swp
+*.docx
+*.rtf

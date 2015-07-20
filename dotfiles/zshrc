@@ -1,0 +1,112 @@
+COMPLETION_WAITING_DOTS="false"
+
+# Zsh prompt
+ZSH_THEME="3den"
+
+# path exports
+PATH+=$PATH                                           # don't mangle $PATH
+PATH+=:$HOME/.cabal/bin                               # cabal global
+PATH+=:.cabal-sandbox/bin/*                           # cabal-sandbox
+PATH+=:$HOME/.rvm/bin                                 # rvm
+PATH+=:$HOME/.local/bin                               # python-pip
+PATH+=:$HOME/scala-2.11.6/bin                         # scala
+PATH+=:$HOME/bin                                      # user executables
+PATH+=:$HOME/local/bin                                # node
+PATH+=:$HOME/elm-latest-install/Elm-Platform/0.15/bin # elm
+export PATH
+
+# elm exports
+ELM_HOME=$HOME/elm-latest-install/Elm-Platform/0.15/share/i386-linux-ghc-7.6.3/elm-reactor-0.3.1
+
+# set some variables for later use in the script
+ZSH=$HOME/.oh-my-zsh
+D_HOME=$HOME/braindump/dotfiles
+
+# source my aliases + ohmyzsh file
+source $ZSH/oh-my-zsh.sh
+source $D_HOME/alias.zsh
+
+# editor export
+export EDITOR="vim"
+export USE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
+
+# terminal tmux export
+export TERM="xterm-256color"
+
+# python 3.4.3 asyncio debug
+export PYTHONASYNCIODEBUG=1
+
+# history options
+export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
+export HISTSIZE=25000
+export HISTFILE=~/.zsh_history
+export SAVEHIST=10000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
+
+# completion selection by menu for kill
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*' force-list always
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+
+# tab completion for PIDs
+zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm,command -w -w"
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*' force-list always
+
+# use caching
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+# prompts for 'rm *' completions
+# setopt RM_STAR_WAIT
+
+# allow bash style comments
+setopt interactivecomments
+
+# spelling corrector
+setopt CORRECT
+
+# terminal vim
+bindkey -v
+export KEYTIMEOUT=10
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey -M viins '^k' kill-line
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+# show which vim mode we are in
+precmd() { RPROMPT="" }
+zle-keymap-select() {
+  RPROMPT=""
+  [[ $KEYMAP = vicmd ]] && RPROMPT="(COMMAND MODE)"
+  () { return $__prompt_status }
+  zle reset-prompt
+}
+zle-line-init() { typeset -g __prompt_status="$?" }
+zle -N zle-keymap-select
+zle -N zle-line-init
+
+# virtualenv stuff
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+[ -e /usr/bin/virtualenvwrapper.sh ]       && source /usr/bin/virtualenvwrapper.sh
+[ -e /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
+[ -e ~/.local/bin/virtualenvwrapper.sh ]   && source ~/.local/bin/virtualenvwrapper.sh
+
+# start tmux for every session but do not duplicate
+if [ "$TMUX" = "" ]; then tnew default; clear; fi
+
+# Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# RVM necessary
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
