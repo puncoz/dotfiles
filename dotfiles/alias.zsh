@@ -2,9 +2,8 @@
 # globals
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 USER=`whoami`
-BASEDIR=~/braindump
-DOTDIR=~/braindump/dotfiles
-DOTDIR_ADV=~/braindump/dotfiles_adv
+BASEDIR=~/dotfiles
+DOTDIR=~/dotfiles/dotfiles
 ZSHDIR=~/.oh-my-zsh
 
 
@@ -77,7 +76,7 @@ alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ei='vim ~/.irssi/config'
 alias ez='vim ~/.zshrc'
-alias ea='vim $DOTDIR_ADV/alias.zsh'
+alias ea='vim $DOTDIR/alias.zsh'
 alias ew='cd ~/work/'
 alias sz='source ~/.zshrc'
 

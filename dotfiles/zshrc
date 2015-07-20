@@ -20,7 +20,7 @@ ELM_HOME=$HOME/elm-latest-install/Elm-Platform/0.15/share/i386-linux-ghc-7.6.3/e
 
 # set some variables for later use in the script
 ZSH=$HOME/.oh-my-zsh
-D_HOME=$HOME/braindump/dotfiles
+D_HOME=$HOME/dotfiles/dotfiles
 
 # source my aliases + ohmyzsh file
 source $ZSH/oh-my-zsh.sh
