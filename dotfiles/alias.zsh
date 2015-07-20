@@ -71,7 +71,6 @@ alias apts='apt-cache search'
 alias aptsh='apt-cache show'
 alias epp='echo $PYTHONPATH'
 alias dotf='cd $DOTDIR'
-alias brain='cd $BASEDIR'
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ei='vim ~/.irssi/config'
@@ -133,7 +132,7 @@ alias tkill='tmux kill-session -t'
 alias snew='screen -S'
 alias sls='screen -ls'
 alias sa='screen -x'
-alias eT='vim $BASEDIR/todo.md'
+alias eT='vim $HOME/todo.md'
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # functions
