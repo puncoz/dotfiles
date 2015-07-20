@@ -2,7 +2,7 @@
 
 USER=`whoami`
 EMAIL="lukewm@riseup.net"
-DOTDIR=~/braindump/dotfiles
+DOTDIR=~/dotfiles/dotfiles
 ZSHDIR=~/.oh-my-zsh
 
 read -p "Run update? [yn] " answer
@@ -25,7 +25,11 @@ if [[ $answer = y ]] ; then
   read -p "Go add github key @ github.com/settings/ssh. Press [Enter] to continue ..."
 fi
 
-# @todo clone dotfiles
+
+read -p "Clone dotfiles? [yn] " answer
+if [[ $answer = y ]] ; then
+  git clone git@github.com:lwm/dotfiles.git ~/dotfiles
+fi
 
 read -p "Symlink dotfiles? [yn] " answer
 if [[ $answer = y ]] ; then
