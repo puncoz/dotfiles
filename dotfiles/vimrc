@@ -5,7 +5,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-" git 
+" git
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-git'
@@ -15,12 +15,14 @@ Plugin 'sjl/gundo.vim.git'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-surround'
 
 " navigation
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'tpope/vim-unimpaired'
 
 " motion
 Plugin 'Lokaltog/vim-easymotion'
@@ -46,6 +48,7 @@ Plugin 'altercation/vim-colors-solarized'
 
 "" python
 Plugin 'davidhalter/jedi-vim'
+Plugin 'nvie/vim-flake8'
 
 "" haskell
 Plugin 'eagletmt/neco-ghc'
@@ -65,6 +68,7 @@ let mapleader = ","
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsListSnippets="<c-k>"
 
 " paste mode
 set pastetoggle=<F12>
@@ -74,28 +78,29 @@ syntax enable
 au FileType * setlocal formatoptions-=cro
 
 " getting some better colours with this option
-" colorscheme Tomorrow-Night-Eighties
-colorscheme molokai
+colorscheme Tomorrow-Night-Eighties
+" colorscheme molokai
 " colorscheme solarized
 
 " tabular.vim
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:\zs<CR>
-vmap <Leader>a: :Tabularize /:\zs<CR>
+nmap <Leader>a: :Tabularize /:zs<CR>
+vmap <Leader>a: :Tabularize /:zs<CR>
 nmap <Leader>a& :Tabularize /&<CR>
 vmap <Leader>a& :Tabularize /&<CR>
-nmap <Leader>a:: :Tabularize /:\zs<CR>
-vmap <Leader>a:: :Tabularize /:\zs<CR>
+nmap <Leader>a:: :Tabularize /:zs<CR>
+vmap <Leader>a:: :Tabularize /:zs<CR>
 nmap <Leader>a, :Tabularize /,<CR>
 vmap <Leader>a, :Tabularize /,<CR>
-nmap <Leader>a,, :Tabularize /,\zs<CR>
-vmap <Leader>a,, :Tabularize /,\zs<CR>
+nmap <Leader>a,, :Tabularize /,zs<CR>
+vmap <Leader>a,, :Tabularize /,zs<CR>
 nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 
 " escape parens with Ctrl-e
 inoremap <C-e> <C-o>A
+nnoremap <leader>v vib
 
 " strip all whitespace with ,WW
 nnoremap <leader>WW :%s/\s\+$//<cr>:let @/=''<CR>
@@ -233,6 +238,7 @@ augroup END
 let g:syntastic_python_checkers=['pylint']
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_check_on_wq = 0
 
 " syntastic :Errors
 function! ToggleErrors()
@@ -278,9 +284,35 @@ set cursorline
 setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
+" ycm
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+
+" surround extra mappings
+let b:surround_{char2nr("v")} = "{{ \r }}"
+let b:surround_{char2nr("{")} = "{{ \r }}"
+let b:surround_{char2nr("%")} = "{% \r %}"
+let b:surround_{char2nr("b")} = "{% block \1block name: \1 %}\r{% endblock \1\1 %}"
+let b:surround_{char2nr("i")} = "{% if \1condition: \1 %}\r{% endif %}"
+let b:surround_{char2nr("w")} = "{% with \1with: \1 %}\r{% endwith %}"
+let b:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
+let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}""}")}
+
 " colorschemes
 let g:rehash256 = 1
 set background=dark
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 let g:solarized_termcolors=256
+
+" flake8 auto checker
+autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
+autocmd BufWritePost *.py call Flake8()
+
+" python filetype tab config
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4
