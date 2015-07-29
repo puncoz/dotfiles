@@ -105,6 +105,9 @@ export PROJECT_HOME=$HOME/Devel
 # start tmux for every session but do not duplicate
 if [ "$TMUX" = "" ]; then tnew default; clear; fi
 
+# run the virtualenv if one is set
+if [ -n "$VIRTUAL_ENV" ]; then . "$VIRTUAL_ENV/bin/activate"; fi
+
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
