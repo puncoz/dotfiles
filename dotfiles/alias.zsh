@@ -10,6 +10,12 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias ddm='./manage.py migrate'
+alias dsm='./manage.py sqlmigrate'
+alias dmm='./manage.py makemigrations'
+alias dch='./manage.py check'
+alias dsh='./manage.py shell'
+alias drs='./manage.py runserver'
 alias rbstr='rainbowstream'
 alias qotd="python3 -c 'import wikiquote; print(wikiquote.quote_of_the_day())'"
 alias jrepl='java -jar idea-IC-141.1532.4/javarepl.jar'
