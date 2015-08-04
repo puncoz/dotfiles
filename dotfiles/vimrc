@@ -99,7 +99,8 @@ nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 
 " escape parens with Ctrl-e
-inoremap <C-e> <C-o>A
+inoremap <C-e> <C-o>a
+inoremap <C-d> <C-o>A
 nnoremap <leader>v vib
 
 " strip all whitespace with ,WW
@@ -239,6 +240,7 @@ let g:syntastic_python_checkers=['pylint']
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec='/usr/local/bin/python3'
 
 " syntastic :Errors
 function! ToggleErrors()
