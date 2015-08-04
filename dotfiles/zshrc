@@ -4,15 +4,16 @@ COMPLETION_WAITING_DOTS="false"
 ZSH_THEME="3den"
 
 # path exports
-PATH+=$PATH                                           # don't mangle $PATH
-PATH+=:$HOME/.cabal/bin                               # cabal global
-PATH+=:.cabal-sandbox/bin/*                           # cabal-sandbox
-PATH+=:$HOME/.rvm/bin                                 # rvm
-PATH+=:$HOME/.local/bin                               # python-pip
-PATH+=:$HOME/scala-2.11.6/bin                         # scala
-PATH+=:$HOME/bin                                      # user executables
-PATH+=:$HOME/local/bin                                # node
-PATH+=:$HOME/elm-latest-install/Elm-Platform/0.15/bin # elm
+PATH+=$PATH                                            # don't mangle $PATH
+PATH+=:$HOME/.cabal/bin                                # cabal global
+PATH+=:.cabal-sandbox/bin/*                            # cabal-sandbox
+PATH+=:$HOME/.rvm/bin                                  # rvm
+PATH+=:$HOME/.local/bin                                # python-pip, stack
+PATH+=:$HOME/scala-2.11.6/bin                          # scala
+PATH+=:$HOME/bin                                       # user executables
+PATH+=:$HOME/local/bin                                 # node
+PATH+=:$HOME/elm-latest-install/Elm-Platform/0.15/bin  # elm
+PATH+=:$HOME/.stack/programs/i386-linux/ghc-7.8.4/bin/ # stack
 export PATH
 
 # elm exports
