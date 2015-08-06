@@ -114,3 +114,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # RVM necessary
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+#Django at work
+export DJANGO_SETTINGS_MODULE=sapi.settings.dev
