@@ -51,9 +51,10 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'nvie/vim-flake8'
 
 "" haskell
-Plugin 'eagletmt/neco-ghc'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'Shougo/vimproc.vim'
+" Plugin 'eagletmt/neco-ghc'
+" Plugin 'eagletmt/ghcmod-vim'
+" Plugin 'Shougo/vimproc.vim'
+" Plugin 'bitc/vim-hdevtools'
 
 "" elm
 Plugin 'lambdatoast/elm.vim'
@@ -281,10 +282,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " highlighting the current line
 set cursorline
 
-" ghcmod
-" @TODO is this really working?
-setlocal omnifunc=necoghc#omnifunc
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
+" ghc-mod
+" setlocal omnifunc=necoghc#omnifunc
+" let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " ycm
 let g:ycm_collect_identifiers_from_tags_files = 1
