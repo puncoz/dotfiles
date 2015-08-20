@@ -7,7 +7,8 @@ ZSH_THEME="3den"
 PATH+=$PATH                                            # don't mangle $PATH
 PATH+=:$HOME/.cabal/bin                                # cabal global
 PATH+=:.cabal-sandbox/bin/*                            # cabal-sandbox
-PATH+=:$HOME/.rvm/bin                                  # rvm
+PATH+=:$HOME/.rvm/bin                                  # rvm path
+PATH+=:$HOME/.rvm/gems/ruby-*/bin/*                    # secondary rvm path
 PATH+=:$HOME/.local/bin                                # python-pip, stack
 PATH+=:$HOME/scala-2.11.6/bin                          # scala
 PATH+=:$HOME/bin                                       # user executables
@@ -104,7 +105,8 @@ export PROJECT_HOME=$HOME/Devel
 [ -e ~/.local/bin/virtualenvwrapper.sh ]   && source ~/.local/bin/virtualenvwrapper.sh
 
 # start tmux for every session but do not duplicate
-if [ "$TMUX" = "" ]; then tnew default; clear; fi
+# if [ "$TMUX" = "" ]; then tnew default; clear; fi
+if [ "$TMUX" = "" ]; then tmuxinator start api; fi
 
 # run the virtualenv if one is set
 if [ -n "$VIRTUAL_ENV" ]; then . "$VIRTUAL_ENV/bin/activate"; fi
@@ -115,5 +117,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # RVM necessary
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-#Django at work
+# WORK SETTINGS
+# @TODO - if work env variable set, do this otherwise, don't
 export DJANGO_SETTINGS_MODULE=sapi.settings.dev
+export DOCKER_HOST=tcp://localhost:4243
+workon api

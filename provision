@@ -17,7 +17,7 @@ fi
 
 read -p "Generate SSH keys for Github? [yn] " answer
 if [[ $answer = y ]] ; then
-  mkdir ~/.ssh && cd $_
+  mkdir -p ~/.ssh && cd $_
   ssh-keygen -t rsa -C $EMAIL
   eval `ssh-agent -s`
   ssh-add ~/.ssh/id_rsa
@@ -33,6 +33,7 @@ fi
 
 read -p "Symlink dotfiles? [yn] " answer
 if [[ $answer = y ]] ; then
+  mkdir -p ~/.irssi
   cd $DOTDIR
 
   # delete all dotfiles present, suppress stderr
@@ -83,17 +84,24 @@ if [[ $answer = y ]] ; then
   cd $HOME && pip install --user ipython virtualenvwrapper
 fi
 
-read -p "Do you want to install rainbowstream [yn] " answer
+read -p "Do you want to install rainbowstream? [yn] " answer
 if [[ $answer = y ]] ; then
   pip install --user rainbowstream
   echo "You need to run rainbowstream to get oAuth configured!"
 fi
 
-read -p "Do you want to install haskell-platform [yn] " answer
+read -p "Do you want to install haskell-platform? [yn] " answer
 if [[ $answer = y ]] ; then
   sudo apt-get install haskell-platform
   cabal update
   cabal install cabal
+fi
+
+read -p "Do you want to install RVM? [yn] " answer
+if [[ $answer = y ]] ; then
+    # you will need this if you want to install your ZSH theme
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    \curl -sSL https://get.rvm.io | bash -s stable --ruby
 fi
 
 read -p "Change shell to Zsh? [yn] " answer

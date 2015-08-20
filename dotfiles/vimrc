@@ -51,13 +51,14 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'nvie/vim-flake8'
 
 "" haskell
-" Plugin 'eagletmt/neco-ghc'
-" Plugin 'eagletmt/ghcmod-vim'
-" Plugin 'Shougo/vimproc.vim'
-" Plugin 'bitc/vim-hdevtools'
+Plugin 'bitc/vim-hdevtools'
 
 "" elm
 Plugin 'lambdatoast/elm.vim'
+
+"" gist
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
 
 call vundle#end()
 filetype plugin indent on

@@ -10,6 +10,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias start='tmuxinator start api'
 alias ddm='./manage.py migrate'
 alias dsm='./manage.py sqlmigrate'
 alias dmm='./manage.py makemigrations'
@@ -37,13 +38,13 @@ alias pserve='python -m SimpleHTTPServer 5000'
 alias tede='trans en:de'
 alias tden='trans de:en'
 alias p8='ping 8.8.8.8'
-alias lsa='ls -FCA --color=tty'
+alias la='ls -FCA --color=tty'
 alias s='ls'
 alias rm='rm -I'
 alias rmr='rm -rI'
 alias e='exit'
 alias G='| grep -i'
-alias grep='grep -i'
+alias g='grep -iR'
 alias mv='mv -i'
 alias v='vim'
 alias mk='mkdir'
