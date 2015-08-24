@@ -145,7 +145,7 @@ chatnets = {
   fn = {
     type = "IRC";
     nick = "lwm";
-    autosendcmd = "/msg nickserv IDENTIFY P68.shwer; wait 4000; /window 2; /wc; /join #haskell; /join #django; /join #restframework";
+    autosendcmd = "/msg nickserv IDENTIFY P68.shwer; wait 4000; /window 2; /wc;";
   };
 };
 
