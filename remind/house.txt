@@ -1,0 +1,1 @@
+REM 2 +1 MSG Apartment rent is due on the 2nd.%
