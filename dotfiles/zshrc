@@ -4,17 +4,30 @@ COMPLETION_WAITING_DOTS="false"
 ZSH_THEME="3den"
 
 # path exports
-PATH+=$PATH                                            # don't mangle $PATH
-PATH+=:$HOME/.cabal/bin                                # cabal global
-PATH+=:.cabal-sandbox/bin/*                            # cabal-sandbox
-PATH+=:$HOME/.rvm/bin                                  # rvm path
-PATH+=:$HOME/.rvm/gems/ruby-*/bin/*                    # secondary rvm path
-PATH+=:$HOME/.local/bin                                # python-pip, stack
-PATH+=:$HOME/scala-2.11.6/bin                          # scala
-PATH+=:$HOME/bin                                       # user executables
-PATH+=:$HOME/local/bin                                 # node
-PATH+=:$HOME/elm-latest-install/Elm-Platform/0.15/bin  # elm
-PATH+=:$HOME/.stack/programs/i386-linux/ghc-7.8.4/bin/ # stack
+CABAL_DIR=$HOME/.cabal/bin
+HEROKU_DIR=/usr/local/heroku/bin
+CABAL_SANDBOX_DIR=.cabal-sandbox/bin/*
+RVM_DIR=$HOME/.rvm/bin
+RVM_DIR2=$HOME/.rvm/gems/ruby-*/bin/*
+DOT_LOCAL_DIR=$HOME/.local/bin
+SCALA_DIR=$HOME/scala-2.11.6/bin
+BIN_DIR=$HOME/bin
+LOCAL_DIR=$HOME/local/bin
+ELM_DIR=$HOME/elm-latest-install/Elm-Platform/0.15/bin
+STACK_DIR=$HOME/.stack/programs/i386-linux/ghc-7.8.4/bin/
+
+PATH+=$PATH  # don't mangle the path
+if [ -d "$CABAL_DIR" ]; then PATH+=:$CABAL_DIR; fi
+if [ -d "$HEROKU_DIR" ]; then PATH+=:$HEROKU_DIR; fi
+if [ -d "$CABAL_SANDBOX_DIR" ]; then PATH+=:$CABAL_SANDBOX_DIR; fi
+if [ -d "$RVM_DIR" ]; then PATH+=:$RVM_DIR; fi
+if [ -d "$RVM_DIR2" ]; then PATH+=:$RVM_DIR2; fi
+if [ -d "$DOT_LOCAL_DIR" ]; then PATH+=:$DOT_LOCAL_DIR; fi
+if [ -d "$SCALA_DIR" ]; then PATH+=:$SCALA_DIR; fi
+if [ -d "$BIN_DIR" ]; then PATH+=:$BIN_DIR; fi
+if [ -d "$LOCAL_DIR" ]; then PATH+=:$LOCAL_DIR; fi
+if [ -d "$ELM_DIR" ]; then PATH+=:$ELM_DIR; fi
+if [ -d "$STACK_DIR" ]; then PATH+=:$STACK_DIR; fi
 export PATH
 
 # elm exports
@@ -65,9 +78,6 @@ zstyle ':completion:*:kill:*' force-list always
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
-# prompts for 'rm *' completions
-# setopt RM_STAR_WAIT
-
 # allow bash style comments
 setopt interactivecomments
 
@@ -105,20 +115,15 @@ export PROJECT_HOME=$HOME/Devel
 [ -e ~/.local/bin/virtualenvwrapper.sh ]   && source ~/.local/bin/virtualenvwrapper.sh
 
 # start tmux for every session but do not duplicate
-# if [ "$TMUX" = "" ]; then tnew default; clear; fi
-if [ "$TMUX" = "" ]; then tmuxinator start api; fi
-
-# run the virtualenv if one is set
-if [ -n "$VIRTUAL_ENV" ]; then . "$VIRTUAL_ENV/bin/activate"; fi
-
-# Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+if [ "$TMUX" = "" ]; then tnew default; clear; fi
 
 # RVM necessary
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# WORK SETTINGS
-# @TODO - if work env variable set, do this otherwise, don't
-export DJANGO_SETTINGS_MODULE=sapi.settings.dev
-export DOCKER_HOST=tcp://localhost:4243
-workon api
+# work environment setup
+WORKF=$HOME/.work_env
+if [ -f $WORKF ]; then
+    export DJANGO_SETTINGS_MODULE=sapi.settings.dev
+    export DOCKER_HOST=tcp://localhost:4243
+    workon api
+fi
