@@ -114,9 +114,6 @@ export PROJECT_HOME=$HOME/Devel
 [ -e /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 [ -e ~/.local/bin/virtualenvwrapper.sh ]   && source ~/.local/bin/virtualenvwrapper.sh
 
-# start tmux for every session but do not duplicate
-if [ "$TMUX" = "" ]; then tnew default; clear; fi
-
 # RVM necessary
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -126,4 +123,7 @@ if [ -f $WORKF ]; then
     export DJANGO_SETTINGS_MODULE=sapi.settings.dev
     export DOCKER_HOST=tcp://localhost:4243
     workon api
+else
+    # start tmux for every session but do not duplicate
+    if [ "$TMUX" = "" ]; then tnew default; clear; fi
 fi
