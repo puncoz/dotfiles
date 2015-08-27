@@ -123,6 +123,9 @@ if [ -f $WORKF ]; then
     export DJANGO_SETTINGS_MODULE=sapi.settings.dev
     export DOCKER_HOST=tcp://localhost:4243
     workon api
+    export SCA_USER="postgres"
+    export SCA_PWORD="passw0rd"
+    export SCA_DB="verbos"
 else
     # start tmux for every session but do not duplicate
     if [ "$TMUX" = "" ]; then tnew default; clear; fi
