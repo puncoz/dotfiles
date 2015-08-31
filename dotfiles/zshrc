@@ -130,3 +130,8 @@ else
     # start tmux for every session but do not duplicate
     if [ "$TMUX" = "" ]; then tnew default; clear; fi
 fi
+
+# remind me!
+command -v remind >/dev/null 2>&1 && cd $HOME && remind ~/.reminders || { 
+    echo "'remind' program is not installed" >&2; 
+}
