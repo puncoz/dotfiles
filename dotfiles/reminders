@@ -1,2 +1,2 @@
-include /home/decentral1se/dotfiles/remind/birthdays.txt
-include /home/decentral1se/dotfiles/remind/house.txt
+include [filedir()]/dotfiles/remind/birthdays.txt
+include [filedir()]/dotfiles/remind/house.txt
