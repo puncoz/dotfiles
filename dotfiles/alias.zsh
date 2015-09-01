@@ -10,6 +10,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias dup='docker-compose up'
 alias start='tmuxinator start api'
 alias ddm='./manage.py migrate'
 alias dsm='./manage.py sqlmigrate'
