@@ -45,8 +45,6 @@ alias rm='rm -I'
 alias rmr='rm -rI'
 alias e='exit'
 alias G='| grep -i'
-alias gR='grep -iR'
-alias g='grep -i'
 alias mv='mv -i'
 alias v='vim'
 alias mk='mkdir'
@@ -232,4 +230,14 @@ function ghc-pkg-reset() {
     echo 'erasing directories under ~/.ghc'; command rm -rf `find ~/.ghc/* -maxdepth 1 -type d`; \
     echo 'erasing ~/.cabal/lib'; command rm -rf ~/.cabal/lib; \
   )
+}
+
+# grep helper. Not case sensitive
+function g() {
+  grep -i $1 *
+}
+
+# grep helper. Not case sensitive and searchs recursively
+function g() {
+  grep -iR $1 *
 }
