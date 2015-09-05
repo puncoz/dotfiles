@@ -1,1 +1,2 @@
 REM September 9 +1 MSG Dan is arriving tomorrow. Holidays!%
+REM September 5    MSG Lunch with Christoph and Andreas @ 12.30.%
