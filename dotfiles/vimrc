@@ -45,6 +45,7 @@ Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'luochen1990/rainbow'
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'gilgigilgil/anderson.vim'
 
 "" python
 Plugin 'davidhalter/jedi-vim'
@@ -80,8 +81,9 @@ syntax enable
 au FileType * setlocal formatoptions-=cro
 
 " getting some better colours with this option
-colorscheme Tomorrow-Night-Eighties
-" colorscheme molokai
+" colorscheme anderson
+" colorscheme Tomorrow-Night-Eighties
+colorscheme molokai
 " colorscheme solarized
 
 " tabular.vim
