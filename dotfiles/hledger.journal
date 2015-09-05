@@ -8,14 +8,26 @@
     Expenses:Books         €20.00
     Assets:Checking
 
-2015/09/03 ATM withdrawal - breakfast, lunch, beer
-    Expenses:MiscCash      €20.00
+2015/09/03 breakfast, lunch, beer
+    Expenses:Food          €20.00
+    Assets:Checking
+
+2015/09/04 ping pong bats
+    Expenses:MiscCash      €10.00
+    Assets:Checking
+
+2015/09/04 phone credit
+    Expenses:MiscCash      €15.00
+    Assets:Checking
+
+2015/09/04 food and beer
+    Expenses:Food          €5.20
     Assets:Checking
 
 2015/09/05 pay rent
     Expenses:Rent          €250.00
     Assets:Checking
 
-2015/09/05 pay safety deposit for new apartment
+2015/09/30 pay safety deposit for new apartment
     Expenses:Rent          €750.00
     Assets:Checking
