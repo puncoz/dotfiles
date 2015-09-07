@@ -48,8 +48,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'gilgigilgil/anderson.vim'
 
 "" python
-" Plugin 'davidhalter/jedi-vim'
-" Plugin 'nvie/vim-flake8'
+"" I only use python-mode for ropevim + pydoc niceties
+Plugin 'davidhalter/jedi-vim'
+Plugin 'nvie/vim-flake8'
 Plugin 'klen/python-mode.git'
 
 "" haskell
@@ -131,17 +132,23 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Ctrl-P.vim mappings
-let g:ctrlp_max_height=30
-let g:ctrlp_max_files = 1000
-let g:ctrlp_max_depth = 10
-let g:ctrlp_lazy_update = 1
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc
-let g:ctrlp_extensions = ['funky']
 nnoremap <Leader>cf :CtrlPFunky<Cr>
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc
+
 let g:ctrlp_use_caching = 1
 let g:ctrlp_by_filename = 1
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_max_height=30
+let g:ctrlp_max_files = 5000
+let g:ctrlp_max_depth = 100
+let g:ctrlp_lazy_update = 1
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_extensions = ['funky']
 
 " end of line chars
 set list
@@ -314,22 +321,24 @@ highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 let g:solarized_termcolors=256
 
-" flake8 auto checker
-" autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
-" autocmd BufWritePost *.py call Flake8()
-
-" pymode
-let g:pymode_trim_whitespaces=1
-let g:pymode_lint_on_write=1
-let g:pymode_lint_on_fly=0
-let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8']
-let g:pymode_rope=1
-let g:pymode_rope_autoimport=1
-let g:pymode_rope_autoimport_import_after_complete=1
-let g:pymode_rope_goto_definition_cmd='vnew'
-let g:pymode_doc_bind='K'
-
 " python filetype tab config
 autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
+
+" pymode disables/enables
+let g:pymode_trim_whitespaces=1
+let g:pymode_lint=0
+let g:pymode_rope=1
+let g:pymode_rope_lookup_project=1
+let g:pymode_rope_autoimport=1
+let g:pymode_rope_autoimport_import_after_complete=1
+let g:pymode_rope_goto_definition_cmd='vnew'
+let g:pymode_rope_completion=0
+let g:pymode_rope_goto_definition_bind = '<leader>g'
+
+let g:pymode_doc_bind='K'
+let g:pymode_run_bind = '<leader>r'
+
+"" flake8 auto checker
+autocmd BufWritePost *.py call Flake8()
