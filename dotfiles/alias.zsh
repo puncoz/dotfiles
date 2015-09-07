@@ -10,8 +10,8 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-alias hr='hledger register'
-alias hb='hledger balance'
+alias hlr='hledger register'
+alias hlb='hledger balance'
 alias dup='docker-compose up'
 alias start='tmuxinator start api'
 alias ddm='./manage.py migrate'
@@ -240,6 +240,6 @@ function g() {
 }
 
 # grep helper. Not case sensitive and searchs recursively
-function g() {
+function gr() {
   grep -iR $1 *
 }
