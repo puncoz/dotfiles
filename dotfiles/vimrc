@@ -321,13 +321,13 @@ let g:solarized_termcolors=256
 " pymode
 let g:pymode_trim_whitespaces=1
 let g:pymode_lint_on_write=1
-let g:pymode_lint_on_fly=1
+let g:pymode_lint_on_fly=0
 let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8']
 let g:pymode_rope=1
 let g:pymode_rope_autoimport=1
 let g:pymode_rope_autoimport_import_after_complete=1
 let g:pymode_rope_goto_definition_cmd='vnew'
-let g:pymode_doc_bind='D'
+let g:pymode_doc_bind='K'
 
 " python filetype tab config
 autocmd FileType python set sw=4
