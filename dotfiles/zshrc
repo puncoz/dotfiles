@@ -132,6 +132,6 @@ else
 fi
 
 # remind me!
-command -v remind >/dev/null 2>&1 && cd $HOME && remind ~/.reminders || { 
+command -v remind >/dev/null 2>&1 && remind ~/.reminders || { 
     echo "'remind' program is not installed" >&2; 
 }
