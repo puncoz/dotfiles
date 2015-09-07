@@ -1,3 +1,4 @@
 REM September 9 +1 MSG Dan is arriving tomorrow. Holidays!%
 REM September 7    MSG Lunch with Christoph and Andreas @ 12.30PM.%
+REM September 9    MSG QuantifiedCode work day @ 9.30AM.%
 REM September 10   MSG PUB meetup tonight @ 7.15PM.%
