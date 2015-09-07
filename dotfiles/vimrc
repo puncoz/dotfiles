@@ -48,8 +48,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'gilgigilgil/anderson.vim'
 
 "" python
-Plugin 'davidhalter/jedi-vim'
-Plugin 'nvie/vim-flake8'
+" Plugin 'davidhalter/jedi-vim'
+" Plugin 'nvie/vim-flake8'
+Plugin 'klen/python-mode.git'
 
 "" haskell
 Plugin 'bitc/vim-hdevtools'
@@ -314,8 +315,19 @@ highlight nonText ctermbg=NONE
 let g:solarized_termcolors=256
 
 " flake8 auto checker
-autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
-autocmd BufWritePost *.py call Flake8()
+" autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
+" autocmd BufWritePost *.py call Flake8()
+
+" pymode
+let g:pymode_trim_whitespaces=1
+let g:pymode_lint_on_write=1
+let g:pymode_lint_on_fly=1
+let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8']
+let g:pymode_rope=1
+let g:pymode_rope_autoimport=1
+let g:pymode_rope_autoimport_import_after_complete=1
+let g:pymode_rope_goto_definition_cmd='vnew'
+let g:pymode_doc_bind='D'
 
 " python filetype tab config
 autocmd FileType python set sw=4
