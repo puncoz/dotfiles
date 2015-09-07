@@ -82,8 +82,8 @@ au FileType * setlocal formatoptions-=cro
 
 " getting some better colours with this option
 " colorscheme anderson
-" colorscheme Tomorrow-Night-Eighties
-colorscheme molokai
+colorscheme Tomorrow-Night-Eighties
+" colorscheme molokai
 " colorscheme solarized
 
 " tabular.vim
