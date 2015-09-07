@@ -48,10 +48,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'gilgigilgil/anderson.vim'
 
 "" python
-"" I only use python-mode for ropevim + pydoc niceties
 Plugin 'davidhalter/jedi-vim'
 Plugin 'nvie/vim-flake8'
-Plugin 'klen/python-mode.git'
+Plugin 'fs111/pydoc.vim'
 
 "" haskell
 Plugin 'bitc/vim-hdevtools'
@@ -326,18 +325,8 @@ autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
-" pymode disables/enables
-let g:pymode_trim_whitespaces=1
-let g:pymode_lint=0
-let g:pymode_rope=1
-let g:pymode_rope_lookup_project=1
-let g:pymode_rope_autoimport=1
-let g:pymode_rope_autoimport_import_after_complete=1
-let g:pymode_rope_goto_definition_cmd='vnew'
-let g:pymode_rope_completion=0
-let g:pymode_rope_goto_definition_bind = '<leader>g'
-let g:pymode_doc_bind='K'
-let g:pymode_run_bind = '<leader>r'
-
 "" flake8 auto checker
 autocmd BufWritePost *.py call Flake8()
+
+"" delimitMate python + ruby triple quote fix
+au FileType python let b:delimitMate_nesting_quotes = ['"']
