@@ -336,7 +336,6 @@ let g:pymode_rope_autoimport_import_after_complete=1
 let g:pymode_rope_goto_definition_cmd='vnew'
 let g:pymode_rope_completion=0
 let g:pymode_rope_goto_definition_bind = '<leader>g'
-
 let g:pymode_doc_bind='K'
 let g:pymode_run_bind = '<leader>r'
 
