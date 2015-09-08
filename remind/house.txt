@@ -1,2 +1,2 @@
-REM 2 +1 MSG Apartment rent is due on the 2nd (450 EUR).%
+REM 2            +5 MSG Apartment rent is due on the 2nd (450 EUR).%
 REM September 30 +1 MSG 1,500 EUR due to Gerli tomorrow.%
