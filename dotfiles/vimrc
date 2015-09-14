@@ -111,6 +111,16 @@ nnoremap <leader>v vib
 " strip all whitespace with ,WW
 nnoremap <leader>WW :%s/\s\+$//<cr>:let @/=''<CR>
 
+"" auto remove whitespace
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+" autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
 " source the vimrc file after saving it
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
