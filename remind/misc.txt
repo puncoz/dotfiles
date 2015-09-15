@@ -1,4 +1,5 @@
 REM September 9  +1 MSG Dan is arriving tomorrow.%
 REM September 9  +1 MSG QuantifiedCode work day @ 9.30AM.%
 REM September 10    MSG PUB meetup tonight @ 7.15PM.%
+REM September 17    MSG Go with Alice to get bikes.%
 REM October   10 +2 MSG Stop TTIP-CETA demonstration.%
