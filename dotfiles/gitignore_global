@@ -25,3 +25,4 @@ Icon?
 ehthumbs.db
 Thumbs.db
 .ropeproject/
+node_modules/
