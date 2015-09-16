@@ -340,3 +340,8 @@ autocmd BufWritePost *.py call Flake8()
 
 "" delimitMate python + ruby triple quote fix
 au FileType python let b:delimitMate_nesting_quotes = ['"']
+
+"" gitgutter
+let g:gitgutter_max_signs=500
+let g:gitgutter_realtime=1
+let g:gitgutter_highlight_lines=1
