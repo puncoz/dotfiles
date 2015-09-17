@@ -10,6 +10,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias rem='remind ~/.reminders'
 alias hlr='hledger register'
 alias hlb='hledger balance'
 alias dup='docker-compose up'
