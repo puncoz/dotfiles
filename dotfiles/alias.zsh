@@ -10,6 +10,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias termupd='sudo update-alternatives --config x-terminal-emulator'
 alias rem='remind ~/.reminders'
 alias hlr='hledger register'
 alias hlb='hledger balance'
