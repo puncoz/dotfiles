@@ -64,8 +64,16 @@
     Expenses:MiscCash      €8.10
     Assets:Checking
 
-2015/09/15 Pocket money from the ATM
+2015/09/15 pocket money from the ATM
     Expenses:MiscCash      €20.00
+    Assets:Checking
+
+2015/09/18 water, beer and sweets
+    Expenses:Food          €3.00
+    Assets:Checking
+
+2015/09/18 donation to GSBTB
+    Expenses:MiscCash      €5.00
     Assets:Checking
 
 2015/09/30 pay safety deposit for new apartment
