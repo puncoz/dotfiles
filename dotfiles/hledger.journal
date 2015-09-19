@@ -84,8 +84,12 @@
     Expenses:MiscCash      €50.00
     Assets:Checking
 
-2015/09/19 Alice transfer - photo, food
+2015/09/19 alice transfer - photo, food
     Expenses:MiscCash      €15.00
+    Assets:Checking
+
+2015/09/19 marty payback
+    Expenses:MiscCash      €20.00
     Assets:Checking
 
 2015/09/30 pay safety deposit for new apartment
