@@ -132,6 +132,12 @@ else
 fi
 
 # remind me!
-command -v remind >/dev/null 2>&1 && remind ~/.reminders || { 
-    echo "'remind' program is not installed" >&2; 
+command -v remind >/dev/null 2>&1 && remind ~/.reminders || {
+    echo "'remind' program is not installed" >&2;
 }
+
+# auto ssh-agent, ssh-add
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval `ssh-agent -s`
+    ssh-add
+fi
