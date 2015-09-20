@@ -12,6 +12,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 alias termupd='sudo update-alternatives --config x-terminal-emulator'
 alias rem='remind ~/.reminders'
+alias ehl='vim ~/.hledger.journal '
 alias hlr='hledger register'
 alias hlb='hledger balance'
 alias dup='docker-compose up'
