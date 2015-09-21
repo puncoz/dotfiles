@@ -10,6 +10,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias youtube='mpsyt'
 alias termupd='sudo update-alternatives --config x-terminal-emulator'
 alias rem='remind ~/.reminders'
 alias ehl='vim ~/.hledger.journal '
@@ -107,7 +108,7 @@ alias gow='git show'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gbr='git branch -r'
-alias gab='git branch -a'
+alias gba='git branch -a'
 alias gc='git commit -v'
 alias gcm='git commit -m'
 alias gd='git diff'
