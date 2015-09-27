@@ -1,2 +1,4 @@
-REM September 18    MSG Purchase some Shampoo.%
+REM September 28    MSG 6.30PM - Meet Elisabeth.%
+REM September 28    MSG 4.00PM - Voltastr. meeting.%
+REM October   1  +1 MSG Pick Mary + Mary up for the airport.%
 REM October   10 +2 MSG Stop TTIP-CETA demonstration.%
