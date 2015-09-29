@@ -257,7 +257,7 @@ augroup vimrc_autocmds
 augroup END
 
 " syntastic file checker
-let g:syntastic_python_checkers=['pylint']
+let g:syntastic_python_checkers=['pylint', 'mypy']
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_wq = 0
