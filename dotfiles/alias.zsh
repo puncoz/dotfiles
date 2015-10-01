@@ -10,6 +10,10 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias dep='docker-compose run web python manage.py migrate \
+           && docker-compose run web python manage.py createsuperuser \
+           && docker-compose run web python manage.py loaddata fixtures/initial.json \
+           && docker-compose run web python manage.py loadproducts fixtures/initial_products.json'
 alias youtube='mpsyt'
 alias termupd='sudo update-alternatives --config x-terminal-emulator'
 alias rem='remind ~/.reminders'
