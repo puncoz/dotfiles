@@ -1,2 +1,0 @@
-REM 2            +5 MSG Apartment rent is due on the 2nd (450 EUR).%
-REM September 30    MSG 8PM, get keys for new apartment.%

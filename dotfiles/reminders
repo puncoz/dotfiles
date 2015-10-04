@@ -1,3 +1,2 @@
 include [filedir()]/dotfiles/remind/birthdays.txt
-include [filedir()]/dotfiles/remind/house.txt
-include [filedir()]/dotfiles/remind/misc.txt
+include [filedir()]/dotfiles/remind/reminders.txt
