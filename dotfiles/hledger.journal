@@ -104,6 +104,22 @@
     Expenses:Food          €17.00
     Assets:Checking
 
+2015/09/30 tracdelight salary
+    Assets:Checking        €1648.01
+    Income:Tracdelight
+
 2015/09/30 pay safety deposit for new apartment
     Expenses:Rent          €750.00
+    Assets:Checking
+
+2015/10/01 pay rent for October
+    Expenses:Rent          €450.00
+    Assets:Checking
+
+2015/10/02 balance from DKB checking
+    Expenses:MiscCash      €201.00
+    Assets:Checking
+
+2015/10/02 kebab + peanut bar
+    Expenses:Food          €5.10
     Assets:Checking
