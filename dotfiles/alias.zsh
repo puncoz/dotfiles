@@ -10,6 +10,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias wtf='bro'
 alias dep='docker-compose run web python manage.py migrate \
            && docker-compose run web python manage.py createsuperuser \
            && docker-compose run web python manage.py loaddata fixtures/initial.json \
