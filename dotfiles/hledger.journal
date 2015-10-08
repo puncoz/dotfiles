@@ -1,129 +1,44 @@
-; journal created 2015-09-04 by hledger
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; SALARY
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 2015/08/31 tracdelight salary
     Assets:Checking         €1648.01
     Income:Tracdelight
-
-2015/09/02 purchase book - 'Living My Life'
-    Expenses:Books         €20.00
-    Assets:Checking
-
-2015/09/03 breakfast, lunch, beer
-    Expenses:Food          €20.00
-    Assets:Checking
-
-2015/09/04 ping pong bats
-    Expenses:MiscCash      €10.00
-    Assets:Checking
-
-2015/09/04 phone credit
-    Expenses:MiscCash      €15.00
-    Assets:Checking
-
-2015/09/04 food and beer
-    Expenses:Food          €5.20
-    Assets:Checking
-
-2015/09/05 pay rent
-    Expenses:Rent          €250.00
-    Assets:Checking
-
-2015/09/05 picking up Alice, breakfast
-    Expenses:MiscCash      €20.00
-    Assets:Checking
-
-2015/09/05 mexican restaurant
-    Expenses:Food          €23.80
-    Assets:Checking
-
-2015/09/05 beers with Alice and Felix
-    Expenses:Food          €7.30
-    Assets:Checking
-
-2015/09/07 weekly shopping
-    Expenses:Food          €41.77
-    Assets:Checking
-
-2015/09/08 falafal lunch
-    Expenses:Food          €4.00
-    Assets:Checking
-
-2015/09/08 house beers
-    Expenses:Food          €4.47
-    Assets:Checking
-
-2015/09/10 dan arrival, beers + food
-    Expenses:MiscCash      €10.00
-    Assets:Checking
-
-2015/09/13 leipzig trip
-    Expenses:MiscCash      €70.00
-    Assets:Checking
-
-2015/09/14 flixbus Leipzig
-    Expenses:Travel        €16.00
-    Assets:Checking
-
-2015/09/15 work metro trips
-    Expenses:MiscCash      €8.10
-    Assets:Checking
-
-2015/09/15 pocket money from the ATM
-    Expenses:MiscCash      €20.00
-    Assets:Checking
-
-2015/09/18 water, beer and sweets
-    Expenses:Food          €3.00
-    Assets:Checking
-
-2015/09/18 donation to GSBTB
-    Expenses:MiscCash      €5.00
-    Assets:Checking
-
-2015/09/19 ATM balance from DKB accounting
-    Expenses:MiscCash      €50.00
-    Assets:Checking
-
-2015/09/19 alice transfer - photo, food
-    Expenses:MiscCash      €15.00
-    Assets:Checking
-
-2015/09/19 marty payback
-    Expenses:MiscCash      €20.00
-    Assets:Checking
-
-2015/09/19 getting the beers in dickhead
-    Expenses:Beer          €30.00
-    Assets:Checking
-
-2015/09/21 clothing from Primark
-    Expenses:Clothing      €40.00
-    Assets:Checking
-
-2015/09/21 Lidl weekly shop
-    Expenses:Food          €17.00
-    Assets:Checking
 
 2015/09/30 tracdelight salary
     Assets:Checking        €1648.01
     Income:Tracdelight
 
-2015/09/30 pay safety deposit for new apartment
-    Expenses:Rent          €750.00
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PAYING RENT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+2015/09/05 September rent
+    Expenses:Rent €250.00
     Assets:Checking
 
-2015/10/01 pay rent for October
-    Expenses:Rent          €450.00
+2015/09/30 Safety deposit for Ohmstrasse 10
+    Expenses:Rent €750.00
     Assets:Checking
 
-2015/10/02 balance from DKB checking
-    Expenses:MiscCash      €201.00
+2015/10/01 October rent
+    Expenses:Rent €850.00
     Assets:Checking
 
-2015/10/02 kebab + peanut bar
-    Expenses:Food          €5.10
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; DEBT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+2015/10/08 Alice Berlin loan money
+    Expenses:Debt €810.00
     Assets:Checking
 
-2015/10/02 work lunch + chocolate bar
-    Expenses:Food          €5.00
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; GIFT MONEY
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+2015/10/08 Mam life helper money
+    Expenses:Gift €250.00
     Assets:Checking
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; FOOD X BEER
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; START NOVEMBER
