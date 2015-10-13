@@ -126,6 +126,7 @@ if [ -f $WORKF ]; then
     export SCA_USER="postgres"
     export SCA_PWORD="passw0rd"
     export SCA_DB="verbos"
+    export STG="https://staging-api-admin.tracdelight.com/v1"
 else
     # start tmux for every session but do not duplicate
     if [ "$TMUX" = "" ]; then tnew default; clear; fi
