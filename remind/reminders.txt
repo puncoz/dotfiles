@@ -2,3 +2,4 @@
 REM 2            +5 MSG Rent due (850 EUR).%
 
 # miscellaneous
+REM October 15      MSG Skype Mam + Rufus%
