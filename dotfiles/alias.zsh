@@ -10,9 +10,10 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias papi='curl -H "Accept: application/json; indent=4"'
+alias api='curl --user "tracdelight-admin:#47nj)RUk)%))*=" -H "Accept: application/json; indent=4"'
 alias wtf='bro'
 alias dep='docker-compose run web python manage.py migrate \
-           && docker-compose run web python manage.py createsuperuser \
            && docker-compose run web python manage.py loaddata fixtures/initial.json \
            && docker-compose run web python manage.py loadproducts fixtures/initial_products.json'
 alias youtube='mpsyt'
