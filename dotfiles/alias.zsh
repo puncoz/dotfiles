@@ -10,6 +10,8 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias djadmin="echo \"from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'foo@bar.com', 'admin')\" | ./manage.py shell"
+alias killpyc='find . -name \*.pyc -delete'
 alias papi='curl -H "Accept: application/json; indent=4"'
 alias api='curl --user "tracdelight-admin:#47nj)RUk)%))*=" -H "Accept: application/json; indent=4"'
 alias wtf='bro'
