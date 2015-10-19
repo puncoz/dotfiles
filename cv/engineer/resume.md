@@ -2,7 +2,7 @@ Luke Murphy
 ===========
 
 > <lukewm@riseup.net> • 0176 6709 7686 • 11/11/1988 (26 y/o) \
-> Kolonnenstraße 36, 10829, Berlin, Germany • Irish, EU Citizen \
+> Ohmstraße 10, 10179, Berlin, Germany • Irish, EU Citizen \
 > [lukemurphy.eu](http://lukemurphy.eu) \
 
 Experience
@@ -11,9 +11,9 @@ Experience
 **Software Engineer**; [Tracdelight](http://www.tracdelight.com/), Berlin, Germany; 2015 :: Current \
 *Skills*: ``Python``, ``Django``, ``Django REST Framework``, ``MySQL``, ``Git``
 
-  * RESTful API theory, design, implementation and maintenance
-  * Average 35 million API requests per month
-  * Test driven development, daily code review
+  * RESTful API design and implementation
+  * 3rd party API integrations
+  * Test driven development, Github code review workflow.
 
 **Sabbatical**; 2014 :: 1 year
 
@@ -43,8 +43,8 @@ Awarded title of *College Scholar*; *Thesis*: Functional programming in Java
 
 Projects
 --------
-**[personal website](http://lukemurphy.eu)**  \
-My personal website which is powered by Hakyll.
+**[orchardchildcare](https://github.com/lwm/orchardchildcare)**  \
+A Django/Backbone.js application for a childcare business.
 
 **[spanish-conjugator-api](https://github.com/lwm/spanish-conjugator-api)**  \
 A Haskell/PostgreSQL project that exposes an ``API`` for verb conjugations.

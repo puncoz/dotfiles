@@ -120,9 +120,9 @@ export PROJECT_HOME=$HOME/Devel
 # work environment setup
 WORKF=$HOME/.work_env
 if [ -f $WORKF ]; then
-    export DJANGO_SETTINGS_MODULE=sapi.settings.dev
+    # export DJANGO_SETTINGS_MODULE=sapi.settings.dev
     export DOCKER_HOST=tcp://localhost:4243
-    workon api
+    # workon api
     export SCA_USER="postgres"
     export SCA_PWORD="passw0rd"
     export SCA_DB="verbos"
