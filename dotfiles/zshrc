@@ -114,39 +114,17 @@ export PROJECT_HOME=$HOME/Devel
 [ -e /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 [ -e ~/.local/bin/virtualenvwrapper.sh ]   && source ~/.local/bin/virtualenvwrapper.sh
 
-# RVM necessary
+# RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Autoenv
+[[ -s "$HOME/.autoenv" ]] && source ~/.autoenv/activate.sh
 
 # python 3.X
 export PYTHONDONTWRITEBYTECODE=True
 
-# work environment setup
-WORKF=$HOME/.work_env
-if [ -f $WORKF ]; then
-
-    # api project
-    export DJANGO_SETTINGS_MODULE=sapi.settings.dev
-    export DOCKER_HOST=tcp://localhost:4243
-    export STG="https://staging-api.tracdelight.com/v1"
-    export STGA="https://staging-api-admin.tracdelight.com/v1"
-    workon api
-
-    # haskell project
-    export SCA_USER="postgres"
-    export SCA_PWORD="passw0rd"
-    export SCA_DB="verbos"
-
-    # orchardchildcare
-    # export AWS_ACCESS_KEY_ID="AKIAJEVAADFVIGJ73MNQ"
-    # export AWS_SECRET_ACCESS_KEY="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"
-    # export DJANGO_SECRET_KEY="so%hi1kly5hfjy2f=tapxaorzwn=f-^7_&@_-r4##f7oub7(2x"
-    # export DJANGO_SETTINGS_MODULE=core.settings.development
-    # workon orchardchildcare
-else
-    # start tmux for every session but do not duplicate
-    if [ "$TMUX" = "" ]; then tnew default; clear; fi
-fi
+# start tmux for every session but do not duplicate
+if [ "$TMUX" = "" ]; then tnew default; clear; fi
 
 # remind me!
 command -v remind >/dev/null 2>&1 && remind ~/.reminders || {
