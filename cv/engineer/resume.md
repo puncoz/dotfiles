@@ -11,9 +11,9 @@ Experience
 **Software Engineer**; [Tracdelight](http://www.tracdelight.com/), Berlin, Germany; 2015 :: Current \
 *Skills*: ``Python``, ``Django``, ``Django REST Framework``, ``MySQL``, ``Git``
 
-  * RESTful API design and implementation
-  * 3rd party API integrations
-  * Test driven development, Github code review workflow.
+  * RESTish API design and implementation
+  * 3rd party API consumption and integration with system
+  * Test driven development, Github workflow
 
 **Sabbatical**; 2014 :: 1 year
 
