@@ -336,13 +336,13 @@ autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
-"" flake8 auto checker
+" flake8 auto checker
 autocmd BufWritePost *.py call Flake8()
 
-"" delimitMate python + ruby triple quote fix
+" delimitMate python + ruby triple quote fix
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 
-"" gitgutter
+" gitgutter
 let g:gitgutter_max_signs=500
 let g:gitgutter_realtime=1
 let g:gitgutter_highlight_lines=1
