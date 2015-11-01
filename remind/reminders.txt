@@ -1,5 +1,9 @@
 # recurring reminders
-REM 2            +5 MSG Rent due (850 EUR).%
+REM 2            +5 MSG Rent due (850 EUR)%
+REM Mon             MSG German class @ 6.30PM%
 
 # miscellaneous
-REM October 15      MSG Skype Mam + Rufus%
+REM November 2      MSG Get filmed developed in DM%
+REM November 2      MSG Book Holidays off in work%
+REM November 3      MSG Get a bike from bridge%
+REM November 4      MSG Lock8 interview%
