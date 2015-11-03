@@ -3,8 +3,6 @@ REM 2            +5 MSG Rent due (850 EUR)%
 REM Mon             MSG German class @ 6.30PM%
 
 # miscellaneous
-REM November 2      MSG Get filmed developed in DM%
-REM November 2      MSG Book Holidays off in work%
-REM November 3      MSG Get a bike from bridge%
-REM November 4      MSG Lock8 interview%
-REM November 5      MSG Register at Technischer Uni%
+REM November 4      MSG Skype Ruth @ ???%
+REM November 4      MSG Get a bike from bridge%
+REM November 4      MSG Lock8 interview @ 4.30%
