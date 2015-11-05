@@ -222,6 +222,10 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gbr :Git branch<CR>
+nnoremap <silent> <leader>gbw :Gbrowse<CR>
+
+" get to git via visual mode
+vmap <silent> <leader>gbw :Gbrowse<CR>
 
 " easy-motion.vim
 let g:EasyMotion_leader_key = '<space>'
