@@ -3,6 +3,5 @@ REM 2            +5 MSG Rent due (850 EUR)%
 REM Mon             MSG German class @ 6.30PM%
 
 # miscellaneous
-REM November 6  MSG Book Monday 9th afteroon for interview%
 REM November 6  MSG Get a bike%
 REM November 6  MSG Meet Alice @ 7PM %
