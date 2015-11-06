@@ -1,5 +1,5 @@
 # recurring reminders
-REM 2            +5 MSG Rent due (850 EUR)%
+REM 2            +5 MSG Rent due%
 REM Mon             MSG German class @ 6.30PM%
 
 # miscellaneous
