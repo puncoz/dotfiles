@@ -1,7 +1,4 @@
 # recurring reminders
-REM 2            +5 MSG Rent due%
-REM Mon             MSG German class @ 6.30PM%
+REM 30 +5 MSG Rent due on the 2nd%
 
 # miscellaneous
-REM November 6  MSG Get a bike%
-REM November 6  MSG Meet Alice @ 7PM %
