@@ -1,4 +1,6 @@
 # recurring reminders
 REM 30 +5 MSG Rent due on the 2nd%
+REM       MSG Practice German%
 
 # miscellaneous
+REM 25 +2 MSG Ling/Sam/Dad arriving?%
