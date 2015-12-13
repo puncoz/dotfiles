@@ -1,5 +1,5 @@
-*.com
 *.class
+*.com
 *.dll
 *.exe
 *.o
@@ -27,3 +27,5 @@ Thumbs.db
 .ropeproject/
 node_modules/
 .env
+.venv/
+.cache/
