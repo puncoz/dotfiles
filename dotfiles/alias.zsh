@@ -10,6 +10,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias envd='envdir envdir/'
 alias ppjson="python -m json.tool"
 alias djadmin="echo \"from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'foo@bar.com', 'admin')\" | ./manage.py shell"
 alias killpyc='find . -name \*.pyc -delete'
