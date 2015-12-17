@@ -10,6 +10,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias tv='tmuxinator velodrome'
 alias px='envd py.test -x'
 alias uptodate='mkdir -p /tmp/velodrome && git fetch upstream && git merge upstream/master && pip install -r requirements/base.txt && envd py.test -x'
 alias cenv='python3.4 -m venv .venv'
