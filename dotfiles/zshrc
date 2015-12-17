@@ -49,8 +49,10 @@ export VISUAL=$EDITOR
 # terminal tmux export
 export TERM="xterm-256color"
 
-# python 3.4.3 asyncio debug
+# python exports
 export PYTHONASYNCIODEBUG=1
+export PYTHONWARNINGS="ignore"
+export PYTHONDONTWRITEBYTECODE=True
 
 # history options
 export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
@@ -116,12 +118,6 @@ export PROJECT_HOME=$HOME/Devel
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Autoenv
-[[ -s "$HOME/.autoenv" ]] && source ~/.autoenv/activate.sh
-
-# python 3.X
-export PYTHONDONTWRITEBYTECODE=True
 
 # start tmux for every session but do not duplicate
 if [ "$TMUX" = "" ]; then tnew default; clear; fi
