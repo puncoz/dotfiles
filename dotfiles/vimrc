@@ -28,6 +28,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 "" syntax checker
 Plugin 'scrooloose/syntastic'
@@ -352,3 +354,6 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 let g:gitgutter_max_signs=500
 let g:gitgutter_realtime=1
 let g:gitgutter_highlight_lines=1
+
+" ctags mania
+let g:easytags_events = ['BufWritePost']
