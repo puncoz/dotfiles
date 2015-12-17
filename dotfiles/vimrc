@@ -147,11 +147,12 @@ nnoremap <Leader>cf :CtrlPFunky<Cr>
 nnoremap <leader>ct :CtrlPTag<cr>
 
 
-let g:ctrlp_cache_dir = $HOME . '/tmp/.cache/ctrlp'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+let g:ctrlp_cache_dir = $HOME . '.cache/ctrlp'
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc,/.venv/*
 
 let g:ctrlp_use_caching = 1
 let g:ctrlp_by_filename = 1
