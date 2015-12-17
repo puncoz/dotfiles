@@ -10,17 +10,13 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias px='envd py.test -x'
+alias uptodate='mkdir -p /tmp/velodrome && git fetch upstream && git merge upstream/master && pip install -r requirements/base.txt && envd py.test -x'
+alias cenv='python3.4 -m venv .venv'
+alias aenv='. .venv/bin/activate'
 alias envd='envdir envdir/'
 alias ppjson="python -m json.tool"
-alias djadmin="echo \"from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'foo@bar.com', 'admin')\" | ./manage.py shell"
 alias killpyc='find . -name \*.pyc -delete'
-alias papi='curl -H "Accept: application/json; indent=4"'
-alias api='curl --user "tracdelight-admin:#47nj)RUk)%))*=" -H "Accept: application/json; indent=4"'
-alias wtf='bro'
-alias dep='docker-compose run web python manage.py migrate \
-           && docker-compose run web python manage.py loaddata fixtures/initial.json \
-           && docker-compose run web python manage.py loadproducts fixtures/initial_products.json'
-alias youtube='mpsyt'
 alias termupd='sudo update-alternatives --config x-terminal-emulator'
 alias rem='remind ~/.reminders'
 alias ehl='vim ~/.hledger.journal '
@@ -34,26 +30,8 @@ alias dmm='./manage.py makemigrations'
 alias dch='./manage.py check'
 alias dsh='./manage.py shell'
 alias drs='./manage.py runserver'
-alias rbstr='rainbowstream'
-alias qotd="python3 -c 'import wikiquote; print(wikiquote.quote_of_the_day())'"
-alias jrepl='java -jar idea-IC-141.1532.4/javarepl.jar'
-alias setjava8='sudo update-java-alternatives -s java-8-oracle'
-alias setjava8env='sudo apt-get install oracle-java8-set-default'
-alias setjava7='sudo update-java-alternatives -s java-7-oracle'
-alias setjava7env='sudo apt-get install oracle-java7-set-default'
 alias whereis2='dpkg -L'
-alias rrdb='rake db:reset db:migrate'
-alias rs='rails s'
 alias df='df -aH .'
-alias py="python"
-alias py2='python2'
-alias py3='python3'
-alias pip2='pip'
-alias pip3='pip3'
-alias ipy='ipython'
-alias pserve='python -m SimpleHTTPServer 5000'
-alias tede='trans en:de'
-alias tden='trans de:en'
 alias p8='ping 8.8.8.8'
 alias la='ls -FCA --color=tty'
 alias s='ls'
@@ -66,7 +44,6 @@ alias v='vim'
 alias mk='mkdir'
 alias x='extract'
 alias ssheval='eval `ssh-agent -s`'
-alias ly='lynx -vikeys'
 alias nx='PATH=$(npm bin):$PATH'
 alias irssi='TERM=screen-256color irssi'
 alias dall='dpkg --get-selections'
@@ -103,6 +80,7 @@ alias sz='source ~/.zshrc'
 # remove all unwatched files in a git repo
 alias gdel='git status -s | cut -c4- | xargs rm -r $1'
 
+alias gcf='git commit --fixup'
 alias gfucku='git push -f'
 alias gi='git init'
 alias gst='git status'
@@ -246,4 +224,9 @@ function ghc-pkg-reset() {
     echo 'erasing directories under ~/.ghc'; command rm -rf `find ~/.ghc/* -maxdepth 1 -type d`; \
     echo 'erasing ~/.cabal/lib'; command rm -rf ~/.cabal/lib; \
   )
+}
+
+function getpr() {
+    # quickly pull down a pull request, create a branch and check it out
+    git fetch upstream pull/$1/head:"pr_$1" && git checkout "pr_$1"
 }
