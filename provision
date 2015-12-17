@@ -15,6 +15,15 @@ if [[ $answer = y ]] ; then
   sudo apt-get install -y git zsh tmux irssi xclip remind
 fi
 
+read -p "Install ctags? [yn] " answer
+if [[ $answer = y ]] ; then
+    git clone https://github.com/universal-ctags/ctags.git
+    cd ctags
+    ./autogen.sh
+    configure && make && sudo make install
+    cd -
+fi
+
 read -p "Generate SSH keys for Github? [yn] " answer
 if [[ $answer = y ]] ; then
   mkdir -p ~/.ssh && cd $_
