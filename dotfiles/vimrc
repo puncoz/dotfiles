@@ -159,7 +159,7 @@ let g:ctrlp_max_files = 5000
 let g:ctrlp_max_depth = 100
 let g:ctrlp_lazy_update = 1
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_extensions = ['funky']
+let g:ctrlp_extensions = ['funky', 'tag']
 
 " end of line chars
 set list
