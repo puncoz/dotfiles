@@ -10,9 +10,9 @@ if [[ $answer = y ]] ; then
   sudo apt-get update
 fi
 
-read -p "Install git, zsh, tmux, irssi, xclip? [yn] " answer
+read -p "Install git, zsh, tmux, irssi, xclip and remind? [yn] " answer
 if [[ $answer = y ]] ; then
-  sudo apt-get install -y git zsh tmux irssi xclip
+  sudo apt-get install -y git zsh tmux irssi xclip remind
 fi
 
 read -p "Generate SSH keys for Github? [yn] " answer
