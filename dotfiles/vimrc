@@ -142,8 +142,10 @@ vnoremap > >gv
 
 " Ctrl-P.vim mappings
 nnoremap <Leader>cf :CtrlPFunky<Cr>
+nnoremap <leader>ct :CtrlPTag<cr>
 
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+
+let g:ctrlp_cache_dir = $HOME . '/tmp/.cache/ctrlp'
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
