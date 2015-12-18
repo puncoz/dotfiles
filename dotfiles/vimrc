@@ -216,6 +216,7 @@ set fileencodings=.
 set spelllang=en_gb
 set foldmethod=indent
 set foldlevel=99
+set relativenumber
 
 " fugitive.vim
 nnoremap <silent> <leader>gs :Gstatus<CR>
