@@ -64,6 +64,12 @@ Plugin 'lambdatoast/elm.vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 
+" YAML
+Plugin 'stephpy/vim-yaml'
+
+" saltstack
+Plugin 'saltstack/salt-vim'
+
 call vundle#end()
 filetype plugin indent on
 
