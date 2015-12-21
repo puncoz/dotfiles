@@ -70,6 +70,12 @@ Plugin 'stephpy/vim-yaml'
 " saltstack
 Plugin 'saltstack/salt-vim'
 
+" jinja
+Plugin 'Glench/Vim-Jinja2-Syntax'
+
+" vagrant
+Plugin 'hashivim/vim-vagrant'
+
 call vundle#end()
 filetype plugin indent on
 
