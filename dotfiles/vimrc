@@ -368,6 +368,3 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 let g:gitgutter_max_signs=500
 let g:gitgutter_realtime=1
 let g:gitgutter_highlight_lines=1
-
-" ctags mania
-let g:easytags_events = ['BufWritePost']
