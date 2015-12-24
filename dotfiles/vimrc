@@ -368,3 +368,11 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 let g:gitgutter_max_signs=500
 let g:gitgutter_realtime=1
 let g:gitgutter_highlight_lines=1
+
+" easytags
+let g:easytags_async=1
+let g:easytags_events=['BufWritePost']
+let g:easytags_on_cursorhold=0
+let g:easytags_auto_update=0
+let g:easytags_autorecurse=1
+let g:easytags_python_enabled=1
