@@ -10,6 +10,7 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias rmtags='rm -f ~/.vimtags'
 alias vgs='vagrant global-status'
 alias tv='tmuxinator velodrome'
 alias px='envd py.test -x'
