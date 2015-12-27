@@ -26,7 +26,8 @@ ehthumbs.db
 Thumbs.db
 .ropeproject/
 node_modules/
-.env
+.env/
 .venv/
 .cache/
-tags
+tags/
+lock8-config/
