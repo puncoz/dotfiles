@@ -8,12 +8,10 @@ Luke Murphy
 Experience
 ----------
 
-**Software Engineer**; [Tracdelight](http://www.tracdelight.com/), Berlin, Germany; 2015 :: Current \
-*Skills*: ``Python``, ``Django``, ``Django REST Framework``, ``MySQL``, ``Git``
+**Software Engineer**; [Lock8](http://www.lock8.me/), Berlin, Germany; 2015 :: Current \
+*Skills*: ``Python``, ``Django``, ``Django REST Framework``, ``PostgreSQL``, ``Docker``, ``AWS Services``
 
-  * RESTish API design and implementation
-  * 3rd party API consumption and integration with system
-  * Test driven development, Github workflow
+  * @TODO
 
 **Sabbatical**; 2014 :: 1 year
 
@@ -43,11 +41,11 @@ Awarded title of *College Scholar*; *Thesis*: Functional programming in Java
 
 Projects
 --------
-**[orchardchildcare](https://github.com/lwm/orchardchildcare)**  \
-A Django/Backbone.js application for a childcare business.
-
 **[spanish-conjugator-api](https://github.com/lwm/spanish-conjugator-api)**  \
 A Haskell/PostgreSQL project that exposes an ``API`` for verb conjugations.
+
+**[csq](https://github.com/lwm/csq)**  \
+A CLI program written in Python which outputs quotes.
 
 
 Interest
