@@ -1,7 +1,7 @@
 # ~/.tmuxinator/vdrome.yml
 
 name: vdrome
-root: ~/wizardry/velodrome
+root: ~/work/lock8/velodrome
 
 # Optional tmux socket
 # socket_name: foo
@@ -35,4 +35,4 @@ windows:
   - server:
     - clear && envd ./manage.py runserver
   - gist:
-    - vim -c "Gist -l"
+    - vim -c "Gist f66b019eabc16e9b05aa"
