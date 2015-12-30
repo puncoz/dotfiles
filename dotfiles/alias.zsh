@@ -223,3 +223,8 @@ function getpr() {
     # quickly pull down a pull request, create a branch and check it out
     git fetch upstream pull/$1/head:"pr_$1" && git checkout "pr_$1"
 }
+
+function cd() {
+    # quick hack to get env init
+    builtin cd "$@" && if [ -d ".venv/" ]; then aenv; fi;
+}
