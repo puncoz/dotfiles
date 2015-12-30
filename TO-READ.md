@@ -3,6 +3,7 @@ Goliath: Life and Loathing in Greater Israel
 Rubicon: The Last Years of the Roman Republic
 What is Anarchist Communism
 Why Civil Resistance works
+Coders at Work
 
 
 ## Authors
