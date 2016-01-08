@@ -123,3 +123,8 @@ export PROJECT_HOME=$HOME/Devel
 command -v remind >/dev/null 2>&1 && remind ~/.reminders || {
     echo "'remind' program is not installed" >&2;
 }
+
+# default tmux
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
