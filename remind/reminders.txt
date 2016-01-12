@@ -1,4 +1,2 @@
 REM 30 +5       MSG Rent due on the 2nd%
-REM 30          MSG Buy a video camera this month?%
-REM 1           MSG Buy a guitar%
 REM 1           MSG Book Animal Collective gig in April%
