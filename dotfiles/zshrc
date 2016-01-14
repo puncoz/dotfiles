@@ -125,6 +125,6 @@ command -v remind >/dev/null 2>&1 && remind ~/.reminders || {
 }
 
 # default tmux
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
+# if command -v tmux>/dev/null; then
+#   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+# fi
