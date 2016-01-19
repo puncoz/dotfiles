@@ -34,5 +34,9 @@ windows:
     - clear
   - server:
     - clear && envd ./manage.py runserver
+  - test_logs:
+    - clear && awslogs get docker/test --start='1h' --watch
+  - prod_logs:
+    - clear && awslogs get docker/prod --start='1h' --watch
   - gist:
     - vim -c "Gist f66b019eabc16e9b05aa"
