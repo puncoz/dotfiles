@@ -15,6 +15,10 @@ alias rmtags='rm -f ~/.vimtags'
 alias vgs='vagrant global-status'
 alias tv='tmuxinator vdrome'
 alias px='envd py.test -x'
+alias prepush='envd make check_migrated && \
+               frosted -r -vb velodrome && \
+               flake8 velodrome && \
+               envd make requirements'
 alias utd='pip install -U pip && \
            git pull upstream master && \
            pip install -r requirements/dev.txt && \
