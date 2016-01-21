@@ -15,7 +15,10 @@ alias rmtags='rm -f ~/.vimtags'
 alias vgs='vagrant global-status'
 alias tv='tmuxinator vdrome'
 alias px='envd py.test -x'
-alias uptodate='git pull upstream master && pip install -r requirements/dev.txt && envd py.test -x --create-db'
+alias utd='pip install -U pip && \
+           git pull upstream master && \
+           pip install -r requirements/dev.txt && \
+           envd py.test -x --create-db'
 alias cenv='python3.4 -m venv .venv'
 alias aenv='. .venv/bin/activate'
 alias envd='envdir envdir/'
