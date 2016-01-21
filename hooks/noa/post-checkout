@@ -1,2 +1,0 @@
-#!/bin/sh
-ctags -R $HOME/work/lock8/velodrome/velodrome/ && exit 0

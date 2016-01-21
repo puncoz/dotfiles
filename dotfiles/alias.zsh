@@ -10,22 +10,11 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-alias sgp='sudo gparted'
-alias rmtags='rm -f ~/.vimtags'
 alias vgs='vagrant global-status'
 alias tv='tmuxinator vdrome'
 alias px='envd py.test -x'
-alias gtg='prepush && pxc'
 alias pxc='envd py.test -x --create-db'
 alias pks='envd py.test -sk'
-alias prepush='envd make check_migrated && \
-               frosted -r -vb velodrome && \
-               flake8 velodrome && \
-               envd make requirements'
-alias utd='pip install -U pip && \
-           git pull upstream master && \
-           pip install -r requirements/dev.txt && \
-           envd py.test -x --create-db'
 alias cenv='python3.4 -m venv .venv'
 alias aenv='. .venv/bin/activate'
 alias envd='envdir envdir/'
@@ -237,7 +226,10 @@ function getpr() {
     git fetch upstream pull/$1/head:"pr_$1" && git checkout "pr_$1"
 }
 
-function cd() {
-    # quick hack to get env init
-    builtin cd "$@" && if [ -d ".venv/" ]; then aenv; fi;
+function utd() {
+    git checkout master && \
+    pip install -U pip && \
+    git pull upstream master && \
+    pip install -r requirements/dev.txt && \
+    envd py.test -x --create-db
 }

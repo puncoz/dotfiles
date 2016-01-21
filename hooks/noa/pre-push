@@ -1,9 +1,0 @@
-#!/bin/bash
-
-read -p "Have you run prepush? " -n 1 -r < /dev/tty
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    exit 0
-fi
-exit 1
