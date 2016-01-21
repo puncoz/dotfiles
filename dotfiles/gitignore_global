@@ -29,5 +29,5 @@ node_modules/
 .env/
 .venv/
 .cache/
-tags/
+tags
 lock8-config/
