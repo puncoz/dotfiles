@@ -17,6 +17,7 @@ alias tv='tmuxinator vdrome'
 alias px='envd py.test -x'
 alias gtg='prepush && pxc'
 alias pxc='envd py.test -x --create-db'
+alias pks='envd py.test -sk'
 alias prepush='envd make check_migrated && \
                frosted -r -vb velodrome && \
                flake8 velodrome && \
