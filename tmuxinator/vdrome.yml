@@ -39,5 +39,3 @@ windows:
   #   - clear && awslogs get --watch docker/test | awk '$2 = substr($2, 1, 12)'
   # - prod_logs:
   #   - clear && awslogs get --watch docker/prod | awk '$2 = substr($2, 1, 12)'
-  - gist:
-    - vim -c "Gist f66b019eabc16e9b05aa"
