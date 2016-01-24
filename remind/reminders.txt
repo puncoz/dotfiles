@@ -1,5 +1,6 @@
 REM 30 +5     MSG Rent due on the 2nd%
 REM 1         MSG Book Animal Collective gig in April%
+REM Jan 25    MSG Call Ruth!%
 REM Jan 26 +1 MSG https://theleftberlin.wordpress.com/coming-events/organising-to-stop-the-war-on-syria/%
 REM Feb 5  +1 MSG Blockup Ratschlag on Friday - blockupy.org/en/6280/invitation-to-the-blockupy-consultation-meeting-6-7-2-2016-in-berlin/%
 REM Feb 9     MSG DiEM 25 launch live cast tonight - volksbuehne-berlin.de/praxis/diem_25/%
