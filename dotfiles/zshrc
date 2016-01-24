@@ -120,11 +120,11 @@ export PROJECT_HOME=$HOME/Devel
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # remind me!
-command -v remind >/dev/null 2>&1 && remind ~/.reminders || {
+command -v remind >/dev/null 2>&1 && remind -h ~/.reminders || {
     echo "'remind' program is not installed" >&2;
 }
 
 # default tmux
-# if command -v tmux>/dev/null; then
-#   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-# fi
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
