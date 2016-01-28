@@ -13,6 +13,7 @@ ZSHDIR=~/.oh-my-zsh
 alias vgs='vagrant global-status'
 alias tv='tmuxinator vdrome'
 alias px='envd py.test -x'
+alias pxs='envd py.test -xs'
 alias pxc='envd py.test -x --create-db'
 alias pks='envd py.test -sk'
 alias cenv='python3.4 -m venv .venv'
