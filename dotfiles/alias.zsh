@@ -232,6 +232,7 @@ function utd() {
     pip install -U pip && \
     git pull upstream master && \
     pip install -r requirements/dev.txt && \
-    envd py.test -x --create-db && \
+    pip install -e . && \
+    PYTHONPATH=. envd py.test -x --create-db && \
     git push origin master
 }
