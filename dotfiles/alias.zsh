@@ -10,8 +10,10 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias rdb='envd ./manage.py drop_test_database --noinput'
 alias vgs='vagrant global-status'
 alias tv='tmuxinator vdrome'
+alias pxv='envd py.test -x -vv'
 alias px='envd py.test -x'
 alias pxs='envd py.test -xs'
 alias pxc='envd py.test -x --create-db'
