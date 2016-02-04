@@ -52,6 +52,7 @@ Plugin 'gilgigilgil/anderson.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'fs111/pydoc.vim'
+Plugin 'fisadev/vim-isort'
 
 "" haskell
 Plugin 'bitc/vim-hdevtools'
