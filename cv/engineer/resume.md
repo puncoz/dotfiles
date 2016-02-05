@@ -46,7 +46,7 @@ Projects
 
 A command line comp-sci quoter written in Python.
 
-**[spanish-conjugator-api](https://github.com/lwm/es-api)**  \
+**[es-api](https://github.com/lwm/es-api)**  \
 
 A Spanish verb conjugator API written in Haskell.
 
