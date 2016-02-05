@@ -368,3 +368,6 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 let g:gitgutter_max_signs=500
 let g:gitgutter_realtime=1
 let g:gitgutter_highlight_lines=1
+
+" isort
+let g:vim_isort_map = '<C-i>'
