@@ -1,17 +1,25 @@
 Luke Murphy
 ===========
 
-> <lukewm@riseup.net> • 0176 6709 7686 • 11/11/1988 (26 y/o) \
+> <lukewm@riseup.net> • 0176 6709 7686 • 11/11/1988 (27 y/o) \
 > Ohmstraße 10, 10179, Berlin, Germany • Irish, EU Citizen \
-> [lukemurphy.eu](http://lukemurphy.eu) \
+> [github.com/lwm](https://github.com/lwm) | [lwm.github.io](https://lwm.github.io) \
 
 Experience
 ----------
 
-**Software Engineer**; [Lock8](http://www.lock8.me/), Berlin, Germany; 2015 :: Current \
-*Skills*: ``Python``, ``Django``, ``Django REST Framework``, ``PostgreSQL``, ``Docker``, ``AWS Services``
+**Software Engineer**; [Lock8](http://www.lock8.me/), Berlin, Germany; 2016 :: Current
 
-  * @TODO
+  * Implement a task, alert and email API for fleet operators \
+  * Implement registration/login/password flow for [fleet management system](https://fms.lock8.me/login) \
+  * Integrate logging infrastructure into existing docker X saltstack environment \
+
+**Software Engineer**; [Tracdelight](https://www.tracdelight.com/), Berlin, Germany; 2015 :: 7 months
+
+  * Implement [stores](http://blog.tracdelight.com/new-tool-stores/) feature \
+  * Refactoring of in-house user widget metrics \
+  * Refactoring of test infrastructure (nosetest -> py.test)
+  * Implement an [API documentation](http://docs.tracdelight.com/) solution
 
 **Sabbatical**; 2014 :: 1 year
 
@@ -21,32 +29,26 @@ Experience
     * Contributed to sites such as [adp.dit.ie](http://www.dit.ie/creativearts/), [jamiedelaney.com](http://jamiedelaney.com/) and [thefilthyclub.com](http://www.thefilthyclub.com/)
 
 **Software Engineer**; [Ammeon](http://www.ammeon.com/), Dublin, Ireland; 2013 :: 1 year \
-*Skills*: ``Python``, ``Jenkins``, ``Maven``, ``Puppet``, ``Git``
 
   * Contributed in Agile sprints on a domain configuration product.
   * Implemented new test framework for coming 2.0 version of the product.
   * Taught off-site engineers how to use the API to write their own tests.
 
-**Lead Instructor**; [CTYI](http://www.dcu.ie/ctyi/index.shtml), Cork, Ireland; 2013 :: 5 months \ *Skills*: ``Python``
-
-  * Presented introductory programming lectures for a new pilot programme.
-  * Programme successfully continued with my course material.
-
 
 Education
 ---------
 **2009-2013; BSc Computer Science**; [University College Cork](http://www.ucc.ie/en/), Cork \
-Awarded title of *College Scholar*; *Thesis*: Functional programming in Java
-
+Awarded title of *College Scholar*
 
 Projects
 --------
-**[spanish-conjugator-api](https://github.com/lwm/spanish-conjugator-api)**  \
-A Haskell/PostgreSQL project that exposes an ``API`` for verb conjugations.
-
 **[csq](https://github.com/lwm/csq)**  \
-A CLI program written in Python which outputs quotes.
 
+A command line comp-sci quoter written in Python.
+
+**[spanish-conjugator-api](https://github.com/lwm/es-api)**  \
+
+A Spanish verb conjugator API written in Haskell.
 
 Interest
 --------
