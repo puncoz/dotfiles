@@ -239,3 +239,9 @@ function utd() {
     PYTHONPATH=. envd py.test -x --create-db && \
     git push origin master
 }
+
+function docker-cleanup(){
+    # kill all docker images/containers
+    docker rmi $(docker ps -qa)
+    docker rmi $(docker images -qa)
+}
