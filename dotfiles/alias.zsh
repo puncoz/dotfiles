@@ -5,6 +5,7 @@ USER=`whoami`
 BASEDIR=~/dotfiles
 DOTDIR=~/dotfiles/dotfiles
 ZSHDIR=~/.oh-my-zsh
+TMUXINATORDIR=~/.tmuxinator
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -12,7 +13,10 @@ ZSHDIR=~/.oh-my-zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 alias rdb='envd ./manage.py drop_test_database --noinput'
 alias vgs='vagrant global-status'
+alias etv='vim $TMUXINATORDIR/vdrome.yml'
 alias tv='tmuxinator vdrome'
+alias etv='vim $TMUXINATORDIR/ghc.yml'
+alias etg='tmuxinator ghc'
 alias pxv='envd py.test -x -vv'
 alias px='envd py.test -x'
 alias pxs='envd py.test -xs'
