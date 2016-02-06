@@ -118,7 +118,9 @@ alias grv='git remote -v'
 alias gp='git push'
 alias gpu='git push -h'
 alias gp='git push'
+alias gpo='git push origin master'
 alias gher='git push heroku master'
+alias gpu='git pull upstream master'
 alias gpl='git pull --rebase'
 alias gplu='git pull -u --rebase'
 alias gam='git commit --amend'
@@ -244,8 +246,13 @@ function utd() {
     git push origin master
 }
 
-function docker-cleanup(){
+function docker-cleanup() {
     # kill all docker images/containers
     docker rmi $(docker ps -qa)
     docker rmi $(docker images -qa)
+}
+
+function gri() {
+    # fire up an interactive rebase back $1 commits
+    git rebase -i HEAD~$1
 }
