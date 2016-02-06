@@ -215,22 +215,6 @@ function myip {
     echo # Newline.
 }
 
-# remove all installed GHC/cabal packages, leaving ~/.cabal binaries and docs
-# in place. When all else fails, use this to get out of dependency hell and
-# start over - https://gist.github.com/timmytofu/7417408
-function ghc-pkg-reset() {
-  if [[ $(readlink -f /proc/$$/exe) =~ zsh ]]; then
-    read 'ans?Erasing all your user ghc and cabal packages - are you sure (y/N)? '
-  else # assume bash/bash compatible otherwise
-    read -p 'Erasing all your user ghc and cabal packages - are you sure (y/N)? ' ans
-  fi
-
-  [[ x$ans =~ "xy" ]] && ( \
-    echo 'erasing directories under ~/.ghc'; command rm -rf `find ~/.ghc/* -maxdepth 1 -type d`; \
-    echo 'erasing ~/.cabal/lib'; command rm -rf ~/.cabal/lib; \
-  )
-}
-
 function getpr() {
     # quickly pull down a pull request, create a branch and check it out
     git fetch upstream pull/$1/head:"pr_$1" && git checkout "pr_$1"
