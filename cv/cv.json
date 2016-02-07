@@ -92,44 +92,26 @@
     {
       "title": "csq",
       "category": "Computer Science",
-      "url": "https://pypi.python.org/pypi/csq/",
+      "url": "https://github.com/lwm/csq",
       "repo": "https://github.com/lwm/csq",
       "media": [],
-      "role": "Creator",
-      "summary": "Computing quotes on the command line.",
-      "description": "A Python 2/3 compatible program which is tested with tox, py.test and Travis.",
-      "highlights": [
-        "Project Highlight #1",
-        "Project Highlight #2",
-        "Project Highlight #3"
-      ],
-      "keywords": [
-        "Tag1",
-        "Tag2",
-        "Tag3",
-        "Tag4"
-      ]
+      "role": "",
+      "summary": "Computing quotes on the command line written in Python.",
+      "description": "",
+      "highlights": [],
+      "keywords": []
     },
     {
-      "title": "Asteroids",
-      "category": "FOSS",
-      "url": "http://asteroids-demo.org",
-      "repo": "https://asteroids-repo.com",
+      "title": "es-api",
+      "category": "Language",
+      "url": "https://github.com/lwm/es-api",
+      "repo": "https://github.com/lwm/es-api",
       "media": [],
-      "role": "Creator",
-      "summary": "Conceived, designed, implemented, and created 3D Asteroids space shooter with Unreal Engine IV and C++.",
-      "description": "A 3D Asteroids clone with Unreal 4 and cross-platform C++.",
-      "highlights": [
-        "Project Highlight #1",
-        "Project Highlight #2",
-        "Project Highlight #3"
-      ],
-      "keywords": [
-        "C++",
-        "Unreal Engine",
-        "3D",
-        "DirectX"
-      ]
+      "role": "",
+      "summary": "Spanish verb conjugation web API written in Haskell.",
+      "description": "",
+      "highlights": [],
+      "keywords": []
     }
   ],
   "education": {
