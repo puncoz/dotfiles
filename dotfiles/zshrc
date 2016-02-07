@@ -15,6 +15,7 @@ BIN_DIR=$HOME/bin
 LOCAL_DIR=$HOME/local/bin
 ELM_DIR=$HOME/elm-latest-install/Elm-Platform/0.15/bin
 STACK_DIR=$HOME/.stack/programs/i386-linux/ghc-7.8.4/bin/
+NVM_DIR=$HOME/.nvm
 
 PATH+=$PATH  # don't mangle the path
 if [ -d "$CABAL_DIR" ]; then PATH+=:$CABAL_DIR; fi
@@ -28,6 +29,7 @@ if [ -d "$BIN_DIR" ]; then PATH+=:$BIN_DIR; fi
 if [ -d "$LOCAL_DIR" ]; then PATH+=:$LOCAL_DIR; fi
 if [ -d "$ELM_DIR" ]; then PATH+=:$ELM_DIR; fi
 if [ -d "$STACK_DIR" ]; then PATH+=:$STACK_DIR; fi
+if [ -d "$NVM_DIR" ]; then PATH+=$NVM_DIR; fi
 export PATH
 
 # elm exports
@@ -128,5 +130,9 @@ command -v remind >/dev/null 2>&1 && remind -h ~/.reminders || {
     echo "'remind' program is not installed" >&2;
 }
 
+# pyenv
 # https://github.com/yyuu/pyenv#installation
 eval "$(pyenv init -)"
+
+# nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
