@@ -5,7 +5,7 @@
   },
   "info": {
     "label": "Software Engineer",
-    "brief": "@TODO",
+    "brief": "Irish, 27 years old, currently looking for part-time opportunities.",
     "image": "http://i.imgur.com/Lg6aTXO.jpg"
   },
   "contact": {
@@ -37,9 +37,8 @@
         "url": "http://www.lock8.me/",
         "position": "Software Engineer",
         "start": "2015-12",
-        "keywords": ["Python 3.4,", "Django,", "Django REST Framework"],
         "highlights": [
-          "Implement a task, alert and email API for fleet operators.",
+          "Implement a task maintenance interface for fleet operators.",
           "Implement registration/login/password flow for fleet management system.",
           "Integrate logging infrastructure into existing saltstack environment."
         ]
@@ -50,11 +49,10 @@
         "position": "Software Engineer",
         "start": "2015-05",
         "end": "2015-12",
-        "keywords": ["Python 2.7,", "Django,", "Django REST Framework"],
         "highlights": [
           "Implement new [stores feature](http://blog.tracdelight.com/new-tool-stores/).",
-          "Refactoring of in-house widget metrics.",
-          "Refactoring of test infrastructure."
+          "Refactoring of in-house widget metrics and test infrastructure.",
+          "Increasing test coverage of existing codebase."
         ]
       },
       {
@@ -65,7 +63,7 @@
         "end": "2015-01",
         "highlights": [
           "Participated in building the [first skate park](https://www.nowness.com/series/nowness-shorts/skateboarding-in-palestine-skatepal) in Palestine with SkatePAL.",
-          "Volunteered with [Codemia in Bolivia](http://codemia.org/) based on my previous teaching experience."
+          "Volunteered with [Codemia in Bolivia](http://codemia.org/)."
         ]
       },
       {
@@ -74,7 +72,6 @@
         "position": "Software Engineer",
         "start": "2013-02",
         "end": "2014-01",
-        "keywords": ["Python 2.7"],
         "highlights": [
           "Implemented new test framework for coming 2.0 version of the product.",
           "Taught off-site engineers how to use the API to write their own tests."
@@ -115,16 +112,16 @@
   "skills": {
     "sets": [
       { "name": "Language", "skills": ["Python"] },
-      { "name": "Library/Framework", "skills": ["Django,", "Django REST Framework"] },
-      { "name": "Devops", "skills": ["Docker,", "AWS EC2,", "AWS S3,", "AWS Cloudfront"] },
-      { "name": "Testing", "skills": ["Travis,", "Tox,", "Py.test"] },
+      { "name": "Library/Framework", "skills": ["Django", "Django REST Framework"] },
+      { "name": "Devops", "skills": ["Docker", "AWS EC2", "AWS S3", "AWS Cloudfront"] },
+      { "name": "Testing", "skills": ["Travis", "Tox", "Py.test"] },
       { "name": "Operating System", "skills": ["GNU/Linux"] },
       { "name": "Version Control", "skills": ["Git"] }
     ]
   },
   "languages": [
-    {"language": "English", "level": "Native"},
-    {"language": "Spanish", "level": "Conversational"}
+    {"language": "English (Native)", "level": "Native"},
+    {"language": "Spanish (Conversational)", "level": "Conversational"}
   ],
   "speaking": [],
   "service": [],
