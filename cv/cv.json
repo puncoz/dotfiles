@@ -1,8 +1,7 @@
 {
   "name": "Luke Murphy",
   "meta": {
-    "format": "FRESH@0.6.0",
-    "version": "0.1.0"
+    "format": "FRESH@0.6.0", "version": "0.1.0"
   },
   "info": {
     "label": "Software Engineer",
@@ -39,11 +38,7 @@
         "position": "Software Engineer",
         "summary": "@TODO",
         "start": "2015-12",
-        "keywords": [
-          "Python 3.4,",
-          "Django,",
-          "Django REST Framework"
-        ],
+        "keywords": ["Python 3.4,", "Django,", "Django REST Framework"],
         "highlights": [
           "Implement a task, alert and email API for fleet operators.",
           "Implement registration/login/password flow for fleet management system.",
@@ -57,15 +52,38 @@
         "summary": "@TODO",
         "start": "2015-05",
         "end": "2015-12",
-        "keywords": [
-          "Python 2.7,",
-          "Django,",
-          "Django REST Framework"
-        ],
+        "keywords": ["Python 2.7,", "Django,", "Django REST Framework"],
         "highlights": [
-          "Implement stores feature.",
+          "Implement new [stores feature](http://blog.tracdelight.com/new-tool-stores/).",
           "Refactoring of in-house widget metrics.",
           "Refactoring of test infrastructure."
+        ]
+      },
+      {
+        "employer": "Sabbatical",
+        "url": "",
+        "position": "Self-Employed",
+        "summary": "@TODO",
+        "start": "2014-02",
+        "end": "2015-01",
+        "keywords": [],
+        "highlights": [
+          "Participated in building the [first skate park](https://www.nowness.com/series/nowness-shorts/skateboarding-in-palestine-skatepal) in Palestine with SkatePAL.",
+          "Volunteered with [Codemia in Bolivia](http://codemia.org/) based on my previous teaching experience."
+        ]
+      },
+      {
+        "employer": "Ammeon",
+        "url": "http://www.ammeon.com/",
+        "position": "Software Engineer",
+        "summary": "@TODO",
+        "start": "2014-02",
+        "end": "2013-01",
+        "keywords": ["Python 2.7"],
+        "highlights": [
+          "@TODO",
+          "Implemented new test framework for coming 2.0 version of the product.",
+          "Taught off-site engineers how to use the API to write their own tests."
         ]
       }
     ]
