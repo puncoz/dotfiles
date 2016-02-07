@@ -115,6 +115,7 @@
       { "name": "Library/Framework", "skills": ["Django", "Django REST Framework"] },
       { "name": "Devops", "skills": ["Docker", "AWS EC2", "AWS S3", "AWS Cloudfront"] },
       { "name": "Testing", "skills": ["Travis", "Tox", "Py.test"] },
+      { "name": "Database", "skills": ["PostgreSQL", "MySQL"] },
       { "name": "Operating System", "skills": ["GNU/Linux"] },
       { "name": "Version Control", "skills": ["Git"] }
     ]
