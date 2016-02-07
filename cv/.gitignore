@@ -7,3 +7,5 @@ resume.tex
 *.swp
 *.docx
 *.rtf
+out/
+fresh-themes/
