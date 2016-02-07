@@ -36,7 +36,6 @@
         "employer": "Lock8",
         "url": "http://www.lock8.me/",
         "position": "Software Engineer",
-        "summary": "@TODO",
         "start": "2015-12",
         "keywords": ["Python 3.4,", "Django,", "Django REST Framework"],
         "highlights": [
@@ -49,7 +48,6 @@
         "employer": "Tracdelight",
         "url": "https://www.tracdelight.com/",
         "position": "Software Engineer",
-        "summary": "@TODO",
         "start": "2015-05",
         "end": "2015-12",
         "keywords": ["Python 2.7,", "Django,", "Django REST Framework"],
@@ -63,10 +61,8 @@
         "employer": "Sabbatical",
         "url": "",
         "position": "Self-Employed",
-        "summary": "@TODO",
         "start": "2014-02",
         "end": "2015-01",
-        "keywords": [],
         "highlights": [
           "Participated in building the [first skate park](https://www.nowness.com/series/nowness-shorts/skateboarding-in-palestine-skatepal) in Palestine with SkatePAL.",
           "Volunteered with [Codemia in Bolivia](http://codemia.org/) based on my previous teaching experience."
@@ -76,12 +72,10 @@
         "employer": "Ammeon",
         "url": "http://www.ammeon.com/",
         "position": "Software Engineer",
-        "summary": "@TODO",
-        "start": "2014-02",
-        "end": "2013-01",
+        "start": "2013-02",
+        "end": "2014-01",
         "keywords": ["Python 2.7"],
         "highlights": [
-          "@TODO",
           "Implemented new test framework for coming 2.0 version of the product.",
           "Taught off-site engineers how to use the API to write their own tests."
         ]
@@ -94,261 +88,49 @@
       "category": "Computer Science",
       "url": "https://github.com/lwm/csq",
       "repo": "https://github.com/lwm/csq",
-      "media": [],
-      "role": "",
-      "summary": "Computing quotes on the command line written in Python.",
-      "description": "",
-      "highlights": [],
-      "keywords": []
+      "summary": "Computing quotes on the command line written in Python."
     },
     {
       "title": "es-api",
       "category": "Language",
       "url": "https://github.com/lwm/es-api",
       "repo": "https://github.com/lwm/es-api",
-      "media": [],
-      "role": "",
-      "summary": "Spanish verb conjugation web API written in Haskell.",
-      "description": "",
-      "highlights": [],
-      "keywords": []
+      "summary": "Spanish verb conjugation web API written in Haskell."
     }
   ],
   "education": {
-    "summary": "Optional overall education summary. Not used in most themes.",
-    "level": "degree",
-    "degree": "BSCS",
-    "history": [
-      {
-        "institution": "Acme University",
-        "title": "BSCS",
-        "url": "http://acmeuniversity.edu",
-        "start": "2004-09",
-        "end": "2009-06",
-        "grade": "3.5",
-        "summary": "Graduate of Acme University, summer of 2009. Go [Coyotes](https://en.wikipedia.org/wiki/Coyote)!",
-        "curriculum": [
-          "Data Algorithms",
-          "Optimization",
-          "Neural Networks",
-          "C",
-          "C++",
-          "Java",
-          "HTTP",
-          "TCP/IP"
-        ]
-      }
-    ]
-  },
-  "service": {
     "summary": "",
+    "level": "degree",
+    "degree": "BSc",
     "history": [
       {
-        "flavor": "volunteer",
-        "position": "Volunteer Coordinator",
-        "organization": "The Mommies Network",
-        "url": "http://themommiesnetwork.org",
-        "start": "2006-06",
-        "summary": "A summary of your volunteer experience at this organization. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-        "highlights": []
-      },
-      {
-        "flavor": "military",
-        "position": "MOS",
-        "organization": "Air Force",
-        "url": "https://service-website.mil",
-        "start": "2004",
-        "summary": "A summary of your service experience with this organization. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-        "highlights": []
+        "institution": "University College Of Cork",
+        "title": "BSc Computer Science",
+        "url": "http://www.ucc.ie/en/",
+        "start": "2009-01",
+        "end": "2013-01"
       }
     ]
   },
   "skills": {
     "sets": [
-      {
-        "name": "Language",
-        "level": "",
-        "skills": ["Python"]
-      },
-      {
-        "name": "Library/Framework",
-        "level": "",
-        "skills": ["Django,", "Django REST Framework"]
-      },
-      {
-        "name": "Devops",
-        "level": "",
-        "skills": ["Docker,", "AWS EC2,", "AWS S3,", "AWS Cloudfront"]
-      },
-      {
-        "name": "Testing",
-        "level": "",
-        "skills": ["Travis,", "Tox,", "Py.test"]
-      },
-      {
-        "name": "Operating System",
-        "level": "",
-        "skills": ["GNU/Linux"]
-      },
-      {
-        "name": "Version Control",
-        "level": "",
-        "skills": ["Git"]
-      }
-    ],
-    "list": []
+      { "name": "Language", "skills": ["Python"] },
+      { "name": "Library/Framework", "skills": ["Django,", "Django REST Framework"] },
+      { "name": "Devops", "skills": ["Docker,", "AWS EC2,", "AWS S3,", "AWS Cloudfront"] },
+      { "name": "Testing", "skills": ["Travis,", "Tox,", "Py.test"] },
+      { "name": "Operating System", "skills": ["GNU/Linux"] },
+      { "name": "Version Control", "skills": ["Git"] }
+    ]
   },
-  "samples": [
-    {
-      "title": "Work Sample #1",
-      "summary": "A technical or creative **work sample**.",
-      "url": "http://project-repo.com",
-      "date": "2015"
-    },
-    {
-      "title": "Creative Sample #2",
-      "summary": "Another technical or creative sample. You can use [Markdown](https://daringfireball.net/projects/markdown/) here.",
-      "url": "http://project-repo.com",
-      "date": "2015"
-    }
-  ],
-  "writing": [
-    {
-      "title": "My Blog",
-      "publisher": {
-        "name": "Medium.com",
-        "url": "https://medium.com"
-      },
-      "flavor": "blog",
-      "date": "2010",
-      "summary": "Your blog or online home.",
-      "url": "http://coding-snorer.com"
-    },
-    {
-      "title": "Something I Wrote Once",
-      "flavor": "essay",
-      "date": "2009",
-      "summary": "List your blogs, articles, essays, novels, and dissertations.",
-      "publisher": {
-        "name": "Acme University Press",
-        "url": "http://press.acmeuniversity.edu"
-      },
-      "url": "http://codeproject.com/something-i-wrote-once"
-    }
-  ],
-  "reading": [
-    {
-      "title": "Other Copenhagens",
-      "flavor": "book",
-      "url": "http://www.amazon.com/Other-Copenhagens-And-Stories/dp/0984749209",
-      "author": "Edmund Jorgensen"
-    },
-    {
-      "title": "r/programming",
-      "flavor": "website",
-      "url": "https://www.reddit.com/r/programming"
-    },
-    {
-      "title": "Hacker News",
-      "flavor": "website",
-      "url": "https://news.ycombinator.com/"
-    }
-  ],
-  "recognition": [
-    {
-      "flavor": "award",
-      "from": "HackMyResume",
-      "title": "Awesomeness Award",
-      "event": "HMR Release",
-      "url": "http://please.hackmyresume.com",
-      "date": "2016",
-      "summary": "Thanks for being a HackMyResume / FluentCV user!"
-    },
-    {
-      "flavor": "industry",
-      "from": "Big Software",
-      "title": "MVP: SpinWidget Technology",
-      "event": "Yearly Roundup",
-      "date": "2015-08-03",
-      "summary": "For work in promotion and popularization of SpinWidget technology."
-    }
-  ],
-  "references": [
-    {
-      "name": "John Doe",
-      "category": "professional",
-      "role": "Manager @ Somewhere Inc.",
-      "private": true,
-      "summary": "Contact information available on request.",
-      "contact": [
-        {
-          "flavor": "email",
-          "value": "john.doe@somewhere.com"
-        }
-      ]
-    },
-    {
-      "name": "Jane Q. Fullstacker",
-      "category": "technical",
-      "summary": "Contact information available on request.",
-      "role": "Coworker",
-      "private": true,
-      "contact": [
-        {
-          "flavor": "email",
-          "value": "jane.fullstacker@somewhere.com"
-        }
-      ]
-    }
-  ],
-  "testimonials": [
-    {
-      "name": "John Doe",
-      "flavor": "professional",
-      "quote": "Such-and-such is awesome! I'd hire him/her again in a second!",
-      "private": false
-    },
-    {
-      "name": "Somebody Important",
-      "flavor": "technical",
-      "quote": "Hands-down *the best developer/manager/spelunker/coworker/etc* I've ever worked with. Emphasis *mine!*",
-      "private": false
-    }
-  ],
   "languages": [
-    {
-      "language": "English",
-      "level": "native"
-    },
-    {
-      "language": "Spanish",
-      "level": "advanced"
-    },
-    {
-      "language": "C++",
-      "level": "intermediate"
-    }
+    {"language": "English", "level": "Native"},
+    {"language": "Spanish", "level": "Conversational"}
   ],
-  "interests": [
-    {
-      "name": "GitHub",
-      "summary": "Regular GitHub user and tinkerer.",
-      "keywords": [
-        "GitHub",
-        "git",
-        "GitHub Desktop (OS X)",
-        "LFS",
-        "GitHub API"
-      ]
-    },
-    {
-      "name": "chess",
-      "summary": "Avid chess player.",
-      "keywords": [
-        "Sicilian",
-        "King's Gambit",
-        "Ruy Lopez"
-      ]
-    }
-  ]
+  "samples": [],
+  "writing": [],
+  "reading": [],
+  "recognition": [],
+  "references": [],
+  "testimonials": [],
+  "interests": []
 }
