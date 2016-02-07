@@ -15,6 +15,9 @@ if [[ $answer = y ]] ; then
   sudo apt-get install -y git zsh tmux irssi xclip remind
 fi
 
+# @TODO
+# install nvm for node, npm, wikitopdf, phantomjs
+
 read -p "Install ctags? [yn] " answer
 if [[ $answer = y ]] ; then
     # @TODO - this has dependencies + doesn't work
