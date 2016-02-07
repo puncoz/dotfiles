@@ -371,3 +371,6 @@ let g:gitgutter_highlight_lines=1
 
 " isort
 let g:vim_isort_map = '<C-i>'
+
+" json linting
+au BufRead,BufNewFile *.json set filetype=json
