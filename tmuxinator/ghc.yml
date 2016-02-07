@@ -31,4 +31,4 @@ windows:
   - ghc-docker-dev:
     - docker run --rm -i -t -v `pwd`:/home/ghc gregweber/ghc-haskell-dev /bin/bash
   - code:
-    - vim
+    - clear
