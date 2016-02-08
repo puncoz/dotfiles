@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'mileszs/ack.vim'
 
 " motion
 Plugin 'Lokaltog/vim-easymotion'
