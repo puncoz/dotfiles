@@ -12,6 +12,7 @@ John Ralston Saul
 Leo Victor Panitch
 Sabah Alnasseri
 Karl Popper
+Slavoj Žižek
 
 ## Miscellaneous
 Michel Thomas Biography
