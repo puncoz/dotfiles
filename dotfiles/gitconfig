@@ -7,6 +7,7 @@
     safecrlf = true
 	excludesfile = ~/.gitignore_global
     editor = vim
+	pager = diff-so-fancy | less --tabs=1,5 -R
 
 [merge]
     tool = meld
