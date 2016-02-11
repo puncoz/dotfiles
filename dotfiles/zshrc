@@ -136,3 +136,4 @@ eval "$(pyenv init -)"
 
 # nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+nvm use 5.5.0  # @TODO - make this not blow up on other systems
