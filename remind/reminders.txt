@@ -1,7 +1,2 @@
 REM 30 +5     MSG Rent due on the 2nd%
-REM 1         MSG Book Animal Collective gig in April%
-REM Jan 26    MSG Call Ruth%
-REM Jan 26    MSG Syria related meetup tonight%
-REM Feb 5  +1 MSG Blockup Ratschlag on Friday%
-REM Feb 9     MSG DiEM 25 launch live cast tonight%
-REM Feb 18 +1 MSG die Linke meetup%
+REM 12        MSG Call Ruth @ 6PM%
