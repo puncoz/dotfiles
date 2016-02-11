@@ -131,9 +131,8 @@ command -v remind >/dev/null 2>&1 && remind -h ~/.reminders || {
 }
 
 # pyenv
-# https://github.com/yyuu/pyenv#installation
-eval "$(pyenv init -)"
+command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 
 # nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-nvm use 5.5.0  # @TODO - make this not blow up on other systems
+command -v nvm >/dev/null 2>&1 && nvm use 5.5.0
