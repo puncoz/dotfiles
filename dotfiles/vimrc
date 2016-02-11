@@ -280,7 +280,7 @@ augroup vimrc_autocmds
 augroup END
 
 " syntastic file checker
-let g:syntastic_python_checkers=['pylint', 'mypy']
+let g:syntastic_python_checkers=['flake8']
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_wq = 0
@@ -375,3 +375,7 @@ let g:vim_isort_map = '<C-i>'
 
 " json linting
 au BufRead,BufNewFile *.json set filetype=json
+
+" attempt to speed up Syntastic
+set lazyredraw
+set ttyfast
