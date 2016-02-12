@@ -1,2 +1,1 @@
 REM 30 +5     MSG Rent due on the 2nd%
-REM 12        MSG Call Ruth @ 6PM%
