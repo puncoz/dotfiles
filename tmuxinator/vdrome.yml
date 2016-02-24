@@ -28,10 +28,13 @@ startup_window: cli
 post: rm -rf ~/tmp/velodrome && rm -rf /tmp/images
 
 windows:
-  - vim:
-    - vim
+  - code:
+    layout: 309c,159x51,0,0{98x51,0,0,0,60x51,99,0,6}
+    panes:
+      - vim
+      - #empty
   - cli:
-    - #
+    - #empty
   - server:
     - envd ./manage.py runserver
   - testlogs:
