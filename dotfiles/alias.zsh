@@ -11,6 +11,8 @@ TMUXINATORDIR=~/.tmuxinator
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias vpc='vim +PluginClean'
+alias vpi='vim +PluginInstall'
 alias rdb='envd ./manage.py drop_test_database --noinput'
 alias vgs='vagrant global-status'
 alias etv='vim $TMUXINATORDIR/vdrome.yml'
@@ -134,6 +136,7 @@ alias gundo='git reset --soft HEAD'
 alias gundoh='git reset --hard HEAD'
 alias gun='git ls-files --others --exclude-standard'
 alias gcn='git shortlog -s -n'
+alias .a='git add . --all'
 alias .c='git add --all && git commit -v'
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
@@ -242,4 +245,12 @@ function docker-cleanup() {
 function gri() {
     # fire up an interactive rebase back $1 commits
     git rebase -i HEAD~$1
+}
+
+function testlogs(){
+    awslogs get --watch docker/test | awk '$2 = substr($2, 1, 12)'
+}
+
+function prodlogs(){
+    awslogs get --watch docker/prod | awk '$2 = substr($2, 1, 12)'
 }
