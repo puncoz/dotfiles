@@ -231,7 +231,8 @@ function utd() {
     git pull upstream master && \
     pip install -r requirements/dev.txt && \
     pip install -e . && \
-    git push origin master
+    git push origin master && \
+    envd ./manage.py drop_test_database --noinput && \
     envd ptw velodrome -- --testmon
 }
 
