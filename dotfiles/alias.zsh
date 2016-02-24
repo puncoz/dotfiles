@@ -228,12 +228,11 @@ function getpr() {
 
 function utd() {
     git checkout master && \
-    pip install -U pip && \
     git pull upstream master && \
     pip install -r requirements/dev.txt && \
     pip install -e . && \
-    PYTHONPATH=. envd py.test -x --create-db && \
     git push origin master
+    envd ptw velodrome -- --testmon
 }
 
 function docker-cleanup() {
