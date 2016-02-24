@@ -10,7 +10,7 @@ root: ~/work/lock8/velodrome
 pre: mkdir -p /tmp/images && mkdir -p /tmp/velodrome
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: aenv
+pre_window: aenv && clear
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -31,11 +31,12 @@ windows:
   - vim:
     - vim
   - cli:
-    - clear
+    - #
   - server:
-    - clear && envd ./manage.py runserver
-  # while awslogs might be costing us, I can't use them anymore
-  # - test_logs:
-  #   - clear && awslogs get --watch docker/test | awk '$2 = substr($2, 1, 12)'
-  # - prod_logs:
-  #   - clear && awslogs get --watch docker/prod | awk '$2 = substr($2, 1, 12)'
+    - envd ./manage.py runserver
+  - testlogs:
+    - testlogs
+  - irssi:
+    - irssi
+  - gist:
+    - vim -c "Gist f16fdf2d1efe50379da5"
