@@ -54,6 +54,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'fs111/pydoc.vim'
 Plugin 'fisadev/vim-isort'
+Plugin 'alfredodeza/pytest.vim'
 
 "" haskell
 Plugin 'bitc/vim-hdevtools'
@@ -230,6 +231,7 @@ set spelllang=en_gb
 set foldmethod=indent
 set foldlevel=99
 set relativenumber
+set nohlsearch
 
 " fugitive.vim
 nnoremap <silent> <leader>gs :Gstatus<CR>
