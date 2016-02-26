@@ -229,8 +229,8 @@ function getpr() {
 function utd() {
     git checkout master && \
     git pull upstream master && \
-    pip install -r requirements/dev.txt && \
-    pip install -e . && \
+    pip install -I -r requirements/dev.txt && \
+    pip install -I -e --force-reinstall . && \
     git push origin master && \
     envd ./manage.py drop_test_database --noinput && \
     envd ptw velodrome -- --testmon
