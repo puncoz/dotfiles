@@ -1,3 +1,4 @@
 REM February 29 MSG 19:00 http://www.meetup.com/OK-Lab-Berlin/events/229013346/%
 REM March    01 MSG 19:00 http://www.meetup.com/ThoughtWorks-Berlin/events/229124421/%
 REM March    01 MSG 19:00 https://www.facebook.com/events/608991909253838/%
+REM March    04 MSG 17:30 Open Lab Day https://fablab.berlin/en/%
