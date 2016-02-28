@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 read -p "Symlink dotfiles? [yn] " answer
  if [[ $answer = y ]] ; then
    mkdir -p ~/.irssi
