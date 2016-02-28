@@ -1,1 +1,3 @@
-REM 30 +5     MSG Rent due on the 2nd%
+REM February 29 MSG 19:00 http://www.meetup.com/OK-Lab-Berlin/events/229013346/%
+REM March    01 MSG 19:00 http://www.meetup.com/ThoughtWorks-Berlin/events/229124421/%
+REM March    01 MSG 19:00 https://www.facebook.com/events/608991909253838/%
