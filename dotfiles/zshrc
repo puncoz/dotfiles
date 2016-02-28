@@ -135,4 +135,4 @@ command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 
 # nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-command -v nvm >/dev/null 2>&1 && nvm use 5.5.0
+command -v nvm >/dev/null 2>&1 && nvm use 5.5.0 >/dev/null 2>&1
