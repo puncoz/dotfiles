@@ -281,6 +281,7 @@ augroup END
 
 " syntastic file checker
 let g:syntastic_python_checkers=['flake8', 'pylint', 'mypy']
+let g:syntastic_yaml_checkers=['/usr/local/bin/yamllint']
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_wq = 0
