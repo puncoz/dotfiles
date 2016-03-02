@@ -11,6 +11,7 @@ TMUXINATORDIR=~/.tmuxinator
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias tmn='envd ptw velodrome -- --testmon -s'
 alias vpc='vim +PluginClean'
 alias vpi='vim +PluginInstall'
 alias rdb='envd ./manage.py drop_test_database --noinput'
