@@ -231,10 +231,10 @@ function utd() {
     git checkout master && \
     git pull upstream master && \
     pip install -I -r requirements/dev.txt && \
-    pip install -I -e --force-reinstall . && \
+    pip install -I -e . && \
     git push origin master && \
     envd ./manage.py drop_test_database --noinput && \
-    envd ptw velodrome -- --testmon
+    envd py.test -x -vv
 }
 
 function docker-cleanup() {
