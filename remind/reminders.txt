@@ -1,5 +1,1 @@
-REM March       MSG Find a dentist!%
-REM March       MSG Find a pilates class!%
-REM March       MSG Send some wg-gesucht emails!%
-REM March    07 MSG 20:00 Meet Oli at c-base%
-REM March    11 MSG 17:30 Open Lab Day https://fablab.berlin/en/%
+REM May 5th MSG Find a dentist!%
