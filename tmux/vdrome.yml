@@ -42,4 +42,4 @@ windows:
   - irssi:
     - irssi
   - gist:
-    - vim -c "Gist f16fdf2d1efe50379da5"
+    - vim -c "Gist 1c7e91c7d22c3d740706"
