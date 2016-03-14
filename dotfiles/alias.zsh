@@ -11,31 +11,21 @@ TMUXINATORDIR=~/.tmuxinator
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-alias tmn='envd ptw velodrome -- --testmon -s -p no:sugar'
 alias vpc='vim +PluginClean'
 alias vpi='vim +PluginInstall'
 alias rdb='envd ./manage.py drop_test_database --noinput'
 alias vgs='vagrant global-status'
-alias etv='vim $TMUXINATORDIR/vdrome.yml'
 alias tv='tmuxinator vdrome'
 alias tg='tmuxinator ghc'
-alias etv='vim $TMUXINATORDIR/vdrome.yml'
 alias etg='vim $TMUXINATORDIR/ghc.yml'
-alias pxv='envd py.test -x -vv -s'
-alias px='envd py.test -x'
-alias pxs='envd py.test -xs'
-alias pxc='envd py.test -x --create-db'
-alias pks='envd py.test -sk'
 alias cenv='python -m venv .venv'
 alias aenv='. .venv/bin/activate'
-alias envd='envdir envdir/'
 alias ppjson="python -m json.tool"
 alias pyclean='killpyc && killpycache'
 alias killpyc='find . -name \*.pyc -delete'
 alias killpycache='find . -name __pycache__ -delete'
 alias termupd='sudo update-alternatives --config x-terminal-emulator'
 alias rem='remind ~/.reminders'
-alias start='tmuxinator start api'
 alias djm='./manage.py migrate'
 alias djmm='./manage.py makemigrations'
 alias djs='./manage.py shell_plus'
@@ -149,18 +139,6 @@ alias eT='vim $HOME/todo.md'
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # functions
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-add_to_pp(){
-    # add the first positional parameter to $PYTHONPATH
-    export PYTHONPATH=$PYTHONPATH:$1;
-}
-
-copyid(){
-    # as user '$1' at IP '$2', copy over our local ssh key
-    # so we don't have to do type a password everytime we
-    # ssh to this machine
-    ssh-copy-id -i ~/.ssh/id_rsa.pub $1@$2
-}
-
 f(){
     # quick find. Takes one parameter - the search term
     echo "find . -iname \"*$1*\""
@@ -191,18 +169,6 @@ extract (){
     fi
 }
 
-# make a backup of a file
-# https://github.com/grml/grml-etc-core/blob/master/etc/zsh/zshrc
-bk() {
-    cp -a "$1" "${1}_$(date --iso-8601=seconds)"
-}
-
-# print terminal-wide banner
-# souce: https://github.com/jleclanche/dotfiles/blob/master/.zshrc#L281
-function hr {
-    print ${(l:COLUMNS::=:)}
-}
-
 # get public ip
 # souce: https://github.com/jleclanche/dotfiles/blob/master/.zshrc#L281
 function myip {
@@ -227,16 +193,6 @@ function getpr() {
     git fetch upstream pull/$1/head:"pr_$1" && git checkout "pr_$1"
 }
 
-function utd() {
-    git checkout master && \
-    git pull upstream master && \
-    pip install -I -r requirements/dev.txt && \
-    pip install -I -e . && \
-    git push origin master && \
-    envd ./manage.py drop_test_database --noinput && \
-    envd py.test -x -vv
-}
-
 function docker-cleanup() {
     # kill all docker images/containers
     docker rmi $(docker ps -qa)
@@ -248,6 +204,10 @@ function gri() {
     git rebase -i HEAD~$1
 }
 
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# lock8 aliases and functions
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 function testlogs(){
     awslogs get --watch docker/test | awk '$2 = substr($2, 1, 12)'
 }
@@ -255,3 +215,14 @@ function testlogs(){
 function prodlogs(){
     awslogs get --watch docker/prod | awk '$2 = substr($2, 1, 12)'
 }
+
+alias ssht1='ssh ubuntu@52.16.11.86'
+alias ssht2='ssh ubuntu@52.18.79.179'
+alias sshsm='ssh ubuntu@saltmaster.lock8.me'
+alias tmn='envd ptw velodrome -- --testmon -s -p no:sugar'
+alias etv='vim $TMUXINATORDIR/vdrome.yml'
+alias pxv='envd py.test -x -vv'
+alias px='envd py.test -x'
+alias pxs='envd py.test -xs'
+alias pks='envd py.test -sk'
+alias envd='envdir envdir/'
