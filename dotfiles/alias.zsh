@@ -219,6 +219,8 @@ function prodlogs(){
 alias ssht1='ssh ubuntu@52.16.11.86'
 alias ssht2='ssh ubuntu@52.18.79.179'
 alias sshsm='ssh ubuntu@saltmaster.lock8.me'
+alias sshpw='ssh ubuntu@54.154.235.63'
+alias sshp1='ssh ubuntu@52.48.103.144'
 alias tmn='envd ptw velodrome -- --testmon -s -p no:sugar'
 alias etv='vim $TMUXINATORDIR/vdrome.yml'
 alias pxv='envd py.test -x -vv'
