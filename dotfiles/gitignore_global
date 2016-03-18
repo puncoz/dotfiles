@@ -31,3 +31,4 @@ node_modules/
 .cache/
 tags
 lock8-config/
+.env
