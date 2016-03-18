@@ -13,10 +13,11 @@ imap jk <Esc>
 
 colorscheme jellybeans
 set background=dark
+set number
 
-" show characters past 79 chars long in red 
-match ErrorMsg '\%>80v.\+'
+" highlight characters past 79 chars
+match ErrorMsg '\%>79v.\+'
 
-" source 'init.vim' from inside nvim
+" source $MYVIMRC from inside nvim
 nnoremap <leader>ev :split $MYVIMRC<CR>  
 nnoremap <leader>sv :source $MYVIMRC<CR>  
