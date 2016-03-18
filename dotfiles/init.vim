@@ -1,12 +1,14 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
-Plug 'nanotech/jellybeans.vim'
+Plug 'tomasr/molokai'
 
 " python
 Plug 'Raimondi/delimitMate'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'davidhalter/jedi-vim'
+Plug 'gotcha/vimpdb'
+Plug 'fisadev/vim-isort'
 
 " git
 Plug 'airblade/vim-gitgutter'
@@ -21,7 +23,12 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
+
+" motion
 Plug 'ervandew/supertab'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-surround'
 
 " GNU/Linux utils
 Plug 'vim-utils/vim-man'
@@ -32,6 +39,8 @@ Plug 'mattn/webapi-vim'
 
 " completions
 Plug 'Shougo/deoplete.nvim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " static analysis
 Plug 'benekastah/neomake'
@@ -43,7 +52,8 @@ call plug#end()
 
 let mapleader = ","
 imap jk <Esc>
-colorscheme jellybeans
+
+colorscheme molokai
 
 " options galore
 set background=dark
@@ -149,6 +159,9 @@ let g:jedi#documentation_command = "<leader>pk"
 let g:jedi#usages_command = "<leader>pu"
 let g:jedi#rename_command = "<leader>pr"
 " }
+
+" isort mapping
+let g:vim_isort_map = '<C-i>'
 
 " git.io/vai8m
 function! MyFollowSymlink(...)
