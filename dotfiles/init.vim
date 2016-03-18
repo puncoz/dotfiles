@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-sensible'
-Plug 'benekastah/neomake'
+call plug#begin('~/.config/nvim/plugged')
 call plug#end()
+
+colorscheme murphy
