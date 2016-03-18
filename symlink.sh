@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+DOTDIR="$HOME/dotfiles/dotfiles"
+
 read -p "Symlink dotfiles? [yn] " answer
  if [[ $answer = y ]] ; then
    mkdir -p ~/.irssi
