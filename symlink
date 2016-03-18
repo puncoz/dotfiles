@@ -2,12 +2,14 @@
 
 DOTDIR="$HOME/dotfiles/dotfiles"
 
-mkdir -p ~/.irssi
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.irssi}
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 cd $DOTDIR
 
 # delete all dotfiles present, suppress stderr
 for f in *; do
   if [[ $f = "config" ]] ; then rm ~/.irssi/$f 2> /dev/null; fi
+  if [[ $f = "init.vim" ]] ; then rm ~/.config/nvim/$f 2> /dev/null; fi
     rm ~/.$f 2> /dev/null;
 done
 
@@ -17,6 +19,10 @@ for f in *; do
   then
     ln -s $(realpath ./$f) ~/.irssi/$f
     file ~/.irssi/$f
+  elif [[ $f = "init.vim" ]] ;
+  then
+    ln -s $(realpath ./$f) ~/.config/nvim/$f
+    file ~/.config/nvim/$f
   else
     ln -s $(realpath ./$f) ~/.$f
     file ~/.$f
