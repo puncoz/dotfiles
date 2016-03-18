@@ -1,5 +1,11 @@
 COMPLETION_WAITING_DOTS="false"
 
+# autoenv, please work!
+source /usr/local/bin/activate.sh
+
+# plugins!
+plugins=()
+
 # Zsh prompt
 ZSH_THEME="3den"
 
