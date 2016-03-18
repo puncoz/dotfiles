@@ -11,15 +11,23 @@ Plug 'tpope/vim-git'
 " whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
+" navigation
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
+
 call plug#end()
 
 let mapleader = ","
 imap jk <Esc>
-
 colorscheme jellybeans
+
+" options galore
 set background=dark
 set number
 set cursorline
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc,/.venv/*
 
 " highlight characters past 79 chars
 match ErrorMsg '\%>79v.\+'
@@ -44,6 +52,27 @@ nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gbw :Gbrowse<CR>
+
+" nerdtree mappings
+map ,<C-n> :NERDTreeToggle<CR>
+let g:nerdtree_tabs_autoclose=1
+let g:nerdtree_tabs_open_on_console_startup=0
+let g:nerdtree_tabs_smart_startup_focus=2
+let g:nerdtree_tabs_startup_cd=1
+
+" ctrl-p mappings
+nnoremap <Leader>cf :CtrlPFunky<Cr>
+nnoremap <leader>ct :CtrlPTag<cr>
+
+let g:ctrlp_use_caching = 1
+let g:ctrlp_by_filename = 1
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_max_height=30
+let g:ctrlp_max_files = 5000
+let g:ctrlp_max_depth = 100
+let g:ctrlp_lazy_update = 1
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_extensions = ['funky', 'tag']
 
 " git.io/vai8m
 function! MyFollowSymlink(...)
