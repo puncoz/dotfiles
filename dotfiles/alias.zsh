@@ -11,6 +11,7 @@ TMUXINATORDIR=~/.tmuxinator
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # aliases
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+alias vo='vim $(fzf)'
 alias vim='nvim'
 alias vpc='vim +PluginClean'
 alias vpi='vim +PluginInstall'
