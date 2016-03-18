@@ -20,6 +20,10 @@ Plug 'tacahiroy/ctrlp-funky'
 " GNU/Linux utils
 Plug 'vim-utils/vim-man'
 
+" Github
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+
 call plug#end()
 
 let mapleader = ","
