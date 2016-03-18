@@ -44,3 +44,37 @@ nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gbw :Gbrowse<CR>
+
+" git.io/vai8m
+function! MyFollowSymlink(...)
+  if exists('w:no_resolve_symlink') && w:no_resolve_symlink
+    return
+  endif
+  if &ft == 'help'
+    return
+  endif
+  let fname = a:0 ? a:1 : expand('%')
+  if fname =~ '^\w\+:/'
+    " Do not mess with 'fugitive://' etc.
+    return
+  endif
+  let fname = simplify(fname)
+  let resolvedfile = resolve(fname)
+  if resolvedfile == fname
+    return
+  endif
+  let resolvedfile = fnameescape(resolvedfile)
+  let sshm = &shm
+  set shortmess+=A
+  redraw
+  exec 'file ' . resolvedfile
+  let &shm=sshm
+  unlet! b:git_dir
+  call fugitive#detect(resolvedfile)
+  if &modifiable
+    redraw
+    echomsg 'Resolved symlink: =>' resolvedfile
+  endif
+endfunction
+command! -bar FollowSymlink call MyFollowSymlink()
+au BufReadPost * nested call MyFollowSymlink(expand('%'))
