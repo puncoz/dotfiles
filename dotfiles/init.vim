@@ -3,12 +3,15 @@ call plug#begin('~/.config/nvim/plugged')
 " colorschemes
 Plug 'nanotech/jellybeans.vim'
 
+" python
+Plug 'klen/python-mode'
+
 " git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 
-" whitespace
+" whitespace trimmer for all file types
 Plug 'ntpeters/vim-better-whitespace'
 
 " navigation
@@ -78,6 +81,8 @@ nnoremap <leader>ct :CtrlPTag<cr>
 " deo-plete
 let g:deoplete#enable_at_startup=1
 
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
+let g:ctrlp_cache_dir = $HOME . '.cache/ctrlp'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_by_filename = 1
 let g:ctrlp_show_hidden = 1
