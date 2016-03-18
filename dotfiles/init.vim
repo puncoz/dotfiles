@@ -17,6 +17,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 
+" GNU/Linux utils
+Plug 'vim-utils/vim-man'
+
 call plug#end()
 
 let mapleader = ","
