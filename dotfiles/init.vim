@@ -16,6 +16,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
+Plug 'ervandew/supertab'
 
 " GNU/Linux utils
 Plug 'vim-utils/vim-man'
@@ -23,6 +24,9 @@ Plug 'vim-utils/vim-man'
 " Github
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
+
+" completions
+Plug 'Shougo/deoplete.nvim'
 
 call plug#end()
 
@@ -70,6 +74,9 @@ let g:nerdtree_tabs_startup_cd=1
 " ctrl-p mappings
 nnoremap <Leader>cf :CtrlPFunky<Cr>
 nnoremap <leader>ct :CtrlPTag<cr>
+
+" deo-plete
+let g:deoplete#enable_at_startup=1
 
 let g:ctrlp_use_caching = 1
 let g:ctrlp_by_filename = 1
