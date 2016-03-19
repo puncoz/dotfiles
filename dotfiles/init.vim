@@ -163,6 +163,10 @@ let g:jedi#rename_command = "<leader>pr"
 " isort mapping
 let g:vim_isort_map = '<C-i>'
 
+" tab mappings
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-t>     <Esc>:tabnew<CR>
+
 " git.io/vai8m
 function! MyFollowSymlink(...)
   if exists('w:no_resolve_symlink') && w:no_resolve_symlink
