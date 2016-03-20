@@ -53,10 +53,11 @@ call plug#end()
 let mapleader = ","
 imap jk <Esc>
 
+" colorschemes
 colorscheme molokai
+set background=dark
 
 " options galore
-set background=dark
 set number
 set cursorline
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc,/.venv/*
@@ -166,6 +167,9 @@ let g:vim_isort_map = '<C-i>'
 " tab mappings
 nnoremap <C-t>     :tabnew<CR>
 inoremap <C-t>     <Esc>:tabnew<CR>
+
+" gist mappings
+nnoremap <leader>gl :Gist -l<CR>
 
 " git.io/vai8m
 function! MyFollowSymlink(...)

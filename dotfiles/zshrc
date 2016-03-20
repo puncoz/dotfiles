@@ -1,4 +1,4 @@
-source $HOME/.zprezto/init.zsh
+source ~/.zprezto/init.zsh
 
 # paths
 BIN_DIR=$HOME/bin
@@ -56,7 +56,13 @@ command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
 command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 
 # aliases
-source $HOME/.zsha
+source ~/.zsha
 
 # functions
-source $HOME/.zshf
+source ~/.zshf
+
+# preztorc
+source ~/.zpreztorc
+
+# work aliases
+source ~/.worka
