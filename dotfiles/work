@@ -1,0 +1,25 @@
+function testlogs(){ awslogs get --watch docker/test }
+function prodlogs(){ awslogs get --watch docker/prod }
+
+# testing-one
+alias ssht1='ssh ubuntu@52.16.11.86'
+
+# testing-two
+alias ssht2='ssh ubuntu@52.18.79.179'
+
+# salt-master
+alias sshsm='ssh ubuntu@saltmaster.lock8.me'
+
+# production-workers
+alias sshpw='ssh ubuntu@54.154.235.63'
+
+# production-1
+alias sshp1='ssh ubuntu@52.48.103.144'
+
+alias envd='envdir envdir/'
+alias tmn='envd ptw velodrome -- --testmon -s -p no:sugar'
+alias etv='vim $TMUXINATORDIR/vdrome.yml'
+alias px='envd py.test -x -vv'
+alias pks='envd py.test -ks'
+alias rdb='envd ./manage.py drop_test_database --noinput'
+alias tv='tmuxinator vdrome'
