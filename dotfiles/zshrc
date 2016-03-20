@@ -1,5 +1,25 @@
 source $HOME/.zprezto/init.zsh
 
+# paths
+BIN_DIR=$HOME/bin
+LOCAL_DIR=$HOME/local/bin
+DOT_LOCAL_DIR=$HOME/.local/bin
+RVM_DIR=$HOME/.rvm/bin
+RVM_DIR2=$HOME/.rvm/gems/ruby-*/bin/*
+NVM_DIR=$HOME/.nvm
+PYENV_ROOT=$HOME/.pyenv
+
+# path exports
+PATH+=$PATH
+if [ -d "$RVM_DIR" ]; then PATH+=:$RVM_DIR; fi
+if [ -d "$RVM_DIR2" ]; then PATH+=:$RVM_DIR2; fi
+if [ -d "$DOT_LOCAL_DIR" ]; then PATH+=:$DOT_LOCAL_DIR; fi
+if [ -d "$BIN_DIR" ]; then PATH+=:$BIN_DIR; fi
+if [ -d "$LOCAL_DIR" ]; then PATH+=:$LOCAL_DIR; fi
+if [ -d "$NVM_DIR" ]; then PATH+=$NVM_DIR; fi
+if [ -d "$PYENV_ROOT" ]; then PATH+=$PYENV_ROOT; fi
+export PATH
+
 # editor
 export EDITOR="vim"
 export USE_EDITOR=$EDITOR
@@ -26,10 +46,11 @@ export PROJECT_HOME=$HOME/Devel
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# automatic reminders
-command -v remind >/dev/null 2>&1 && remind -h ~/.reminders || {
-    echo "'remind' program is not installed" >&2;
-}
+# remind
+command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
+
+# nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # pyenv
 command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"

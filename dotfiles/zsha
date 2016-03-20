@@ -34,6 +34,7 @@ alias ei='vim ~/.irssi/config'
 alias ez='vim ~/.zshrc'
 alias ea='vim ~/.zsha'
 alias ef='vim ~/.zshf'
+alias ezp='vim ~/.zprestorc'
 
 # fzf
 alias vo='vim $(fzf)'
