@@ -1,20 +1,20 @@
 ## Books
-Goliath: Life and Loathing in Greater Israel
-Rubicon: The Last Years of the Roman Republic
-What is Anarchist Communism
-Why Civil Resistance works
-Coders at Work
+- Goliath: Life and Loathing in Greater Israel
+- Rubicon: The Last Years of the Roman Republic
+- What is Anarchist Communism
+- Why Civil Resistance works
+- Coders at Work
 
 
 ## Authors
-James Baldwin
-John Ralston Saul
-Leo Victor Panitch
-Sabah Alnasseri
-Karl Popper
-Slavoj Žižek
+- James Baldwin
+- John Ralston Saul
+- Leo Victor Panitch
+- Sabah Alnasseri
+- Karl Popper
+- Slavoj Žižek
 
 ## Miscellaneous
-Michel Thomas Biography
-https://en.wikipedia.org/wiki/Banco_%28novel%29
-A book about how trees work
+- Michel Thomas Biography
+- https://en.wikipedia.org/wiki/Banco_%28novel%29
+- A book about how trees work
