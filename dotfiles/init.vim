@@ -70,7 +70,6 @@ set completeopt=menuone,preview,noinsert
 set wrap!
 set incsearch
 set ignorecase
-set encoding=utf-8
 set textwidth=0
 set nobackup
 set nowritebackup
@@ -165,7 +164,8 @@ let g:ctrlp_extensions = ['funky', 'tag']
 " }
 
 " deo-plete {
-let g:deoplete#enable_at_startup=1
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
 " }
 
 " neomake {
@@ -190,7 +190,7 @@ au FileType * setlocal formatoptions-=cro
 
 " jedi mappings/settings {
 let g:jedi#usages_command=""
-let g:jedi#popup_select_first=0
+let g:jedi#popup_select_first=1
 let g:jedi#use_tabs_not_buffers=1
 let g:jedi#show_call_signatures="2"
 let g:jedi#auto_close_doc=1
