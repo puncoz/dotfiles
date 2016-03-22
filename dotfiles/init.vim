@@ -2,7 +2,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
 Plug 'tomasr/molokai'
-
 " python
 Plug 'Raimondi/delimitMate'
 Plug 'hynek/vim-python-pep8-indent'
@@ -94,6 +93,8 @@ nnoremap <leader>pc :PlugClean <CR>
 
 " git gutter, going big
 let g:gitgutter_max_signs=10000
+let g:gitgutter_realtime=1
+let g:gitgutter_eager=1
 
 " vim-fugitive mappings {
 nnoremap <silent> <leader>gd :Gdiff<CR>
@@ -165,11 +166,28 @@ let g:jedi#rename_command = "<leader>pr"
 let g:vim_isort_map = '<C-i>'
 
 " tab mappings
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-t>     <Esc>:tabnew<CR>
+nnoremap <C-t> :tabnew<CR>
+inoremap <C-t> <Esc>:tabnew<CR>
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" close scratch window when getting into insert mode
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " gist mappings
 nnoremap <leader>gl :Gist -l<CR>
+
+" ultisnip mappings
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsListSnippets="<c-k>"
+
+" escape parens
+inoremap <C-e> <C-o>a
+inoremap <C-d> <C-o>A
 
 " git.io/vai8m
 function! MyFollowSymlink(...)
