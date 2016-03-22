@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
 Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
 
 " python
 Plug 'Raimondi/delimitMate'
@@ -62,6 +63,9 @@ imap jk <Esc>
 colorscheme molokai
 set background=dark
 
+" colorscheme solarized
+" let g:solarized_termcolors=256
+
 " options galore
 set number
 set cursorline
@@ -97,11 +101,29 @@ set relativenumber
 set nohlsearch
 
 " terminal mode mappings
-tnoremap jk <C-\><C-n>
-tnoremap <C-w>h <C-\><C-n><C-w>h
-tnoremap <C-w>j <C-\><C-n><C-w>j
-tnoremap <C-w>k <C-\><C-n><C-w>k
-tnoremap <C-w>l <C-\><C-n><C-w>l
+if exists(':tnoremap')  " Neovim
+  tnoremap jk <C-\><C-n>
+  tnoremap <C-h> <C-\><C-n><C-w>h
+  tnoremap <C-j> <C-\><C-n><C-w>j
+  tnoremap <C-k> <C-\><C-n><C-w>k
+  tnoremap <C-l> <C-\><C-n><C-w>l
+
+  " exit.
+  tnoremap jk <C-\><C-n>
+
+  " <c-space> does not work (https://github.com/neovim/neovim/issues/3101).
+  tnoremap <C-@> <C-\><C-n>:tab sp<cr>:startinsert<cr>
+
+  let g:terminal_scrollback_buffer_size = 100000  " current max
+
+  nnoremap <Leader>cx :vsp \| :term envdir envdir ptw velodrome -- --testmon<cr>
+  nnoremap <Leader>cX :vsp \| :term envdir envdir ptw velodrome -- --testmon<space>
+
+  augroup vimrc_term
+    au!
+    autocmd! BufEnter term://* startinsert
+  augroup END
+endif
 
 " python specific
 syntax enable
