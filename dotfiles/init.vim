@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
 Plug 'tomasr/molokai'
+
 " python
 Plug 'Raimondi/delimitMate'
 Plug 'hynek/vim-python-pep8-indent'
@@ -47,6 +48,9 @@ Plug 'benekastah/neomake'
 " manipulation
 Plug 'tpope/vim-commentary'
 
+" quickfix
+Plug 'tpope/vim-unimpaired'
+
 call plug#end()
 
 let mapleader = ","
@@ -84,7 +88,7 @@ match ErrorMsg '\%>79v.\+'
 autocmd BufWritePre * StripWhitespace
 
 " edit/save $MYVIMRC conveniently
-nnoremap <leader>ev :split $MYVIMRC<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " vim-plug mappings
@@ -136,8 +140,14 @@ let g:deoplete#enable_at_startup=1
 " }
 
 " neomake {
-let g:neomake_python_enabled_maker = ['flake8', 'pep8', 'mccabe']
+let g:neomake_python_enabled_makers = ['pylama']
 let g:neomake_open_list=1
+let g:neomake_list_height=6
+
+nnoremap <leader>qc :lclose<CR>
+nnoremap <leader>qo :lopen<CR>
+
+autocmd! BufWritePost * Neomake
 " }
 
 " supertab
@@ -188,6 +198,13 @@ let g:UltiSnipsListSnippets="<c-k>"
 " escape parens
 inoremap <C-e> <C-o>a
 inoremap <C-d> <C-o>A
+
+" ultisnips {
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsListSnippets="<c-k>"
+" }
 
 " git.io/vai8m
 function! MyFollowSymlink(...)
