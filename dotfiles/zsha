@@ -35,6 +35,7 @@ alias ez='vim ~/.zshrc'
 alias ea='vim ~/.zsha'
 alias ef='vim ~/.zshf'
 alias ezp='vim ~/.zpreztorc'
+alias ewa='vim ~/.worka'
 
 # fzf
 alias vo='vim $(fzf)'
