@@ -1,3 +1,5 @@
+set nocompatible
+
 call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
@@ -64,9 +66,36 @@ set background=dark
 set number
 set cursorline
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc,/.venv/*
-set laststatus=2
 set completeopt=menuone,preview,noinsert
 set wrap!
+set incsearch
+set ignorecase
+set encoding=utf-8
+set textwidth=0
+set nobackup
+set nowritebackup
+set noswapfile
+set history=999
+set backspace=indent,eol,start
+set ruler
+set showmode
+set laststatus=2
+set scrolloff=10
+set ch=2
+set hlsearch
+set gdefault
+set hidden
+set whichwrap+=<,>,[,]
+set wildmenu
+set title
+set ttyfast
+set virtualedit=onemore
+set fileencodings=.
+set spelllang=en_gb
+set foldmethod=indent
+set foldlevel=99
+set relativenumber
+set nohlsearch
 
 " terminal mode mappings
 tnoremap jk <C-\><C-n>
