@@ -18,7 +18,7 @@ alias sshp1='ssh ubuntu@52.48.103.144'
 
 alias envd='envdir envdir/'
 alias tmn='envd ptw velodrome -- --testmon -p no:sugar'
-alias etv='vim $TMUXINATORDIR/vdrome.yml'
+alias etv='vim ~/.tmuxinator/vdrome.yml'
 alias px='envd py.test -x -vv'
 alias pks='envd py.test -sk'
 alias rdb='envd ./manage.py drop_test_database --noinput'
