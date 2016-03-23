@@ -279,7 +279,8 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
-let g:test#runner_commands = ['pytest']
+let g:test#python#runner='pytest'
+let test#strategy = "neovim"
 " }
 
 " git.io/vai8m
