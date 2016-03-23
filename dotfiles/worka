@@ -23,3 +23,7 @@ alias px='envd py.test -x -vv'
 alias pks='envd py.test -sk'
 alias rdb='envd ./manage.py drop_test_database --noinput'
 alias tv='tmuxinator vdrome'
+
+# work specific, but good for now
+pyenv shell 3.5.0
+nvm use --silent v5.5.0

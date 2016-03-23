@@ -6,12 +6,18 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 
-" python
+" haskell
+Plug 'neovimhaskell/haskell-vim'
+Plug 'eagletmt/neco-ghc'
+
+" programming
 Plug 'Raimondi/delimitMate'
-Plug 'hynek/vim-python-pep8-indent'
-Plug 'davidhalter/jedi-vim'
-Plug 'gotcha/vimpdb'
-Plug 'fisadev/vim-isort'
+
+" python
+Plug 'hynek/vim-python-pep8-indent', {'for' : ['python']}
+Plug 'davidhalter/jedi-vim', {'for' : ['python']}
+Plug 'gotcha/vimpdb', {'for' : ['python']}
+Plug 'fisadev/vim-isort', {'for' : ['python']}
 
 " git
 Plug 'airblade/vim-gitgutter'
@@ -42,7 +48,7 @@ Plug 'mattn/webapi-vim'
 
 " completions
 Plug 'Shougo/deoplete.nvim'
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips',
 Plug 'honza/vim-snippets'
 
 " static analysis
@@ -67,6 +73,9 @@ set background=dark
 " let g:solarized_termcolors=256
 
 " options galore
+syntax on
+filetype plugin indent on
+
 set number
 set cursorline
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc,/.venv/*
@@ -256,6 +265,9 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsListSnippets="<c-k>"
 " }
+
+" specify python
+let g:python_host_prog='/home/lwm/.pyenv/shims/python'
 
 " git.io/vai8m
 function! MyFollowSymlink(...)
