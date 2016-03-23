@@ -16,14 +16,47 @@ alias sshpw='ssh ubuntu@54.154.235.63'
 # production-1
 alias sshp1='ssh ubuntu@52.48.103.144'
 
-alias envd='envdir envdir/'
-alias tmn='envd ptw velodrome -- --testmon -p no:sugar'
+alias tmn='ptw velodrome -- --testmon -p no:sugar'
 alias etv='vim ~/.tmuxinator/vdrome.yml'
-alias px='envd py.test -x -vv'
-alias pks='envd py.test -sk'
-alias rdb='envd ./manage.py drop_test_database --noinput'
+alias px='py.test -x -vv'
+alias pks='py.test -sk'
+alias rdb='./manage.py drop_test_database --noinput'
 alias tv='tmuxinator vdrome'
 
-# work specific, but good for now
+# not very work specific, but good for now
 pyenv shell 3.5.0
 nvm use --silent v5.5.0
+
+# envdir replacement
+export BROKER_AWS_ACCESS_KEY_ID=abc
+export DJANGO_BROKER_AWS_SECRET_ACCESS_KEY=abc
+export DJANGO_SETTINGS_MODULE=velodrome.settings
+export DJANGO_SOCIAL_AUTH_LOCK8_GOOGLE_OAUTH2_SECRET=abc
+export BROKER_AWS_SECRET_ACCESS_KEY=abc
+export DJANGO_CONFIGURATION=Dev
+export DJANGO_SOCIAL_AUTH_FACEBOOK_KEY=abc
+export DJANGO_SOCIAL_AUTH_NOA_FACEBOOK_OAUTH2_KEY=abc
+export CACHE_URL=locmem://travis
+export DJANGO_GCM_API_KEY=abc
+export DJANGO_SOCIAL_AUTH_FACEBOOK_SECRET=abc
+export DJANGO_SOCIAL_AUTH_NOA_FACEBOOK_OAUTH2_SECRET=abc
+export DATABASE_URL=postgis://lock8:lock8@localhost:5432/velodrome
+export DJANGO_MANDRILL_API_KEY=abc
+export DJANGO_SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=abc
+export DJANGO_SOCIAL_AUTH_NOA_GOOGLE_OAUTH2_KEY=abc
+export DJANGO_APNS_CERTIFICATE=abc
+export DJANGO_MEDIA_URL=http://127.0.0.1:8000/
+export DJANGO_SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=abc
+export DJANGO_SOCIAL_AUTH_NOA_GOOGLE_OAUTH2_SECRET=abc
+export DJANGO_AWS_ACCESS_KEY_ID=abc
+export DJANGO_OPBEAT_SECRET_TOKEN=abc
+export DJANGO_SOCIAL_AUTH_LOCK8_FACEBOOK_OAUTH2_KEY=abc
+export DJANGO_STATIC_ROOT=/tmp/velodrome
+export DJANGO_AWS_SECRET_ACCESS_KEY=abc
+export DJANGO_PINAX_STRIPE_SECRET_KEY=0123456789abcdefghipqrstuvwxyz
+export DJANGO_SOCIAL_AUTH_LOCK8_FACEBOOK_OAUTH2_SECRET=abc
+export DJANGO_TELIT_PASSWORD=abc
+export DJANGO_BROKER_AWS_ACCESS_KEY_ID=abc
+export DJANGO_SECRET_KEY=abc
+export DJANGO_SOCIAL_AUTH_LOCK8_GOOGLE_OAUTH2_KEY=abc
+export DJANGO_TELIT_USERNAME=abc

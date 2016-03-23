@@ -12,6 +12,7 @@ Plug 'eagletmt/neco-ghc'
 
 " programming
 Plug 'Raimondi/delimitMate'
+Plug 'janko-m/vim-test'
 
 " python
 Plug 'hynek/vim-python-pep8-indent', {'for' : ['python']}
@@ -125,8 +126,8 @@ if exists(':tnoremap')  " Neovim
 
   let g:terminal_scrollback_buffer_size = 100000  " current max
 
-  nnoremap <Leader>cx :vsp \| :term envdir envdir ptw velodrome -- --testmon<cr>
-  nnoremap <Leader>cX :vsp \| :term envdir envdir ptw velodrome -- --testmon<space>
+  nnoremap <Leader>cx :vsp \| :term ptw velodrome -- --testmon<cr>
+  nnoremap <Leader>cX :vsp \| :term ptw velodrome -- --testmon<space>
 
   augroup vimrc_term
     au!
@@ -266,8 +267,20 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsListSnippets="<c-k>"
 " }
 
-" specify python
+" haskell
+let g:necoghc_enable_detailed_browse=1
+
+" specify python (relies on setup in ~/.worka
 let g:python_host_prog='/home/lwm/.pyenv/shims/python'
+
+" vim-test {
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+let g:test#runner_commands = ['pytest']
+" }
 
 " git.io/vai8m
 function! MyFollowSymlink(...)

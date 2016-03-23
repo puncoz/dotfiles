@@ -1,39 +1,16 @@
 # ~/.tmuxinator/vdrome.yml
-
 name: vdrome
 root: ~/work/lock8/velodrome
 
-# Optional tmux socket
-# socket_name: foo
+pre: mkdir -p /tmp/images /tmp/velodrome
+post: rm -rf /tmp/velodrome /tmp/images
 
-# Runs before everything. Use it to start daemons etc.
-pre: mkdir -p /tmp/images && mkdir -p /tmp/velodrome
-
-# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: tomate && aenv && clear
-
-# Pass command line options to tmux. Useful for specifying a different tmux.conf.
-# tmux_options: -f ~/.tmux.mac.conf
-
-# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
-# tmux_command: byobu
-
-# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: cli
-
-# Controls whether the tmux session should be attached to automatically. Defaults to true.
-# attach: false
-
-# Runs after everything. Use it to attach to tmux with custom options etc.
-post: rm -rf ~/tmp/velodrome && rm -rf /tmp/images
-
 windows:
   - code:
-    layout: 309c,159x51,0,0{98x51,0,0,0,60x51,99,0,6}
     panes:
       - vim
-      - #empty
   - cli:
     - #empty
   - server:
-    - envd ./manage.py runserver
+    - ./manage.py runserver
