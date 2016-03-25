@@ -76,6 +76,7 @@ alias gl='git log'
 alias gcp='git cherry-pick'
 alias .a='git add . --all'
 alias .c='git add --all && git commit -v'
+alias gm='git merge --ff-only'
 
 # tmux
 alias ta='tmux attach -t'
