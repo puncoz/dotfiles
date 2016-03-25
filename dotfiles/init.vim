@@ -5,6 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 " colorschemes
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 
 " haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -67,7 +68,7 @@ let mapleader = ","
 imap jk <Esc>
 
 " colorschemes
-colorscheme molokai
+colorscheme gruvbox
 set background=dark
 
 " colorscheme solarized
