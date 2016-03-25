@@ -8,18 +8,19 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 
 " haskell
-Plug 'neovimhaskell/haskell-vim'
-Plug 'eagletmt/neco-ghc'
+Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
+Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
+Plug 'jaspervdj/stylish-haskell', {'for': 'haskell'}
 
 " programming
 Plug 'Raimondi/delimitMate'
 Plug 'janko-m/vim-test'
 
 " python
-Plug 'hynek/vim-python-pep8-indent', {'for' : ['python']}
-Plug 'davidhalter/jedi-vim', {'for' : ['python']}
-Plug 'gotcha/vimpdb', {'for' : ['python']}
-Plug 'fisadev/vim-isort', {'for' : ['python']}
+Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
+Plug 'gotcha/vimpdb', {'for': 'python'}
+Plug 'fisadev/vim-isort', {'for': 'python'}
 
 " git
 Plug 'airblade/vim-gitgutter'
@@ -41,10 +42,10 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-surround'
 
-" GNU/Linux utils
+" gnu/linux utils
 Plug 'vim-utils/vim-man'
 
-" Github
+" github
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 
@@ -139,8 +140,11 @@ endif
 " python specific
 syntax enable
 let python_highlight_all = 1
-set number showmatch
-set shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent
+autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
+
+" haskell specific
+autocmd FileType haskell set tabstop=8|set shiftwidth=4|set expandtab
+vnoremap <leader>sh %!stylish-haskell<CR>
 
 " highlight characters past 79 chars
 match ErrorMsg '\%>79v.\+'
@@ -203,6 +207,7 @@ let g:deoplete#enable_smart_case = 1
 
 " neomake {
 let g:neomake_python_enabled_makers = ['pylama']
+let g:neomake_haskell_enabled_makers = ['ghcmod', 'hdevtools', 'hlint']
 let g:neomake_open_list=1
 let g:neomake_list_height=6
 
