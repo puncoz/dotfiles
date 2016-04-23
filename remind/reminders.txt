@@ -1,1 +1,2 @@
-REM May 5th MSG Find a dentist!%
+REM May   2th  MSG Find a dentist.%
+REM April 27th MSG Apartment viewing at 8pm.%
