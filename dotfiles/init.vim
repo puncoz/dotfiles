@@ -144,7 +144,7 @@ autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 
 " haskell specific
 autocmd FileType haskell set tabstop=8|set shiftwidth=4|set expandtab
-vnoremap <leader>sh %!stylish-haskell<CR>
+nnoremap <leader>sh %!stylish-haskell<CR>
 
 " highlight characters past 79 chars
 match ErrorMsg '\%>79v.\+'
