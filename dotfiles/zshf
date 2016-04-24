@@ -21,8 +21,8 @@ function x (){
 }
 
 function docker-cleanup(){
-    docker rmi $(docker ps -qa)
-    docker rmi $(docker images -qa)
+    docker stop $(docker ps -qa) && docker rmi -f $(docker ps -qa)
+    docker rmi -f $(docker images -qa)
 }
 
 function getpr(){
