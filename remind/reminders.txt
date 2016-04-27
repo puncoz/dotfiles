@@ -1,4 +1,3 @@
-REM April 27    MSG Dentist appointment at 14.30%
-REM April 27    MSG Apartment viewing at 4pm: wg-gesucht.de/en/5536261.html%
+REM April 28    MSG Apartment viewing: wg-gesucht.de/en/5536261.html%
 REM April 27    MSG Apartment viewing at 8.20pm: wg-gesucht.de/5537445.html%
 REM May   12 +5 MSG Syrian visions (Heimathafen)%
