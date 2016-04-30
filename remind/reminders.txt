@@ -1,4 +1,2 @@
-REM April 30    MSG Message Marc and see if I got the apartment%
-REM April 30    MSG House viewing 2.15pm: ???%
 REM May   05 +1 MSG OpenTech Summit 09:00am on the 5th%
 REM May   12 +5 MSG Syrian visions (Heimathafen)%
