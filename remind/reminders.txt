@@ -1,6 +1,4 @@
 REM May   17 +9 MSG Alice is back in Berlin! Prepare!%
-REM May   02 +2 MSG Get a german translator for dentist%
 REM May   02    MSG Protest! facebook.com/events/1171346179576482/%
-REM May   02    MSG Dentist appointment at 09:00%
 REM May   05 +1 MSG OpenTech Summit 09:00am on the 5th%
 REM May   12 +5 MSG Syrian visions (Heimathafen)%
