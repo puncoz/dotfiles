@@ -1,20 +1,8 @@
 function testlogs(){ awslogs get --watch docker/test }
 function prodlogs(){ awslogs get --watch docker/prod }
 
-# testing-one
-alias ssht1='ssh ubuntu@52.16.11.86'
-
-# testing-two
-alias ssht2='ssh ubuntu@52.18.79.179'
-
 # salt-master
 alias sshsm='ssh ubuntu@saltmaster.lock8.me'
-
-# production-workers
-alias sshpw='ssh ubuntu@54.154.235.63'
-
-# production-1
-alias sshp1='ssh ubuntu@52.48.103.144'
 
 alias tmn='ptw velodrome -- --testmon -p no:sugar'
 alias etv='vim ~/.tmuxinator/vdrome.yml'
@@ -29,6 +17,7 @@ pyenv shell 3.5.0
 nvm use --silent v5.5.0
 
 # envdir replacement
+# face palm ...
 export BROKER_AWS_ACCESS_KEY_ID=abc
 export DJANGO_BROKER_AWS_SECRET_ACCESS_KEY=abc
 export DJANGO_SETTINGS_MODULE=velodrome.settings
