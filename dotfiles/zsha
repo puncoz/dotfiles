@@ -85,6 +85,7 @@ alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias tg='tmuxinator ghc'
+alias tdf='tnew default'
 
 # movement
 alias dotf='cd ~/dotfiles/dotfiles'
