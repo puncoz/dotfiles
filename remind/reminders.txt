@@ -1,4 +1,5 @@
-REM May   17 +9 MSG Alice is back in Berlin! Prepare!%
-REM May   08 +1 MSG Mother's day!%
-REM May   05 +1 MSG OpenTech Summit 09:00am on the 5th%
-REM May   12 +5 MSG Syrian visions (Heimathafen)%
+REM May   09    MSG Dentist appointment X 2%
+REM May   12    MSG Charles arriving!%
+REM May   12    MSG Syrian visions; Heimathafen; 19:00%
+REM May   13    MSG Moa arriving!%
+REM May   30    MSG Paulo arriving!%
