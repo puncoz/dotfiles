@@ -1,5 +1,5 @@
-REM May   09    MSG Dentist appointment X 2%
+REM May   09    MSG Dentist appointment X 2 (13:00, 20:00)%
 REM May   12    MSG Charles arriving!%
 REM May   12    MSG Syrian visions; Heimathafen; 19:00%
-REM May   13    MSG Moa arriving!%
+REM May   13    MSG Moa arriving - call at 11am%
 REM May   30    MSG Paulo arriving!%
