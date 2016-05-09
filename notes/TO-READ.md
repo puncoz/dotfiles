@@ -5,7 +5,6 @@
 - Why Civil Resistance works
 - Coders at Work
 
-
 ## Authors
 - James Baldwin
 - John Ralston Saul
@@ -18,3 +17,4 @@
 - Michel Thomas Biography
 - https://en.wikipedia.org/wiki/Banco_%28novel%29
 - A book about how trees work
+- A book about DIY + cement
