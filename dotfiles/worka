@@ -12,6 +12,8 @@ alias pks='py.test -sk'
 alias rdb='./manage.py drop_test_database --noinput'
 alias tv='tmuxinator vdrome'
 
+alias dmg='./manage.py migrate'
+
 # not very work specific, but good for now
 pyenv shell 3.5.0
 nvm use --silent v5.5.0
