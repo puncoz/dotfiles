@@ -29,7 +29,7 @@ function getpr(){
     git fetch upstream pull/$1/head:"pr_$1"
     git checkout "pr_$1"
 }
-function gr(){
+function grh(){
     git rebase -i HEAD~$1
 }
 function f (){
