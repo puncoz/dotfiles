@@ -17,13 +17,16 @@ done
 for f in *; do
   if [[ $f = "config" ]] ;
   then
+    # put `config` in `~/.irssi/config
     ln -s $(realpath ./$f) ~/.irssi/$f
     file ~/.irssi/$f
   elif [[ $f = "init.vim" ]] ;
   then
+    # put `init.vim` in ~/.config/nvim/init.vim
     ln -s $(realpath ./$f) ~/.config/nvim/$f
     file ~/.config/nvim/$f
   else
+    # stick everything else in ~/ as a dotfile
     ln -s $(realpath ./$f) ~/.$f
     file ~/.$f
   fi
