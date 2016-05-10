@@ -276,9 +276,6 @@ let g:UltiSnipsListSnippets="<c-k>"
 " haskell
 let g:necoghc_enable_detailed_browse=1
 
-" specify python (relies on setup in ~/.worka
-let g:python_host_prog='/home/lwm/.pyenv/shims/python'
-
 " vim-test {
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
