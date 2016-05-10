@@ -1,6 +1,6 @@
 source ~/.zprezto/init.zsh
 
-# paths
+# path exports
 BIN_DIR=$HOME/bin
 LOCAL_DIR=$HOME/local/bin
 DOT_LOCAL_DIR=$HOME/.local/bin
@@ -9,15 +9,14 @@ RVM_DIR2=$HOME/.rvm/gems/ruby-*/bin/*
 NVM_DIR=$HOME/.nvm
 PYENV_ROOT=$HOME/.pyenv
 
-# path exports
 PATH+=$PATH
-if [ -d "$RVM_DIR" ]; then PATH+=:$RVM_DIR; fi
-if [ -d "$RVM_DIR2" ]; then PATH+=:$RVM_DIR2; fi
+if [ -d "$RVM_DIR" ];       then PATH+=:$RVM_DIR; fi
+if [ -d "$RVM_DIR2" ];      then PATH+=:$RVM_DIR2; fi
 if [ -d "$DOT_LOCAL_DIR" ]; then PATH+=:$DOT_LOCAL_DIR; fi
-if [ -d "$BIN_DIR" ]; then PATH+=:$BIN_DIR; fi
-if [ -d "$LOCAL_DIR" ]; then PATH+=:$LOCAL_DIR; fi
-if [ -d "$NVM_DIR" ]; then PATH+=$NVM_DIR; fi
-if [ -d "$PYENV_ROOT" ]; then PATH+=$PYENV_ROOT; fi
+if [ -d "$BIN_DIR" ];       then PATH+=:$BIN_DIR; fi
+if [ -d "$LOCAL_DIR" ];     then PATH+=:$LOCAL_DIR; fi
+if [ -d "$NVM_DIR" ];       then PATH+=$NVM_DIR; fi
+if [ -d "$PYENV_ROOT" ];    then PATH+=$PYENV_ROOT; fi
 export PATH
 
 # editor
@@ -36,15 +35,10 @@ export PYTHONDONTWRITEBYTECODE=True
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
+
 [ -e /usr/bin/virtualenvwrapper.sh ]       && source /usr/bin/virtualenvwrapper.sh
 [ -e /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 [ -e ~/.local/bin/virtualenvwrapper.sh ]   && source ~/.local/bin/virtualenvwrapper.sh
-
-# rvm
-[ -f ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # remind
 command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
@@ -55,17 +49,12 @@ command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
 # pyenv
 command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 
-# autoenv
+# third party sourcing
 [ -f ~/.autoenv/activate.sh ] && source ~/.autoenv/activate.sh
+[ -f ~/.rvm/scripts/rvm ]     && source ~/.rvm/scripts/rvm
+[ -f ~/.fzf.zsh ]             && source ~/.fzf.zsh
 
-# aliases
-source ~/.zsha
-
-# functions
-source ~/.zshf
-
-# preztorc
-source ~/.zpreztorc
-
-# work aliases
-source ~/.worka
+# dotfile sourcing
+[ -f ~/.zsha ]                && source ~/.zsha
+[ -f ~/.zshf ]                && source ~/.zshf
+[ -f ~/.zpreztorc ]           && source ~/.zpreztorc
