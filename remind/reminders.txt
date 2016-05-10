@@ -1,4 +1,4 @@
-REM May   09    MSG Dentist appointment X 2 (13:00, 20:00)%
+REM May   13    MSG Dentist appointment 13:00%
 REM May   12    MSG Charles arriving!%
 REM May   12    MSG Syrian visions; Heimathafen; 19:00%
 REM May   13    MSG 'Building a movement against the war in Syria' on tonight at 18.30pm%
