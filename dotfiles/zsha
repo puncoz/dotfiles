@@ -7,7 +7,9 @@ alias erm='vim ~/dotfiles/remind/reminders.txt'
 alias rem='remind ~/.reminders'
 alias p8='ping 8.8.8.8'
 alias s='ls'
-alias g='grep -iR'
+alias g='grep -i'
+alias gR='grep -iR'
+alias gig='grep -iv'
 
 # piping
 alias -g L='| less'
@@ -29,7 +31,6 @@ alias aptsh='apt-cache show'
 # vim
 alias vim='nvim'
 alias ev='vim ~/.config/nvim/init.vim'
-alias etg='vim $TMUXINATORDIR/ghc.yml'
 alias et='vim ~/.tmux.conf'
 alias ei='vim ~/.irssi/config'
 alias ez='vim ~/.zshrc'
