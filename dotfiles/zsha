@@ -91,3 +91,14 @@ alias tdf='tnew default'
 
 # movement
 alias dotf='cd ~/dotfiles/dotfiles'
+
+# work
+alias tmn='ptw velodrome -- --testmon -p no:sugar'
+alias etv='vim ~/.tmuxinator/vdrome.yml'
+alias px='py.test -x'
+alias pxv='py.test -x -vv'
+alias pks='py.test -sk'
+alias rdb='./manage.py drop_test_database --noinput'
+alias tv='tmuxinator vdrome'
+alias dmg='./manage.py migrate'
+alias sshsm='ssh ubuntu@saltmaster.lock8.me'
