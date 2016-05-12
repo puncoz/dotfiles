@@ -23,9 +23,6 @@ zstyle ':prezto:load' pmodule \
 # Set the key mapping style to 'emacs' or 'vi'
 zstyle ':prezto:module:editor' key-bindings 'vi'
 
-# %v - virtualenv name
-zstyle ':prezto:module:python:info:virtualenv' format 'virtualenv:%v'
-
 # Auto convert .... to ../..
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
