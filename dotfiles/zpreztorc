@@ -12,12 +12,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'ruby' \
   'git' \
-  'haskell' \
-  'python' \
-  'tmux' \
-  'archive' \
   'prompt'
 
 # Set the key mapping style to 'emacs' or 'vi'

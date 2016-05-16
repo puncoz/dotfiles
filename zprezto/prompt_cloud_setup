@@ -49,7 +49,7 @@ function prompt_cloud_setup {
     'rprompt' ''
 
   # define prompts.
-  PROMPT='%B%F{$primary_color}${prompt_char}%f%b  %B%F{$secondary_color}%c%f%b ${git_info:+${(e)git_info[prompt]}} '
+  PROMPT='%B%F{$secondary_color}%c%f%b ${git_info:+${(e)git_info[prompt]}} %B%F{$primary_color}${prompt_char}%f%b '
   RPROMPT=''
 }
 
