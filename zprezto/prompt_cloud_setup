@@ -9,6 +9,16 @@ function prompt_cloud_precmd {
   if (( $+functions[git-info] )); then
       git-info
   fi
+
+  # get ruby information
+  if (( $+functions[ruby-info] )); then
+      ruby-info
+  fi
+
+  # get nvm information
+  if (( $+functions[node-info] )); then
+      node-info
+  fi
 }
 
 function prompt_cloud_help {
@@ -48,9 +58,15 @@ function prompt_cloud_setup {
     'prompt' '%b%C%D' \
     'rprompt' ''
 
+  # set ruby-info parameters
+  zstyle ':prezto:module:ruby:info:version' format '%F{blue}[%v]%f'
+
+  # set the nvm-info parameters
+  zstyle ':prezto:module:node:info:version' format ' node:%F{green}%v%f'
+
   # define prompts.
   PROMPT='%B%F{$secondary_color}%c%f%b ${git_info:+${(e)git_info[prompt]}} %B%F{$primary_color}${prompt_char}%f%b '
-  RPROMPT=''
+  RPROMPT='%B$node_info[version] %B$ruby_info[version]'
 }
 
 prompt_cloud_setup "$@"

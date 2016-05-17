@@ -13,6 +13,8 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'git' \
+  'ruby' \
+  'node' \
   'prompt'
 
 # Set the key mapping style to 'emacs' or 'vi'
