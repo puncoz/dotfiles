@@ -12,6 +12,9 @@ Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
 Plug 'jaspervdj/stylish-haskell', {'for': 'haskell'}
 
+" elm
+Plug 'lambdatoast/elm.vim', {'for': 'elm'}
+
 " programming
 Plug 'Raimondi/delimitMate'
 Plug 'janko-m/vim-test'
