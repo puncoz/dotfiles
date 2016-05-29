@@ -279,9 +279,15 @@ let g:UltiSnipsListSnippets="<c-k>"
 " }
 
 " easymotion {
-let g:EasyMotion_leader_key = '<space>'
+nmap <space> <Plug>(easymotion-s)
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_upper = 1
+
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionShade  Comment
+hi link EasyMotionTarget2First MatchParen
+hi link EasyMotionTarget2Second MatchParen
+hi link EasyMotionMoveHL Search
 " }
 
 " haskell
