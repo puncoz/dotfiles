@@ -85,7 +85,7 @@ filetype plugin indent on
 set number
 set cursorline
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc,/.venv/*
-set completeopt=menuone,preview,noinsert
+set completeopt=menuone,preview
 set wrap!
 set incsearch
 set ignorecase
@@ -205,6 +205,7 @@ let g:ctrlp_extensions = ['funky', 'tag']
 
 " deo-plete {
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_smart_case = 1
 " }
 
@@ -222,6 +223,7 @@ autocmd! BufWritePost * Neomake
 
 " supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabLongestHighlight = 1
 
 " delimitMate correction for triple quotes
 au FileType python let b:delimitMate_nesting_quotes = ['"']
