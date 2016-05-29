@@ -278,6 +278,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsListSnippets="<c-k>"
 " }
 
+" easymotion {
+let g:EasyMotion_leader_key = '<space>'
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_upper = 1
+" }
+
 " haskell
 let g:necoghc_enable_detailed_browse=1
 
