@@ -3,6 +3,7 @@ alias cenv='python -m venv .venv'
 alias aenv='. .venv/bin/activate'
 
 # miscellaneous
+alias pnm='sudo pkill NetworkManager'
 alias erm='vim ~/dotfiles/remind/reminders.txt'
 alias rem='remind ~/.reminders'
 alias p8='ping 8.8.8.8'
@@ -94,6 +95,7 @@ alias tdf='tnew default'
 alias dotf='cd ~/dotfiles/dotfiles'
 
 # work
+alias rtm='rdb && tmn'
 alias tmn='ptw velodrome -- --testmon -x -p no:sugar'
 alias etv='vim ~/.tmuxinator/vdrome.yml'
 alias px='py.test -x'
