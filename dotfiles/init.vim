@@ -3,8 +3,6 @@ set nocompatible
 call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
-Plug 'tomasr/molokai'
-Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 
 " haskell
@@ -74,9 +72,6 @@ imap jk <Esc>
 " colorschemes
 colorscheme gruvbox
 set background=dark
-
-" colorscheme solarized
-" let g:solarized_termcolors=256
 
 " options galore
 syntax on
