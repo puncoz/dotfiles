@@ -97,6 +97,7 @@ alias dotf='cd ~/dotfiles/dotfiles'
 # work
 alias rtm='rdb && tmn'
 alias tmn='ptw velodrome -- --testmon -x -p no:sugar'
+alias tmnp='ptw velodrome -- --testmon -x -p no:sugar --pdb'
 alias etv='vim ~/.tmuxinator/vdrome.yml'
 alias px='py.test -x'
 alias pxv='py.test -x -vv'
