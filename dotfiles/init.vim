@@ -109,6 +109,8 @@ set foldmethod=indent
 set foldlevel=99
 set relativenumber
 set nohlsearch
+set listchars=tab:»·,trail:·,eol:¬,nbsp:_,extends:»,precedes:«
+set list
 
 " terminal mode mappings
 if exists(':tnoremap')  " Neovim
