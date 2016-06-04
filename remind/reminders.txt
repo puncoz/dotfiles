@@ -1,3 +1,6 @@
+REM June  09    MSG 'The Joy of Jupyter Notebooks' meetup.%
+REM June  07    MSG Die Linke meetup.%
+REM June  06    MSG Skype Paulo.%
 REM June  06    MSG First arrival of Ruth's social worker.%
 REM June  11    MSG http://www.langenachtderwissenschaften.de/%
 REM June  18    MSG Mo and Ruth taking off to west cork.%
