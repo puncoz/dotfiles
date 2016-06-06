@@ -1,3 +1,4 @@
+REM June  06    MSG Meet Michael at 12:00%
 REM June  09    MSG 'The Joy of Jupyter Notebooks' meetup.%
 REM June  07    MSG Die Linke meetup.%
 REM June  06    MSG Skype Paulo.%
