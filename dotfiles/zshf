@@ -42,3 +42,8 @@ function f(){
     # find things fast
     sudo find . -iname "*$1*"
 }
+
+function clearenv(){
+    # kill all the packages for pip
+    pip freeze | xargs pip uninstall -y
+}
