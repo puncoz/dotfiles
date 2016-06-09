@@ -54,4 +54,6 @@ function installpyenv(){
     export PATH="/home/lwm/.pyenv/bin:$PATH"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
+    clear
+    pyenv --version
 }
