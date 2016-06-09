@@ -1,9 +1,4 @@
-REM June  06    MSG Skype Paulo.%
-REM June  06    MSG First arrival of Ruth's social worker.%
-REM June  07    MSG Meet Michael at 12:00%
-REM June  07    MSG Die Linke meetup.%
-REM June  09    MSG 'The Joy of Jupyter Notebooks' meetup.%
-REM June  11    MSG http://www.langenachtderwissenschaften.de/%
-REM June  18    MSG Mo and Ruth taking off to west cork.%
-REM June  18    MSG Big family bash in Cork%
-REM July  16    MSG Lauren landing in Ireland%
+REM June  11    +1 MSG http://www.langenachtderwissenschaften.de/%
+REM June  18    +1 MSG Mo and Ruth taking off to west cork.%
+REM June  18    +1 MSG Big family bash in Cork%
+REM July  16    +1 MSG Lauren landing in Ireland%
