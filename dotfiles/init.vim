@@ -111,6 +111,7 @@ set relativenumber
 set nohlsearch
 set listchars=tab:»·,trail:·,eol:¬,nbsp:_,extends:»,precedes:«
 set list
+set tabstop=2
 
 " terminal mode mappings
 if exists(':tnoremap')  " Neovim
