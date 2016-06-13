@@ -1,3 +1,4 @@
+REM July  07    +1 MSG Tech talks: http://nextgen.academy/de/home/.%
 REM June  14       MSG Hit Schufa office!%
 REM June  16       MSG Schufa should have arrived.%
 REM June  18    +2 MSG Prepare: Dresden landscape mission.%
