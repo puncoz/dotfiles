@@ -1,6 +1,6 @@
 # ~/.tmuxinator/vdrome.yml
 name: vdrome
-root: ~/work/lock8/velodrome
+root: ~/work/noa/velodrome
 
 pre: mkdir -p /tmp/images /tmp/velodrome
 post: rm -rf /tmp/velodrome /tmp/images
