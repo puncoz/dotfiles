@@ -54,9 +54,17 @@ command -v pyenv >/dev/null 2>&1 && pyenv shell 3.5.0
 # third party sourcing
 [ -f ~/.autoenv/activate.sh ] && source ~/.autoenv/activate.sh
 [ -f ~/.rvm/scripts/rvm ]     && source ~/.rvm/scripts/rvm
+
+
 [ -f ~/.fzf.zsh ]             && source ~/.fzf.zsh
+export FZF_COMPLETION_TRIGGER='X'
+export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
 
 # dotfile sourcing
 [ -f ~/.zsha ]                && source ~/.zsha
 [ -f ~/.zshf ]                && source ~/.zshf
 [ -f ~/.zpreztorc ]           && source ~/.zpreztorc
+
+# still get incremental search with 'vi' keys
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
