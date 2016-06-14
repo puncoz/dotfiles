@@ -8,9 +8,10 @@ post: rm -rf /tmp/velodrome /tmp/images
 startup_window: cli
 windows:
   - code:
-    panes:
-      - vim
+    - vim
   - cli:
     - #empty
   - server:
     - ./manage.py runserver
+  - todo:
+    - vim -c "Gist -l"
