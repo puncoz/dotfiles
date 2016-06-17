@@ -329,3 +329,6 @@ function! MyFollowSymlink(...)
 endfunction
 command! -bar FollowSymlink call MyFollowSymlink()
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
+
+" elm.vim mappings
+let g:elm_format_autosave = 1
