@@ -59,14 +59,14 @@ function prompt_cloud_setup {
     'rprompt' ''
 
   # set ruby-info parameters
-  zstyle ':prezto:module:ruby:info:version' format '%F{blue}[%v]%f'
+  zstyle ':prezto:module:ruby:info:version' format '%F{green}[%v]%f'
 
   # set the nvm-info parameters
-  zstyle ':prezto:module:node:info:version' format ' node:%F{green}%v%f'
+  zstyle ':prezto:module:node:info:version' format '%F{green}[node-%F{green}%v%f%F{green}]'
 
   # define prompts.
-  PROMPT='%B%F{$secondary_color}%c%f%b ${git_info:+${(e)git_info[prompt]}} %B%F{$primary_color}${prompt_char}%f%b '
-  RPROMPT='%B$node_info[version] %B$ruby_info[version]'
+  PROMPT='%B%F{$secondary_color}[%c]%f%b${git_info:+${(e)git_info[prompt]}} %B%F{$primary_color}${prompt_char}%f%b '
+  RPROMPT='%B$node_info[version]%B$ruby_info[version]'
 }
 
 prompt_cloud_setup "$@"
