@@ -1,4 +1,4 @@
-:set prompt "\x03BB> "
+:set prompt "\x03BB "
 :set +m
 :set +t
 :def hoogle \s -> return $ ":! hoogle --count=15 \"" ++ s ++ "\""
