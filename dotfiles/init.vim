@@ -68,6 +68,9 @@ Plug 'tpope/vim-commentary'
 " quickfix
 Plug 'tpope/vim-unimpaired'
 
+" EditorConfig
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 let mapleader = ","
@@ -115,7 +118,8 @@ set relativenumber
 set nohlsearch
 set listchars=tab:»·,trail:·,eol:¬,nbsp:_,extends:»,precedes:«
 set list
-set tabstop=2
+set expandtab
+set smartindent
 
 " terminal mode mappings
 if exists(':tnoremap')  " Neovim
