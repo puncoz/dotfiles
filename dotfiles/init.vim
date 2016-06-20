@@ -13,6 +13,10 @@ Plug 'jaspervdj/stylish-haskell', {'for': 'haskell'}
 " elm
 Plug 'lambdatoast/elm.vim', {'for': 'elm'}
 
+" javascript
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+
 " programming
 Plug 'Raimondi/delimitMate'
 Plug 'janko-m/vim-test'
