@@ -146,13 +146,10 @@ if exists(':tnoremap')  " Neovim
   augroup END
 endif
 
-" python specific
-syntax enable
-let python_highlight_all = 1
-autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
+" @TODO
+let python_highlight_all=1
 
-" haskell specific
-autocmd FileType haskell set tabstop=8|set shiftwidth=4|set expandtab
+" @TODO
 nnoremap <leader>sh %!stylish-haskell<CR>
 
 " highlight characters past 79 chars
@@ -281,8 +278,8 @@ let g:UltiSnipsListSnippets="<c-k>"
 
 " easymotion {
 nmap <space> <Plug>(easymotion-s)
-let g:EasyMotion_smartcase = 1
-let g:EasyMotion_use_upper = 1
+let g:EasyMotion_smartcase=1
+let g:EasyMotion_use_upper=1
 
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
