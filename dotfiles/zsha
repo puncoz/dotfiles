@@ -47,6 +47,7 @@ alias vo='vim $(fzf)'
 alias sz='source ~/.zshrc'
 
 # git
+alias grim='git rebase -i --root master'
 alias grm='git rebase master'
 alias grc='git rebase --continue'
 alias grA='git rebase --abort'
