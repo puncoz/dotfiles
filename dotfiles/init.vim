@@ -338,5 +338,14 @@ endfunction
 command! -bar FollowSymlink call MyFollowSymlink()
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
 
-" elm.vim mappings
+" elm.vim {
 let g:elm_format_autosave = 1
+" }
+
+" javascript.vim {
+let g:javascript_enable_domhtmlcss=1
+" }
+
+" Makefile {
+autocmd FileType make setlocal tabstop=2 noexpandtab
+" }
