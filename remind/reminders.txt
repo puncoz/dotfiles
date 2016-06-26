@@ -1,6 +1,3 @@
-REM June  19       MSG AnnotatorJS Video Meeting at 9pm%
-REM June  20       MSG Mesosphere meetup tonight @7pm: bit.ly/1ruGYDe%
-REM June  21    +1 MSG Berlin Elm-Hackathon @7pm bit.ly/1tBZ3kQ%
-REM June  24    +3 MSG 48hours NK this weekend%
 REM July  07    +1 MSG Tech talks: http://nextgen.academy/de/home/%
+REM June  27       MSG Figure out dates to enter here: theleftberlin.wordpress.com/2016/06/22/a-whole-load-of-coming-meetings-and-demos/
 REM July  16    +1 MSG Lauren landing in Ireland%
