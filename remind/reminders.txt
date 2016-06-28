@@ -1,3 +1,4 @@
+REM June  29       MSG Figure out dates to enter here: theleftberlin.wordpress.com/2016/06/22/a-whole-load-of-coming-meetings-and-demos/
 REM July  07    +1 MSG Tech talks: http://nextgen.academy/de/home/%
-REM June  27       MSG Figure out dates to enter here: theleftberlin.wordpress.com/2016/06/22/a-whole-load-of-coming-meetings-and-demos/
 REM July  16    +1 MSG Lauren landing in Ireland%
+REM June  30       MSG Metting: oad testing with locust running a deployment which we know will break taking machines in/out of service manually
