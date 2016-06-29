@@ -1,4 +1,5 @@
-REM June  29       MSG Figure out dates to enter here: theleftberlin.wordpress.com/2016/06/22/a-whole-load-of-coming-meetings-and-demos/
+REM June  29       MSG 6pm, Palestine Ltd: goo.gl/maps/gFttt3296TQ2
+REM July  04       MSG Today: http://www.linksfraktion.de/termine/frieden-statt-nato/
 REM July  07    +1 MSG Tech talks: http://nextgen.academy/de/home/%
+REM July  11       MSG https://theleftberlin.wordpress.com/coming-events/eamonn-mccann-on-the-left-in-ireland-socialists-and-parliament/
 REM July  16    +1 MSG Lauren landing in Ireland%
-REM June  30       MSG Metting: oad testing with locust running a deployment which we know will break taking machines in/out of service manually
