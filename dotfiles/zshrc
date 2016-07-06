@@ -68,3 +68,6 @@ export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
 # still get incremental search with 'vi' keys
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
+
+# get bash style comments
+setopt interactivecomments
