@@ -1,5 +1,5 @@
 # python
-alias cenv='python3.4 -m venv .venv'
+alias cenv='python -m venv .venv'
 alias aenv='. .venv/bin/activate'
 
 # miscellaneous
