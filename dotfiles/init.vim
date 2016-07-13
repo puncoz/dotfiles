@@ -13,6 +13,9 @@ Plug 'jaspervdj/stylish-haskell', {'for': 'haskell'}
 " elm
 Plug 'lambdatoast/elm.vim', {'for': 'elm'}
 
+" docker
+Plug 'ekalinin/Dockerfile.vim'
+
 " javascript
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
@@ -26,6 +29,10 @@ Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'gotcha/vimpdb', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
+Plug 'tweekmonster/braceless.vim'
+
+" django
+Plug 'tweekmonster/django-plus.vim'
 
 " git
 Plug 'airblade/vim-gitgutter'
@@ -346,3 +353,7 @@ let g:javascript_enable_domhtmlcss=1
 " Makefile {
 autocmd FileType make setlocal tabstop=2 noexpandtab
 " }
+
+" braceless.vim {
+autocmd FileType python BracelessEnable +indent +fold +highlight
+"}
