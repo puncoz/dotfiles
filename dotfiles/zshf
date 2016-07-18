@@ -57,3 +57,12 @@ function installpyenv(){
     clear
     pyenv --version
 }
+
+function getpy35env(){
+    python3.5 -m venv .venv --without-pip
+    aenv
+    wget https://bootstrap.pypa.io/get-pip.py
+    python get-pip.py
+    rm -f get-pip.py
+    aenv
+}
