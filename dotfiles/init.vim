@@ -29,7 +29,7 @@ Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'gotcha/vimpdb', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
-Plug 'tweekmonster/braceless.vim'
+" Plug 'tweekmonster/braceless.vim'
 
 " django
 Plug 'tweekmonster/django-plus.vim'
@@ -355,5 +355,5 @@ autocmd FileType make setlocal tabstop=2 noexpandtab
 " }
 
 " braceless.vim {
-autocmd FileType python BracelessEnable +indent +fold +highlight
+" autocmd FileType python BracelessEnable +indent +fold +highlight
 "}
