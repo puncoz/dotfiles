@@ -1,0 +1,5 @@
+REM July   +1 23 MSG Spain%
+REM August    01 MSG Mo/Ruth arriving%
+REM August    04 MSG Enter details for internet contract%
+REM August +5 05 MSG Budapest%
+REM August +5 08 MSG Copenhagen%
