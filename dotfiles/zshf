@@ -66,3 +66,7 @@ function getpy35env(){
     rm -f get-pip.py
     aenv
 }
+
+function pkp(){
+    py.test -skv $1 --pdb
+}
