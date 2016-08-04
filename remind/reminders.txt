@@ -1,3 +1,2 @@
-REM August    03 MSG Haskell meetup at 7pm%
-REM August +1 04 MSG Enter details for internet contract%
-REM August +1 09 MSG Electricity guy arriving at 7am%
+REM Semptember +1  03 MSG MesosCon meetup 7pm%
+REM August     +1  09 MSG Electricity guy arriving at 7am%
