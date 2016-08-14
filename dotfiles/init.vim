@@ -131,6 +131,7 @@ set background=dark
 " options galore {
 syntax on
 filetype plugin indent on
+set spell
 set number
 set cursorline
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc,/.venv/*
