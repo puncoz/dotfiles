@@ -361,3 +361,6 @@ let g:javascript_enable_domhtmlcss=1
 " Makefile {
 autocmd FileType make setlocal tabstop=2 noexpandtab
 " }
+
+" strip all that whitespace
+autocmd BufWritePre * StripWhitespace
