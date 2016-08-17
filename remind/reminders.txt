@@ -1,4 +1,2 @@
-REM August     +1  09 MSG Electricity guy arriving at 7am%
-REM August     +1  17 MSG Haskell meetup 7pm%
 REM August     +1  27 MSG NixOS meetup 8pm%
 REM September  +1  03 MSG MesosCon meetup 7pm%
