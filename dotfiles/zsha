@@ -1,6 +1,7 @@
 # python
 alias cenv='python -m venv .venv'
 alias aenv='. .venv/bin/activate'
+alias pdev='pip install -r requirements/dev.txt'
 
 # miscellaneous
 alias pnm='sudo pkill NetworkManager'
@@ -60,7 +61,7 @@ alias gi='git init'
 alias gs='git status -sb'
 alias ga='git add'
 alias gap='git add --patch'
-alias gb='git branch'
+alias gb='git branch -v'
 alias gow='git show'
 alias gbD='git branch -D'
 alias gc='git commit -v'
