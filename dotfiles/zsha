@@ -2,6 +2,7 @@
 alias cenv='python -m venv .venv'
 alias aenv='. .venv/bin/activate'
 alias pdev='pip install -r requirements/dev.txt'
+alias killpyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
 # miscellaneous
 alias pnm='sudo pkill NetworkManager'
@@ -12,6 +13,7 @@ alias s='ls'
 alias g='grep -i'
 alias gR='grep -iR'
 alias gig='grep -iv'
+alias rmf='rm -rf'
 
 # piping
 alias -g L='| less'
