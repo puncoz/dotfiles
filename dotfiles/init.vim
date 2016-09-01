@@ -209,7 +209,7 @@ nnoremap <leader>pc :PlugClean <CR>
 let g:gitgutter_max_signs=10000
 let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
-let g:gitgutter_highlight_lines=1
+" let g:gitgutter_highlight_lines=1
 " }
 
 " vim-fugitive mappings {
