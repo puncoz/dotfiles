@@ -1,3 +1,0 @@
-REM August     +1  31 MSG CODE screening%
-REM August     +1  27 MSG NixOS meetup 8pm%
-REM September  +1  03 MSG MesosCon meetup 7pm%
