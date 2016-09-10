@@ -63,6 +63,7 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 " programming
 Plug 'Raimondi/delimitMate'
 Plug 'janko-m/vim-test'
+Plug 'Yggdroot/indentLine'
 
 " python
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
@@ -365,3 +366,9 @@ autocmd FileType make setlocal tabstop=2 noexpandtab
 
 " strip all that whitespace
 autocmd BufWritePre * StripWhitespace
+
+" indentline {
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#09AA08'
+let g:indentLine_char = '┆'
+" }
