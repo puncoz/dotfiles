@@ -256,9 +256,15 @@ let g:deoplete#enable_smart_case=1
 
 " neomake {
 let g:neomake_python_enabled_makers=['pylama']
-let g:neomake_haskell_enabled_makers=['ghcmod', 'hdevtools', 'hlint']
+
+" would be great to use `hdevtools` but so far, it doesn't have great
+" integration with stack. Slow and old ghc-mod will have to do for now.
+let g:neomake_haskell_enabled_makers=['ghcmod', 'hlint']
+
 let g:neomake_open_list=1
 let g:neomake_list_height=6
+let g:neomake_verbose=1
+let g:neomake_logfile='/tmp/neomake.log'
 nnoremap <leader>qc :lclose<CR>
 nnoremap <leader>qo :lopen<CR>
 autocmd! BufWritePost * Neomake
@@ -372,3 +378,4 @@ let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '┆'
 " }
+
