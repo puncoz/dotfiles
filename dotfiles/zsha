@@ -97,6 +97,10 @@ alias tkill='tmux kill-session -t'
 alias tg='tmuxinator ghc'
 alias tdf='tnew default'
 
+# haskell
+alias ghc='stack exec -- ghc'
+alias ghci='stack exec -- ghci'
+
 # movement
 alias dotf='cd ~/dotfiles/dotfiles'
 
