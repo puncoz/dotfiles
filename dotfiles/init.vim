@@ -259,6 +259,7 @@ let g:neomake_python_enabled_makers=['pylama']
 
 " would be great to use `hdevtools` but so far, it doesn't have great
 " integration with stack. Slow and old ghc-mod will have to do for now.
+" https://github.com/hdevtools/hdevtools/issues/37
 let g:neomake_haskell_enabled_makers=['ghcmod', 'hlint']
 
 let g:neomake_open_list=1
