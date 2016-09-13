@@ -46,7 +46,11 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 
 " haskell
-Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
+
+" Can't use while hacking on `commercialhaskell/stack`
+" It's just too slow ...
+" Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
+
 Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
 Plug 'jaspervdj/stylish-haskell', {'for': 'haskell'}
 
@@ -344,7 +348,11 @@ hi link EasyMotionMoveHL Search
 " }
 
 " neco-ghc {
-let g:necoghc_enable_detailed_browse=1
+
+" https://github.com/eagletmt/neco-ghc#gnecoghc_enable_detailed_browse
+" boot times are crazy for hacking on stack. Setting to 0 for now ...
+let g:necoghc_enable_detailed_browse=0
+
 let g:haskellmode_completion_ghc=0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 " }
