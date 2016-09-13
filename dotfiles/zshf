@@ -70,3 +70,7 @@ function getpy35env(){
 function pkp(){
     py.test -skv $1 --pdb
 }
+
+function gethasktags() {
+  hasktags --ignore-close-implementation --ctags .
+}
