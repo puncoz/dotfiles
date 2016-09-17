@@ -71,6 +71,6 @@ function pkp(){
     py.test -skv $1 --pdb
 }
 
-function gethasktags() {
+function ht() {
   hasktags --ignore-close-implementation --ctags .
 }
