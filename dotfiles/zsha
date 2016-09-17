@@ -103,14 +103,7 @@ alias ghci='stack exec -- ghci'
 # movement
 alias dotf='cd ~/dotfiles/dotfiles'
 
-# work
-alias tmn='ptw velodrome -- --testmon -x --pdb'
-alias etv='vim ~/.tmuxinator/vdrome.yml'
-alias px='py.test -x -vv'
-alias pk='py.test -k'
-alias ps='py.test -s'
-alias mkm='make check && make test && make check_django'
-alias tv='tmuxinator vdrome'
+# django 
 alias dmg='python manage.py migrate'
 alias dmm='python manage.py makemigrations'
 alias drs='python manage.py runserver'
