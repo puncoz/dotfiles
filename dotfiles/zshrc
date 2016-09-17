@@ -1,4 +1,5 @@
 source ~/.zprezto/init.zsh
+source ~/.zshenv
 
 # still get incremental search with 'vi' keys
 bindkey -M viins '^r' history-incremental-search-backward
