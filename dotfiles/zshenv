@@ -18,7 +18,7 @@ if [ -d "$PYENV_ROOT" ];    then PATH+=$PYENV_ROOT; fi
 export PATH
 
 # editor
-export EDITOR="vim"
+export EDITOR="nvim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 

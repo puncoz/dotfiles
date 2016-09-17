@@ -44,7 +44,7 @@ alias ea='$EDITOR ~/.zsha'
 alias ef='$EDITOR ~/.zshf'
 alias ee='$EDITOR ~/.zshenv'
 alias ezp='$EDITOR ~/.zpreztorc'
-alias sz='exec $SHELL'
+alias sz='source ~/.zshrc'
 alias dotf='cd ~/dotfiles/dotfiles'
 
 # fzf
