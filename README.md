@@ -1,6 +1,6 @@
 # dotfiles
 
-Mostly plundered from defenceless Githubbers on the high seas of the internet.
+Mostly plundered from defenceless githubbers on the high seas of the internet.
 
 If you're looking for some inspiration, [look no further][1].
 
