@@ -1,0 +1,67 @@
+# configure $PATH 
+BIN_DIR=$HOME/bin
+LOCAL_DIR=$HOME/local/bin
+DOT_LOCAL_DIR=$HOME/.local/bin
+RVM_DIR=$HOME/.rvm/bin
+RVM_DIR2=$HOME/.rvm/gems/ruby-*/bin/*
+NVM_DIR=$HOME/.nvm
+PYENV_ROOT=$HOME/.pyenv
+
+PATH+=$PATH
+if [ -d "$RVM_DIR" ];       then PATH+=:$RVM_DIR; fi
+if [ -d "$RVM_DIR2" ];      then PATH+=:$RVM_DIR2; fi
+if [ -d "$DOT_LOCAL_DIR" ]; then PATH+=:$DOT_LOCAL_DIR; fi
+if [ -d "$BIN_DIR" ];       then PATH+=:$BIN_DIR; fi
+if [ -d "$LOCAL_DIR" ];     then PATH+=:$LOCAL_DIR; fi
+if [ -d "$NVM_DIR" ];       then PATH+=$NVM_DIR; fi
+if [ -d "$PYENV_ROOT" ];    then PATH+=$PYENV_ROOT; fi
+export PATH
+
+# editor
+export EDITOR="nvim"
+export USE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
+
+# terminal
+export TERM="xterm-256color"
+
+# python
+export PYTHONASYNCIODEBUG=1
+export PYTHONDONTWRITEBYTECODE=True
+
+# virtualenv
+[ -f /usr/bin/virtualenvwrapper.sh ] && source /usr/bin/virtualenvwrapper.sh
+[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
+[ -f ~/.local/bin/virtualenvwrapper.sh ] && source ~/.local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+
+# fzf
+export FZF_COMPLETION_TRIGGER='X'
+export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
+
+# dotfiles
+[ -f ~/.zsha ] && source ~/.zsha
+[ -f ~/.zshf ] && source ~/.zshf
+[ -f ~/.zpreztorc ] && source ~/.zpreztorc
+
+# autoenv 
+[ -f ~/.autoenv/activate.sh ] && source ~/.autoenv/activate.sh
+
+# autoenv
+[ -f ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# remind
+command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
+
+# nvm
+[ -f "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+command -v nvm >/dev/null 2>&1 && nvm use --silent v5.5.0
+
+# pyenv
+command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
+command -v pyenv >/dev/null 3>&1 && pyenv shell 3.5.0
