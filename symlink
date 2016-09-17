@@ -10,7 +10,7 @@ cd $DOTDIR
 for f in *; do
   if [[ $f = "config" ]] ; then rm ~/.irssi/$f 2> /dev/null; fi
   if [[ $f = "init.vim" ]] ; then rm ~/.config/nvim/$f 2> /dev/null; fi
-    rm ~/.$f 2> /dev/null;
+  rm ~/.$f 2> /dev/null;
 done
 
 # symlink all dotfiles
