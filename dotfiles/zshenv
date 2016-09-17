@@ -1,4 +1,4 @@
-# configure $PATH 
+# configure $PATH
 BIN_DIR=$HOME/bin
 LOCAL_DIR=$HOME/local/bin
 DOT_LOCAL_DIR=$HOME/.local/bin
@@ -18,7 +18,7 @@ if [ -d "$PYENV_ROOT" ];    then PATH+=$PYENV_ROOT; fi
 export PATH
 
 # editor
-export EDITOR="nvim"
+export EDITOR="vim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
@@ -46,7 +46,7 @@ export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
 [ -f ~/.zshf ] && source ~/.zshf
 [ -f ~/.zpreztorc ] && source ~/.zpreztorc
 
-# autoenv 
+# autoenv
 [ -f ~/.autoenv/activate.sh ] && source ~/.autoenv/activate.sh
 
 # autoenv

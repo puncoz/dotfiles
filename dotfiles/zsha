@@ -4,6 +4,7 @@ alias aenv='. .venv/bin/activate'
 alias killpyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
 # unix-y
+alias vim='nvim'
 alias pnm='sudo pkill NetworkManager'
 alias p8='ping 8.8.8.8'
 alias s='ls'
