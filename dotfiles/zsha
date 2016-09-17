@@ -1,19 +1,20 @@
 # python
 alias cenv='python -m venv .venv'
 alias aenv='. .venv/bin/activate'
-alias pdev='pip install -r requirements/dev.txt'
 alias killpyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
-# miscellaneous
+# unix-y
 alias pnm='sudo pkill NetworkManager'
-alias erm='$EDITOR ~/dotfiles/remind/reminders.txt'
-alias rem='remind ~/.reminders'
 alias p8='ping 8.8.8.8'
 alias s='ls'
 alias g='grep -i'
 alias gR='grep -iR'
 alias gig='grep -iv'
 alias rmf='rm -rf'
+
+# remind
+alias erm='$EDITOR ~/dotfiles/remind/reminders.txt'
+alias rem='remind ~/.reminders'
 
 # piping
 alias -g L='| less'
@@ -33,7 +34,7 @@ alias apti='sudo apt -y install'
 alias apts='apt-cache search'
 alias aptsh='apt-cache show'
 
-# config 
+# config
 alias ev='$EDITOR ~/.config/nvim/init.vim'
 alias et='$EDITOR ~/.tmux.conf'
 alias ei='$EDITOR ~/.irssi/config'
@@ -42,12 +43,11 @@ alias ea='$EDITOR ~/.zsha'
 alias ef='$EDITOR ~/.zshf'
 alias ee='$EDITOR ~/.zshenv'
 alias ezp='$EDITOR ~/.zpreztorc'
+alias sz='exec $SHELL'
+alias dotf='cd ~/dotfiles/dotfiles'
 
 # fzf
 alias vo='$EDITOR $(fzf)'
-
-# source
-alias sz='source ~/.zshrc'
 
 # git
 alias grim='git rebase -i --root master'
@@ -100,10 +100,7 @@ alias tdf='tnew default'
 alias ghc='stack exec -- ghc'
 alias ghci='stack exec -- ghci'
 
-# movement
-alias dotf='cd ~/dotfiles/dotfiles'
-
-# django 
+# django
 alias dmg='python manage.py migrate'
 alias dmm='python manage.py makemigrations'
 alias drs='python manage.py runserver'
