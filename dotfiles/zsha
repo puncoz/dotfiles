@@ -6,7 +6,7 @@ alias killpyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
 # miscellaneous
 alias pnm='sudo pkill NetworkManager'
-alias erm='vim ~/dotfiles/remind/reminders.txt'
+alias erm='$EDITOR ~/dotfiles/remind/reminders.txt'
 alias rem='remind ~/.reminders'
 alias p8='ping 8.8.8.8'
 alias s='ls'
@@ -33,19 +33,18 @@ alias apti='sudo apt -y install'
 alias apts='apt-cache search'
 alias aptsh='apt-cache show'
 
-# vim
-alias vim='nvim'
-alias ev='vim ~/.config/nvim/init.vim'
-alias et='vim ~/.tmux.conf'
-alias ei='vim ~/.irssi/config'
-alias ez='vim ~/.zshrc'
-alias ea='vim ~/.zsha'
-alias ef='vim ~/.zshf'
-alias ezp='vim ~/.zpreztorc'
-alias ewa='vim ~/.worka'
+# config 
+alias ev='$EDITOR ~/.config/nvim/init.vim'
+alias et='$EDITOR ~/.tmux.conf'
+alias ei='$EDITOR ~/.irssi/config'
+alias ez='$EDITOR ~/.zshrc'
+alias ea='$EDITOR ~/.zsha'
+alias ef='$EDITOR ~/.zshf'
+alias ee='$EDITOR ~/.zshenv'
+alias ezp='$EDITOR ~/.zpreztorc'
 
 # fzf
-alias vo='vim $(fzf)'
+alias vo='$EDITOR $(fzf)'
 
 # source
 alias sz='source ~/.zshrc'
