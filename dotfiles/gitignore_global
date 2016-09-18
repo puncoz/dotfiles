@@ -25,3 +25,5 @@ node_modules/
 tags
 .env
 elm-stuff/
+script.sh
+report.html
