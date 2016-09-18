@@ -1,2 +1,2 @@
-REM October +15  05 MSG Haskell eXchange%
-REM October +15  08 MSG Haskell eXchange Hackathon%
+REM October 05 MSG Haskell eXchange%
+REM October 08 MSG Haskell eXchange Hackathon%
