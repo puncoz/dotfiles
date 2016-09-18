@@ -6,7 +6,7 @@
     autocrlf = false
     safecrlf = true
     excludesfile = ~/.gitignore_global
-    editor = vim
+    editor = nvim
 
 [merge]
     tool = meld
