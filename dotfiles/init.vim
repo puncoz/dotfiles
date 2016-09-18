@@ -262,10 +262,10 @@ let g:deoplete#enable_smart_case=1
 " neomake {
 let g:neomake_python_enabled_makers=['pylama']
 
-" would be great to use `hdevtools` but so far, it doesn't have great
-" integration with stack. Slow and old ghc-mod will have to do for now.
+" It would be great to use `hdevtools` but so far, it doesn't
+" have great integration with stack. Relying on only hlint for now.
 " https://github.com/hdevtools/hdevtools/issues/37
-let g:neomake_haskell_enabled_makers=['ghcmod', 'hlint']
+let g:neomake_haskell_enabled_makers=['hlint']
 
 let g:neomake_open_list=1
 let g:neomake_list_height=6
