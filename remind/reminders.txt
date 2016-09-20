@@ -1,2 +1,3 @@
-REM October 05 MSG Haskell eXchange%
-REM October 08 MSG Haskell eXchange Hackathon%
+REM October   05 MSG Haskell eXchange%
+REM October   08 MSG Haskell eXchange Hackathon%
+REM September 21 MSG http://www.songkick.com/concerts/27389574-yob-at-musik-and-frieden%
