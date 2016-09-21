@@ -43,34 +43,7 @@ function f(){
     sudo find . -iname "*$1*"
 }
 
-function clearenv(){
-    # kill all the packages for pip
-    pip freeze | xargs pip uninstall -y
-}
-
-function installpyenv(){
-    # install pyenv quick and fast
-    curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-    export PATH="/home/lwm/.pyenv/bin:$PATH"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-    clear
-    pyenv --version
-}
-
-function getpy35env(){
-    python3.5 -m venv .venv --without-pip
-    aenv
-    wget https://bootstrap.pypa.io/get-pip.py
-    python get-pip.py
-    rm -f get-pip.py
-    aenv
-}
-
-function pkp(){
-    py.test -skv $1 --pdb
-}
-
 function ht() {
+  # generate haskell CTAGS
   hasktags --ignore-close-implementation --ctags .
 }
