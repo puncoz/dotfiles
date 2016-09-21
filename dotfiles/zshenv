@@ -30,9 +30,6 @@ export PYTHONASYNCIODEBUG=1
 export PYTHONDONTWRITEBYTECODE=True
 
 # virtualenv
-[ -f /usr/bin/virtualenvwrapper.sh ] && source /usr/bin/virtualenvwrapper.sh
-[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
-[ -f ~/.local/bin/virtualenvwrapper.sh ] && source ~/.local/bin/virtualenvwrapper.sh
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
@@ -40,28 +37,3 @@ export PROJECT_HOME=$HOME/Devel
 # fzf
 export FZF_COMPLETION_TRIGGER='X'
 export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
-
-# dotfiles
-[ -f ~/.zsha ] && source ~/.zsha
-[ -f ~/.zshf ] && source ~/.zshf
-[ -f ~/.zpreztorc ] && source ~/.zpreztorc
-
-# autoenv
-[ -f ~/.autoenv/activate.sh ] && source ~/.autoenv/activate.sh
-
-# autoenv
-[ -f ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# remind
-command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
-
-# nvm
-[ -f "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-command -v nvm >/dev/null 2>&1 && nvm use --silent v5.5.0
-
-# pyenv
-command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
-command -v pyenv >/dev/null 3>&1 && pyenv shell 3.5.0

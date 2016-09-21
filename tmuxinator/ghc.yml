@@ -1,9 +1,0 @@
-# ~/.tmuxinator/ghc.yml
-name: ghc
-root: ~/work/contributing/ghc
-
-windows:
-  - ghc-docker-dev:
-    - docker run --rm -i -t -v `pwd`:/home/ghc gregweber/ghc-haskell-dev /bin/bash
-  - code:
-    - clear
