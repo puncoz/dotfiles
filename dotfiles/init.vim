@@ -125,6 +125,9 @@ Plug 'tpope/vim-unimpaired'
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
 
+" Vim misc
+Plug 'takac/vim-hardtime'
+
 call plug#end()
 
 let mapleader=","
@@ -388,4 +391,8 @@ autocmd BufWritePre * StripWhitespace
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '┆'
+" }
+
+" hardmode {
+let g:hardtime_default_on = 1
 " }
