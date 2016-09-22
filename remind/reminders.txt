@@ -1,5 +1,4 @@
-REM September 21 MSG http://www.songkick.com/concerts/27389574-yob-at-musik-and-frieden%
-REM September 24 MSG Theo Parrish in Berlin%
+REM September 24 MSG Theo Parrish at 10pm%
 REM October   05 MSG Haskell eXchange%
 REM October   08 MSG Haskell eXchange Hackathon%
 REM October   14 MSG Poligon hackathon%
