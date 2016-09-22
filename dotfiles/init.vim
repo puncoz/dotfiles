@@ -92,6 +92,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
+Plug 'mhinz/vim-startify'
 
 " motion
 Plug 'ervandew/supertab'
