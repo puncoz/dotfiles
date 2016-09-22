@@ -228,7 +228,7 @@ nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gc :Gcommit --verbose<CR>
 nnoremap <silent> <leader>gam :Gcommit --verbose --amend<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
-nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gL :Glog<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gbw :Gbrowse<CR>
 " }
