@@ -1,5 +1,5 @@
-REM September 24 MSG Theo Parrish at 10pm%
 REM September 28 MSG Haskell night at 7pm%
+REM September 02 MSG Haskell night Berlin%
 REM October   05 MSG Haskell eXchange%
 REM October   08 MSG Haskell eXchange Hackathon%
-REM October   14 MSG Poligon hackathon%
+REM October   14 MSG Haskell night Slovenia%
