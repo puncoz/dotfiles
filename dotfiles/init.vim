@@ -127,6 +127,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Vim misc
 Plug 'takac/vim-hardtime'
+Plug 'vimlab/split-term.vim'
 
 call plug#end()
 
@@ -228,9 +229,13 @@ nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gc :Gcommit --verbose<CR>
 nnoremap <silent> <leader>gam :Gcommit --verbose --amend<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
-nnoremap <silent> <leader>gL :Glog<CR>
+nnoremap <silent> <leader>gL :Git! log<CR>ggw
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gbw :Gbrowse<CR>
+
+" https://blog.mikecordell.com/vim/2014/07/20/quick-fixup-in-vim-with-fugitive.html
+nnoremap <leader>f yiw <ESC>:Git commit --fixup=<C-r>"<CR>
+
 " }
 
 " nerdtree {

@@ -51,6 +51,7 @@ alias dotf='cd ~/dotfiles/dotfiles'
 alias vo='$EDITOR $(fzf)'
 
 # git
+alias git='hub' # experimental/risky
 alias grim='git rebase -i --root master'
 alias grm='git rebase master'
 alias grc='git rebase --continue'
