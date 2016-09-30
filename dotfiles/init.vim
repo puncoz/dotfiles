@@ -405,5 +405,5 @@ let g:indentLine_char = '┆'
 " }
 
 " hardmode {
-let g:hardtime_default_on = 1
+let g:hardtime_default_on=1
 " }
