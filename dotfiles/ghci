@@ -1,4 +1,12 @@
+-- Standard lambda prompt
 :set prompt "\x03BB "
+
+-- Multiple line input
 :set +m
+
+-- Show type of last evaluated expression
 :set +t
-:def hoogle \s -> return $ ":! hoogle --count=15 \"" ++ s ++ "\""
+
+-- http://chrisdone.com/posts/making-ghci-fast
+:set -fobject-code
+-- :set -fno-code
