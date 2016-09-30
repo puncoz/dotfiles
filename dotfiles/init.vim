@@ -246,6 +246,10 @@ let g:nerdtree_tabs_autoclose=1
 let g:nerdtree_tabs_open_on_console_startup=0
 let g:nerdtree_tabs_smart_startup_focus=2
 let g:nerdtree_tabs_startup_cd=1
+
+" http://www.mokacoding.com/blog/nerdtree-relative-numbers/
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
 " }
 
 " ctrl-p {
