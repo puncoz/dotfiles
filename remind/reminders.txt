@@ -1,5 +1,5 @@
-REM September    30 MSG Visit co.up at 10.30am%
 REM October      02 MSG Haskell event Berlin%
+REM October      04 MSG Return the co.up keys%
 REM October      05 MSG Haskell eXchange%
 REM October      08 MSG Haskell eXchange Hackathon%
 REM October   +1 07 MSG Repair visit to Arndtstr.%
