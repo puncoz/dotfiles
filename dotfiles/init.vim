@@ -224,12 +224,14 @@ let g:gitgutter_eager=1
 " }
 
 " vim-fugitive mappings {
-nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gpf :Git push --force<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>gd :Git diff<CR>
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gc :Gcommit --verbose<CR>
 nnoremap <silent> <leader>gam :Gcommit --verbose --amend<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
-nnoremap <silent> <leader>gL :Git! log<CR>ggw
+nnoremap <silent> <leader>gl :Git! log<CR>ggw
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gbw :Gbrowse<CR>
 
