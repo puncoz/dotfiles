@@ -330,7 +330,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " }
 
 " gist {
-nnoremap <leader>gl :Gist -l<CR>
+nnoremap <leader>gt :Gist -c f16fdf2d1efe50379da5<CR>
 " }
 
 " ultisnip {
