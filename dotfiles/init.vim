@@ -179,6 +179,7 @@ set listchars=tab:»·,trail:·,eol:¬,nbsp:_,extends:»,precedes:«
 set list
 set expandtab
 set smartindent
+set clipboard+=unnamedplus
 " }
 
 " terminal mode mappings {
@@ -226,7 +227,7 @@ let g:gitgutter_eager=1
 " vim-fugitive mappings {
 nnoremap <silent> <leader>gpf :Git push --force<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
-nnoremap <silent> <leader>gd :Git diff<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gc :Gcommit --verbose<CR>
 nnoremap <silent> <leader>gam :Gcommit --verbose --amend<CR>
@@ -405,5 +406,8 @@ let g:indentLine_char = '┆'
 " }
 
 " hardmode {
-let g:hardtime_default_on=1
+let g:hardtime_default_on=0
 " }
+
+" HLint hacking
+nnoremap <leader>ht :!hlint test<CR>
