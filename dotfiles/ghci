@@ -1,6 +1,3 @@
--- Standard lambda prompt
-:set prompt "\x03BB "
-
 -- Multiple line input
 :set +m
 
@@ -10,3 +7,20 @@
 -- http://chrisdone.com/posts/making-ghci-fast
 :set -fobject-code
 -- :set -fno-code
+
+-- Enable almost all warnings
+-- Note. This is sometimes too verbose. Useful for own projects.
+-- :set -Wall
+
+-- Make suggestions for misspelled names
+:set -fhelpful-errors
+
+-- Convert typed hole errors into warnings
+:set -XPartialTypeSignatures
+:set -fdefer-typed-holes
+
+-- Standard lambda prompt
+:set prompt "\x03BB "
+
+-- Turn off crazy `:r` import listing
+:set -v0
