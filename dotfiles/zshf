@@ -43,7 +43,13 @@ function f(){
     sudo find . -iname "*$1*"
 }
 
-function ht() {
+function ht(){
   # generate haskell CTAGS
   hasktags --ignore-close-implementation --ctags .
+}
+
+function hpr(){
+  # push a branch and submit a PR
+  git push origin $1
+  git pull-request
 }
