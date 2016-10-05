@@ -1,5 +1,3 @@
-REM October      05 MSG Haskell eXchange%
-REM October      08 MSG Haskell eXchange Hackathon%
 REM October   +1 07 MSG Repair visit to Arndtstr.%
 REM October   +1 10 MSG Repair visit to Arndtstr.%
 REM October      14 MSG Haskell event Slovenia%
