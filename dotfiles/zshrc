@@ -7,6 +7,17 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 # get bash style comments
 setopt interactivecomments
 
+# zsh plugins
+# https://github.com/sorin-ionescu/prezto/blob/master/runcoms/zpreztorc#L25
+zstyle ':prezto:load' pmodule \
+  'directory' \
+  'utility' \
+  'completion' \
+  'git' \
+  'prompt' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+
 # dotfiles
 [ -f ~/.zsha ] && source ~/.zsha
 [ -f ~/.zshf ] && source ~/.zshf
