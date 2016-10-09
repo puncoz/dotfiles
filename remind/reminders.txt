@@ -1,4 +1,4 @@
 REM October   +1 10 MSG E-check @ Arndtstr.%
 REM October   +1 14 MSG Haskell event Slovenia%
-REM October   +1 10 MSG Acid Mother Temple Zagreb%
+REM October   +1 19 MSG Acid Mother Temple Zagreb%
 REM October   +5 28 MSG Zagreb WebCamp%
