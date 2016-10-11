@@ -12,6 +12,7 @@ alias g='grep -i'
 alias gR='grep -iR'
 alias gig='grep -iv'
 alias rmf='rm -rf'
+alias xclip='xclip -selection c'
 
 # remind
 alias erm='$EDITOR ~/dotfiles/remind/reminders.txt'
