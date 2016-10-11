@@ -47,3 +47,9 @@ function ht(){
   # generate haskell CTAGS
   hasktags --ignore-close-implementation --ctags .
 }
+
+function glh(){
+  # get a commit hash into the system clipboard
+  git show "HEAD~$1" --pretty=format:"%h" --no-patch | xclip -selection c
+}
+
