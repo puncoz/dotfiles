@@ -225,16 +225,7 @@ let g:gitgutter_eager=1
 " }
 
 " vim-fugitive mappings {
-nnoremap <silent> <leader>gpf :Git push --force<CR>
-nnoremap <silent> <leader>gp :Git push<CR>
-nnoremap <silent> <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gs :Gstatus<CR>
-nnoremap <silent> <leader>gc :Gcommit --verbose<CR>
-nnoremap <silent> <leader>gam :Gcommit --verbose --amend<CR>
-nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>gl :Git! log<CR>ggw
-nnoremap <silent> <leader>gw :Gwrite<CR>
-nnoremap <silent> <leader>gbw :Gbrowse<CR>
 
 " https://blog.mikecordell.com/vim/2014/07/20/quick-fixup-in-vim-with-fugitive.html
 nnoremap <leader>f yiw <ESC>:Git commit --fixup=<C-r>"<CR>
