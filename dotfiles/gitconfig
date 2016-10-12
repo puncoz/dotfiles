@@ -15,7 +15,7 @@
     helper = cache --timeout=3600
 
 [push]
-    default = matching
+    default = current
 
 [github]
     user = lwm
