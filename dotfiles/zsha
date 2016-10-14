@@ -3,6 +3,10 @@ alias cenv='python -m venv .venv'
 alias aenv='. .venv/bin/activate'
 alias killpyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
+# stack
+alias stw='stack test --file-watch --fast'
+alias sg='stack ghci'
+
 # unix-y
 alias vim='nvim'
 alias pnm='sudo pkill NetworkManager'
