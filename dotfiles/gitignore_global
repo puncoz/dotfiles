@@ -1,3 +1,7 @@
+# defaults
+.env
+.cache/
+tags
 *.class
 *.com
 *.dll
@@ -17,17 +21,24 @@
 *.sql
 *.sqlite
 ._*
-.ropeproject/
+
+# javascript (eek!)
 node_modules/
+
+# python
+.ropeproject/
+dev_*.py
 .env/
 .venv/
-.cache/
-tags
-.env
+
+# elm
 elm-stuff/
-script.sh
+
+# haskell
 report.html
 *.hi
 *.o
 *.hs
-TIME.md
+
+# freelance
+FREE.md
