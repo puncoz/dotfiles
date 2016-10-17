@@ -222,13 +222,10 @@ nnoremap <leader>pc :PlugClean <CR>
 let g:gitgutter_max_signs=10000
 let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
-" let g:gitgutter_highlight_lines=1
 " }
 
-" vim-fugitive mappings {
-nnoremap <silent> <leader>gl :Git! log<CR>ggw
-
 " https://blog.mikecordell.com/vim/2014/07/20/quick-fixup-in-vim-with-fugitive.html
+nnoremap <silent> <leader>gl :Git! log<CR>ggw
 nnoremap <leader>f yiw <ESC>:Git commit --fixup=<C-r>"<CR>
 
 " }
@@ -268,6 +265,11 @@ let g:deoplete#enable_smart_case=1
 " }
 
 " neomake {
+
+let g:neomake_python_pylama_maker = {
+    \ 'args': ['--format', 'pep8', '--ignore', 'W0401'],
+    \ 'errorformat': '%f:%l:%c: %t%m',
+    \ }
 let g:neomake_python_enabled_makers=['pylama']
 
 " It would be great to use `hdevtools` but so far, it doesn't
@@ -326,7 +328,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 nnoremap <leader>gt :Gist -c f16fdf2d1efe50379da5<CR>
 " }
 
-" ultisnip {
+" ultisnips {
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -336,13 +338,6 @@ let g:UltiSnipsListSnippets="<c-k>"
 " escape parens {
 inoremap <C-e> <C-o>a
 inoremap <C-d> <C-o>A
-" }
-
-" ultisnips {
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsListSnippets="<c-k>"
 " }
 
 " easymotion {
@@ -400,6 +395,3 @@ let g:indentLine_char = '┆'
 " hardmode {
 let g:hardtime_default_on=0
 " }
-
-" HLint hacking
-nnoremap <leader>ht :!hlint test<CR>
