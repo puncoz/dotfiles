@@ -75,6 +75,7 @@ Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'gotcha/vimpdb', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
+Plug 'lambdalisue/vim-pyenv', {'for': 'python'}
 
 " django
 Plug 'tweekmonster/django-plus.vim'
