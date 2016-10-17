@@ -112,7 +112,11 @@ alias ghci='stack exec -- ghci'
 alias dmg='python manage.py migrate'
 alias dmm='python manage.py makemigrations'
 alias drs='python manage.py runserver'
+alias dcs='python manage.py createsuperuser'
 alias dsp='python manage.py shell_plus'
+
+# py.test
+alias pt='py.test'
 
 # postgresql
 alias pgs='sudo -u postgres'
