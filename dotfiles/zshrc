@@ -41,6 +41,7 @@ command -v nvm >/dev/null 2>&1 && nvm use --silent v5.5.0
 
 # pyenv
 command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
+command -v pyenv >/dev/null 2>&1 && eval "$(pyenv virtualenv-init -)"
 command -v pyenv >/dev/null 3>&1 && pyenv shell 3.5.0
 
 # virtualenv
