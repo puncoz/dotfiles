@@ -265,7 +265,6 @@ let g:deoplete#enable_smart_case=1
 " }
 
 " neomake {
-
 let g:neomake_python_pylama_maker = {
     \ 'args': ['--format', 'pep8', '--ignore', 'W0401'],
     \ 'errorformat': '%f:%l:%c: %t%m',
@@ -395,3 +394,7 @@ let g:indentLine_char = '┆'
 " hardmode {
 let g:hardtime_default_on=0
 " }
+
+" python
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
