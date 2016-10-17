@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Create PostgreSQL user and database.
+
+read -p "Database name? " db
+sudo -u postgres createdb --echo $db
+
+read -p "User name? " user
+sudo -u postgres createuser --echo --superuser --createdb --pwprompt --createrole $user
