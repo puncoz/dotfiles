@@ -113,3 +113,10 @@ alias dmg='python manage.py migrate'
 alias dmm='python manage.py makemigrations'
 alias drs='python manage.py runserver'
 alias dsp='python manage.py shell_plus'
+
+# postgresql
+alias pgs='sudo -u postgres'
+
+# pyenv
+alias pyv='pyenv virtualenvs'
+alias pya='pyenv activate'
