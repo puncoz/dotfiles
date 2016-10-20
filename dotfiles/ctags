@@ -2,9 +2,6 @@
 --c-kinds=+p
 --c++-kinds=+p
 --python-kinds=-iv
---languages=-json
-
---guess-language-eagerly
 
 --recurse=yes
 --tag-relative=yes
