@@ -101,6 +101,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-surround'
 
+" search
+Plug 'junegunn/vim-slash'
+
 " gnu/linux utils
 Plug 'vim-utils/vim-man'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
