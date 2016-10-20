@@ -67,7 +67,6 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 
 " programming
 Plug 'Raimondi/delimitMate'
-Plug 'janko-m/vim-test'
 Plug 'Yggdroot/indentLine'
 
 " python
@@ -361,16 +360,6 @@ let g:necoghc_enable_detailed_browse=0
 
 let g:haskellmode_completion_ghc=0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-" }
-
-" vim-test {
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
-let g:test#python#runner='pytest'
-let test#strategy="neovim"
 " }
 
 " elm.vim {
