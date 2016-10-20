@@ -28,13 +28,11 @@ export TERM="xterm-256color"
 # python
 export PYTHONASYNCIODEBUG=1
 export PYTHONDONTWRITEBYTECODE=True
-export PYENV_VERSION='3.5.2'
-
-# virtualenv
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
 
 # fzf
 export FZF_COMPLETION_TRIGGER='X'
 export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
+
+# pyenv
+export PYENV_VERSION='3.5.2'
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
