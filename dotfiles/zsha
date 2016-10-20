@@ -55,8 +55,11 @@ alias dotf='cd ~/dotfiles/dotfiles'
 # fzf
 alias vo='$EDITOR $(fzf)'
 
+# hub
+alias git='hub'
+alias gpr='git pull-request'
+
 # git
-alias git='hub' # experimental/risky
 alias grim='git rebase -i --root master'
 alias grm='git rebase master'
 alias grc='git rebase --continue'
@@ -98,11 +101,10 @@ alias gm='git merge --ff-only'
 
 # tmux
 alias ta='tmux attach -t'
-alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias tg='tmuxinator ghc'
-alias tdf='tnew default'
+alias tdf='tmux new -s default -c .'
 
 # haskell
 alias ghc='stack exec -- ghc'

@@ -53,3 +53,7 @@ function glh(){
   git show "HEAD~$1" --pretty=format:"%h" --no-patch | xclip -selection c
 }
 
+function tnew(){
+  # start a new tmux session
+  tmux new -s $1 -c .
+}
