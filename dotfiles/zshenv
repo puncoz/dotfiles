@@ -34,5 +34,7 @@ export FZF_COMPLETION_TRIGGER='X'
 export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
 
 # pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 export PYENV_VERSION='3.5.2'
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
