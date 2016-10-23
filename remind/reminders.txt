@@ -1,4 +1,3 @@
-REM October      24 MSG Off to Milan!%
 REM November  +5 12 MSG Zagreb film festival.%
 REM December  +5 07 MSG Human Rights Film Festival Zagreb.%
 REM January   +3 16 MSG Linux Conf%
