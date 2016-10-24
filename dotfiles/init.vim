@@ -400,7 +400,6 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 " github-issues
 let g:gissues_lazy_load=1
-let g:github_access_token="8237c7db0cc9bc426046ba8dee7fe6512f8904f5"
 
 " silversearcher-ag
 if executable('ag')
