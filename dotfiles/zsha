@@ -98,6 +98,9 @@ alias gcp='git cherry-pick'
 alias .a='git add . --all'
 alias .c='git add --all && git commit -v'
 alias gm='git merge --ff-only'
+alias gS='git stash'
+alias gSa='git stash apply'
+alias gSd='git stash drop'
 
 # tmux
 alias ta='tmux attach -t'
