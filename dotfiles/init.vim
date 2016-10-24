@@ -84,6 +84,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 
+" github
+Plug 'jaxbot/github-issues.vim'
+
 " whitespace trimmer for all file types
 Plug 'ntpeters/vim-better-whitespace'
 
@@ -200,6 +203,10 @@ if exists(':tnoremap')
     autocmd! BufEnter term://* startinsert
   augroup END
 endif
+
+nnoremap <Leader>py :sp \| :term py.test<cr>
+nnoremap <Leader>px :sp \| :term py.test -x<cr>
+nnoremap <Leader>pk :sp \| :term p -k
 " }
 
 " stylish-haskell {
@@ -390,3 +397,14 @@ let g:hardtime_default_on=0
 " python
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
+
+" github-issues
+let g:gissues_lazy_load=1
+let g:github_access_token="8237c7db0cc9bc426046ba8dee7fe6512f8904f5"
+
+" silversearcher-ag
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+  nnoremap \ :Ag<SPACE>
+endif
