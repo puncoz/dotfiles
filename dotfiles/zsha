@@ -101,6 +101,7 @@ alias gm='git merge --ff-only'
 alias gS='git stash'
 alias gSa='git stash apply'
 alias gSd='git stash drop'
+alias gwip='git add . --all && git commit -m "[WIP]"'
 
 # tmux
 alias ta='tmux attach -t'
