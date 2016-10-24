@@ -38,7 +38,6 @@ elm-stuff/
 report.html
 *.hi
 *.o
-*.hs
 
 # freelance
 FREE.md
