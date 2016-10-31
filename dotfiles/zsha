@@ -8,6 +8,7 @@ alias stw='stack test --file-watch --fast'
 alias sg='stack ghci'
 
 # unix-y
+alias vi='nvim'
 alias vim='nvim'
 alias pnm='sudo pkill NetworkManager'
 alias p8='ping 8.8.8.8'
@@ -130,3 +131,7 @@ alias pgs='sudo -u postgres'
 # pyenv
 alias pyv='pyenv virtualenvs'
 alias pya='pyenv activate'
+
+# jekyll
+alias js='jekyll serve --incremental'
+alias jc='jekyll clean'

@@ -407,3 +407,6 @@ if executable('ag')
   nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
   nnoremap \ :Ag<SPACE>
 endif
+
+"
+nnoremap po :pu<CR>A

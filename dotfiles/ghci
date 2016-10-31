@@ -19,6 +19,9 @@
 :set -XPartialTypeSignatures
 :set -fdefer-typed-holes
 
+-- Polymorphic Strings (please!)
+-- :set -XOverloadedStrings
+
 -- Standard lambda prompt
 :set prompt "\x03BB "
 
