@@ -95,7 +95,6 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
-Plug 'mhinz/vim-startify'
 
 " motion
 Plug 'ervandew/supertab'
@@ -408,5 +407,5 @@ if executable('ag')
   nnoremap \ :Ag<SPACE>
 endif
 
-"
-nnoremap po :pu<CR>A
+" source init.vim on the fly
+nnoremap <leader>sv :so ~/.config/nvim/init.vim
