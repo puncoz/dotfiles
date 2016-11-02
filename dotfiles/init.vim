@@ -39,7 +39,6 @@ endfunction
 command! -bar FollowSymlink call MyFollowSymlink()
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
 
-
 call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
@@ -133,6 +132,11 @@ Plug 'editorconfig/editorconfig-vim'
 " Vim misc
 Plug 'takac/vim-hardtime'
 Plug 'vimlab/split-term.vim'
+
+" writing
+Plug 'reedes/vim-wordy'
+Plug 'dbmrq/vim-ditto'
+Plug 'reedes/vim-pencil'
 
 call plug#end()
 
@@ -408,4 +412,21 @@ if executable('ag')
 endif
 
 " source init.vim on the fly
-nnoremap <leader>sv :so ~/.config/nvim/init.vim
+nnoremap <leader>sv :so ~/.config/nvim/init.vim<CR>
+
+" Ditto.vim {
+au FileType markdown,text,tex DittoOn
+" }
+
+" Pencil {
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd,text call pencil#init()
+augroup END
+
+" merge paragraphs and format
+nnoremap <leader>Qa vapJgqap
+
+" format paragraph
+nnoremap <leader>qa gqap
+" }
