@@ -10,21 +10,28 @@ cd $DOTDIR
 for f in *; do
   if [[ $f = "config" ]] ; then rm ~/.irssi/$f 2> /dev/null; fi
   if [[ $f = "init.vim" ]] ; then rm ~/.config/nvim/$f 2> /dev/null; fi
+  if [[ $f = "words" ]] ; then rm ~/.config/nvim/spell/*.add 2> /dev/null; fi
   rm ~/.$f 2> /dev/null;
 done
 
-# symlink all dotfiles
+# symlink all dotfiles (taking care of irregular file paths)
 for f in *; do
   if [[ $f = "config" ]] ;
   then
-    # put `config` in `~/.irssi/config
     ln -s $(realpath ./$f) ~/.irssi/$f
     file ~/.irssi/$f
   elif [[ $f = "init.vim" ]] ;
   then
-    # put `init.vim` in ~/.config/nvim/init.vim
     ln -s $(realpath ./$f) ~/.config/nvim/$f
     file ~/.config/nvim/$f
+  elif [[ $f = "words" ]] ;
+  then
+    # Use same word file for Vim and Ispell
+    ln -s $(realpath ./$f) ~/.config/nvim/spell/en.utf-8.add
+    file ~/.config/nvim/spell/en.utf-8.add
+
+    ln -s $(realpath ./$f) ~/.ispell_british
+    file ~/.ispell_british
   else
     # stick everything else in ~/ as a dotfile
     ln -s $(realpath ./$f) ~/.$f
