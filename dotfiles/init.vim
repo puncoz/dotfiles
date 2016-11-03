@@ -133,10 +133,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'takac/vim-hardtime'
 Plug 'vimlab/split-term.vim'
 
-" writing
+" Writing
 Plug 'reedes/vim-wordy'
-Plug 'dbmrq/vim-ditto'
-Plug 'reedes/vim-pencil'
 
 call plug#end()
 
@@ -191,7 +189,17 @@ set smartindent
 set clipboard+=unnamedplus
 " }
 
-" terminal mode mappings {
+" init.vim source {
+nnoremap <leader>sv :so ~/.config/nvim/init.vim<CR>
+" }
+
+" writing {
+nnoremap <leader>Qa vapJgqap
+nnoremap <leader>qa gqap
+nnoremap <leader>zz 1z=
+" }
+
+" terminal mode {
 if exists(':tnoremap')
   tnoremap jk <C-\><C-n>
   tnoremap <C-h> <C-\><C-n><C-w>h
@@ -210,6 +218,11 @@ endif
 nnoremap <Leader>py :sp \| :term py.test<cr>
 nnoremap <Leader>px :sp \| :term py.test -x<cr>
 nnoremap <Leader>pk :sp \| :term p -k
+" }
+
+" escape parens {
+inoremap <C-e> <C-o>a
+inoremap <C-d> <C-o>A
 " }
 
 " stylish-haskell {
@@ -346,11 +359,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsListSnippets="<c-k>"
 " }
 
-" escape parens {
-inoremap <C-e> <C-o>a
-inoremap <C-d> <C-o>A
-" }
-
 " easymotion {
 nmap <space> <Plug>(easymotion-s)
 let g:EasyMotion_smartcase=1
@@ -410,23 +418,3 @@ if executable('ag')
   nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
   nnoremap \ :Ag<SPACE>
 endif
-
-" source init.vim on the fly
-nnoremap <leader>sv :so ~/.config/nvim/init.vim<CR>
-
-" Ditto.vim {
-au FileType markdown,text,tex DittoOn
-" }
-
-" Pencil {
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd,text call pencil#init()
-augroup END
-
-" merge paragraphs and format
-nnoremap <leader>Qa vapJgqap
-
-" format paragraph
-nnoremap <leader>qa gqap
-" }
