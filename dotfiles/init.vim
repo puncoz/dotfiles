@@ -41,99 +41,49 @@ au BufReadPost * nested call MyFollowSymlink(expand('%'))
 
 call plug#begin('~/.config/nvim/plugged')
 
-" colorschemes
 Plug 'morhetz/gruvbox'
-
-" haskell
-
-" Can't use while hacking on `commercialhaskell/stack`
-" It's just too slow ...
-" Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
-
 Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
 Plug 'jaspervdj/stylish-haskell', {'for': 'haskell'}
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
-
-" elm
 Plug 'lambdatoast/elm.vim', {'for': 'elm'}
-
-" docker
 Plug 'ekalinin/Dockerfile.vim'
-
-" javascript
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-
-" programming
 Plug 'Raimondi/delimitMate'
-Plug 'Yggdroot/indentLine'
-
-" python
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'gotcha/vimpdb', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'lambdalisue/vim-pyenv', {'for': 'python'}
-
-" django
 Plug 'tweekmonster/django-plus.vim'
-
-" git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
-
-" github
 Plug 'jaxbot/github-issues.vim'
-
-" whitespace trimmer for all file types
 Plug 'ntpeters/vim-better-whitespace'
-
-" navigation
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
-
-" motion
 Plug 'ervandew/supertab'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-surround'
-
-" search
 Plug 'junegunn/vim-slash'
-
-" gnu/linux utils
+Plug 'mhinz/vim-grepper'
 Plug 'vim-utils/vim-man'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-
-" github
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
-
-" completions
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'SirVer/ultisnips',
 Plug 'honza/vim-snippets'
-
-" static analysis
 Plug 'benekastah/neomake'
-
-" manipulation
 Plug 'tpope/vim-commentary'
-
-" quickfix
 Plug 'tpope/vim-unimpaired'
-
-" EditorConfig
 Plug 'editorconfig/editorconfig-vim'
-
-" Vim misc
-Plug 'takac/vim-hardtime'
 Plug 'vimlab/split-term.vim'
-
-" Writing
+Plug 'tpope/vim-repeat'
 Plug 'reedes/vim-wordy'
 
 call plug#end()
@@ -187,10 +137,6 @@ set list
 set expandtab
 set smartindent
 set clipboard+=unnamedplus
-" }
-
-" init.vim source {
-nnoremap <leader>sv :so ~/.config/nvim/init.vim<CR>
 " }
 
 " writing {
@@ -249,10 +195,9 @@ let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
 " }
 
-" https://blog.mikecordell.com/vim/2014/07/20/quick-fixup-in-vim-with-fugitive.html
+" https://blog.mikecordell.com/vim/2014/07/20/quick-fixup-in-vim-with-fugitive.html {
 nnoremap <silent> <leader>gl :Git! log<CR>ggw
 nnoremap <leader>f yiw <ESC>:Git commit --fixup=<C-r>"<CR>
-
 " }
 
 " nerdtree {
@@ -295,12 +240,7 @@ let g:neomake_python_pylama_maker = {
     \ 'errorformat': '%f:%l:%c: %t%m',
     \ }
 let g:neomake_python_enabled_makers=['pylama']
-
-" It would be great to use `hdevtools` but so far, it doesn't
-" have great integration with stack. Relying on only hlint for now.
-" https://github.com/hdevtools/hdevtools/issues/37
 let g:neomake_haskell_enabled_makers=['hlint']
-
 let g:neomake_open_list=1
 let g:neomake_list_height=6
 let g:neomake_verbose=1
@@ -316,7 +256,7 @@ let g:SuperTabLongestHighlight=1
 " }
 
 " delimitMate correction for triple quotes {
-au FileType python let b:delimitMate_nesting_quotes=['"']
+au FileType python let b:delimitMate_nesting_quotes=['"', "`"]
 " }
 
 " disable auto commenting {
@@ -348,7 +288,7 @@ map <c-h> <c-w>h
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " }
 
-" gist {
+" gist.vim {
 nnoremap <leader>gt :Gist -c f16fdf2d1efe50379da5<CR>
 " }
 
@@ -370,16 +310,6 @@ hi link EasyMotionTarget2Second MatchParen
 hi link EasyMotionMoveHL Search
 " }
 
-" neco-ghc {
-
-" https://github.com/eagletmt/neco-ghc#gnecoghc_enable_detailed_browse
-" boot times are crazy for hacking on stack. Setting to 0 for now ...
-let g:necoghc_enable_detailed_browse=0
-
-let g:haskellmode_completion_ghc=0
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-" }
-
 " elm.vim {
 let g:elm_format_autosave=1
 " }
@@ -388,22 +318,8 @@ let g:elm_format_autosave=1
 let g:javascript_enable_domhtmlcss=1
 " }
 
-" Makefile {
-autocmd FileType make setlocal tabstop=2 noexpandtab
-" }
-
 " strip all that whitespace
 autocmd BufWritePre * StripWhitespace
-
-" indentline {
-let g:indentLine_color_term = 239
-let g:indentLine_color_gui = '#09AA08'
-let g:indentLine_char = '┆'
-" }
-
-" hardmode {
-let g:hardtime_default_on=0
-" }
 
 " python
 let g:python_host_prog = '/usr/bin/python'
@@ -411,10 +327,3 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 " github-issues
 let g:gissues_lazy_load=1
-
-" silversearcher-ag
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-  nnoremap \ :Ag<SPACE>
-endif
