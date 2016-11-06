@@ -85,6 +85,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'vimlab/split-term.vim'
 Plug 'tpope/vim-repeat'
 Plug 'reedes/vim-wordy'
+Plug 'tpope/vim-sleuth'
 
 call plug#end()
 
