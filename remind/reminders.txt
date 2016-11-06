@@ -1,3 +1,3 @@
-REM November  +5 12 MSG Zagreb film festival.%
-REM December  +5 07 MSG Human Rights Film Festival Zagreb.%
-REM January   +3 16 MSG Linux Conf%
+REM November  +2 12 MSG Zagreb film festival.%
+REM December  +2 07 MSG Human Rights Film Festival Zagreb.%
+REM January   +2 16 MSG Linux Conf%
