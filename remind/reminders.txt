@@ -1,3 +1,4 @@
+REM November     09 MSG Visit Hacklab in Zagreb.%
 REM November  +2 12 MSG Zagreb film festival.%
 REM December  +2 07 MSG Human Rights Film Festival Zagreb.%
 REM January   +2 16 MSG Linux Conf%
