@@ -9,8 +9,9 @@ cd $DOTDIR
 # delete all dotfiles present, suppress stderr
 for f in *; do
   if [[ $f = "config" ]] ; then rm ~/.irssi/$f 2> /dev/null; fi
+  if [[ $f = "config.yaml" ]] ; then rm ~/.stack/$f 2> /dev/null; fi
   if [[ $f = "init.vim" ]] ; then rm ~/.config/nvim/$f 2> /dev/null; fi
-  if [[ $f = "words" ]] ; then rm ~/.config/nvim/spell/*.add 2> /dev/null; fi
+  if [[ $f = "words" ]] ; then rm ~/.config/nvim/spell/*.add && rm ~/.ispell_british 2> /dev/null; fi
   rm ~/.$f 2> /dev/null;
 done
 
@@ -20,6 +21,10 @@ for f in *; do
   then
     ln -s $(realpath ./$f) ~/.irssi/$f
     file ~/.irssi/$f
+  elif [[ $f = "config.yaml" ]] ;
+  then
+    ln -s $(realpath ./$f) ~/.stack/$f
+    file ~/.stack/$f
   elif [[ $f = "init.vim" ]] ;
   then
     ln -s $(realpath ./$f) ~/.config/nvim/$f
