@@ -69,7 +69,6 @@ Plug 'ervandew/supertab'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-surround'
-Plug 'junegunn/vim-slash'
 Plug 'mhinz/vim-grepper'
 Plug 'vim-utils/vim-man'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -328,3 +327,7 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 " github-issues
 let g:gissues_lazy_load=1
+
+" haskell indentation {
+au FileType haskell setl tabstop=4 expandtab softtabstop=2 shiftwidth=2 shiftround
+"}
