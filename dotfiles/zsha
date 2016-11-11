@@ -135,3 +135,7 @@ alias pya='pyenv activate'
 # jekyll
 alias js='jekyll serve --incremental'
 alias jc='jekyll clean'
+
+# dictionary
+alias dg='dict -d gcide'
+alias dt='dict -d moby-thesaurus'
