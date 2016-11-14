@@ -330,7 +330,7 @@ let g:gissues_lazy_load=1
 
 " haskell indentation {
 au FileType haskell setl tabstop=4 expandtab softtabstop=2 shiftwidth=2 shiftround
-"}
+" }
 
 " dictionary mappings {
 nnoremap <Leader>dg :sp \| :term dict -d gcide<space>
