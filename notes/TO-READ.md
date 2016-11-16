@@ -4,9 +4,11 @@
 - What is Anarchist Communism
 - Why Civil Resistance works
 - Coders at Work
+- Clandestine in Chile
 
 ## Authors
 - James Baldwin
+- Alexander Herzen
 - John Ralston Saul
 - Leo Victor Panitch
 - Sabah Alnasseri
