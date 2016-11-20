@@ -1,3 +1,4 @@
-REM                 MSG Practice Romanian!%
-REM December  +2 07 MSG Human Rights Film Festival Zagreb.%
-REM January   +2 16 MSG Linux Conf%
+REM                 MSG Practice Romanian.%
+REM November  +1 26 MSG Pytest sprint, Zagreb .%
+REM December  +1 07 MSG Human Rights Film Festival Zagreb.%
+REM January   +1 16 MSG Linux Conf%
