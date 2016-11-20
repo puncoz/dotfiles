@@ -121,6 +121,8 @@ alias dmm='python manage.py makemigrations'
 alias drs='python manage.py runserver'
 alias dcs='python manage.py createsuperuser'
 alias dsp='python manage.py shell_plus'
+alias dch='python manage.py check'
+alias drd='python manage.py reset_db'
 
 # py.test
 alias pt='py.test'
