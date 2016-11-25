@@ -124,8 +124,9 @@ alias dsp='python manage.py shell_plus'
 alias dch='python manage.py check'
 alias drd='python manage.py reset_db'
 
-# py.test
+# pytest
 alias pt='py.test'
+alias ptw='ptw -- --testmon'
 
 # postgresql
 alias pgs='sudo -u postgres'
