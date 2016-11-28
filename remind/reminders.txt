@@ -1,7 +1,4 @@
 REM                 MSG Practice Romanian.%
-REM November     26 MSG Pytest sprint.%
-REM November     27 MSG Writing meetup.%
-REM November     28 MSG Dentist Appointment.%
 REM December     01 MSG OKFN announcement.%
 REM December  +1 07 MSG Human Rights Film Festival.%
 REM January   +1 16 MSG Linux Conf.%
