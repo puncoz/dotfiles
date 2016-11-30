@@ -138,8 +138,7 @@ alias pyv='pyenv virtualenvs'
 alias pya='pyenv activate'
 
 # jekyll
-alias js='jekyll serve --incremental'
-alias jc='jekyll clean'
+alias js='jekyll clean && jekyll serve --incremental'
 
 # dictionary
 alias dg='dict -d gcide'

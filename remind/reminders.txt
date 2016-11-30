@@ -1,6 +1,5 @@
-REM                 MSG Practice Romanian.%
-REM                 MSG Buy all the present.%
-REM November     29 MSG Skype Dad.%
-REM December     01 MSG OKFN announcement.%
+REM                 MSG Buy all the presents.%
+REM December        MSG Skype Dad.%
+
 REM December  +1 07 MSG Human Rights Film Festival.%
 REM January   +1 16 MSG Linux Conf.%
