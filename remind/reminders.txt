@@ -1,5 +1,2 @@
-REM                 MSG Buy all the presents.%
-REM December        MSG Skype Dad.%
-
 REM December  +1 07 MSG Human Rights Film Festival.%
 REM January   +1 16 MSG Linux Conf.%
