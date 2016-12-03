@@ -1,0 +1,59 @@
+# mutt basics
+set from="lukewm@riseup.net"
+set realname="Luke Murphy"
+set mbox_type=Maildir
+set spoolfile=+/
+set header_cache=~/.cache/mutt
+set editor="nvim -c 'set ft=mail noautoindent spell spelllang=en_gb'"
+
+# mailboxes
+set folder = "~/log"
+set mbox = "~/log/in.mbox"
+set record = "~/log/out.mbox"
+set postponed = "~/log/postponed.mbox"
+
+# riseup config
+
+# receive
+set pop_delete=yes
+set pop_user="lukewm"
+set pop_host="mail.riseup.net"
+set pop_last=yes
+set pop_checkinterval=150
+set ssl_force_tls=yes
+set ssl_starttls=yes
+set smtp_url="smtps://lukewm@riseup.net@mail.riseup.net/"
+set imap_check_subscribed
+
+# sorting
+set sort=reverse-date-received
+set sort_aux=reverse-date-received
+
+# encoding
+set charset=utf-8
+set send_charset=utf-8
+
+# vim bindings
+bind index j next-entry
+bind index k previous-entry
+bind index J next-thread
+bind index K previous-thread
+bind index / search
+bind index n search-next
+bind index N search-opposite
+bind index gg first-entry
+bind index G last-entry
+bind pager j next-line
+bind pager k previous-line
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+
+# misc options
+set text_flowed=yes
+set fast_reply=yes
+set include=yes
+
+# misc bindings
+bind index m fetch-mail
+
+push <show-version>
