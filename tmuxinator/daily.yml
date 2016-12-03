@@ -1,0 +1,13 @@
+# ~/.tmuxinator/daily.yml
+
+name: daily
+root: ~/
+
+startup_window: todo
+
+windows:
+  - todo: vim -c ":Gist -c f16fdf2d1efe50379da5"
+  - irssi: irssi
+  - feeds: newsbeuter
+  - twitter: cd $HOME && . .venv/bin/activate && rainbowstream
+  - email: mutt -f pop://lukewm:$PWORD@mail.riseup.net
