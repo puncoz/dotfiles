@@ -289,7 +289,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " }
 
 " gist.vim {
-nnoremap <leader>gt :Gist -c f16fdf2d1efe50379da5<CR>
+nnoremap <leader>gt :Gist -c f17fdf2d1efe50379da5<CR>
 " }
 
 " ultisnips {
@@ -336,3 +336,6 @@ au FileType haskell setl tabstop=4 expandtab softtabstop=2 shiftwidth=2 shiftrou
 nnoremap <Leader>dg :sp \| :term dict -d gcide<space>
 nnoremap <Leader>dt :sp \| :term dict -d moby-thesaurus<space>
 " }
+
+" mutt (related to text_flowed)
+setlocal fo+=aw

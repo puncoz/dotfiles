@@ -110,8 +110,11 @@ alias gwip='git add . --all && git commit -m "[WIP]"'
 alias ta='tmux attach -t'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
-alias tg='tmuxinator ghc'
 alias tdf='tmux new -s default -c .'
+
+# tmuxinator
+alias tx='tmuxinator'
+alias txd='rvm gemset use tmuxinator && tmuxinator daily'
 
 # haskell
 alias ghc='stack exec -- ghc'
@@ -143,3 +146,6 @@ alias js='jekyll clean && jekyll serve --incremental'
 # dictionary
 alias dg='dict -d gcide'
 alias dt='dict -d moby-thesaurus'
+
+# mutt
+alias mt='mutt -f pop://lukewm:$PWORD@mail.riseup.net'
