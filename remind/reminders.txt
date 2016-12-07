@@ -1,2 +1,5 @@
-REM December     07 MSG Mama: James Bridle @ 18:00
-REM January   +1 16 MSG Linux Conf.%
+REM December     07 MSG Klub Mama: James Bridle @ 18:00.%
+REM January      16 MSG Linux Conf.%
+REM February +21 01 Telekommunisten International (Dates TBA).%
+REM March    +21 06 IFF in Valencia.%
+REM May      +21 08 re:publica in Berlin.%
