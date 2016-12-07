@@ -138,12 +138,13 @@ set list
 set expandtab
 set smartindent
 set clipboard+=unnamedplus
+set fo+=aw
 " }
 
 " writing {
 nnoremap <leader>Qa vapJgqap
 nnoremap <leader>qa gqap
-nnoremap <leader>zz 1z=
+nnoremap <leader>Z 1z=
 " }
 
 " terminal mode {
@@ -337,6 +338,3 @@ au FileType haskell setl tabstop=4 expandtab softtabstop=2 shiftwidth=2 shiftrou
 nnoremap <Leader>dg :sp \| :term dict -d gcide<space>
 nnoremap <Leader>dt :sp \| :term dict -d moby-thesaurus<space>
 " }
-
-" mutt (related to text_flowed)
-setlocal fo+=aw
