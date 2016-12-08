@@ -14,6 +14,7 @@
 - Sabah Alnasseri
 - Karl Popper
 - Slavoj Žižek
+- Hannah Arendt
 
 ## Miscellaneous
 - Michel Thomas Biography
