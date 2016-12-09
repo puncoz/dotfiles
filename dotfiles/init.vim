@@ -263,10 +263,6 @@ let g:SuperTabLongestHighlight=1
 au FileType python let b:delimitMate_nesting_quotes=['"', "`"]
 " }
 
-" disable auto commenting {
-au FileType * setlocal formatoptions-=cro
-" }
-
 " jedi {
 let g:jedi#usages_command=""
 let g:jedi#popup_select_first=1
