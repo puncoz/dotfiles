@@ -86,6 +86,7 @@ Plug 'vimlab/split-term.vim'
 Plug 'tpope/vim-repeat'
 Plug 'reedes/vim-wordy'
 Plug 'tpope/vim-sleuth'
+Plug 'chase/vim-ansible-yaml'
 
 call plug#end()
 
@@ -109,6 +110,7 @@ set wrap!
 set incsearch
 set ignorecase
 set textwidth=0
+set wrapmargin=0
 set nobackup
 set nowritebackup
 set noswapfile
@@ -337,4 +339,8 @@ au FileType haskell setl tabstop=4 expandtab softtabstop=2 shiftwidth=2 shiftrou
 " dictionary mappings {
 nnoremap <Leader>dg :sp \| :term dict -d gcide<space>
 nnoremap <Leader>dt :sp \| :term dict -d moby-thesaurus<space>
+" }
+
+" vim-ansible-yaml.vim {
+let g:ansible_options={'ignore_blank_lines': 0}
 " }
