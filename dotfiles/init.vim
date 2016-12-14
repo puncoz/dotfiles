@@ -45,7 +45,6 @@ Plug 'morhetz/gruvbox'
 Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
 Plug 'jaspervdj/stylish-haskell', {'for': 'haskell'}
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
-Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
 Plug 'lambdatoast/elm.vim', {'for': 'elm'}
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
