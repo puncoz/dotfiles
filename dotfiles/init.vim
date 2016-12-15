@@ -42,24 +42,17 @@ au BufReadPost * nested call MyFollowSymlink(expand('%'))
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
-Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
 Plug 'jaspervdj/stylish-haskell', {'for': 'haskell'}
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
-Plug 'lambdatoast/elm.vim', {'for': 'elm'}
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'Raimondi/delimitMate'
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
-Plug 'gotcha/vimpdb', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'lambdalisue/vim-pyenv', {'for': 'python'}
-Plug 'tweekmonster/django-plus.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
-Plug 'jaxbot/github-issues.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
@@ -69,8 +62,6 @@ Plug 'ervandew/supertab'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-surround'
-Plug 'mhinz/vim-grepper'
-Plug 'vim-utils/vim-man'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
@@ -83,8 +74,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vimlab/split-term.vim'
 Plug 'tpope/vim-repeat'
-Plug 'reedes/vim-wordy'
-Plug 'tpope/vim-sleuth'
 Plug 'chase/vim-ansible-yaml'
 
 call plug#end()
@@ -139,7 +128,6 @@ set list
 set expandtab
 set smartindent
 set clipboard+=unnamedplus
-set fo+=aw
 " }
 
 " writing {
@@ -198,6 +186,7 @@ let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
 " }
 
+" fixup workflow with fugitive
 " https://blog.mikecordell.com/vim/2014/07/20/quick-fixup-in-vim-with-fugitive.html {
 nnoremap <silent> <leader>gl :Git! log<CR>ggw
 nnoremap <leader>f yiw <ESC>:Git commit --fixup=<C-r>"<CR>
@@ -209,8 +198,9 @@ let g:nerdtree_tabs_autoclose=1
 let g:nerdtree_tabs_open_on_console_startup=0
 let g:nerdtree_tabs_smart_startup_focus=2
 let g:nerdtree_tabs_startup_cd=1
+" }
 
-" http://www.mokacoding.com/blog/nerdtree-relative-numbers/
+" http://www.mokacoding.com/blog/nerdtree-relative-numbers/ {
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 " }
@@ -283,10 +273,6 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 " }
 
-" close scratch window when getting into insert mode {
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-" }
-
 " gist.vim {
 nnoremap <leader>gt :Gist -c f17fdf2d1efe50379da5<CR>
 " }
@@ -309,27 +295,12 @@ hi link EasyMotionTarget2Second MatchParen
 hi link EasyMotionMoveHL Search
 " }
 
-" elm.vim {
-let g:elm_format_autosave=1
-" }
-
-" javascript.vim {
-let g:javascript_enable_domhtmlcss=1
-" }
-
 " strip all that whitespace
 autocmd BufWritePre * StripWhitespace
 
 " python
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
-
-" github-issues
-let g:gissues_lazy_load=1
-
-" haskell indentation {
-au FileType haskell setl tabstop=4 expandtab softtabstop=2 shiftwidth=2 shiftround
-" }
 
 " dictionary mappings {
 nnoremap <Leader>dg :sp \| :term dict -d gcide<space>
