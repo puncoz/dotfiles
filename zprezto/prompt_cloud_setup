@@ -1,30 +1,12 @@
-# load dependencies.
 pmodload 'helper'
 
 function prompt_cloud_precmd {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
 
-  # get git repository information.
   if (( $+functions[git-info] )); then
       git-info
   fi
-
-  # get ruby information
-  if (( $+functions[ruby-info] )); then
-      ruby-info
-  fi
-
-  # get nvm information
-  if (( $+functions[node-info] )); then
-      node-info
-  fi
-}
-
-function prompt_cloud_help {
-  cat <<EOT
-@TODO
-EOT
 }
 
 function prompt_cloud_preview {
@@ -54,15 +36,7 @@ function prompt_cloud_setup {
   zstyle ':prezto:module:git:info:dirty' format "%%B%F{$secondary_color}]%f%%b %F{yellow}⚡%f"
   zstyle ':prezto:module:git:info:clean' format "%B%F{$secondary_color}]%f%b"
   zstyle ':prezto:module:git:info:branch' format "%%B%F{$secondary_color}[%f%%b%%B%F{$primary_color}%b%f%%b"
-  zstyle ':prezto:module:git:info:keys' format \
-    'prompt' '%b%C%D' \
-    'rprompt' ''
-
-  # set ruby-info parameters
-  zstyle ':prezto:module:ruby:info:version' format '%F{green}[%v]%f'
-
-  # set the nvm-info parameters
-  zstyle ':prezto:module:node:info:version' format '%F{green}[node-%F{green}%v%f%F{green}]'
+  zstyle ':prezto:module:git:info:keys' format 'prompt' '%b%C%D' 'rprompt' ''
 
   # define prompts.
   PROMPT='%B%F{$secondary_color}[%c]%f%b${git_info:+${(e)git_info[prompt]}} %B%F{$primary_color}${prompt_char}%f%b '
