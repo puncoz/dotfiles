@@ -15,7 +15,6 @@ for f in *; do
   if [[ $f = "muttrc" ]] ; then rm ~/.mutt/$f 2> /dev/null; fi
   if [[ $f = "config.yaml" ]] ; then rm ~/.stack/$f 2> /dev/null; fi
   if [[ $f = "init.vim" ]] ; then rm ~/.config/nvim/$f 2> /dev/null; fi
-  if [[ $f = "words" ]] ; then rm ~/.config/nvim/spell/*.add && rm ~/.ispell_british 2> /dev/null; fi
   if [[ $f = "newsbeuter_config" ]] ; then rm ~/.newsbeuter/config; fi
   if [[ $f = "urls" ]] ; then rm ~/.newsbeuter/urls; fi
   rm ~/.$f 2> /dev/null;
@@ -47,14 +46,6 @@ for f in *; do
   then
     ln -s $(realpath ./$f) ~/.config/nvim/$f
     file ~/.config/nvim/$f
-  elif [[ $f = "words" ]] ;
-  then
-    # Use same word file for Vim and Ispell
-    ln -s $(realpath ./$f) ~/.config/nvim/spell/en.utf-8.add
-    file ~/.config/nvim/spell/en.utf-8.add
-
-    ln -s $(realpath ./$f) ~/.ispell_british
-    file ~/.ispell_british
   else
     # stick everything else in ~/ as a dotfile
     ln -s $(realpath ./$f) ~/.$f
