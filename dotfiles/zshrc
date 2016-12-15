@@ -37,3 +37,6 @@ command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
 
 # nvm
 [ -f "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# git/hub auto complete
+setopt complete_aliases
