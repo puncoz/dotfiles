@@ -155,9 +155,7 @@ if exists(':tnoremap')
   augroup END
 endif
 
-nnoremap <Leader>py :sp \| :term py.test<cr>
-nnoremap <Leader>px :sp \| :term py.test -x<cr>
-nnoremap <Leader>pk :sp \| :term p -k
+nnoremap <Leader>T :sp \| :term<space>
 " }
 
 " escape parens {
