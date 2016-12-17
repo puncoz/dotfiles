@@ -1,7 +1,6 @@
 symlink: LNARGS:=--force --symbolic --verbose
 symlink:
 	ln $(LNARGS) $(realpath $(FPATH)) $(FLINK)
-.PHONY: symlink
 
 mutt: FPATH:=dotfiles/muttrc
 mutt: FLINK:=~/.mutt/muttrc
@@ -58,7 +57,6 @@ regular_dotfiles:
 	@$(MAKE) -s git_config
 	@$(MAKE) -s ghci
 	@$(MAKE) -s ctags
-.PHONY: regular_dotfiles
 
 irregular_dotfiles:
 	@$(MAKE) -s mutt
@@ -66,6 +64,5 @@ irregular_dotfiles:
 	@$(MAKE) -s stack
 	@$(MAKE) -s newsbeuter_conf
 	@$(MAKE) -s newsbeuter_url
-.PHONY: irregular_dotfiles
 
 dotfiles: regular_dotfiles irregular_dotfiles
