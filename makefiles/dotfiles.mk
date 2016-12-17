@@ -50,19 +50,21 @@ tmux: FPATH:=dotfiles/tmux.conf
 tmux: FLINK:=~/.tmux.conf
 tmux: symlink
 
-regular_dotfiles:
+tmuxinator: FPATH:=tmuxinator/daily.yml
+tmuxinator: FLINK:=~/.tmuxinator/daily.yml
+tmuxinator: symlink
+
+dotfiles:
 	@$(MAKE) -s tmux
 	@$(MAKE) -s remind
 	@$(MAKE) -s git_ignore
 	@$(MAKE) -s git_config
 	@$(MAKE) -s ghci
 	@$(MAKE) -s ctags
-
-irregular_dotfiles:
 	@$(MAKE) -s mutt
 	@$(MAKE) -s irssi
 	@$(MAKE) -s stack
 	@$(MAKE) -s newsbeuter_conf
 	@$(MAKE) -s newsbeuter_url
-
-dotfiles: regular_dotfiles irregular_dotfiles
+	@$(MAKE) -s tmuxinator
+.PHONY: dotfiles
