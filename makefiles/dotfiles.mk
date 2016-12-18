@@ -1,3 +1,5 @@
+# TODO: change target names to the files
+
 symlink: LNARGS:=--force --symbolic --verbose
 symlink:
 	ln $(LNARGS) $(realpath $(FPATH)) $(FLINK)
@@ -50,9 +52,9 @@ tmux: FPATH:=dotfiles/tmux.conf
 tmux: FLINK:=~/.tmux.conf
 tmux: symlink
 
-tmuxinator: FPATH:=tmuxinator/daily.yml
-tmuxinator: FLINK:=~/.tmuxinator/daily.yml
-tmuxinator: symlink
+tmux_daily: FPATH:=tmuxinator/daily.yml
+tmux_daily: FLINK:=~/.tmuxinator/daily.yml
+tmux_daily: symlink
 
 dotfiles:
 	@$(MAKE) -s tmux
@@ -66,5 +68,5 @@ dotfiles:
 	@$(MAKE) -s stack
 	@$(MAKE) -s newsbeuter_conf
 	@$(MAKE) -s newsbeuter_url
-	@$(MAKE) -s tmuxinator
+	@$(MAKE) -s tmux_daily
 .PHONY: dotfiles
