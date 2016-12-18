@@ -8,6 +8,7 @@ alias killpyc='find . -name "*.pyc" -exec rm -rf {} \;'
 # stack
 alias stw='stack test --file-watch --fast'
 alias sg='stack ghci'
+alias sb='stack build'
 
 # unix-y
 alias vi='nvim'

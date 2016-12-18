@@ -311,3 +311,8 @@ nnoremap <Leader>dt :sp \| :term dict -d moby-thesaurus<space>
 " vim-ansible-yaml.vim {
 let g:ansible_options={'ignore_blank_lines': 0}
 " }
+
+" dotfiles / docker / makefile mania {
+nnoremap <Leader>D :sp \| :term make dockerize CMDS="make<space>
+nnoremap <Leader>db :sp \| :term docker build -t lwm/xenial .<cr>
+" }
