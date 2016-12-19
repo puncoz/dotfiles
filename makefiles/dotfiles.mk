@@ -52,7 +52,7 @@ tmux: FPATH:=dotfiles/tmux/tmux.conf
 tmux: FLINK:=~/.tmux.conf
 tmux: symlink
 
-tmux_daily: FPATH:=tmuxinator/daily.yml
+tmux_daily: FPATH:=dotfiles/tmuxinator/daily.yml
 tmux_daily: FLINK:=~/.tmuxinator/daily.yml
 tmux_daily: symlink
 
@@ -61,7 +61,7 @@ tmux_daily: symlink
 .zshrc: symlink
 
 dotfiles:
-	@$(MAKE) -s nvim 
+	@$(MAKE) -s nvim
 	@$(MAKE) -s tmux
 	@$(MAKE) -s remind
 	@$(MAKE) -s git_ignore
