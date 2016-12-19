@@ -1,78 +1,62 @@
-# TODO: change target names to the files
+LNARGS=--force --symbolic --verbose
 
-symlink: LNARGS:=--force --symbolic --verbose
-symlink:
-	ln $(LNARGS) $(realpath $(FPATH)) $(FLINK)
+~/.mutt/muttrc:
+	ln $(LNARGS) $(realpath dotfiles/mutt/$(@F)) $@
 
-mutt: FPATH:=dotfiles/mutt/muttrc
-mutt: FLINK:=~/.mutt/muttrc
-mutt: symlink
+~/.irssi/config:
+	ln $(LNARGS) $(realpath dotfiles/irssi/$(@F)) $@
 
-irssi: FPATH:=dotfiles/irssi/config
-irssi: FLINK:=~/.irssi/config
-irssi: symlink
+~/.stack/config.yaml:
+	ln $(LNARGS) $(realpath dotfiles/stack/$(@F)) $@
 
-stack: FPATH:=dotfiles/stack/config.yaml
-stack: FLINK:=~/.stack/config.yaml
-stack: symlink
+~/.config/nvim/init.vim:
+	ln $(LNARGS) $(realpath dotfiles/nvim/$(@F)) $@
 
-nvim: FPATH:=dotfiles/nvim/init.vim
-nvim: FLINK:=~/.config/nvim/init.vim
-nvim: symlink
+~/.newsbeuter/config:
+	ln $(LNARGS) $(realpath dotfiles/newsbeuter/$(@F)) $@
 
-newsbeuter_conf: FPATH:=dotfiles/newsbeuter/config
-newsbeuter_conf: FLINK:=~/.newsbeuter/config
-newsbeuter_conf: symlink
+~/.newsbeuter/urls:
+	ln $(LNARGS) $(realpath dotfiles/newsbeuter/$(@F)) $@
 
-newsbeuter_url: FPATH:=dotfiles/newsbeuter/urls
-newsbeuter_url: FLINK:=~/.newsbeuter/urls
-newsbeuter_url: symlink
+~/.ctags:
+	ln $(LNARGS) $(realpath dotfiles/exuberant-ctags/ctags) $@
 
-ctags: FPATH:=dotfiles/exuberant-ctags/ctags
-ctags: FLINK:=~/.ctags
-ctags: symlink
+~/.ghci:
+	ln $(LNARGS) $(realpath dotfiles/ghc/ghci) $@
 
-ghci: FPATH:=dotfiles/ghc/ghci
-ghci: FLINK:=~/.ghci
-ghci: symlink
+~/.gitconfig:
+	ln $(LNARGS) $(realpath dotfiles/git/gitconfig) $@
 
-git_config: FPATH:=dotfiles/git/gitconfig
-git_config: FLINK:=~/.gitconfig
-git_config: symlink
+~/.gitignore_global:
+	ln $(LNARGS) $(realpath dotfiles/git/gitignore_global) $@
 
-git_ignore: FPATH:=dotfiles/git/gitignore_global
-git_ignore: FLINK:=~/.gitignore_global
-git_ignore: symlink
+~/.reminders:
+	ln $(LNARGS) $(realpath dotfiles/remind/reminders) $@
 
-remind: FPATH:=dotfiles/remind/reminders
-remind: FLINK:=~/.reminders
-remind: symlink
+~/.tmux.conf:
+	ln $(LNARGS) $(realpath dotfiles/tmux/tmux.conf) $@
 
-tmux: FPATH:=dotfiles/tmux/tmux.conf
-tmux: FLINK:=~/.tmux.conf
-tmux: symlink
+~/.tmuxinator/daily.yml:
+	ln $(LNARGS) $(realpath dotfiles/tmuxinator/$(@F)) $@
 
-tmux_daily: FPATH:=dotfiles/tmuxinator/daily.yml
-tmux_daily: FLINK:=~/.tmuxinator/daily.yml
-tmux_daily: symlink
-
-.zshrc: FPATH:=dotfiles/zsh/zshrc
-.zshrc: FLINK:=~/.zshrc
-.zshrc: symlink
+~/.zshrc:
+	ln $(LNARGS) $(realpath dotfiles/zsh/zshrc) $@
 
 dotfiles:
-	@$(MAKE) -s nvim
-	@$(MAKE) -s tmux
-	@$(MAKE) -s remind
-	@$(MAKE) -s git_ignore
-	@$(MAKE) -s git_config
-	@$(MAKE) -s ghci
-	@$(MAKE) -s ctags
-	@$(MAKE) -s mutt
-	@$(MAKE) -s irssi
-	@$(MAKE) -s stack
-	@$(MAKE) -s newsbeuter_conf
-	@$(MAKE) -s newsbeuter_url
-	@$(MAKE) -s tmux_daily
-	@$(MAKE) -s .zshrc
+	@$(MAKE) --always-make --silent \
+	~/.mutt/muttrc \
+	~/.irssi/config \
+	~/.stack/config.yaml \
+	~/.config/nvim/init.vim \
+	~/.newsbeuter/config \
+	~/.newsbeuter/urls \
+	~/.ctags \
+	~/.ghci \
+	~/.gitconfig \
+	~/.gitignore_global \
+	~/.reminders \
+	~/.tmux.conf \
+	~/.tmuxinator/daily.yml \
+	~/.zshrc \
+	| sort | column -t
 .PHONY: dotfiles
