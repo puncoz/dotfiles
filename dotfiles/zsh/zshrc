@@ -157,7 +157,7 @@ alias s='ls'
 alias gR='grep -iR'
 alias xclip='xclip -selection c'
 
-alias erm='$EDITOR ~/dotfiles/remind/reminders.txt'
+alias erm='$EDITOR ~/dotfiles/dotfiles/remind/reminders.txt'
 
 alias -g L='| less'
 alias -g SO='1> /dev/null'
