@@ -1,0 +1,8 @@
+# TODO
+#
+# Each change to this repo should run a full Makefile
+# build via Docker to check that I can still configure
+# a new system the way I like.
+#
+# It would also be nice if I could sanity check the programs
+# (like nvim), so that the aren't blowing up.
