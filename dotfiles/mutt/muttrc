@@ -54,4 +54,5 @@ set text_flowed=yes
 set fast_reply=yes
 set include=yes
 
+# show version
 push <show-version>
