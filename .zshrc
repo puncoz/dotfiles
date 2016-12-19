@@ -1,1 +1,0 @@
-/home/lwm/.zshrc
