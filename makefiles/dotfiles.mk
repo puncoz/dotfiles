@@ -56,6 +56,10 @@ tmux_daily: FPATH:=tmuxinator/daily.yml
 tmux_daily: FLINK:=~/.tmuxinator/daily.yml
 tmux_daily: symlink
 
+.zshrc: FPATH:=dotfiles/zshrc
+.zshrc: FLINK:=~/.zshrc
+.zshrc: symlink
+
 dotfiles:
 	@$(MAKE) -s tmux
 	@$(MAKE) -s remind
@@ -69,4 +73,5 @@ dotfiles:
 	@$(MAKE) -s newsbeuter_conf
 	@$(MAKE) -s newsbeuter_url
 	@$(MAKE) -s tmux_daily
+	@$(MAKE) -s .zshrc
 .PHONY: dotfiles

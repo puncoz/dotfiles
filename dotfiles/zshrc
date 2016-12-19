@@ -1,42 +1,260 @@
-source ~/.zprezto/init.zsh
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# OH MY ZSH
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+export ZSH=/home/lwm/.oh-my-zsh
 
-# still get incremental search with 'vi' keys
+export ZSH_THEME="lambda"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# ZSH NATIVE CONFIGURATION
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
-# get bash style comments
-setopt interactivecomments
+# setopt interactivecomments
+# setopt complete_aliases
 
-# zsh plugins
-# https://github.com/sorin-ionescu/prezto/blob/master/runcoms/zpreztorc#L25
-zstyle ':prezto:load' pmodule \
-  'directory' \
-  'utility' \
-  'completion' \
-  'git' \
-  'prompt' \
-  'syntax-highlighting' \
-  'history-substring-search' \
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# PATH
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+BIN_DIR=$HOME/bin
+LOCAL_DIR=$HOME/local/bin
+DOT_LOCAL_DIR=$HOME/.local/bin
+RVM_DIR=$HOME/.rvm/bin
+RVM_DIR2=$HOME/.rvm/gems/ruby-*/bin/*
+NVM_DIR=$HOME/.nvm
+PYENV_ROOT=$HOME/.pyenv
+PATH+=$PATH
+if [ -d "$RVM_DIR" ];       then PATH+=:$RVM_DIR; fi
+if [ -d "$RVM_DIR2" ];      then PATH+=:$RVM_DIR2; fi
+if [ -d "$DOT_LOCAL_DIR" ]; then PATH+=:$DOT_LOCAL_DIR; fi
+if [ -d "$BIN_DIR" ];       then PATH+=:$BIN_DIR; fi
+if [ -d "$LOCAL_DIR" ];     then PATH+=:$LOCAL_DIR; fi
+if [ -d "$NVM_DIR" ];       then PATH+=$NVM_DIR; fi
+if [ -d "$PYENV_ROOT" ];    then PATH+=$PYENV_ROOT; fi
+export PATH
 
+# editor
+export EDITOR="nvim"
+export USE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
+
+# terminal
+[[ $TMUX = "" ]] && export TERM="xterm-256color"
+
+# python
+export PYTHONASYNCIODEBUG=1
+export PYTHONDONTWRITEBYTECODE=True
+
+# fzf
+export FZF_COMPLETION_TRIGGER='X'
+export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
+
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYENV_VERSION='3.5.2'
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# EXTERNAL SOURCING
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # dotfiles
 [ -f ~/.zsha ] && source ~/.zsha
 [ -f ~/.zshf ] && source ~/.zshf
 [ -f ~/.zpreztorc ] && source ~/.zpreztorc
 
-# autoenv
+# programs
 [ -f ~/.autoenv/activate.sh ] && source ~/.autoenv/activate.sh
-
-# autoenv
 [ -f ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
-
-# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# remind
+# reminders
 command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
 
-# nvm
-[ -f "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# FUNCTIONS
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+function x (){
+    # extract files without having to remember anything
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xjf $1;;
+            *.tar.gz)    tar xzf $1;;
+            *.bz2)       bunzip2 $1;;
+            *.rar)       rar x $1;;
+            *.gz)        gunzip $1;;
+            *.tar)       tar xf $1;;
+            *.tbz2)      tar xjf $1;;
+            *.tgz)       tar xzf $1;;
+            *.zip)       unzip $1;;
+            *.Z)         uncompress $1;;
+            *.7z)        7z x $1;;
+            *.xz)        tar xf $1;;
+            *)           echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
 
-# git/hub auto complete
-setopt complete_aliases
+function docker-cleanup(){
+    # nuke all docker images and containers
+    docker stop $(docker ps -qa) && docker rm -f $(docker ps -qa)
+    docker rmi -f $(docker images -qa)
+}
+
+function getpr(){
+    # pull down a PR locally, accepts one param - the number of the PR
+    git fetch upstream pull/$1/head:"pr_$1"
+    git checkout "pr_$1"
+}
+
+function grh(){
+    # interactively rebase, accepts one param - the number of commits
+    git rebase -i HEAD~$1
+}
+
+function f(){
+    # find things fast
+    sudo find . -iname "*$1*"
+}
+
+function ht(){
+  # generate haskell CTAGS
+  hasktags --ignore-close-implementation --ctags .
+}
+
+function glh(){
+  # get a commit hash into the system clipboard
+  git show "HEAD~$1" --pretty=format:"%h" --no-patch | xclip -selection c
+}
+
+function tnew(){
+  # start a new tmux session
+  tmux new -s $1 -c .
+}
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# ALIASES
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# TODO (these can all be the same?)
+alias 2cv='virtualenv .venv'
+alias 3cv='python -m venv .venv'
+alias av='. .venv/bin/activate'
+
+alias stw='stack test --file-watch --fast'
+alias sg='stack ghci'
+alias sb='stack build'
+
+alias vi='nvim'
+alias vim='nvim'
+alias pnm='sudo pkill NetworkManager'
+alias p8='ping 8.8.8.8'
+alias s='ls'
+alias gR='grep -iR'
+alias xclip='xclip -selection c'
+
+alias erm='$EDITOR ~/dotfiles/remind/reminders.txt'
+
+alias -g L='| less'
+alias -g SO='1> /dev/null'
+alias -g SE='2> /dev/null'
+
+alias aptar='sudo apt -y autoremove'
+alias aptcl='sudo apt -y autoclean && sudo apt-get -y clean'
+alias aptup='sudo apt update'
+alias aptug='sudo apt upgrade'
+alias aptdg='sudo apt dist-upgrade'
+alias aptin='sudo apt -y install'
+alias aptr='sudo apt -y remove'
+alias aptp='sudo apt -y purge'
+alias apti='sudo apt -y install'
+alias apts='apt-cache search'
+alias aptsh='apt-cache show'
+
+alias ev='$EDITOR ~/.config/nvim/init.vim'
+alias ez='$EDITOR ~/.zshrc'
+alias sz='source ~/.zshrc'
+alias dotf='cd ~/dotfiles'
+
+alias grim='git rebase -i --root master'
+alias grm='git rebase master'
+alias grc='git rebase --continue'
+alias grA='git rebase --abort'
+alias gres='git reset'
+alias gdel='git status -s | cut -c4- | xargs rm -r $1'
+alias grH='git reset HEAD~'
+alias gcf='git commit --fixup'
+alias grq='git rebase -i --autosquash'
+alias gfu='git push -f'
+alias gi='git init'
+alias gs='git status -sb'
+alias ga='git add'
+alias gap='git add --patch'
+alias gb='git branch -v'
+alias gow='git show'
+alias gbD='git branch -D'
+alias gc='git commit -v'
+alias gcm='git commit -m'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias go='git checkout'
+alias gob='git checkout -b'
+alias gcl='git clone'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gr='git remote -v'
+alias gp='git push'
+alias gpo='git push origin'
+alias gpu='git pull upstream master'
+alias guo='git pull upstream master --tags && git push origin master --tags'
+alias gpl='git pull --rebase'
+alias gam='git commit --amend --verbose'
+alias gl='git log'
+alias gcp='git cherry-pick'
+alias .a='git add . --all'
+alias .c='git add --all && git commit -v'
+alias gm='git merge --ff-only'
+alias gS='git stash'
+alias gSa='git stash apply'
+alias gSd='git stash drop'
+alias gwip='git add . --all && git commit -m "[WIP]"'
+
+alias ta='tmux attach -t'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+alias tdf='tmux new -s default -c .'
+
+alias tx='tmuxinator'
+alias txd='rvm gemset use tmuxinator && tmuxinator daily'
+
+alias ghc='stack exec -- ghc'
+alias ghci='stack exec -- ghci'
+
+alias dmg='python manage.py migrate'
+alias dmm='python manage.py makemigrations'
+alias drs='python manage.py runserver'
+alias dcs='python manage.py createsuperuser'
+alias dsp='python manage.py shell_plus'
+alias dch='python manage.py check'
+alias drd='python manage.py reset_db'
+
+alias pt='py.test'
+alias ptw='ptw -- --testmon'
+
+alias pgs='sudo -u postgres'
+
+alias pyv='pyenv virtualenvs'
+alias pya='pyenv activate'
+
+alias js='jekyll clean && jekyll serve --incremental'
+
+alias dg='dict -d gcide'
+alias dt='dict -d moby-thesaurus'
+
+alias mt='mutt -f pop://lukewm:$PWORD@mail.riseup.net'
