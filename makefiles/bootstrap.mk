@@ -11,14 +11,17 @@ update:
 upgrade:
 	sudo apt upgrade
 
-curl: update
+curl:
 	@sudo apt install -y $@
 
-tmux: update
+tmux:
 	@sudo apt install -y $@
 
-git: update
+git:
 	@sudo apt install -y $@
+
+stack:
+	@sudo apt install -y stack
 
 rvm: curl
 	@gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -33,14 +36,11 @@ tmuxinator_gemset: ruby_2.3.0
 tmuxinator: tmuxinator_gemset
 	bash -l -c 'rvm gemset use tmuxinator && gem install tmuxinator'
 
-autoenv: apti_git
+autoenv: git
 	git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
 
 pyenv:
 	#TODO
 
 nvim:
-	#TODO
-
-stack:
 	#TODO
