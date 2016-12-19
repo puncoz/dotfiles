@@ -4,49 +4,43 @@ DOCKER_OPTS:=--tty --interactive --rm
 IMAGE:=lwm/xenial
 dockerize:
 	docker run $(DOCKER_OPTS) $(IMAGE) /bin/sh -ci '$(CMDS)'
-.PHONY: dockerize
 
 update:
 	sudo apt update
-.PHONY: update
 
 upgrade:
 	sudo apt upgrade
-.PHONY: upgrade
 
-install:
-	@sudo apt install -y $(PROGRAM)
-.PHONY: install
+curl: update
+	@sudo apt install -y $@
 
-apti_curl: PROGRAM:=curl
-apti_curl: install
+tmux: update
+	@sudo apt install -y $@
 
-apti_tmux: PROGRAM:=tmux
-apti_tmux: install
+git: update
+	@sudo apt install -y $@
 
-apti_git: PROGRAM:=git
-apti_git: install
-
-rvm: apti_curl
+rvm: curl
 	@gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 	@curl -sSL https://get.rvm.io | bash -s stable --ruby
 
-rvm_ruby: rvm
+ruby_2.3.0: rvm
 	bash -l -c 'rvm install ruby-2.3.0'
 
-install_tmuxinator: rvm_ruby
-	bash -l -c 'rvm gemset use tmuxinator --create && gem install tmuxinator'
-.PHONY: tmuxinator
+tmuxinator_gemset: ruby_2.3.0
+	bash -l -c 'rvm use 2.3.0 && rvm gemset use tmuxinator --create'
+
+tmuxinator: tmuxinator_gemset
+	bash -l -c 'rvm gemset use tmuxinator && gem install tmuxinator'
 
 autoenv: apti_git
 	git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
 
-local_autoenv_files: autoenv
-	@echo ". .venv/bin/activate" >> ~/.env
-	@echo "rvm use 2.3.0" >> ~/.env
-	@echo "rvm gemset use tmuxinator --create" >> ~/.env
+pyenv:
+	#TODO
 
-# install rvm
-# install pyenv
-# install nvim (plugins)
-# get new zsh manager
+nvim:
+	#TODO
+
+stack:
+	#TODO
