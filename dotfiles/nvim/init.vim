@@ -68,7 +68,6 @@ Plug 'mattn/webapi-vim'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'SirVer/ultisnips',
 Plug 'honza/vim-snippets'
-Plug 'benekastah/neomake'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'editorconfig/editorconfig-vim'
@@ -76,6 +75,7 @@ Plug 'vimlab/split-term.vim'
 Plug 'tpope/vim-repeat'
 Plug 'chase/vim-ansible-yaml'
 Plug 'mhinz/vim-grepper'
+Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
 
 call plug#end()
 
@@ -236,7 +236,7 @@ let g:neomake_python_pylama_maker = {
     \ }
 let g:neomake_python_enabled_makers=['pylama']
 let g:neomake_haskell_enabled_makers=['hlint']
-let g:neomake_open_list=1
+let g:neomake_open_list=2
 let g:neomake_list_height=6
 let g:neomake_verbose=1
 let g:neomake_logfile='/tmp/neomake.log'
