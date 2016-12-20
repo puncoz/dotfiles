@@ -75,6 +75,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'vimlab/split-term.vim'
 Plug 'tpope/vim-repeat'
 Plug 'chase/vim-ansible-yaml'
+Plug 'mhinz/vim-grepper'
 
 call plug#end()
 
