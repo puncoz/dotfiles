@@ -1,59 +1,70 @@
-SHELL:=bash
-
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# VARIABLES
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+SHELL=bash
 DOCKER_OPTS=--tty --interactive --rm
 IMAGE=lwm/xenial
+LNARGS=--force --symbolic --verbose
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# DOCKER
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 dockerize:
 	docker run $(DOCKER_OPTS) $(IMAGE) /bin/sh -ci '$(CMDS)'
 
-
-LNARGS=--force --symbolic --verbose
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# DOTFILES
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ~/.mutt/muttrc:
-	ln $(LNARGS) $(realpath dotfiles/mutt/$(@F)) $@
+	@ln $(LNARGS) $(realpath dotfiles/mutt/$(@F)) $@
 
 ~/.irssi/config:
-	ln $(LNARGS) $(realpath dotfiles/irssi/$(@F)) $@
+	@ln $(LNARGS) $(realpath dotfiles/irssi/$(@F)) $@
 
 ~/.stack/config.yaml:
-	ln $(LNARGS) $(realpath dotfiles/stack/$(@F)) $@
+	@ln $(LNARGS) $(realpath dotfiles/stack/$(@F)) $@
 
 ~/.config/nvim/init.vim:
-	ln $(LNARGS) $(realpath dotfiles/nvim/$(@F)) $@
+	@ln $(LNARGS) $(realpath dotfiles/nvim/$(@F)) $@
 
 ~/.newsbeuter/config:
-	ln $(LNARGS) $(realpath dotfiles/newsbeuter/$(@F)) $@
+	@ln $(LNARGS) $(realpath dotfiles/newsbeuter/$(@F)) $@
 
 ~/.newsbeuter/urls:
-	ln $(LNARGS) $(realpath dotfiles/newsbeuter/$(@F)) $@
+	@ln $(LNARGS) $(realpath dotfiles/newsbeuter/$(@F)) $@
 
 ~/.ctags:
-	ln $(LNARGS) $(realpath dotfiles/exuberant-ctags/ctags) $@
+	@ln $(LNARGS) $(realpath dotfiles/exuberant-ctags/ctags) $@
 
 ~/.ghci:
-	ln $(LNARGS) $(realpath dotfiles/ghc/ghci) $@
+	@ln $(LNARGS) $(realpath dotfiles/ghc/ghci) $@
 
 ~/.gitconfig:
-	ln $(LNARGS) $(realpath dotfiles/git/gitconfig) $@
+	@ln $(LNARGS) $(realpath dotfiles/git/gitconfig) $@
 
 ~/.gitignore_global:
-	ln $(LNARGS) $(realpath dotfiles/git/gitignore_global) $@
+	@ln $(LNARGS) $(realpath dotfiles/git/gitignore_global) $@
 
 ~/.reminders:
-	ln $(LNARGS) $(realpath dotfiles/remind/reminders) $@
+	@ln $(LNARGS) $(realpath dotfiles/remind/reminders) $@
 
 ~/.tmux.conf:
-	ln $(LNARGS) $(realpath dotfiles/tmux/tmux.conf) $@
+	@ln $(LNARGS) $(realpath dotfiles/tmux/tmux.conf) $@
 
 ~/.tmuxinator/daily.yml:
-	ln $(LNARGS) $(realpath dotfiles/tmuxinator/$(@F)) $@
+	@ln $(LNARGS) $(realpath dotfiles/tmuxinator/$(@F)) $@
 
 ~/.zshrc:
-	ln $(LNARGS) $(realpath dotfiles/zsh/zshrc) $@
+	@ln $(LNARGS) $(realpath dotfiles/zsh/zshrc) $@
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# PROGRAMS
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 update:
-	sudo apt update
+	@sudo apt update
 
 upgrade:
-	sudo apt upgrade
+	@sudo apt upgrade
 
 curl:
 	@sudo apt install -y $@
@@ -75,31 +86,41 @@ nvim:
 	@sudo apt install -y neovim
 
 oh-my-zsh: git
-	git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+	@git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 rvm:
 	@gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 	@curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 ruby_2.3.0:
-	bash -l -c 'rvm install ruby-2.3.0'
+	@rvm install ruby-2.3.0
 
 tmuxinator_gemset:
-	bash -l -c 'rvm use 2.3.0 && rvm gemset use tmuxinator --create'
+	@rvm use 2.3.0
+	@rvm gemset use tmuxinator --create
 
 tmuxinator:
-	bash -l -c 'rvm gemset use tmuxinator && gem install tmuxinator'
+	@rvm gemset use tmuxinator && gem install tmuxinator
 
 autoenv: git
-	git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
+	@git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
 
 nvim_plugins: nvim curl ~/.config/nvim/init.vim
-	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://git.io/VgrSsw
-	nvim +PlugInstall
+	@curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://git.io/VgrSsw
+	@nvim +PlugInstall
 
 pyenv:
-	#TODO
+	@git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 
+pyenv_3.5.2: pyenv
+	@pyenv install 3.5.2
+
+pyenv_2.7.12: pyenv
+	@pyenv install 2.7.12
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# BOOTSTRAPPING
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 dotfiles:
 	@$(MAKE) --always-make --silent \
 	~/.mutt/muttrc \
