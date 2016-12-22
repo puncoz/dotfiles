@@ -1,5 +1,6 @@
+REM December     29 MSG Arndtstr. hand over!%
 REM January      16 MSG Linux Conf.%
-REM February +21 01 Telekommunisten International (Dates TBA).%
-REM February +5  10 RMS in Berlin.%
-REM March    +21 06 IFF in Valencia.%
-REM May      +21 08 re:publica in Berlin.%
+REM February +21 01 MSG Telekommunisten International (Dates TBA).%
+REM February +14 10 RMS in Berlin.%
+REM March    +21 06 MSG IFF in Valencia.%
+REM May      +21 08 MSG re:publica in Berlin.%

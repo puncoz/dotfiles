@@ -256,3 +256,5 @@ alias dg='dict -d gcide'
 alias dt='dict -d moby-thesaurus'
 
 alias mt='mutt -f pop://lukewm:$PWORD@mail.riseup.net'
+
+alias cnt='wc -l'
