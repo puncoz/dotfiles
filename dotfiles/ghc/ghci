@@ -8,10 +8,6 @@
 :set -fobject-code
 -- :set -fno-code
 
--- Enable almost all warnings
--- Note. This is sometimes too verbose. Useful for own projects.
--- :set -Wall
-
 -- Make suggestions for misspelled names
 :set -fhelpful-errors
 
