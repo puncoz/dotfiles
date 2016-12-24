@@ -23,3 +23,6 @@
 
 -- Turn off crazy `:r` import listing
 :set -v0
+
+-- Add Hoogle support
+:def hg \x -> return $ ":!stack hoogle -- -i \"" ++ x ++ "\""
