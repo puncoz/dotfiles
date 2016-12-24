@@ -234,7 +234,7 @@ let g:neomake_python_pylama_maker = {
     \ 'errorformat': '%f:%l:%c: %t%m',
     \ }
 let g:neomake_python_enabled_makers=['pylama']
-let g:neomake_haskell_enabled_makers=['hlint']
+let g:neomake_haskell_enabled_makers=['hlint', 'hdevtools']
 let g:neomake_open_list=2
 let g:neomake_list_height=6
 let g:neomake_verbose=1
@@ -316,3 +316,6 @@ let g:ansible_options={'ignore_blank_lines': 0}
 nnoremap <Leader>D :sp \| :term make dockerize CMDS="make<space>
 nnoremap <Leader>db :sp \| :term docker build -t lwm/xenial .<cr>
 " }
+
+" wrap lines in location list
+au FileType qf set wrap
