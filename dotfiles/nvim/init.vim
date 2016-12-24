@@ -42,7 +42,7 @@ au BufReadPost * nested call MyFollowSymlink(expand('%'))
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
-Plug 'jaspervdj/stylish-haskell', {'for': 'haskell'}
+Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Raimondi/delimitMate'
@@ -75,7 +75,10 @@ Plug 'vimlab/split-term.vim'
 Plug 'tpope/vim-repeat'
 Plug 'chase/vim-ansible-yaml'
 Plug 'mhinz/vim-grepper'
-Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
+Plug 'neomake/neomake'
+
+" TODO: Is this actually good?
+" Plug 'dojoteef/neomake-autolint'
 
 call plug#end()
 
@@ -162,10 +165,6 @@ nnoremap <Leader>T :sp \| :term<space>
 " escape parens {
 inoremap <C-e> <C-o>a
 inoremap <C-d> <C-o>A
-" }
-
-" stylish-haskell {
-nnoremap <leader>sh %!stylish-haskell<CR>
 " }
 
 " highlight characters past 79 chars  {
