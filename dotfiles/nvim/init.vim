@@ -44,6 +44,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
+Plug 'bitc/vim-hdevtools', {'for': 'haskell'}
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
@@ -319,3 +320,9 @@ nnoremap <Leader>db :sp \| :term docker build -t lwm/xenial .<cr>
 
 " wrap lines in location list
 au FileType qf set wrap
+
+" hdevtools {
+nnoremap <leader>ht :HdevtoolsType<CR>
+nnoremap <leader>hc :HdevtoolsClear<CR>
+nnoremap <leader>hi :HdevtoolsInfo<CR>
+" }
