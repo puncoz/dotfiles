@@ -78,9 +78,6 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'mhinz/vim-grepper'
 Plug 'neomake/neomake'
 
-" TODO: Is this actually good?
-" Plug 'dojoteef/neomake-autolint'
-
 call plug#end()
 
 let mapleader=","
