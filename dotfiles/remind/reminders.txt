@@ -1,4 +1,3 @@
-REM December     29 MSG Arndtstr. hand over!%
 REM January      16 MSG Linux Conf.%
 REM February +21 01 MSG Telekommunisten International (Dates TBA).%
 REM February +14 10 RMS in Berlin.%
