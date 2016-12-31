@@ -79,7 +79,6 @@ Plug 'mhinz/vim-grepper'
 Plug 'neomake/neomake'
 Plug 'rafi/vim-tinyline'
 Plug 'itchyny/vim-cursorword'
-Plug 'rafi/awesome-vim-colorschemes'
 
 call plug#end()
 
