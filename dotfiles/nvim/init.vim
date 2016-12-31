@@ -77,6 +77,9 @@ Plug 'tpope/vim-repeat'
 Plug 'chase/vim-ansible-yaml'
 Plug 'mhinz/vim-grepper'
 Plug 'neomake/neomake'
+Plug 'rafi/vim-tinyline'
+Plug 'itchyny/vim-cursorword'
+Plug 'rafi/awesome-vim-colorschemes'
 
 call plug#end()
 
