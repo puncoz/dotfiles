@@ -1,0 +1,10 @@
+# ~/.tmuxinator/wages.yml
+
+name: work
+root: ~/wages
+
+startup_window: hack
+
+windows:
+  - todo:    nvim ~/notes/TODO.md
+  - hack:    # do something!
