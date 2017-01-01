@@ -230,6 +230,7 @@ alias tdf='tmux new -s default -c .'
 
 alias tx='tmuxinator'
 alias txd='rvm gemset use tmuxinator && tmuxinator daily'
+alias txw='rvm gemset use tmuxinator && tmuxinator wages'
 
 alias ghc='stack exec -- ghc'
 alias ghci='stack exec -- ghci'
@@ -258,3 +259,5 @@ alias dt='dict -d moby-thesaurus'
 alias mt='mutt -f pop://lukewm:$PWORD@mail.riseup.net'
 
 alias cnt='wc -l'
+
+alias xsh='ssh ca3.shell.xShellz.com'
