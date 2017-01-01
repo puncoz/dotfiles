@@ -1,7 +1,6 @@
 REM January      16 MSG Linux Conf.%
-REM January  +03 03 MSG CHT5 kicking off.%
 REM February +07 12 MSG Ling arriving in Cork.%
 REM February +21 01 MSG Telekommunisten International (Dates TBA).%
-REM February +14 10 RMS in Berlin.%
+REM February +14 10 MSG RMS in Berlin.%
 REM March    +21 06 MSG IFF in Valencia.%
 REM May      +21 08 MSG re:publica in Berlin.%
