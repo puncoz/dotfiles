@@ -20,9 +20,6 @@ dockerize:
 ~/.mutt/muttrc:
 	@ln $(LNARGS) $(realpath dotfiles/mutt/$(@F)) $@
 
-~/.irssi/config:
-	@ln $(LNARGS) $(realpath dotfiles/irssi/$(@F)) $@
-
 ~/.stack/config.yaml:
 	@ln $(LNARGS) $(realpath dotfiles/stack/$(@F)) $@
 
@@ -129,7 +126,6 @@ pyenv_2.7.12: pyenv
 dotfiles:
 	@$(MAKE) --always-make --silent \
 	~/.mutt/muttrc \
-	~/.irssi/config \
 	~/.stack/config.yaml \
 	~/.config/nvim/init.vim \
 	~/.newsbeuter/config \
