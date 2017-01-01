@@ -1,3 +1,5 @@
+# TODO: Convert to Haskell script using shell-conduit
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # VARIABLES
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -35,6 +37,9 @@ dockerize:
 
 ~/.ctags:
 	@ln $(LNARGS) $(realpath dotfiles/exuberant-ctags/ctags) $@
+
+~/.msmtprc:
+	@ln $(LNARGS) $(realpath dotfiles/msmtp/msmtprc) $@
 
 ~/.ghci:
 	@ln $(LNARGS) $(realpath dotfiles/ghc/ghci) $@
@@ -130,6 +135,7 @@ dotfiles:
 	~/.newsbeuter/config \
 	~/.newsbeuter/urls \
 	~/.ctags \
+	~/.msmtprc \
 	~/.ghci \
 	~/.gitconfig \
 	~/.gitignore_global \
