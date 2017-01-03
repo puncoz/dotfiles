@@ -13,18 +13,18 @@ set record = "~/log/out.mbox"
 set postponed = "~/log/postponed.mbox"
 
 # enable PGP
-source /usr/share/doc/mutt/examples/gpg.rc
-set pgp_autosign
-set pgp_replyencrypt
-set pgp_replysign
-set pgp_replysignencrypted
-set pgp_verify_sig
-set pgp_sign_as
-set pgp_use_gpg_agent=yes
-set pgp_sign_as=3E3718CC
-set pgp_timeout=3600
-set crypt_autosign=yes
-set crypt_replyencrypt=yes
+# source /usr/share/doc/mutt/examples/gpg.rc
+# set pgp_autosign
+# set pgp_replyencrypt
+# set pgp_replysign
+# set pgp_replysignencrypted
+# set pgp_verify_sig
+# set pgp_sign_as
+# set pgp_use_gpg_agent=yes
+# set pgp_sign_as=3E3718CC
+# set pgp_timeout=3600
+# set crypt_autosign=yes
+# set crypt_replyencrypt=yes
 
 # receive
 set pop_delete=yes
