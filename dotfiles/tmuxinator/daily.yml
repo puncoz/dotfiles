@@ -10,7 +10,7 @@ windows:
 - todo: $EDITOR ~/notes/TODO.md
 - irssi: irssi
 - feeds: newsbeuter
-- twitter: . .venv/bin/activate && rainbowstream
+- twitter: . .venv/bin/activate && rainbowstream -iot
 - email: mutt -f pop://lukewm:$PWORD@mail.riseup.net
 - stackage-contrib: ssh stackage-build
 - hack: # blow stuff up
