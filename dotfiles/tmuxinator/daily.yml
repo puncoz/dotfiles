@@ -1,14 +1,16 @@
-# ~/.tmuxinator/daily.yml
-
 name: daily
+
 root: ~/
 
 startup_window: hack
 
+pre: ~/.tmuxinator/startup
+
 windows:
-  - todo:    nvim ~/notes/TODO.md
-  - irssi:   irssi
-  - feeds:   newsbeuter
-  - twitter: cd $HOME && . .venv/bin/activate && rainbowstream
-  - email:   mutt -f pop://lukewm:$PWORD@mail.riseup.net
-  - hack:    # do something!
+- todo: $EDITOR ~/notes/TODO.md
+- irssi: irssi
+- feeds: newsbeuter
+- twitter: . .venv/bin/activate && rainbowstream
+- email: mutt -f pop://lukewm:$PWORD@mail.riseup.net
+- stackage-contrib: ssh stackage-build
+- hack: # blow stuff up

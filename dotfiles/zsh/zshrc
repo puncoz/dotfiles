@@ -264,6 +264,6 @@ alias mt='mutt -f pop://lukewm:$PWORD@mail.riseup.net'
 
 alias cnt='wc -l'
 
-alias xsh='ssh ca3.shell.xShellz.com'
+alias sbs='ssh stackage-build'
 
 alias rbs='rainbowstream'
