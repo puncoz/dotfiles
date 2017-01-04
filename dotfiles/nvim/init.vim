@@ -326,4 +326,6 @@ au FileType qf set wrap
 nnoremap <leader>ht :HdevtoolsType<CR>
 nnoremap <leader>hc :HdevtoolsClear<CR>
 nnoremap <leader>hi :HdevtoolsInfo<CR>
+
+nnoremap <Leader>fs :sp \| :term hdevtools findsymbol<space>
 " }
