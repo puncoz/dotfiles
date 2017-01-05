@@ -1,101 +1,146 @@
+# python
 alias 2cv='virtualenv .venv'
 alias 3cv='python -m venv .venv'
 alias av='. .venv/bin/activate'
 
+# stack
 alias stw='stack test --file-watch --fast'
 alias sg='stack ghci'
 alias sb='stack build'
 alias whv='stack exec ghc-pkg latest'
 alias gpk='stack exec ghc-pkg'
 alias sld='stack list-dependencies'
+alias ghc='stack exec -- ghc'
+alias ghci='stack exec -- ghci'
 
+# editor
+alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+
+# networking
 alias pnm='sudo pkill NetworkManager'
 alias p8='ping 8.8.8.8'
+
+# postgres
+alias pgs='sudo -u postgres'
+
+# builtin
 alias s='ls'
 alias gR='grep -iR'
 alias xclip='xclip -selection c'
-
-alias erm='$EDITOR ~/dotfiles/dotfiles/remind/reminders.txt'
-
 alias -g L='| less'
 alias -g SO='1> /dev/null'
 alias -g SE='2> /dev/null'
+alias cnt='wc -l'
 
+# dotfiles
+alias erm='$EDITOR ~/dotfiles/dotfiles/remind/reminders.txt'
+alias ev='$EDITOR ~/.config/nvim/init.vim'
+alias ez='$EDITOR ~/.zshrc'
+alias ea='$EDITOR ~/.zsha'
+alias ef='$EDITOR ~/.zshf'
+alias sz='source ~/.zshrc'
+alias dotf='cd ~/dotfiles'
+
+# apt
 alias aptar='sudo apt -y autoremove'
-alias aptcl='sudo apt -y autoclean && sudo apt-get -y clean'
 alias aptup='sudo apt update'
 alias aptug='sudo apt upgrade'
 alias aptdg='sudo apt dist-upgrade'
-alias aptin='sudo apt -y install'
 alias aptr='sudo apt -y remove'
 alias aptp='sudo apt -y purge'
 alias apti='sudo apt -y install'
 alias apts='apt-cache search'
 alias aptsh='apt-cache show'
 
-alias ev='$EDITOR ~/.config/nvim/init.vim'
-alias ez='$EDITOR ~/.zshrc'
-alias sz='source ~/.zshrc'
-alias dotf='cd ~/dotfiles'
-
+# git-rebase
 alias grim='git rebase -i --root master'
 alias grm='git rebase master'
 alias grc='git rebase --continue'
 alias grA='git rebase --abort'
-alias gres='git reset'
-alias gdel='git status -s | cut -c4- | xargs rm -r $1'
-alias grH='git reset HEAD~'
-alias gcf='git commit --fixup'
 alias grq='git rebase -i --autosquash'
-alias gfu='git push -f'
+
+# git-reset
+alias gres='git reset'
+alias grH='git reset HEAD~'
+
+# git-init
 alias gi='git init'
+
+# git-status
 alias gs='git status -sb'
+
+# git-add
 alias ga='git add'
 alias gap='git add --patch'
-alias gb='git branch -v'
+
+# git-shoow
 alias gow='git show'
+
+# git-branch
 alias gbD='git branch -D'
-alias gc='git commit -v'
-alias gcm='git commit -m'
+alias gb='git branch -v'
+
+# git-diff
 alias gd='git diff'
 alias gds='git diff --staged'
-alias go='git checkout'
+
+# git-checkout
 alias gob='git checkout -b'
+alias go='git checkout'
+
+# git-commit
+alias gc='git commit -v'
+alias gam='git commit --amend --verbose'
+alias gcf='git commit --fixup'
+
+# git-clone
 alias gcl='git clone'
+
+# git-remote
 alias gra='git remote add'
 alias grr='git remote rm'
 alias gr='git remote -v'
+
+# git-push
 alias gp='git push'
-alias gpo='git push origin'
-alias gpu='git pull upstream master'
+alias gfu='git push -f'
+alias gpo='git push origin master'
 alias gPu='git push upstream master'
+
+# git-pull
+alias gpu='git pull upstream master'
 alias guo='git pull upstream master --tags && git push origin master --tags'
 alias gpl='git pull --rebase'
-alias gam='git commit --amend --verbose'
-alias gl='git log'
-alias gcp='git cherry-pick'
-alias .a='git add . --all'
-alias .c='git add --all && git commit -v'
-alias gm='git merge --ff-only'
-alias gS='git stash'
-alias gSa='git stash apply'
-alias gSd='git stash drop'
-alias gwip='git add . --all && git commit -m "[WIP]"'
 
+# git-log
+alias gl='git log'
+
+# git shortcuts
+alias .c='git add . --all && git commit -v'
+alias gdel='git status -s | cut -c4- | xargs rm -r $1'
+
+# git-cherry-pick
+alias gcp='git cherry-pick'
+
+# git-stash
+alias gst='git stash'
+alias gsa='git stash apply'
+alias gsd='git stash drop'
+
+# tmux
 alias ta='tmux attach -t'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias tdf='tmux new -s default -c .'
 
+# tmuxinator
 alias tx='tmuxinator'
 alias txd='rvm gemset use tmuxinator && tmuxinator daily'
 alias txw='rvm gemset use tmuxinator && tmuxinator wages'
 
-alias ghc='stack exec -- ghc'
-alias ghci='stack exec -- ghci'
-
+# django
 alias dmg='python manage.py migrate'
 alias dmm='python manage.py makemigrations'
 alias drs='python manage.py runserver'
@@ -104,23 +149,26 @@ alias dsp='python manage.py shell_plus'
 alias dch='python manage.py check'
 alias drd='python manage.py reset_db'
 
+# pytest
 alias pt='py.test'
 alias ptw='ptw -- --testmon'
 
-alias pgs='sudo -u postgres'
+# stackage
+alias sbs='ssh stackage-build'
 
+# pyenv
 alias pyv='pyenv virtualenvs'
 alias pya='pyenv activate'
 
+# jekyll
 alias js='jekyll clean && jekyll serve --incremental'
 
+# dict
 alias dg='dict -d gcide'
 alias dt='dict -d moby-thesaurus'
 
+# mutt
 alias mt='mutt -f pop://lukewm:$PWORD@mail.riseup.net'
 
-alias cnt='wc -l'
-
-alias sbs='ssh stackage-build'
-
+# rainbowstream
 alias rbs='rainbowstream'
