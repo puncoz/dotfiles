@@ -1,4 +1,4 @@
-# no automatic reloading
+# automatic reloading
 refresh-on-startup yes
 auto-reload yes
 reload-time 360 # minutes
