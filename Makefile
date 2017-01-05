@@ -1,22 +1,13 @@
 # TODO: Convert to Haskell script using shell-conduit
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# VARIABLES
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 SHELL=bash
 DOCKER_OPTS=--tty --interactive --rm
 IMAGE=lwm/xenial
 LNARGS=--force --symbolic --verbose
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# DOCKER
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 dockerize:
 	docker run $(DOCKER_OPTS) $(IMAGE) /bin/sh -ci '$(CMDS)'
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# DOTFILES
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ~/.mutt/muttrc:
 	@ln $(LNARGS) $(realpath dotfiles/mutt/$(@F)) $@
 
@@ -65,9 +56,6 @@ dockerize:
 ~/.zshf:
 	@ln $(LNARGS) $(realpath dotfiles/zsh/zshf) $@
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# PROGRAMS
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 update:
 	@sudo apt update
 
@@ -126,9 +114,6 @@ pyenv_3.5.2: pyenv
 pyenv_2.7.12: pyenv
 	@pyenv install 2.7.12
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# BOOTSTRAPPING
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 dotfiles:
 	@$(MAKE) --always-make --silent \
 	~/.mutt/muttrc \
