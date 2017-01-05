@@ -1,4 +1,6 @@
 REM              12 MSG `!keep lwm` on xshellz.%
+
+REM January      06 MSG Quay Coop cafe 2pm meeting.%
 REM January      16 MSG Linux Conf.%
 REM February +07 12 MSG Ling arriving in Cork.%
 REM February +21 01 MSG Telekommunisten International (Dates TBA).%
