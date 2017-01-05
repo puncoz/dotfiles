@@ -59,6 +59,12 @@ dockerize:
 ~/.zshrc:
 	@ln $(LNARGS) $(realpath dotfiles/zsh/zshrc) $@
 
+~/.zsha:
+	@ln $(LNARGS) $(realpath dotfiles/zsh/zsha) $@
+
+~/.zshf:
+	@ln $(LNARGS) $(realpath dotfiles/zsh/zshf) $@
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # PROGRAMS
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -139,5 +145,7 @@ dotfiles:
 	~/.tmux.conf \
 	~/.tmuxinator/daily.yml \
 	~/.zshrc \
+	~/.zsha \
+	~/.zshf \
 	| sort | column -t
 .PHONY: dotfiles
