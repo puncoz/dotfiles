@@ -189,10 +189,12 @@ let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
 " }
 
-" fixup workflow with fugitive
+" fugitive
 " https://blog.mikecordell.com/vim/2014/07/20/quick-fixup-in-vim-with-fugitive.html {
-nnoremap <silent> <leader>gl :Git! log<CR>ggw
-nnoremap <leader>f yiw <ESC>:Git commit --fixup=<C-r>"<CR>
+nnoremap <leader>gl :Git! log<CR>ggw
+nnoremap <leader>f yiw <ESC>:Gcommit --fixup=<C-r>"<CR>
+
+nnoremap <leader>C :Gcommit -v<CR>
 " }
 
 " nerdtree {
