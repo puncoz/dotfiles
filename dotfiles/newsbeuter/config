@@ -9,10 +9,6 @@ reload-only-visible-feeds no
 show-read-feeds no
 download-retries 4
 
-# notification
-notify-screen yes
-notify-xterm yes
-
 # storage
 max-items 200
 
