@@ -82,6 +82,9 @@ alias gow='git show'
 alias gbD='git branch -D'
 alias gb='git branch -v'
 
+# git-blame
+alias gB='git blame'
+
 # git-diff
 alias gd='git diff'
 alias gds='git diff --staged'
@@ -116,6 +119,7 @@ alias gpl='git pull --rebase'
 
 # git-log
 alias gl='git log'
+alias gld='git log -p'
 
 # git shortcuts
 alias .c='git add . --all && git commit -v'
