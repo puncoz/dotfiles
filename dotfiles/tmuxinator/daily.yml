@@ -13,4 +13,4 @@ windows:
 - twitter: . .venv/bin/activate && rainbowstream -iot
 - email: mutt -f pop://lukewm:$PWORD@mail.riseup.net
 - stackage-contrib: ssh stackage-build
-- hack: cd ~/hobby/
+- hack: # blow stuff up
