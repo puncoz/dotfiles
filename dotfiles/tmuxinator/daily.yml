@@ -4,7 +4,7 @@ root: ~/
 
 startup_window: hack
 
-pre: ~/.tmuxinator/startup
+# pre: ~/.tmuxinator/startup
 
 windows:
 - todo: $EDITOR ~/notes/TODO.md
