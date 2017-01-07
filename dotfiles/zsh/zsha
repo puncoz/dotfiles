@@ -2,6 +2,7 @@
 alias 2cv='virtualenv .venv'
 alias 3cv='python -m venv .venv'
 alias av='. .venv/bin/activate'
+alias psv='source .venv/bin/activate'
 
 # stack
 alias stw='stack test --file-watch --fast'

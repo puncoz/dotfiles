@@ -2,7 +2,7 @@ REM              12 MSG `!keep lwm` on xshellz.%
 
 REM January      16 MSG Linux Conf.%
 REM February +07 12 MSG Ling arriving in Cork.%
-REM February +21 01 MSG Telekommunisten International (Dates TBA).%
+REM February +21 18 MSG Telekommunisten International.%
 REM February +14 10 MSG RMS in Berlin.%
 REM March    +21 06 MSG IFF in Valencia.%
 REM May      +21 08 MSG re:publica in Berlin.%
