@@ -59,3 +59,6 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # reminders
 command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
+
+# autoenv
+source ~/.autoenv/activate.sh
