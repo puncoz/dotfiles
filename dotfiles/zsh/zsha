@@ -183,3 +183,6 @@ alias pwt='sudo powertop'
 
 # gtimelog
 alias ge='$EDITOR ~/.gtimelog/timelog.txt'
+
+# youtube-dl
+alias ytl='youtube-dl'

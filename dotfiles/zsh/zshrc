@@ -10,6 +10,9 @@ plugins=(git vi-mode stack python autoenv)
 source ~/.zsha
 source ~/.zshf
 
+# vim keys enable
+bindkey -v
+
 # zsh bindings
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
