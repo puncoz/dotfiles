@@ -177,3 +177,6 @@ alias mt='mutt -f pop://lukewm:$PWORD@mail.riseup.net'
 
 # rainbowstream
 alias rbs='rainbowstream'
+
+# powertop
+alias pwt='sudo powertop'
