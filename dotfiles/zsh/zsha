@@ -169,8 +169,7 @@ alias pya='pyenv activate'
 alias js='jekyll clean && jekyll serve --incremental'
 
 # dict
-alias dg='dict -d gcide'
-alias dt='dict -d moby-thesaurus'
+alias dg='dict -d'
 
 # mutt
 alias mt='mutt -f pop://lukewm:$PWORD@mail.riseup.net'
@@ -186,3 +185,4 @@ alias ge='$EDITOR ~/.gtimelog/timelog.txt'
 
 # youtube-dl
 alias ytl='youtube-dl'
+alias ytx='youtube-dl -x'
