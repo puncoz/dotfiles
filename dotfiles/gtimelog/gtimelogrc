@@ -1,0 +1,19 @@
+[gtimelog]
+list-email = activity-list@example.com
+name = b'Luke Murphy'
+editor = xdg-open
+mailer = vim %s
+spreadsheet = xdg-open %s
+chronological = True
+summary_view = False
+show_tasks = True
+gtk-completion = True
+hours = 4
+virtual_midnight = 02:00
+task_list_url =
+edit_task_list_cmd =
+show_office_hours = True
+show_tray_icon = False
+prefer_app_indicator = True
+report_style = plain
+start_in_tray = False

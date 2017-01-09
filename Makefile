@@ -14,6 +14,9 @@ dockerize:
 ~/.stack/config.yaml:
 	@ln $(LNARGS) $(realpath dotfiles/stack/$(@F)) $@
 
+~/.gtimelog/gtimelogrc:
+	@ln $(LNARGS) $(realpath dotfiles/gtimelog/$(@F)) $@
+
 ~/.config/nvim/init.vim:
 	@ln $(LNARGS) $(realpath dotfiles/nvim/$(@F)) $@
 
@@ -118,6 +121,7 @@ dotfiles:
 	@$(MAKE) --always-make --silent \
 	~/.mutt/muttrc \
 	~/.stack/config.yaml \
+	~/.gtimelog/gtimelogrc \
 	~/.config/nvim/init.vim \
 	~/.newsbeuter/config \
 	~/.newsbeuter/urls \

@@ -180,3 +180,6 @@ alias rbs='rainbowstream'
 
 # powertop
 alias pwt='sudo powertop'
+
+# gtimelog
+alias ge='$EDITOR ~/.gtimelog/timelog.txt'
