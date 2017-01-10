@@ -186,3 +186,6 @@ alias ge='$EDITOR ~/.gtimelog/timelog.txt'
 # youtube-dl
 alias ytl='youtube-dl'
 alias ytx='youtube-dl -x'
+
+# syncthing
+alias st='sudo syncthing'
