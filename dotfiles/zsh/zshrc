@@ -1,6 +1,7 @@
 # oh-my-zsh config
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="lambda"
+
 source $ZSH/oh-my-zsh.sh
 
 # oh-my-zsh plugins
@@ -10,25 +11,26 @@ plugins=(git vi-mode stack python autoenv)
 source ~/.zsha
 source ~/.zshf
 
-# vim keys enable
-bindkey -v
-
 # zsh bindings
+bindkey -v
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 bindkey -M viins 'jk' vi-cmd-mode
 
 # path exports
-PATH+=$PATH
+PATH+="$PATH"
 
-RVM_DIR=$HOME/.rvm/bin
+RVM_DIR="$HOME/.rvm/bin"
 if [ -d "$RVM_DIR" ]; then PATH+=:$RVM_DIR; fi
 
-RVM_DIR2=$HOME/.rvm/gems/ruby-*/bin/*
+RVM_DIR2="$HOME/.rvm/gems/ruby-*/bin/*"
 if [ -d "$RVM_DIR2" ]; then PATH+=:$RVM_DIR2; fi
 
-PYENV_ROOT=$HOME/.pyenv
+PYENV_ROOT="$HOME/.pyenv"
 if [ -d "$PYENV_ROOT" ]; then PATH+=$PYENV_ROOT; fi
+
+NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
 PATH+=:$HOME/.local/bin
 PATH+=:$HOME/bin
