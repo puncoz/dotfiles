@@ -1,5 +1,6 @@
 REM              11 MSG `!keep lwm` on xshellz.%
 
+REM January      12 MSG Drop a text to Matt about the Dojo (Ask about lessons for older people!).%
 REM January      16 MSG Linux Conf.%
 REM February +03 07 MSG Meet Alice in Rotterdam.%
 REM February     09 MSG Review https://wiki.fsfe.org/Internal/InternsHowto.%
