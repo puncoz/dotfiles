@@ -1,6 +1,7 @@
-REM              12 MSG `!keep lwm` on xshellz.%
+REM              11 MSG `!keep lwm` on xshellz.%
 
 REM January      16 MSG Linux Conf.%
+REM February +03 07 MSG Meet Alice in Rotterdam.%
 REM February     09 MSG Review https://wiki.fsfe.org/Internal/InternsHowto.%
 REM February +07 12 MSG Ling arriving in Cork.%
 REM February +21 18 MSG Telekommunisten International.%
