@@ -12,5 +12,6 @@ windows:
 - feeds: newsbeuter
 - twitter: . .venv/bin/activate && rainbowstream -iot
 - email: mutt -f pop://lukewm:$PWORD@mail.riseup.net
+- music : cmus
 - stackage-contrib: ssh stackage-build
 - hack: # blow stuff up
