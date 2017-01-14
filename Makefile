@@ -77,6 +77,9 @@ git:
 stack:
 	@sudo apt install -y $@
 
+cmus:
+	@sudo apt install -y $@
+
 nvim:
 	@sudo apt install -y software-properties-common
 	@sudo apt install -y python-dev python-pip python3-dev python3-pip
