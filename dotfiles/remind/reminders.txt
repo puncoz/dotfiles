@@ -11,3 +11,4 @@ REM February     15 MSG Alice off to Thailand until Feb 16th.%
 REM February +21 18 MSG Telekommunisten International.%
 REM March    +21 06 MSG IFF in Valencia.%
 REM May      +21 08 MSG re:publica in Berlin.%
+REM September    08 MSG Palestine.%
