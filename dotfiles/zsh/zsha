@@ -189,3 +189,6 @@ alias ytx='youtube-dl -x'
 
 # syncthing
 alias st='sudo syncthing'
+
+# iftop
+alias ift='sudo iftop'
