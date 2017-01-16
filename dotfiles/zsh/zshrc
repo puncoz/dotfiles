@@ -46,7 +46,6 @@ export VISUAL=$EDITOR
 
 # python exports
 export PYTHONASYNCIODEBUG=1
-export PYTHONDONTWRITEBYTECODE=True
 
 # fzf exports
 export FZF_COMPLETION_TRIGGER='X'
