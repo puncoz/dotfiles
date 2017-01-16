@@ -156,6 +156,7 @@ alias drd='python manage.py reset_db'
 
 # pytest
 alias pt='py.test'
+alias ptx='py.test -x'
 alias ptw='ptw -- --testmon'
 
 # stackage

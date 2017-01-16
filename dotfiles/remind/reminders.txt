@@ -2,6 +2,7 @@ REM              11 MSG `!keep lwm` on xshellz.%
 
 REM January  +07 30 MSG Meeting with consultant for Ruth.%
 REM January      16 MSG Linux Conf.%
+REM January      21 MSG Visit Palestinian centre.%
 REM February +03 04 MSG FOSDEM 2017.%
 REM February +03 07 MSG Meet Alice in Rotterdam.%
 REM February     09 MSG Review https://wiki.fsfe.org/Internal/InternsHowto.%
