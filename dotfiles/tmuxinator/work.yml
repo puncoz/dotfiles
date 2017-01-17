@@ -1,0 +1,10 @@
+name: work
+
+root: ~/wages/fsfe
+
+startup_window: time
+
+windows:
+- time: $EDITOR ~/.gtimelog/timelog.txt
+- todo: $EDITOR ~/wages/fsfe/TODO.md
+- fsfe: # start hacking ...
