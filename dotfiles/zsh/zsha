@@ -193,3 +193,6 @@ alias st='sudo syncthing'
 
 # iftop
 alias ift='sudo iftop'
+
+# docker
+alias drmi='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
