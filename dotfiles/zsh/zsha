@@ -139,11 +139,11 @@ alias ta='tmux attach -t'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias tdf='tmux new -s default -c .'
+alias tnh='tnew hack'
 
 # tmuxinator
 alias tx='tmuxinator'
-alias txd='rvm gemset use tmuxinator && tmuxinator daily'
-alias txw='rvm gemset use tmuxinator && tmuxinator wages'
+alias txd='rvm gemset use tmuxinator && tmuxinator work'
 
 # django
 alias dmg='python manage.py migrate'
