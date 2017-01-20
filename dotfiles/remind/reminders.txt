@@ -1,7 +1,7 @@
 REM              11 MSG `!keep lwm` on xshellz.%
 
-REM January      20 MSG Message Matt about tomorrow.%
-REM January      21 MSG Visit Palestinian centre.%
+REM January      21 MSG Message Matt about classes.%
+REM January      21 MSG Visit Palestinian centre between 2/5pm.%
 REM January      30 MSG Meeting with consultant for Ruth.%
 REM February     04 MSG FOSDEM 2017.%
 REM February     07 MSG Meet Alice in Rotterdam.%
