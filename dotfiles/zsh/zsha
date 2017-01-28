@@ -25,6 +25,7 @@ alias p8='ping 8.8.8.8'
 
 # postgres
 alias pgs='sudo -u postgres'
+alias prs='sudo service postgresql restart'
 
 # builtin
 alias s='ls'
