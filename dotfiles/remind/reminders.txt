@@ -1,5 +1,6 @@
 REM              11 MSG `!keep lwm` on xshellz.%
 
+REM February     02 MSG IFSO meeting in Dublin.%
 REM February     10 MSG RMS in Berlin.%
 REM February     12 MSG Ling arriving in Cork.%
 REM February     15 MSG Alice off to Thailand until Feb 16th.%
