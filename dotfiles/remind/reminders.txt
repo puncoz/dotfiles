@@ -1,14 +1,8 @@
 REM              11 MSG `!keep lwm` on xshellz.%
 
-REM January      21 MSG Message Matt about classes.%
-REM January      21 MSG Visit Palestinian centre between 2/5pm.%
-REM January      30 MSG Meeting with consultant for Ruth.%
-REM February     04 MSG FOSDEM 2017.%
-REM February     07 MSG Meet Alice in Rotterdam.%
 REM February     10 MSG RMS in Berlin.%
 REM February     12 MSG Ling arriving in Cork.%
 REM February     15 MSG Alice off to Thailand until Feb 16th.%
 REM February +21 18 MSG Telekommunisten International.%
 REM March    +21 06 MSG IFF in Valencia.%
 REM May      +21 08 MSG re:publica in Berlin.%
-REM September    08 MSG Palestine.%
