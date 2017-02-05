@@ -18,6 +18,7 @@ alias ghci='stack exec -- ghci'
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+alias bim='nvim'
 
 # networking
 alias pnm='sudo pkill NetworkManager'
