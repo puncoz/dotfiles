@@ -3,6 +3,7 @@ REM              11 MSG `!keep lwm` on xshellz.%
 REM February     10 MSG RMS in Berlin.%
 REM February     12 MSG Ling arriving in Cork.%
 REM February     15 MSG Alice off to Thailand until Feb 16th.%
+REM February +07 26 MSG INPLACE Abbey street action at 6.30pm.%
 REM February +21 18 MSG Telekommunisten International.%
 REM March    +07 03 MSG Urban Ruins Workshop at UCD.%
 REM March    +21 06 MSG IFF in Valencia.%
