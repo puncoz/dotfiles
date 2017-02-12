@@ -1,5 +1,4 @@
-REM              11 MSG `!keep lwm` on xshellz.%
-
+REM              01 MSG `!keep lwm`, `#xShellz` on `irc.freenode.net`.%
 REM February +02 15 MSG Alice off to Thailand until Feb 16th.%
 REM February +07 26 MSG INPLACE Abbey street action at 6.30pm.%
 REM February +01 18 MSG Telekommunisten International.%
