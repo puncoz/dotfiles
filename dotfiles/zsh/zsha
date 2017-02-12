@@ -158,6 +158,7 @@ alias drd='python manage.py reset_db'
 
 # pytest
 alias pt='py.test'
+alias pk='py.test -k'
 alias ptx='py.test -x'
 alias ptw='ptw -- --testmon'
 
