@@ -8,3 +8,4 @@ REM February +01 18 MSG Telekommunisten International.%
 REM March    +03 03 MSG Urban Ruins Workshop at UCD.%
 REM March    +21 06 MSG IFF in Valencia.%
 REM May      +21 08 MSG re:publica in Berlin.%
+REM May      +05 31 MSG ILConf, Cork, UCC.%
