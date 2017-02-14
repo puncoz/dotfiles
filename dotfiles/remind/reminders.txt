@@ -2,6 +2,7 @@ REM              01 MSG `!keep lwm`, `#xShellz` on `irc.freenode.net`.%
 REM February     13 MSG House viewing @ 5.30pm.%
 REM February +02 15 MSG Alice off to Thailand until Feb 16th.%
 REM February +01 17 MSG https://www.facebook.com/HelpingCorksHomeless/posts/914944218641246.%
+REM February +01 24 MSG 10pm, Brown Thomas, Homeless Cork run.%
 REM February +07 26 MSG INPLACE Abbey street action at 6.30pm.%
 REM February +01 18 MSG Telekommunisten International.%
 REM March    +03 03 MSG Urban Ruins Workshop at UCD.%
