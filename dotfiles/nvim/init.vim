@@ -162,6 +162,7 @@ if exists(':tnoremap')
 endif
 
 nnoremap <Leader>T :sp \| :term<space>
+nnoremap <Leader>P :sp \| :term py.test -v<cr>
 " }
 
 " escape parens {
