@@ -1,5 +1,5 @@
 REM January   31   +7 MSG Dad's birthday.%
-REM February  16   +7 MSG Ruth's birthday.%
+REM February  18   +7 MSG Ruth's birthday.%
 REM February  25   +7 MSG Mo's birthday.%
 REM April     18   +7 MSG Niamh's birthday.%
 REM July      3    +7 MSG Ling's birthday.%
