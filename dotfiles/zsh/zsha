@@ -175,9 +175,6 @@ alias js='jekyll clean && jekyll serve --incremental'
 # dict
 alias dg='dict -d'
 
-# mutt
-alias mt='mutt -f pop://lukewm:$PWORD@mail.riseup.net'
-
 # rainbowstream
 alias rbs='rainbowstream'
 
