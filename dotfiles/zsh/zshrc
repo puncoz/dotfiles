@@ -70,3 +70,6 @@ source ~/.autoenv/activate.sh
 # Watch out for some dependencies who need rely
 # on this not being set on install
 export PYTHONDONTWRITEBYTECODE=True
+
+# Make sure we get the keyring running
+export $(gnome-keyring-daemon -s)
