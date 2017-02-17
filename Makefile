@@ -41,9 +41,6 @@ dockerize:
 ~/.gitignore_global:
 	@ln $(LNARGS) $(realpath dotfiles/git/gitignore_global) $@
 
-~/.reminders:
-	@ln $(LNARGS) $(realpath dotfiles/remind/reminders) $@
-
 ~/.tmux.conf:
 	@ln $(LNARGS) $(realpath dotfiles/tmux/tmux.conf) $@
 
@@ -133,7 +130,6 @@ dotfiles:
 	~/.ghci \
 	~/.gitconfig \
 	~/.gitignore_global \
-	~/.reminders \
 	~/.tmux.conf \
 	~/.tmuxinator/work.yml \
 	~/.zshrc \

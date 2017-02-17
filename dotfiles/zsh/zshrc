@@ -62,7 +62,7 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # reminders
-command -v remind >/dev/null 2>&1 && remind -h ~/.reminders
+command -v remind >/dev/null 2>&1 && remind -h ~/remind/reminders.txt
 
 # autoenv
 source ~/.autoenv/activate.sh

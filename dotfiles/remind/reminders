@@ -1,2 +1,0 @@
-include [filedir()]/dotfiles/dotfiles/remind/birthdays.txt
-include [filedir()]/dotfiles/dotfiles/remind/reminders.txt

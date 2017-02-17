@@ -38,7 +38,7 @@ alias -g SE='2> /dev/null'
 alias cnt='wc -l'
 
 # dotfiles
-alias erm='$EDITOR ~/dotfiles/dotfiles/remind/reminders.txt'
+alias erm='$EDITOR ~/remind/reminders.txt'
 alias ev='$EDITOR ~/.config/nvim/init.vim'
 alias ez='$EDITOR ~/.zshrc'
 alias ea='$EDITOR ~/.zsha'
