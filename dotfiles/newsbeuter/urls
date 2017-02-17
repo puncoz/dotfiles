@@ -1,63 +1,64 @@
-http://fsfe.org/news/news.en.rss "Europe/FSFE"
-https://open.coop/feed/ "Europe/OpenCoop"
-http://www.ifso.ie/wordpress/feed "Ireland/IFSO"
-https://data.gov.ie/blog/feed "Ireland/data.gov.ie"
-https://queertypes.com/atom.xml "Hackers/Queertypes"
-https://planet.haskell.org/atom.xml "Hackers/PlanetHaskell"
-https://daedalus.libtech.website/feed "Hackers/Daedalus feed"
-https://www.freelists.org/feed/daedalusfriends "Hackers/Daedalus list"
-http://blog.3rik.cc/feed/ "Hackers/Erik Albers"
-http://taylor.fausak.me/sitemap.rss "Hackers/Taylor"
-https://www.reddit.com/r/haskell/.rss "Haskell/Haskell Reddit"
-http://xlterrestrials.org/plog/?feed=rss2 "Hackers/Podopolog"
-http://ariis.it/static/stream/rss.xml "Hackers/Francesco"
-http://tavisharmstrong.com/index.xml "Hackers/Tavish Armstrong"
-http://booktwo.org/feed/ "Hackers/James Bridle"
-https://anarc.at/blog/index.rss "Hackers/Anarcat"
-https://joeyh.name/blog/index.rss "Hackers/JoeyH"
-https://events.ccc.de/feed/ "Activism/CCC"
-http://bollier.org/blog_entries/feed "Activism/David Bollier"
-http://www.guerrillatranslation.org/feed/ "Activism/Guerrilla Translation"
-https://blog.p2pfoundation.net/feed "Activism/P2P Foundation"
-http://news.infoshop.org/rss.xml "Activism/Infoshop News"
-http://tk.wpcentral.trick.ca/feed/ "Activism/Telekommunisten"
-https://blockupy.org/feed "Activism/Blockupy"
-https://stop-ttip.org/feed/ "Activism/Stop TTIP"
-http://www.crimethinc.com/blog/feed/ "Activism/CrimethInc Far East Blog"
-https://feeds.feedburner.com/Torrentfreak "Activism/TorrentFreak"
-http://libgen.io/rss/index.php "Activism/Library Genesis News"
-http://ascii.textfiles.com/feed "Hackers/J Scott"
-https://holgerkrekel.net/feed/ "Hackers/kregel"
-http://raul.de/feed/ "Hackers/Raul K"
-http://hintjens.com/feed/pages/pagename/blog%3A_start/category/blog/tags/-nofront/limit/999/t/Hintjens "Hackers/Hintjens"
-http://cs-syd.eu/rss.xml "Hackers/CS Syd"
-http://jvns.ca/atom.xml "Hackers/Julia Evans"
-http://feeds.feedburner.com/KrisJenkinsBlog?format=xml "Hackers/Kris Jenkins"
-https://begriffs.com/atom.xml "Hackers/Begriffs"
-https://github.com/lwm.private.atom?token=AB5i0V1cvrsp_xMbQYY0mR7ur1ziDOfdks616-J9wA== "Hackers/Github: lwm"
-https://news.ycombinator.com/rss "Hackers/Hacker News"
-https://ocharles.org.uk/blog/posts.rss "Hackers/Inside ocharles"
-http://degoes.net/feed.xml "Hackers/John A De Goes"
-http://networkingart.eu/feed/ "Hackers/Networkingart"
-http://feeds.feedburner.com/felixge "Hackers/Felix Geisendörfer"
-https://changelog.com/master/feed "Hackers/Changelog"
-http://feeds.feedburner.com/EricsThoughts "Hackers/Eric Holscher"
-http://paolocapriotti.com/atom.xml "Hackers/Paolo Capriotti's blog"
-https://engineuring.wordpress.com/feed/ "Hackers/engineuring"
-http://www.dmytri.info/feed/ "Hackers"
-https://neovim.io/news.xml "Software/Neovim"
-https://static.fsf.org/fsforg/rss/jobs.xml "Jobs/Free software jobs"
-http://www.economist.com/topics/european-union/index.xml "World News/Economist: EU"
-http://www.pacbi.org/rss.php "World News/PACBI "
-http://www.economist.com/feeds/print-sections/103/special-reports.xml "World News/Economist: Special Report"
-http://www.economist.com/topics/computer-technology/index.xml "World News/Economist: IT"
-http://www.who.int/feeds/entity/csr/don/en/rss.xml "World News/WHO: Disease Outbreaks"
-http://www.economist.com/topics/environmental-problems-and-protection/index.xml "World News/Economist: Environment"
-http://www.economist.com/sections/economics/rss.xml "World News/Economist: Economics"
-http://www.aljazeera.com/xml/rss/all.xml "World News/Al Jazeera English"
-https://bdsmovement.net/rss-feed.xml "World News/BDS"
-http://www.who.int/feeds/entity/hac/en/rss.xml "World News/WHO: Emergeny/Disaster"
-http://www.who.int/feeds/entity/mediacentre/news/en/rss.xml "World News/WHO: News"
-http://www.haskellforall.com/feeds/posts/default "Haskell/Haskell for all"
-http://notes-on-haskell.blogspot.com/feeds/posts/default "Haskell/Notes on Haskell"
-http://kittenhood.ro/feed/ "Misc Bloggers/Kittenhood"
+https://blog.mehl.mx/feed/
+http://fsfe.org/news/news.en.rss
+https://open.coop/feed/
+http://www.ifso.ie/wordpress/feed
+https://data.gov.ie/blog/feed
+https://queertypes.com/atom.xml
+https://planet.haskell.org/atom.xml
+https://daedalus.libtech.website/feed
+https://www.freelists.org/feed/daedalusfriends
+http://blog.3rik.cc/feed/
+http://taylor.fausak.me/sitemap.rss
+https://www.reddit.com/r/haskell/.rss
+http://xlterrestrials.org/plog/?feed=rss2
+http://ariis.it/static/stream/rss.xml
+http://tavisharmstrong.com/index.xml
+http://booktwo.org/feed/
+https://anarc.at/blog/index.rss
+https://joeyh.name/blog/index.rss
+https://events.ccc.de/feed/
+http://bollier.org/blog_entries/feed
+http://www.guerrillatranslation.org/feed/
+https://blog.p2pfoundation.net/feed
+http://news.infoshop.org/rss.xml
+http://tk.wpcentral.trick.ca/feed/
+https://blockupy.org/feed
+https://stop-ttip.org/feed/
+http://www.crimethinc.com/blog/feed/
+https://feeds.feedburner.com/Torrentfreak
+http://libgen.io/rss/index.php
+http://ascii.textfiles.com/feed
+https://holgerkrekel.net/feed/
+http://raul.de/feed/
+http://hintjens.com/feed/pages/pagename/blog%3A_start/category/blog/tags/-nofront/limit/999/t/Hintjens
+http://cs-syd.eu/rss.xml
+http://jvns.ca/atom.xml
+http://feeds.feedburner.com/KrisJenkinsBlog?format=xml
+https://begriffs.com/atom.xml
+https://github.com/lwm.private.atom?token=AB5i0V1cvrsp_xMbQYY0mR7ur1ziDOfdks616-J9wA==
+https://news.ycombinator.com/rss
+https://ocharles.org.uk/blog/posts.rss
+http://degoes.net/feed.xml
+http://networkingart.eu/feed/
+http://feeds.feedburner.com/felixge
+https://changelog.com/master/feed
+http://feeds.feedburner.com/EricsThoughts
+http://paolocapriotti.com/atom.xml
+https://engineuring.wordpress.com/feed/
+http://www.dmytri.info/feed/
+https://neovim.io/news.xml
+https://static.fsf.org/fsforg/rss/jobs.xml
+http://www.economist.com/topics/european-union/index.xml
+http://www.pacbi.org/rss.php
+http://www.economist.com/feeds/print-sections/103/special-reports.xml
+http://www.economist.com/topics/computer-technology/index.xml
+http://www.who.int/feeds/entity/csr/don/en/rss.xml
+http://www.economist.com/topics/environmental-problems-and-protection/index.xml
+http://www.economist.com/sections/economics/rss.xml
+http://www.aljazeera.com/xml/rss/all.xml
+https://bdsmovement.net/rss-feed.xml
+http://www.who.int/feeds/entity/hac/en/rss.xml
+http://www.who.int/feeds/entity/mediacentre/news/en/rss.xml
+http://www.haskellforall.com/feeds/posts/default
+http://notes-on-haskell.blogspot.com/feeds/posts/default
+http://kittenhood.ro/feed/
