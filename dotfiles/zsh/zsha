@@ -43,6 +43,7 @@ alias ev='$EDITOR ~/.config/nvim/init.vim'
 alias ez='$EDITOR ~/.zshrc'
 alias ea='$EDITOR ~/.zsha'
 alias ef='$EDITOR ~/.zshf'
+alias et='$EDITOR ~/.tmux.conf'
 alias sz='source ~/.zshrc'
 alias dotf='cd ~/dotfiles'
 
@@ -140,8 +141,7 @@ alias gsd='git stash drop'
 alias ta='tmux attach -t'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
-alias tdf='tmux new -s default -c .'
-alias tnh='tnew hack'
+alias th='tnew hack'
 
 # tmuxinator
 alias tx='tmuxinator'
