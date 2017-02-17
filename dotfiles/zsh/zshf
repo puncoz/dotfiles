@@ -55,8 +55,8 @@ function glh(){
 }
 
 function tnew(){
-  # Start a new tmux session.
-  tmux new -s $1 -c .
+  # Start a new tmux session with named window.
+  tmux new -s $1 -n $1 -c .
 }
 
 function slurp(){
