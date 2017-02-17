@@ -7,6 +7,7 @@ REM February +01 21 MSG https://www.facebook.com/events/167634750403651/.%
 REM February +01 24 MSG 10pm, Brown Thomas, Homeless Cork run.%
 REM February +07 26 MSG INPLACE Abbey street action at 6.30pm.%
 REM February +01 18 MSG Telekommunisten International.%
+REM March        01 MSG Message Mike about film processing.%
 REM March    +03 03 MSG Urban Ruins Workshop at UCD.%
 REM March    +21 06 MSG IFF in Valencia.%
 REM May      +21 08 MSG re:publica in Berlin.%
