@@ -145,7 +145,7 @@ alias tnh='tnew hack'
 
 # tmuxinator
 alias tx='tmuxinator'
-alias txd='rvm gemset use tmuxinator && tmuxinator work'
+alias txd='rvm gemset use tmuxinator'
 
 # django
 alias dmg='python manage.py migrate'
@@ -155,6 +155,9 @@ alias dcs='python manage.py createsuperuser'
 alias dsp='python manage.py shell_plus'
 alias dch='python manage.py check'
 alias drd='python manage.py reset_db'
+
+# flask
+alias fr='flask run'
 
 # pytest
 alias pt='py.test'
@@ -173,13 +176,16 @@ alias pya='pyenv activate'
 alias js='jekyll clean && jekyll serve --incremental'
 
 # dict
-alias dg='dict -d'
+alias dg='dict -d gcide'
+alias dt='dict -d moby-thesaurus'
+alias des='dict -d fd-eng-spa'
+alias dse='dict -d fd-spa-eng'
 
 # rainbowstream
 alias rbs='rainbowstream'
 
 # powertop
-alias pwt='sudo powertop'
+alias pwt='sudo powertop --auto-tune && sudo powertop'
 
 # gtimelog
 alias ge='$EDITOR ~/.gtimelog/timelog.txt'
