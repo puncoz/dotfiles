@@ -63,3 +63,9 @@ function slurp(){
   # Download a website.
   wget --wait=20 --limit-rate=20K -r -p -U Mozilla $1
 }
+
+function vol(){
+  # Change volume via percentage.
+  # $1 might look like +10, or -50.
+  pactl -- set-sink-volume 0 "$1%"
+}
