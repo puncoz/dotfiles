@@ -207,3 +207,6 @@ alias drmi='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 
 # pdf
 alias pdf='evince'
+
+# newsbeuter
+alias nb='newsbeuter'
