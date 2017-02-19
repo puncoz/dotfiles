@@ -210,3 +210,6 @@ alias pdf='evince'
 
 # newsbeuter
 alias nb='newsbeuter'
+
+# eog
+alias img='eog'
