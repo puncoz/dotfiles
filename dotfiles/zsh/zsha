@@ -213,3 +213,6 @@ alias nb='newsbeuter'
 
 # eog
 alias img='eog'
+
+# pipenv
+alias pe='pipenv'
