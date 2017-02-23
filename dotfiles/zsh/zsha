@@ -169,6 +169,7 @@ alias ptw='ptw -- --testmon'
 
 # stackage
 alias sbs='ssh stackage-build'
+alias sck='stack exec --resolver nightly -- stackage-curator check'
 
 # pyenv
 alias pyv='pyenv virtualenvs'
