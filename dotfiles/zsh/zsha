@@ -217,3 +217,6 @@ alias pe='pipenv'
 
 # pip-tools
 alias pc='pip-compile'
+
+# ansible
+alias ap='ansible-playbook'
