@@ -146,9 +146,6 @@ alias th='tnew hack'
 # tmuxinator
 alias tx='tmuxinator'
 
-# rvm
-alias rvmt='rvm gemset use tmuxinator'
-
 # django
 alias dmg='python manage.py migrate'
 alias dmm='python manage.py makemigrations'
