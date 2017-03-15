@@ -42,9 +42,6 @@ au BufReadPost * nested call MyFollowSymlink(expand('%'))
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
-" Really want this, but when working on Stack, a one line
-" patch becomes a 100 line with all the stylish changes.
-" Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
 Plug 'bitc/vim-hdevtools', {'for': 'haskell'}
 Plug 'ekalinin/Dockerfile.vim'
