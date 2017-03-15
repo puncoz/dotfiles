@@ -199,7 +199,7 @@ nnoremap <leader>C :Gcommit -v<CR>
 " nerdtree {
 map ,<C-n> :NERDTreeToggle<CR>
 let g:nerdtree_tabs_autoclose=1
-let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup=0
 let g:nerdtree_tabs_smart_startup_focus=2
 let g:nerdtree_tabs_startup_cd=1
 " }
