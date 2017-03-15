@@ -238,7 +238,6 @@ let g:neomake_python_pylama_maker = {
     \ }
 let g:neomake_python_enabled_makers=['pylama']
 let g:neomake_haskell_enabled_makers=['hlint', 'hdevtools']
-let g:neomake_markdown_enabled_makers=['proselint']
 let g:neomake_open_list=2
 let g:neomake_list_height=6
 let g:neomake_verbose=1
