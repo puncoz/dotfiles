@@ -1,0 +1,9 @@
+name: fsfe
+
+root: ~/wages/fsfe/
+
+startup_window: time
+
+windows:
+- time: $EDITOR ~/.gtimelog/timelog.txt
+- hack:

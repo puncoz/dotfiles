@@ -44,7 +44,7 @@ dockerize:
 ~/.tmux.conf:
 	@ln $(LNARGS) $(realpath dotfiles/tmux/tmux.conf) $@
 
-~/.tmuxinator/work.yml:
+~/.tmuxinator/fsfe.yml:
 	@ln $(LNARGS) $(realpath dotfiles/tmuxinator/$(@F)) $@
 
 ~/.zshrc:
@@ -131,7 +131,7 @@ dotfiles:
 	~/.gitconfig \
 	~/.gitignore_global \
 	~/.tmux.conf \
-	~/.tmuxinator/work.yml \
+	~/.tmuxinator/fsfe.yml \
 	~/.zshrc \
 	~/.zsha \
 	~/.zshf \
