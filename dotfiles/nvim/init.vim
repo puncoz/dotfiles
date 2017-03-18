@@ -302,9 +302,10 @@ hi link EasyMotionMoveHL Search
 " strip all that whitespace
 autocmd BufWritePre * StripWhitespace
 
-" python
+" python {
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
+" }
 
 " dictionary mappings {
 nnoremap <Leader>dg :sp \| :term dict -d gcide<space>
