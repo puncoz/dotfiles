@@ -336,3 +336,25 @@ nnoremap <Leader>db :sp \| :term docker build -t lwm/xenial .<cr>
 
 " wrap lines in location list
 au FileType qf set wrap
+
+" Intero process management:
+nnoremap <Leader>hio :InteroOpen<CR>
+nnoremap <Leader>hik :InteroKill<CR>
+nnoremap <Leader>hic :InteroHide<CR>
+nnoremap <Leader>hil :InteroLoadCurrentModule<CR>
+
+" Intero REPL commands
+nnoremap <Leader>hie :InteroEval<CR>
+nnoremap <Leader>hit :InteroGenericType<CR>
+nnoremap <Leader>hiT :InteroType<CR>
+nnoremap <Leader>hii :InteroInfo<CR>
+nnoremap <Leader>hiI :InteroTypeInsert<CR>
+
+" Intero Go to definition:
+nnoremap <Leader>hid :InteroGoToDef<CR>
+
+" Intero Highlight uses of identifier:
+nnoremap <Leader>hiu :InteroUses<CR>
+
+" Intero Reload the file in Intero after saving
+autocmd! BufWritePost *.hs InteroReload
