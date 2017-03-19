@@ -41,18 +41,35 @@ au BufReadPost * nested call MyFollowSymlink(expand('%'))
 
 call plug#begin('~/.config/nvim/plugged')
 
+" color schemes {
 Plug 'morhetz/gruvbox'
+" }
+
+" haskell
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
-Plug 'bitc/vim-hdevtools', {'for': 'haskell'}
+Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
+Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
+" }
+
+" syntax highlighting {
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'Raimondi/delimitMate'
+Plug 'chase/vim-ansible-yaml'
+"
+
+" python {
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'lambdalisue/vim-pyenv', {'for': 'python'}
+" }
+
+" git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+" }
+
+Plug 'Raimondi/delimitMate'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
@@ -62,23 +79,14 @@ Plug 'ervandew/supertab'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'mattn/gist-vim'
-Plug 'mattn/webapi-vim'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'SirVer/ultisnips',
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'vimlab/split-term.vim'
-Plug 'tpope/vim-repeat'
-Plug 'chase/vim-ansible-yaml'
-Plug 'mhinz/vim-grepper'
 Plug 'neomake/neomake'
 Plug 'rafi/vim-tinyline'
-Plug 'itchyny/vim-cursorword'
-Plug 'amperser/proselint'
 
 call plug#end()
 
@@ -237,7 +245,7 @@ let g:neomake_python_pylama_maker = {
     \ 'errorformat': '%f:%l:%c: %t%m',
     \ }
 let g:neomake_python_enabled_makers=['pylama']
-let g:neomake_haskell_enabled_makers=['hlint', 'hdevtools']
+let g:neomake_haskell_enabled_makers=['hlint']
 let g:neomake_open_list=2
 let g:neomake_list_height=6
 let g:neomake_verbose=1
@@ -264,7 +272,7 @@ let g:jedi#show_call_signatures="2"
 let g:jedi#auto_close_doc=1
 " }
 
-" isort {
+" vim-isort {
 let g:vim_isort_map='<C-i>'
 " }
 
@@ -323,11 +331,3 @@ nnoremap <Leader>db :sp \| :term docker build -t lwm/xenial .<cr>
 
 " wrap lines in location list
 au FileType qf set wrap
-
-" hdevtools {
-nnoremap <leader>ht :HdevtoolsType<CR>
-nnoremap <leader>hc :HdevtoolsClear<CR>
-nnoremap <leader>hi :HdevtoolsInfo<CR>
-
-nnoremap <Leader>fs :sp \| :term hdevtools findsymbol<space>
-" }
