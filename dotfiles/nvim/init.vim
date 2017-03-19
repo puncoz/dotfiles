@@ -1,11 +1,5 @@
-set nocompatible
-
-" functions
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-
-" git.io/vai8m
+" Make sure changes follow symlinks
+" https://github.com/tpope/vim-fugitive/issues/147#issuecomment-27607563
 function! MyFollowSymlink(...)
   if exists('w:no_resolve_symlink') && w:no_resolve_symlink
     return
@@ -41,64 +35,109 @@ au BufReadPost * nested call MyFollowSymlink(expand('%'))
 
 call plug#begin('~/.config/nvim/plugged')
 
-" color schemes {
+" Color schemes
 Plug 'morhetz/gruvbox'
-" }
+Plug 'tomasr/molokai'
 
-" haskell
+" Haskell HLint in-place refactoring
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
+
+" Haskell formatting (not opinionated)
 Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
+
+" Haskell interactive development
 Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
-" }
 
-" syntax highlighting {
+" Docker syntax highlighting
 Plug 'ekalinin/Dockerfile.vim'
+
+" Ansible syntax highlighting
 Plug 'chase/vim-ansible-yaml'
-"
 
-" python {
+" Python PEP8 style enforcer
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
+
+" Python completion library
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
+
+" Python import statement sorting
 Plug 'fisadev/vim-isort', {'for': 'python'}
+
+" Python virtual environment support
 Plug 'lambdalisue/vim-pyenv', {'for': 'python'}
-" }
 
-" git
+" Git modification HUD
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-git'
-" }
 
-Plug 'Raimondi/delimitMate'
-Plug 'ntpeters/vim-better-whitespace'
+" Git inside Vim
+Plug 'tpope/vim-fugitive'
+
+" Git syntax highlighting
+Plug 'tpope/vim-git'
+
+" File explorer tab controller
 Plug 'jistr/vim-nerdtree-tabs'
+
+" File explorer
 Plug 'scrooloose/nerdtree'
+
+" Fuzzy file searcher
 Plug 'kien/ctrlp.vim'
+
+" Fuzzy function searcher
 Plug 'tacahiroy/ctrlp-funky'
+
+" Completion library for quotes/parens/brackets
+Plug 'Raimondi/delimitMate'
+
+" White space killer
+Plug 'ntpeters/vim-better-whitespace'
+
+" Helper for making the TAB key work
 Plug 'ervandew/supertab'
+
+" Edit multiple words with ease
 Plug 'terryma/vim-multiple-cursors'
+
+" Jump to any word you can see
 Plug 'Lokaltog/vim-easymotion'
+
+" Manipulate things that surround things
 Plug 'tpope/vim-surround'
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-Plug 'SirVer/ultisnips',
-Plug 'honza/vim-snippets'
+
+" All round completion engine
+Plug 'Shougo/deoplete.nvim'
+
+" Bindings for commenting out things
 Plug 'tpope/vim-commentary'
+
+" Helpful mappings
 Plug 'tpope/vim-unimpaired'
+
+" EditorConfig is good
 Plug 'editorconfig/editorconfig-vim'
+
+" Async lint framework
 Plug 'neomake/neomake'
+
+" Status line prettifier
 Plug 'rafi/vim-tinyline'
 
 call plug#end()
 
+" Standard Vim leader key for bindings
 let mapleader=","
-imap jk <Esc>
 
-" colorschemes {
-colorscheme gruvbox
+" Get out of insert mode with 'jk'
+imap jk <Esc>
+tnoremap jk <C-\><C-n>
+
+" My favourite colour scheme
 set background=dark
-" }
+colorscheme gruvbox
 
 " options galore {
+" TODO: Comment these!!!
 syntax on
 filetype plugin indent on
 set spell spelllang=en_gb
@@ -145,64 +184,32 @@ set softtabstop=2
 set tabstop=2
 " }
 
-" writing {
-nnoremap <leader>Qa vapJgqap
+" Stop automatically inserting comments on new lines
+set formatoptions=
+
+" Wrap and join an entire paragraph
 nnoremap <leader>qa gqap
+
+" Choose the first spell check recommendation
 nnoremap <leader>Z 1z=
-" }
-
-" terminal mode {
-if exists(':tnoremap')
-  tnoremap jk <C-\><C-n>
-  tnoremap <C-h> <C-\><C-n><C-w>h
-  tnoremap <C-j> <C-\><C-n><C-w>j
-  tnoremap <C-k> <C-\><C-n><C-w>k
-  tnoremap <C-l> <C-\><C-n><C-w>l
-  tnoremap jk <C-\><C-n>
-  tnoremap <C-@> <C-\><C-n>:tab sp<cr>:startinsert<cr>
-  let g:terminal_scrollback_buffer_size=100000
-  augroup vimrc_term
-    au!
-    autocmd! BufEnter term://* startinsert
-  augroup END
-endif
-
-nnoremap <Leader>T :sp \| :term<space>
-nnoremap <Leader>P :sp \| :term py.test -v<cr>
-" }
 
 " escape parens {
 inoremap <C-e> <C-o>a
 inoremap <C-d> <C-o>A
 " }
 
-" highlight characters past 79 chars  {
-match ErrorMsg '\%>79v.\+'
-" }
-
-" edit/save $MYVIMRC conveniently {
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-" }
-
-" vim-plug {
 nnoremap <leader>pi :PlugInstall <CR>
 nnoremap <leader>pc :PlugClean <CR>
-" }
 
-" git gutter {
-let g:gitgutter_max_signs=10000
-let g:gitgutter_realtime=1
-let g:gitgutter_eager=1
-" }
-
-" fugitive
 " https://blog.mikecordell.com/vim/2014/07/20/quick-fixup-in-vim-with-fugitive.html {
 nnoremap <leader>gl :Git! log<CR>ggw
 nnoremap <leader>f yiw <ESC>:Gcommit --fixup=<C-r>"<CR>
 
-nnoremap <leader>C :Gcommit -v<CR>
-" }
+let g:gitgutter_max_signs=10000
+let g:gitgutter_realtime=1
+let g:gitgutter_eager=1
 
 " nerdtree {
 map ,<C-n> :NERDTreeToggle<CR>
@@ -212,12 +219,11 @@ let g:nerdtree_tabs_smart_startup_focus=2
 let g:nerdtree_tabs_startup_cd=1
 " }
 
-" http://www.mokacoding.com/blog/nerdtree-relative-numbers/ {
+" Enable line numbers in Nerdtree tabs
+" http://www.mokacoding.com/blog/nerdtree-relative-numbers/
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
-" }
 
-" ctrl-p {
 nnoremap <Leader>cf :CtrlPFunky<Cr>
 nnoremap <leader>ct :CtrlPTag<cr>
 let g:ctrlp_user_command=['.git/', 'cd %s && git ls-files --exclude-standard -co']
@@ -231,7 +237,6 @@ let g:ctrlp_max_depth=100
 let g:ctrlp_lazy_update=1
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_extensions=['funky', 'tag']
-" }
 
 " deo-plete {
 let g:deoplete#enable_at_startup=1
