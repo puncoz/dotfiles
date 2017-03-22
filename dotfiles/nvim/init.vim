@@ -240,4 +240,4 @@ nnoremap <Leader>hiI :InteroTypeInsert<CR>
 nnoremap <Leader>hid :InteroGoToDef<CR>
 nnoremap <Leader>hiu :InteroUses<CR>
 
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
