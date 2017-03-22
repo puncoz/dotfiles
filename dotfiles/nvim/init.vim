@@ -68,6 +68,8 @@ Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
+
+Plug 'takac/vim-hardtime'
 call plug#end()
 
 let mapleader=","
@@ -150,7 +152,7 @@ autocmd FileType nerdtree setlocal relativenumber
 nnoremap <Leader>cf :CtrlPFunky<Cr>
 nnoremap <leader>ct :CtrlPTag<cr>
 
-let g:ctrlp_user_command=['.git/', 'cd %s && git ls-files --exclude-standard -co']
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_cache_dir=$HOME . '.cache/ctrlp'
 let g:ctrlp_use_caching=1
 let g:ctrlp_by_filename=1
@@ -237,3 +239,5 @@ nnoremap <Leader>hii :InteroInfo<CR>
 nnoremap <Leader>hiI :InteroTypeInsert<CR>
 nnoremap <Leader>hid :InteroGoToDef<CR>
 nnoremap <Leader>hiu :InteroUses<CR>
+
+let g:hardtime_default_on = 1
