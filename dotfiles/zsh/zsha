@@ -138,6 +138,7 @@ alias gsa='git stash apply'
 alias gsd='git stash drop'
 
 # tmux
+alias tmux='tmux -2'
 alias ta='tmux attach -t'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
