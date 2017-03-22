@@ -69,3 +69,8 @@ function vol(){
   # $1 might look like +10, or -50.
   pactl -- set-sink-volume 0 "$1%"
 }
+
+function term-reset(){
+  # Reset your terminal profile
+  dconf reset -f /org/gnome/terminal/legacy/profiles:/
+}
