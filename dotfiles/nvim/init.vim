@@ -44,6 +44,9 @@ Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'lambdalisue/vim-pyenv', {'for': 'python'}
 
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
@@ -241,3 +244,7 @@ nnoremap <Leader>hid :InteroGoToDef<CR>
 nnoremap <Leader>hiu :InteroUses<CR>
 
 let g:hardtime_default_on = 0
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
