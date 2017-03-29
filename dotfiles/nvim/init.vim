@@ -7,7 +7,6 @@ function! MyFollowSymlink(...)
   endif
   let fname=a:0 ? a:1 : expand('%')
   if fname =~ '^\w\+:/'
-    " Do not mess with 'fugitive://' etc.
     return
   endif
   let fname=simplify(fname)
