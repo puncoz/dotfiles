@@ -81,7 +81,7 @@ imap jk <Esc>
 tnoremap jk <C-\><C-n>
 
 set background=dark
-colorscheme gruvbox
+colorscheme molokai
 
 syntax on
 filetype plugin indent on
