@@ -74,3 +74,8 @@ function term-reset(){
   # Reset your terminal profile
   dconf reset -f /org/gnome/terminal/legacy/profiles:/
 }
+
+function glf(){
+  # Check history of a file
+  git log -p --follow "$1"
+}
