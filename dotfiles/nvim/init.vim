@@ -49,6 +49,7 @@ Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+Plug 'junegunn/gv.vim'
 
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
