@@ -223,3 +223,6 @@ alias pc='pip-compile'
 # ansible
 alias ap='ansible-playbook'
 alias ad='ansible-doc'
+
+# hub
+alias hpr='hub pull-request'
