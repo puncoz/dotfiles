@@ -131,7 +131,7 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 
-nnoremap <leader>qa gqap
+nnoremap <leader>q gqap
 nnoremap <leader>Z 1z=
 
 inoremap <C-e> <C-o>a
@@ -140,6 +140,8 @@ inoremap <C-d> <C-o>A
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>pi :PlugInstall <CR>
+nnoremap <leader>pu :PlugUpdate <CR>
+nnoremap <leader>pg :PlugUpgrade <CR>
 nnoremap <leader>pc :PlugClean <CR>
 
 ret g:gitgutter_max_signs=10000
