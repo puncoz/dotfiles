@@ -1,0 +1,4 @@
+#!/bin/bash
+
+read -p "Database name? " db
+sudo -u postgres createdb --echo $db
