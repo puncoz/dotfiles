@@ -31,6 +31,7 @@ command! -bar FollowSymlink call MyFollowSymlink()
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
 
 call plug#begin('~/.config/nvim/plugged')
+
 Plug 'morhetz/gruvbox'
 Plug 'tomasr/molokai'
 
@@ -73,6 +74,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
 
 Plug 'takac/vim-hardtime'
+
 call plug#end()
 
 let mapleader=","
@@ -85,6 +87,7 @@ colorscheme gruvbox
 
 syntax on
 filetype plugin indent on
+
 set spell spelllang=en_gb
 set number
 set cursorline
