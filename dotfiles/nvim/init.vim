@@ -226,6 +226,8 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 nnoremap <Leader>dg :sp \| :term dict -d gcide<space>
 nnoremap <Leader>dt :sp \| :term dict -d moby-thesaurus<space>
+nnoremap <Leader>p :sp \| :term python<cr>
+nnoremap <Leader>t :sp \| :term<cr>
 
 let g:ansible_options={'ignore_blank_lines': 0}
 
