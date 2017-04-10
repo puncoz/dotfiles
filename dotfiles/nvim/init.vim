@@ -225,7 +225,7 @@ hi link EasyMotionMoveHL Search
 autocmd! BufWritePre  *    StripWhitespace
 autocmd! BufWritePost *.hs InteroReload
 autocmd! BufWritePost *    Neomake
-autocmd! BufWritePost *    Isort
+autocmd! BufWritePost *.py Isort
 
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
