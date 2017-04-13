@@ -226,3 +226,4 @@ alias ad='ansible-doc'
 
 # hub
 alias hpr='hub pull-request'
+alias hcl='hub clone'
