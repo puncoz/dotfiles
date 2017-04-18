@@ -270,4 +270,3 @@ augroup vimrc_term
   au!
   autocmd! BufEnter term://* startinsert
 augroup END
-
