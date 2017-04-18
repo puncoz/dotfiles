@@ -173,6 +173,7 @@ alias sck='stack exec --resolver nightly -- stackage-curator check'
 # pyenv
 alias pyv='pyenv virtualenvs'
 alias pya='pyenv activate'
+alias pys='pyenv shell'
 
 # jekyll
 alias js='jekyll clean && jekyll serve --incremental'
