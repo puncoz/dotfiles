@@ -19,6 +19,8 @@ def just_execute(event):
 ip = get_ipython()
 if getattr(ip, 'pt_cli'):
     registry = ip.pt_cli.application.key_bindings_registry
-    filters = (HasFocus(DEFAULT_BUFFER) & ~HasSelection())
-    binding = registry.add_binding(Keys.ControlJ, filter=filters))
+    binding = registry.add_binding(
+        Keys.ControlJ,
+        filter=(HasFocus(DEFAULT_BUFFER) & ~HasSelection())
+    )
     binding(just_execute)
