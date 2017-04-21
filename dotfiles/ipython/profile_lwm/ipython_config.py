@@ -1,3 +1,8 @@
+import os
+
+import IPython
+from IPython.terminal.prompts import Prompts, Token
+
 # Configuration file for ipython.
 
 #------------------------------------------------------------------------------
@@ -127,7 +132,7 @@ c.BaseIPythonApplication.profile = 'lwm'
 #------------------------------------------------------------------------------
 
 ## Whether to display a banner upon starting IPython.
-c.TerminalIPythonApp.display_banner = False
+c.TerminalIPythonApp.display_banner = True
 
 ## If a command or file is given via the command-line, e.g. 'ipython foo.py',
 #  start an interactive shell after executing the file or command.
@@ -169,10 +174,13 @@ c.InteractiveShell.autoindent = True
 c.InteractiveShell.automagic = True
 
 ## The part of the banner to be printed before the profile
-#c.InteractiveShell.banner1 = ""
+pyversion = "Python: {}".format(IPython.sys.version.split()[0])
+ipyversion = "IPython: {}".format(".".join([str(x) for x in IPython.version_info if x is not ""]))
+banner = "{} :: {}".format(pyversion, ipyversion)
+c.InteractiveShell.banner1 = banner
 
 ## The part of the banner to be printed after the profile
-# c.InteractiveShell.banner2 = ""
+c.InteractiveShell.banner2 = ""
 
 ## Set the size of the output cache.  The default is 1000, you can change it
 #  permanently in your config file.  Setting it to 0 completely disables the
@@ -250,13 +258,13 @@ c.InteractiveShell.history_load_length = 1000
 #c.InteractiveShell.quiet = False
 
 ##
-#c.InteractiveShell.separate_in = '\n'
+c.InteractiveShell.separate_in = ''
 
 ##
-#c.InteractiveShell.separate_out = ''
+c.InteractiveShell.separate_out = ''
 
 ##
-#c.InteractiveShell.separate_out2 = ''
+c.InteractiveShell.separate_out2 = ''
 
 ## Show rewritten input, e.g. for autocall.
 #c.InteractiveShell.show_rewritten_input = True
@@ -283,7 +291,7 @@ c.TerminalInteractiveShell.confirm_exit = False
 ## Options for displaying tab completions, 'column', 'multicolumn', and
 #  'readlinelike'. These options are for `prompt_toolkit`, see `prompt_toolkit`
 #  documentation for more information.
-#c.TerminalInteractiveShell.display_completions = 'multicolumn'
+c.TerminalInteractiveShell.display_completions = 'readlinelike'
 
 ## Shortcut style to use at the prompt. 'vi' or 'emacs'.
 c.TerminalInteractiveShell.editing_mode = 'vi'
@@ -309,8 +317,18 @@ c.TerminalInteractiveShell.highlight_matching_brackets = True
 ## Enable mouse support in the prompt
 #c.TerminalInteractiveShell.mouse_support = False
 
+class MyPrompt(Prompts):
+     def in_prompt_tokens(self, cli=None):
+         return [(Token.Prompt, ">>> ")]
+     def continuation_prompt_tokens(self, cli=None, width=None):
+         return [(Token.Prompt, '... ')]
+     def rewrite_prompt_tokens(self):
+         return []
+     def out_prompt_tokens(self):
+         return []
+
 ## Class used to generate Prompt token for prompt_toolkit
-#c.TerminalInteractiveShell.prompts_class = 'IPython.terminal.prompts.Prompts'
+c.TerminalInteractiveShell.prompts_class = MyPrompt
 
 ## Use `raw_input` for the REPL, without completion, multiline input, and prompt
 #  colors.
@@ -508,11 +526,11 @@ c.TerminalInteractiveShell.term_title = False
 ## Experimental: restrict time (in milliseconds) during which Jedi can compute
 #  types. Set to 0 to stop computing types. Non-zero value lower than 100ms may
 #  hurt performance by preventing jedi to build its cache.
-#c.Completer.jedi_compute_type_timeout = 400
+c.Completer.jedi_compute_type_timeout = 400
 
 ## Experimental: Use Jedi to generate autocompletions. Default to True if jedi is
 #  installed
-#c.Completer.use_jedi = True
+c.Completer.use_jedi = True
 
 #------------------------------------------------------------------------------
 # IPCompleter(Completer) configuration
@@ -529,7 +547,7 @@ c.TerminalInteractiveShell.term_title = False
 #  When True: only those names in obj.__all__ will be included.
 #
 #  When False [default]: the __all__ attribute is ignored
-#c.IPCompleter.limit_to__all__ = False
+c.IPCompleter.limit_to__all__ = False
 
 ## Whether to merge completion results into a single list
 #
@@ -546,7 +564,7 @@ c.TerminalInteractiveShell.term_title = False
 #  When 1: all 'magic' names (``__foo__``) will be excluded.
 #
 #  When 0: nothing will be excluded.
-#c.IPCompleter.omit__names = 2
+c.IPCompleter.omit__names = 1
 
 #------------------------------------------------------------------------------
 # ScriptMagics(Magics) configuration
@@ -582,4 +600,4 @@ c.TerminalInteractiveShell.term_title = False
 
 ## If True, any %store-d variables will be automatically restored when IPython
 #  starts.
-#c.StoreMagics.autorestore = False
+c.StoreMagics.autorestore = True
