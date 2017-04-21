@@ -5,6 +5,7 @@ from prompt_toolkit.keys import Keys
 
 
 def just_execute(event):
+    """https://github.com/ipython/ipython/issues/10405"""
     cbuffer = event.current_buffer
     doc = cbuffer.document
     if cbuffer.complete_state:
