@@ -77,6 +77,9 @@ Plug 'chase/vim-ansible-yaml'
 
 Plug 'takac/vim-hardtime'
 
+Plug 'reedes/vim-pencil'
+Plug 'reedes/vim-wordy'
+
 call plug#end()
 
 let mapleader=","
@@ -135,7 +138,6 @@ set tabstop=2
 set splitbelow
 set splitright
 
-nnoremap <leader>q gqap
 nnoremap <leader>Z 1z=
 
 inoremap <C-e> <C-o>a
