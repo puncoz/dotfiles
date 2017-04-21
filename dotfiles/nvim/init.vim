@@ -140,8 +140,9 @@ nnoremap <leader>Z 1z=
 inoremap <C-e> <C-o>a
 inoremap <C-d> <C-o>A
 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
 nnoremap <leader>pi :PlugInstall <cr>
 nnoremap <leader>pu :PlugUpdate <cr>
 nnoremap <leader>pg :PlugUpgrade <cr>
