@@ -131,6 +131,8 @@ set clipboard+=unnamedplus
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
+set splitbelow
+set splitright
 
 nnoremap <leader>q gqap
 nnoremap <leader>Z 1z=
@@ -266,6 +268,3 @@ augroup vimrc_term
   au!
   autocmd! BufEnter term://* startinsert
 augroup END
-
-set splitbelow
-set splitright
