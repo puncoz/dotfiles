@@ -1,7 +1,8 @@
 # python
 alias 2cv='virtualenv .venv'
 alias 3cv='python -m venv .venv'
-alias av='echo ". .venv/bin/activate" >> .env && source .env'
+alias aav='echo ". .venv/bin/activate" >> .env && source .env'
+alias av='source .env'
 alias psv='source .venv/bin/activate'
 
 # stack
