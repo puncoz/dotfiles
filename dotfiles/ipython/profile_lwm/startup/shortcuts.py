@@ -7,14 +7,15 @@ from prompt_toolkit.keys import Keys
 def just_execute(event):
     """https://github.com/ipython/ipython/issues/10405"""
     cbuffer = event.current_buffer
-    doc = cbuffer.document
     if cbuffer.complete_state:
-        if cbuffer.complete_state.current_completion:
-            cbuffer.apply_completion(cc)
+        completion = cbuffer.complete_state.current_completion
+        if completion:
+            cbuffer.apply_completion(completion)
         else:
             cbuffer.cancel_completion()
         return
     cbuffer.accept_action.validate_and_handle(event.cli, cbuffer)
+
 
 ip = get_ipython()
 if getattr(ip, 'pt_cli'):
