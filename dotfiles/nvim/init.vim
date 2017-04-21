@@ -140,18 +140,18 @@ nnoremap <leader>Z 1z=
 inoremap <C-e> <C-o>a
 inoremap <C-d> <C-o>A
 
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>pi :PlugInstall <CR>
-nnoremap <leader>pu :PlugUpdate <CR>
-nnoremap <leader>pg :PlugUpgrade <CR>
-nnoremap <leader>pc :PlugClean <CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>pi :PlugInstall <cr>
+nnoremap <leader>pu :PlugUpdate <cr>
+nnoremap <leader>pg :PlugUpgrade <cr>
+nnoremap <leader>pc :PlugClean <cr>
 
 ret g:gitgutter_max_signs=10000
 let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
 
-map ,<C-n> :NERDTreeToggle<CR>
+map ,<C-n> :NERDTreeToggle<cr>
 let g:nerdtree_tabs_autoclose=1
 let g:nerdtree_tabs_open_on_console_startup=0
 let g:nerdtree_tabs_smart_startup_focus=2
@@ -160,7 +160,7 @@ let g:nerdtree_tabs_startup_cd=1
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 
-nnoremap <Leader>cf :CtrlPFunky<Cr>
+nnoremap <Leader>cf :CtrlPFunky<cr>
 nnoremap <leader>ct :CtrlPTag<cr>
 
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -186,8 +186,8 @@ let g:neomake_list_height=6
 let g:neomake_verbose=1
 let g:neomake_logfile='/tmp/neomake.log'
 
-nnoremap <leader>qc :lclose<CR>
-nnoremap <leader>qo :lopen<CR>
+nnoremap <leader>qc :lclose<cr>
+nnoremap <leader>qo :lopen<cr>
 
 let g:SuperTabDefaultCompletionType="<c-n>"
 let g:SuperTabLongestHighlight=1
@@ -202,8 +202,8 @@ let g:jedi#auto_close_doc=1
 
 let g:vim_isort_map='<C-i>'
 
-nnoremap <C-t> :tabnew<CR>
-inoremap <C-t> <Esc>:tabnew<CR>
+nnoremap <C-t> :tabnew<cr>
+inoremap <C-t> <Esc>:tabnew<cr>
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
@@ -237,17 +237,17 @@ let g:ansible_options={'ignore_blank_lines': 0}
 
 au FileType qf set wrap
 
-nnoremap <Leader>hio :InteroOpen<CR>
-nnoremap <Leader>hik :InteroKill<CR>
-nnoremap <Leader>hic :InteroHide<CR>
-nnoremap <Leader>hil :InteroLoadCurrentModule<CR>
-nnoremap <Leader>hie :InteroEval<CR>
-nnoremap <Leader>hit :InteroGenericType<CR>
-nnoremap <Leader>hiT :InteroType<CR>
-nnoremap <Leader>hii :InteroInfo<CR>
-nnoremap <Leader>hiI :InteroTypeInsert<CR>
-nnoremap <Leader>hid :InteroGoToDef<CR>
-nnoremap <Leader>hiu :InteroUses<CR>
+nnoremap <Leader>hio :InteroOpen<cr>
+nnoremap <Leader>hik :InteroKill<cr>
+nnoremap <Leader>hic :InteroHide<cr>
+nnoremap <Leader>hil :InteroLoadCurrentModule<cr>
+nnoremap <Leader>hie :InteroEval<cr>
+nnoremap <Leader>hit :InteroGenericType<cr>
+nnoremap <Leader>hiT :InteroType<cr>
+nnoremap <Leader>hii :InteroInfo<cr>
+nnoremap <Leader>hiI :InteroTypeInsert<cr>
+nnoremap <Leader>hid :InteroGoToDef<cr>
+nnoremap <Leader>hiu :InteroUses<cr>
 
 let g:hardtime_default_on = 0
 
