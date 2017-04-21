@@ -269,4 +269,4 @@ augroup vimrc_term
   autocmd! BufEnter term://* startinsert
 augroup END
 
-nnoremap <Leader>p :10Term ipython --profile=lwm<cr>
+nnoremap <Leader>pp :10Term ipython --profile=lwm<cr>
