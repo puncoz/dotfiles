@@ -64,6 +64,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/deoplete.nvim'
 Plug 'neomake/neomake'
+Plug 'dojoteef/neomake-autolint'
 Plug 'rafi/vim-tinyline'
 Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
@@ -228,7 +229,6 @@ hi link EasyMotionMoveHL Search
 
 autocmd! BufWritePre  *    StripWhitespace
 autocmd! BufWritePost *.hs InteroReload
-autocmd! BufWritePost *    Neomake
 autocmd! BufWritePost *.py Isort
 
 let g:python_host_prog = '/usr/bin/python'
