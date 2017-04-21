@@ -69,6 +69,7 @@ Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-unimpaired'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'vimlab/split-term.vim'
 
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
