@@ -2,7 +2,7 @@
 :set +m
 
 -- Show type of last evaluated expression
-:set +t
+-- :set +t
 
 -- http://chrisdone.com/posts/making-ghci-fast
 :set -fobject-code
