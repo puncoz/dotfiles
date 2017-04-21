@@ -67,8 +67,7 @@ command -v remind >/dev/null 2>&1 && remind -h ~/remind/reminders.txt
 # autoenv
 source ~/.autoenv/activate.sh
 
-# Watch out for some dependencies who need rely
-# on this not being set on install
+# Some dependencies need this, so watch out on builds
 export PYTHONDONTWRITEBYTECODE=True
 
 # Make sure we get the keyring running
