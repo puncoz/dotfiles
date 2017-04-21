@@ -5,6 +5,10 @@ alias aav='echo ". .venv/bin/activate" >> .env && source .env'
 alias av='source .env'
 alias psv='source .venv/bin/activate'
 
+# ipython
+alias ipython='ipython --profile=lwm'
+alias ipy='ipython'
+
 # stack
 alias stw='stack test --file-watch --fast'
 alias sg='stack ghci'
