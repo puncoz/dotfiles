@@ -37,7 +37,9 @@ Plug 'Lokaltog/vim-easymotion'
 
 " Linting
 Plug 'neomake/neomake'
-Plug 'dojoteef/neomake-autolint'
+
+" This is great but sometimes too slow
+" Plug 'dojoteef/neomake-autolint'
 
 " NVim Enhancements
 Plug 'vimlab/split-term.vim'
