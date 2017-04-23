@@ -77,17 +77,17 @@ ino <C-e> <C-o>a
 ino <C-d> <C-o>A
 ino <C-t> <Esc>:tabnew<cr>
 
-nnoremap <leader>Z 1z=
-nnoremap <leader>ev :split $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>pi :PlugInstall<cr>
-nnoremap <leader>pu :PlugUpdate<cr>
-nnoremap <leader>pg :PlugUpgrade<cr>
-nnoremap <leader>pc :PlugClean<cr>
+nnoremap <Leader>Z 1z=
+nnoremap <Leader>ev :split $MYVIMRC<cr>
+nnoremap <Leader>sv :source $MYVIMRC<cr>
+nnoremap <Leader>pi :PlugInstall<cr>
+nnoremap <Leader>pu :PlugUpdate<cr>
+nnoremap <Leader>pg :PlugUpgrade<cr>
+nnoremap <Leader>pc :PlugClean<cr>
 nnoremap <Leader>cf :CtrlPFunky<cr>
-nnoremap <leader>ct :CtrlPTag<cr>
-nnoremap <leader>qc :lclose<cr>
-nnoremap <leader>qo :lopen<cr>
+nnoremap <Leader>ct :CtrlPTag<cr>
+nnoremap <Leader>qc :lclose<cr>
+nnoremap <Leader>qo :lopen<cr>
 nnoremap <C-t> :tabnew<cr>
 nnoremap <space> <Plug>(easymotion-s)
 nnoremap <Leader><C-n> :NERDTreeToggle<cr>
