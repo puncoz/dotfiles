@@ -69,8 +69,6 @@ autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost *.hs InteroReload
 autocmd! BufWritePost *.py Isort
 
-command! -bar FollowSymlink call MyFollowSymlink()
-
 imap jk <Esc>
 
 ino <C-e> <C-o>a
