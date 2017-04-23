@@ -77,36 +77,36 @@ ino <C-e> <C-o>a
 ino <C-d> <C-o>A
 ino <C-t> <Esc>:tabnew<cr>
 
-nmap <leader>Z 1z=
-nmap <leader>ev :split $MYVIMRC<cr>
-nmap <leader>sv :source $MYVIMRC<cr>
-nmap <leader>pi :PlugInstall<cr>
-nmap <leader>pu :PlugUpdate<cr>
-nmap <leader>pg :PlugUpgrade<cr>
-nmap <leader>pc :PlugClean<cr>
-nmap <Leader>cf :CtrlPFunky<cr>
-nmap <leader>ct :CtrlPTag<cr>
-nmap <leader>qc :lclose<cr>
-nmap <leader>qo :lopen<cr>
-nmap <C-t> :tabnew<cr>
-nmap <space> <Plug>(easymotion-s)
-nmap <Leader><C-n> :NERDTreeToggle<cr>
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-nmap <C-h> <C-w>h
-nmap <Leader>hio :InteroOpen<cr>
-nmap <Leader>hik :InteroKill<cr>
-nmap <Leader>hic :InteroHide<cr>
-nmap <Leader>hil :InteroLoadCurrentModule<cr>
-nmap <Leader>hie :InteroEval<cr>
-nmap <Leader>hit :InteroGenericType<cr>
-nmap <Leader>hiT :InteroType<cr>
-nmap <Leader>hii :InteroInfo<cr>
-nmap <Leader>hiI :InteroTypeInsert<cr>
-nmap <Leader>hid :InteroGoToDef<cr>
-nmap <Leader>hiu :InteroUses<cr>
-nmap <Leader>pp :10Term ipython --profile=lwm<cr>
+nnoremap <leader>Z 1z=
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pu :PlugUpdate<cr>
+nnoremap <leader>pg :PlugUpgrade<cr>
+nnoremap <leader>pc :PlugClean<cr>
+nnoremap <Leader>cf :CtrlPFunky<cr>
+nnoremap <leader>ct :CtrlPTag<cr>
+nnoremap <leader>qc :lclose<cr>
+nnoremap <leader>qo :lopen<cr>
+nnoremap <C-t> :tabnew<cr>
+nnoremap <space> <Plug>(easymotion-s)
+nnoremap <Leader><C-n> :NERDTreeToggle<cr>
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <Leader>hio :InteroOpen<cr>
+nnoremap <Leader>hik :InteroKill<cr>
+nnoremap <Leader>hic :InteroHide<cr>
+nnoremap <Leader>hil :InteroLoadCurrentModule<cr>
+nnoremap <Leader>hie :InteroEval<cr>
+nnoremap <Leader>hit :InteroGenericType<cr>
+nnoremap <Leader>hiT :InteroType<cr>
+nnoremap <Leader>hii :InteroInfo<cr>
+nnoremap <Leader>hiI :InteroTypeInsert<cr>
+nnoremap <Leader>hid :InteroGoToDef<cr>
+nnoremap <Leader>hiu :InteroUses<cr>
+nnoremap <Leader>pp :10Term ipython --profile=lwm<cr>
 
 tno <C-h> <C-\><C-n><C-w>h
 tno <C-j> <C-\><C-n><C-w>j
