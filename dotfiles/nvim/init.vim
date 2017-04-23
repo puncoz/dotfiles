@@ -59,66 +59,6 @@ Plug 'chase/vim-ansible-yaml'
 
 call plug#end()
 
-set background=dark
-colorscheme gruvbox
-
-au BufReadPost * nested call MyFollowSymlink(expand('%'))
-au FileType python let b:delimitMate_nesting_quotes=['"', '`']
-au FileType nerdtree setlocal relativenumber
-au FileType qf set wrap
-
-autocmd! BufWritePre  * StripWhitespace
-autocmd! BufWritePost *.hs InteroReload
-autocmd! BufWritePost *.py Isort
-
-imap jk <Esc>
-
-ino <C-e> <C-o>a
-ino <C-d> <C-o>A
-ino <C-t> <Esc>:tabnew<cr>
-
-nnoremap <Leader>Z 1z=
-nnoremap <Leader>ev :split $MYVIMRC<cr>
-nnoremap <Leader>sv :source $MYVIMRC<cr>
-nnoremap <Leader>pi :PlugInstall<cr>
-nnoremap <Leader>pu :PlugUpdate<cr>
-nnoremap <Leader>pg :PlugUpgrade<cr>
-nnoremap <Leader>pc :PlugClean<cr>
-nnoremap <Leader>cf :CtrlPFunky<cr>
-nnoremap <Leader>ct :CtrlPTag<cr>
-nnoremap <Leader>qc :lclose<cr>
-nnoremap <Leader>qo :lopen<cr>
-nnoremap <C-t> :tabnew<cr>
-nnoremap <space> <Plug>(easymotion-s)
-nnoremap <Leader><C-n> :NERDTreeToggle<cr>
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-nnoremap <C-h> <C-w>h
-nnoremap <Leader>hio :InteroOpen<cr>
-nnoremap <Leader>hik :InteroKill<cr>
-nnoremap <Leader>hic :InteroHide<cr>
-nnoremap <Leader>hil :InteroLoadCurrentModule<cr>
-nnoremap <Leader>hie :InteroEval<cr>
-nnoremap <Leader>hit :InteroGenericType<cr>
-nnoremap <Leader>hiT :InteroType<cr>
-nnoremap <Leader>hii :InteroInfo<cr>
-nnoremap <Leader>hiI :InteroTypeInsert<cr>
-nnoremap <Leader>hid :InteroGoToDef<cr>
-nnoremap <Leader>hiu :InteroUses<cr>
-nnoremap <Leader>pp :10Term ipython --profile=lwm<cr>
-
-tno <C-h> <C-\><C-n><C-w>h
-tno <C-j> <C-\><C-n><C-w>j
-tno <C-k> <C-\><C-n><C-w>k
-tno <C-l> <C-\><C-n><C-w>l
-tno jk <C-\><C-n>
-
-augroup vimrc_term
-  au!
-  autocmd! BufEnter term://* startinsert
-augroup END
-
 let mapleader=","
 let g:gitgutter_max_signs=10000
 let g:gitgutter_realtime=1
@@ -171,6 +111,65 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:terminal_scrollback_buffer_size=100000
 
+au BufReadPost * nested call MyFollowSymlink(expand('%'))
+au FileType python let b:delimitMate_nesting_quotes=['"', '`']
+au FileType nerdtree setlocal relativenumber
+au FileType qf set wrap
+
+autocmd! BufWritePre  * StripWhitespace
+autocmd! BufWritePost *.hs InteroReload
+autocmd! BufWritePost *.py Isort
+
+imap jk <Esc>
+
+ino <C-e> <C-o>a
+ino <C-d> <C-o>A
+ino <C-t> <Esc>:tabnew<cr>
+
+nn <Leader>Z 1z=
+nn <Leader>ev :split $MYVIMRC<cr>
+nn <Leader>sv :source $MYVIMRC<cr>
+nn <Leader>pi :PlugInstall<cr>
+nn <Leader>pu :PlugUpdate<cr>
+nn <Leader>pg :PlugUpgrade<cr>
+nn <Leader>pc :PlugClean<cr>
+nn <Leader>cf :CtrlPFunky<cr>
+nn <Leader>ct :CtrlPTag<cr>
+nn <Leader>qc :lclose<cr>
+nn <Leader>qo :lopen<cr>
+nn <C-t> :tabnew<cr>
+nn <space> <Plug>(easymotion-s)
+nn <Leader><C-n> :NERDTreeToggle<cr>
+nn <C-j> <C-w>j
+nn <C-k> <C-w>k
+nn <C-l> <C-w>l
+nn <C-h> <C-w>h
+nn <Leader>hio :InteroOpen<cr>
+nn <Leader>hik :InteroKill<cr>
+nn <Leader>hic :InteroHide<cr>
+nn <Leader>hil :InteroLoadCurrentModule<cr>
+nn <Leader>hie :InteroEval<cr>
+nn <Leader>hit :InteroGenericType<cr>
+nn <Leader>hiT :InteroType<cr>
+nn <Leader>hii :InteroInfo<cr>
+nn <Leader>hiI :InteroTypeInsert<cr>
+nn <Leader>hid :InteroGoToDef<cr>
+nn <Leader>hiu :InteroUses<cr>
+nn <Leader>pp :10Term ipython --profile=lwm<cr>
+
+tno <C-h> <C-\><C-n><C-w>h
+tno <C-j> <C-\><C-n><C-w>j
+tno <C-k> <C-\><C-n><C-w>k
+tno <C-l> <C-\><C-n><C-w>l
+tno jk <C-\><C-n>
+
+augroup vimrc_term
+  au!
+  autocmd! BufEnter term://* startinsert
+augroup END
+
+set background=dark
+colorscheme gruvbox
 syntax on
 filetype plugin indent on
 set spell spelllang=en_gb
