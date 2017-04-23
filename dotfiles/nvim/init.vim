@@ -197,7 +197,6 @@ set hidden
 set whichwrap+=<,>,[,]
 set wildmenu
 set title
-set ttyfast
 set virtualedit=onemore
 set fileencodings=.
 set spelllang=en_gb
