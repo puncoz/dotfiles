@@ -167,7 +167,7 @@ alias fr='flask run'
 
 # pytest
 alias pt='pytest'
-alias pk='pytest -k'
+alias pk='pytest -sk'
 alias ptx='pytest -x'
 alias ptq='pytest -q'
 alias ptw='ptw -- --testmon'
