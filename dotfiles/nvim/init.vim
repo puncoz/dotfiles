@@ -39,7 +39,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'neomake/neomake'
 
 " This is great but sometimes too slow
-" Plug 'dojoteef/neomake-autolint'
+Plug 'dojoteef/neomake-autolint'
 
 " NVim Enhancements
 Plug 'vimlab/split-term.vim'
