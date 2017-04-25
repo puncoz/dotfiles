@@ -116,6 +116,7 @@ au FileType qf set wrap
 autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost *.hs InteroReload
 autocmd! BufWritePost *.py Isort
+autocmd! BufWritePost * Neomake
 
 imap jk <Esc>
 
@@ -153,6 +154,7 @@ nn <Leader>hiI :InteroTypeInsert<cr>
 nn <Leader>hid :InteroGoToDef<cr>
 nn <Leader>hiu :InteroUses<cr>
 nn <Leader>pp :10Term ipython --profile=lwm<cr>
+nn <Leader>gd :Git diff<cr>
 
 tno <C-h> <C-\><C-n><C-w>h
 tno <C-j> <C-\><C-n><C-w>j

@@ -66,6 +66,7 @@ alias aptsh='apt-cache show'
 
 # git-rebase
 alias grim='git rebase -i --root master'
+alias gR='git rebase'
 alias grm='git rebase master'
 alias grc='git rebase --continue'
 alias grA='git rebase --abort'
