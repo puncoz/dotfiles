@@ -207,7 +207,7 @@ set nohlsearch
 set listchars=tab:»·,trail:·,eol:¬,nbsp:_,extends:»,precedes:«
 set list
 set expandtab
-set smartindent
+set nosmartindent
 set clipboard+=unnamedplus
 set shiftwidth=2
 set softtabstop=2
