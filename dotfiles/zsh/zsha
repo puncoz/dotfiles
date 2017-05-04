@@ -211,7 +211,7 @@ alias st='sudo syncthing'
 alias ift='sudo iftop'
 
 # docker
-alias drmi='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+alias drn='docker run -it'
 
 # pdf
 alias pdf='evince'
