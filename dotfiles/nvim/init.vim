@@ -26,6 +26,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'junegunn/gv.vim'
+Plug 'tpope/vim-rhubarb'
 
 " Navigation
 Plug 'jistr/vim-nerdtree-tabs'
@@ -53,6 +54,9 @@ Plug 'reedes/vim-wordy'
 " Syntax highlighting
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
+
+" FIXME: Sort out
+" AndrewRadev/linediff.vim
 
 call plug#end()
 
