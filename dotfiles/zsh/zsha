@@ -124,7 +124,8 @@ alias gpo='git push origin master'
 alias gPu='git push upstream master'
 
 # git-pull
-alias gpu='git pull upstream master'
+alias gpb='git push upstream $(git symbolic-ref --short -q HEAD)'
+alias gpfb='git push -f upstream $(git symbolic-ref --short -q HEAD)'
 alias guo='git pull upstream master --tags && git push origin master --tags'
 alias gpl='git pull --rebase'
 
@@ -235,3 +236,6 @@ alias ad='ansible-doc'
 # hub
 alias hpr='hub pull-request'
 alias hcl='hub clone'
+
+# fonts
+alias newf='sudo fc-cache -vf'
