@@ -1,51 +1,39 @@
-# mutt basics
 set from="lukewm@riseup.net"
 set realname="Luke Murphy"
 set mbox_type=Maildir
-set spoolfile=+/
-set header_cache=~/.cache/mutt
 set editor="nvim -c 'set ft=mail noautoindent spell spelllang=en_gb'"
-
-# mailboxes
-set folder = "~/log"
-set mbox = "~/log/in.mbox"
-set record = "~/log/out.mbox"
-set postponed = "~/log/postponed.mbox"
-
-# enable PGP
-# source /usr/share/doc/mutt/examples/gpg.rc
-# set pgp_autosign
-# set pgp_replyencrypt
-# set pgp_replysign
-# set pgp_replysignencrypted
-# set pgp_verify_sig
-# set pgp_sign_as
-# set pgp_use_gpg_agent=yes
-# set pgp_sign_as=3E3718CC
-# set pgp_timeout=3600
-# set crypt_autosign=yes
-# set crypt_replyencrypt=yes
-
-# receive
-set pop_delete=yes
-set pop_user="lukewm"
+set pgp_sign_as=3E3718CC
+set pop_user=lukewm
 set pop_host="mail.riseup.net"
-set pop_last=yes
-set pop_checkinterval=150
-set ssl_force_tls=yes
-set ssl_starttls=yes
-set smtp_url="smtps://lukewm@riseup.net@mail.riseup.net/"
 set imap_check_subscribed
-
-# sorting
+set smtp_url="smtps://lukewm@riseup.net@mail.riseup.net/"
 set sort=reverse-date-received
 set sort_aux=reverse-date-received
+set charset="utf-8"
+set send_charset="utf-8"
 
-# encoding
-set charset=utf-8
-set send_charset=utf-8
+set folder=~/mail
+set mbox=~/mail/in.mbox
+set record=~/mail/out.mbox
+set postponed=~/mail/postponed.mbox
+set spoolfile=~/mail/inbox
+set alias_file=~/.mutt/aliases
+set header_cache=~/.cache/mutt
 
-# bindings
+set pgp_timeout="3600"
+set pop_checkinterval="150"
+
+set reverse_alias=yes
+set crypt_replysignencrypted=yes
+set pop_delete=yes
+set ssl_force_tls=yes
+set ssl_starttls=yes
+set pop_last=yes
+set text_flowed=yes
+set fast_reply=yes
+set include=yes
+set pgp_use_gpg_agent=yes
+
 bind index d delete-message
 bind index j next-entry
 bind index k previous-entry
@@ -58,13 +46,11 @@ bind index gg first-entry
 bind index G last-entry
 bind pager j next-line
 bind pager k previous-line
+bind index F fetch-mail
+
 bind attach,index,pager \CD next-page
 bind attach,index,pager \CU previous-page
 
-# misc options
-set text_flowed=yes
-set fast_reply=yes
-set include=yes
-
-# show version
-push <show-version>
+source ~/.mutt/gpg.rc
+source ~/.mutt/aliases
+source "gpg2 -d ~/.mutt/passwd.gpg |"
