@@ -81,12 +81,14 @@ alias gi='git init'
 
 # git-status
 alias gs='git status -sb'
+alias gdel='git status -s | cut -c4- | xargs rm -r $1'
 
 # git-add
 alias ga='git add'
 alias gap='git add --patch'
+alias .c='git add . --all && git commit -v'
 
-# git-shoow
+# git-show
 alias gow='git show'
 
 # git-branch
@@ -132,10 +134,6 @@ alias gpl='git pull --rebase'
 # git-log
 alias gl='git log'
 alias gld='git log -p'
-
-# git shortcuts
-alias .c='git add . --all && git commit -v'
-alias gdel='git status -s | cut -c4- | xargs rm -r $1'
 
 # git-cherry-pick
 alias gcp='git cherry-pick'
