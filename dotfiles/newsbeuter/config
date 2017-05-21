@@ -23,24 +23,12 @@ text-width 80
 
 # key bindings
 bind-key O open-in-browser-and-mark-read
-
-bind-key j down feedlist
-bind-key k up feedlist
-
-bind-key j next articlelist
-bind-key k prev articlelist
-
-# FIXME
-# bind-key j next tag
-# bind-key k prev tag
-
-bind-key j down article
-bind-key k up article
-
-bind-key T home articlelist
-bind-key G end articlelist
-bind-key T home feedlist
-bind-key G end feedlist
+bind-key k up
+bind-key k prev
+bind-key j down
+bind-key j next
+bind-key T home
+bind-key G end
 
 # feed item ignores
 ignore-article "*" "title =~ \"Sponsor\""
