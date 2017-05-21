@@ -1,86 +1,169 @@
-https://community.coops.tech/c/jobs.rss
-http://packdeps.haskellers.com/feed/packunused
-http://packdeps.haskellers.com/feed/tasty-discover
-http://packdeps.haskellers.com/feed/lentil
-https://robertgraham.wordpress.com/feed/
-http://economicupdate.libsyn.com/rss
-http://feeds.feedblitz.com/alternet
-https://www.idris-lang.org/feed/
-http://www.dijkstrascry.com/rss.xml
-https://www.openrightsgroup.org/feed.rss
-https://www.opendemocracy.net/xml/rss/home/index.xml
-https://ar.al/rss.xml
-http://www.socialistworkeronline.net/feed/
-http://commonsstrategies.org/feed/
-https://p2pvalue.eu/feed/
-https://europeancommonsassembly.eu/feed/
-http://commonstransition.org/feed/
-https://github.com/blog/all.atom
-http://iww.international/feed/
-http://republicofwork.com/feed/
-http://hypothes.is/feed/
-http://mediagoblin.org/news/index.xml
-http://www.labour.ie/rss/
-http://socialistparty.ie/feed/
-http://antiausterityalliance.ie/feed/
-http://www.openstreetmap.ie/feed/
-https://blog.mehl.mx/feed/
-http://fsfe.org/news/news.en.rss
-https://open.coop/feed/
-http://www.ifso.ie/wordpress/feed
-https://data.gov.ie/blog/feed
-https://queertypes.com/atom.xml
-https://planet.haskell.org/atom.xml
-https://daedalus.libtech.website/feed
-https://www.freelists.org/feed/daedalusfriends
-http://blog.3rik.cc/feed/
-http://taylor.fausak.me/sitemap.rss
-https://www.reddit.com/r/haskell/.rss
-http://xlterrestrials.org/plog/?feed=rss2
-http://ariis.it/static/stream/rss.xml
-http://tavisharmstrong.com/index.xml
-http://booktwo.org/feed/
-https://anarc.at/blog/index.rss
-https://joeyh.name/blog/index.rss
-https://events.ccc.de/feed/
-http://bollier.org/blog_entries/feed
-http://www.guerrillatranslation.org/feed/
-https://blog.p2pfoundation.net/feed
-http://news.infoshop.org/rss.xml
-http://tk.wpcentral.trick.ca/feed/
-https://blockupy.org/feed
-https://stop-ttip.org/feed/
-http://www.crimethinc.com/blog/feed/
-https://feeds.feedburner.com/Torrentfreak
-http://ascii.textfiles.com/feed
-https://holgerkrekel.net/feed/
-http://raul.de/feed/
-http://cs-syd.eu/rss.xml
-http://jvns.ca/atom.xml
-http://feeds.feedburner.com/KrisJenkinsBlog?format=xml
-https://begriffs.com/atom.xml
-https://news.ycombinator.com/rss
-https://ocharles.org.uk/blog/posts.rss
-http://degoes.net/feed.xml
-http://networkingart.eu/feed/
-http://feeds.feedburner.com/felixge
-https://changelog.com/master/feed
-http://feeds.feedburner.com/EricsThoughts
-http://paolocapriotti.com/atom.xml
-https://engineuring.wordpress.com/feed/
-http://www.dmytri.info/feed/
-https://neovim.io/news.xml
-https://static.fsf.org/fsforg/rss/jobs.xml
-http://www.economist.com/topics/european-union/index.xml
-http://www.pacbi.org/rss.php
-http://www.economist.com/feeds/print-sections/103/special-reports.xml
-http://www.economist.com/topics/computer-technology/index.xml
-http://www.who.int/feeds/entity/csr/don/en/rss.xml
-http://www.economist.com/topics/environmental-problems-and-protection/index.xml
-http://www.economist.com/sections/economics/rss.xml
-http://www.aljazeera.com/xml/rss/all.xml
-https://bdsmovement.net/rss-feed.xml
-http://www.who.int/feeds/entity/hac/en/rss.xml
-http://www.who.int/feeds/entity/mediacentre/news/en/rss.xml
-http://www.haskellforall.com/feeds/posts/default
-http://notes-on-haskell.blogspot.com/feeds/posts/default
+##############################################################################
+# Activism: Events
+##############################################################################
+https://open.coop/feed/ "Activism: Events"
+
+##############################################################################
+# Activism: Art
+##############################################################################
+http://booktwo.org/feed/ "Activism: Art"
+
+##############################################################################
+# Anarchism: Blogger
+##############################################################################
+http://telekommunisten.net/feed/ "Anarchism: Blogger"
+https://robertgraham.wordpress.com/feed/ "Anarchism: Blogger"
+
+##############################################################################
+# Economics
+##############################################################################
+http://economicupdate.libsyn.com/rss "~Democracy At Work: Economic Update" "Economics"
+http://www.economist.com/sections/economics/rss.xml "Economics"
+
+##############################################################################
+# Miscellaneous
+##############################################################################
+http://dimlylitmealsforone.tumblr.com/rss
+
+##############################################################################
+# News: Anarchist
+##############################################################################
+http://news.infoshop.org/rss.xml "News: Anarchist"
+http://www.crimethinc.com/blog/feed/ "News: Anarchist"
+
+##############################################################################
+# News: Europe
+##############################################################################
+http://www.economist.com/topics/european-union/index.xml "News: Europe"
+https://www.openrightsgroup.org/feed.rss "News: Europe"
+https://blockupy.org/feed "News: Europe"
+https://stop-ttip.org/feed/ "News: Europe"
+
+##############################################################################
+# News: Ireland
+##############################################################################
+http://www.socialistworkeronline.net/feed/ "News: Ireland"
+http://www.labour.ie/rss/ "News: Ireland"
+http://socialistparty.ie/feed/ "News: Ireland"
+http://antiausterityalliance.ie/feed/ "News: Ireland"
+http://www.peoplebeforeprofit.ie/feed/ "News: Ireland"
+
+##############################################################################
+# News: IWW
+##############################################################################
+http://iww.international/feed/ "News: IWW"
+
+##############################################################################
+# News: Middle East
+##############################################################################
+http://www.aljazeera.com/xml/rss/all.xml "News: Middle East"
+
+##############################################################################
+# News: Palestine
+##############################################################################
+https://bdsmovement.net/rss-feed.xml "News: Palestine"
+http://www.pacbi.org/rss.php "News: Palestine"
+
+##############################################################################
+# News: USA
+##############################################################################
+http://feeds.feedblitz.com/alternet "~Alternet" "News: USA"
+
+##############################################################################
+# News: World
+##############################################################################
+https://www.opendemocracy.net/xml/rss/home/index.xml "News: World"
+http://www.economist.com/feeds/print-sections/103/special-reports.xml "News: World"
+http://www.who.int/feeds/entity/csr/don/en/rss.xml "News: World"
+http://www.economist.com/topics/environmental-problems-and-protection/index.xml "News: World"
+http://www.who.int/feeds/entity/hac/en/rss.xml "News: World"
+http://www.who.int/feeds/entity/mediacentre/news/en/rss.xml "News: World"
+
+##############################################################################
+# News: Technology
+##############################################################################
+http://www.economist.com/topics/computer-technology/index.xml "News: Technology"
+https://events.ccc.de/feed/ "News: Technology"
+
+##############################################################################
+# Programming: Blogger
+##############################################################################
+http://www.dijkstrascry.com/rss.xml "Programming: Blogger"
+http://ariis.it/static/stream/rss.xml "Programming: Blogger"
+http://tavisharmstrong.com/index.xml "Programming: Blogger"
+https://joeyh.name/blog/index.rss "Programming: Blogger"
+https://holgerkrekel.net/feed/ "Programming: Blogger"
+http://cs-syd.eu/rss.xml "Programming: Blogger"
+http://jvns.ca/atom.xml "Programming: Blogger"
+http://feeds.feedburner.com/KrisJenkinsBlog?format=xml "Programming: Blogger"
+https://ocharles.org.uk/blog/posts.rss "Programming: Blogger"
+http://degoes.net/feed.xml "Programming: Blogger"
+http://feeds.feedburner.com/felixge "Programming: Blogger"
+http://feeds.feedburner.com/EricsThoughts "Programming: Blogger"
+https://ar.al/rss.xml "Programming: Blogger"
+http://www.dmytri.info/feed/ "Programming: Blogger"
+https://engineuring.wordpress.com/feed/ "Programming: Blogger"
+
+##############################################################################
+# Programming: Free Software
+##############################################################################
+http://fsfe.org/news/news.en.rss "Programming: Free Software"
+http://www.ifso.ie/wordpress/feed "Programming: Free Software"
+https://blog.mehl.mx/feed/ "Programming: Free Software"
+http://blog.3rik.cc/feed/ "Programming: Free Software"
+https://anarc.at/blog/index.rss "Programming: Free Software"
+http://www.openstreetmap.ie/feed/ "Programming: Free Software"
+
+##############################################################################
+# Programming: Haskell
+##############################################################################
+https://www.idris-lang.org/feed/ "Programming: Haskell"
+https://queertypes.com/atom.xml "Programming: Haskell"
+https://planet.haskell.org/atom.xml "Programming: Haskell"
+https://www.reddit.com/r/haskell/.rss "Programming: Haskell"
+http://www.haskellforall.com/feeds/posts/default "Programming: Haskell"
+http://notes-on-haskell.blogspot.com/feeds/posts/default "Programming: Haskell"
+https://begriffs.com/atom.xml "Programming: Haskell"
+http://taylor.fausak.me/sitemap.rss "Programming: Haskell"
+http://paolocapriotti.com/atom.xml "Programming: Haskell"
+
+##############################################################################
+# Programming: Historian
+##############################################################################
+http://ascii.textfiles.com/feed "Programming: Historian"
+
+##############################################################################
+# Programming: NeoVim
+##############################################################################
+https://neovim.io/news.xml "Programming: NeoVim"
+
+##############################################################################
+# Programming: State/Corporate Blog
+##############################################################################
+https://github.com/blog/all.atom "Programming: State/Corporate Blog"
+https://data.gov.ie/blog/feed "Programming: State/Corporate Blog"
+
+##############################################################################
+# P2P/Commons
+##############################################################################
+http://commonsstrategies.org/feed/ "P2P/Commons"
+https://p2pvalue.eu/feed/ "P2P/Commons"
+https://europeancommonsassembly.eu/feed/ "P2P/Commons"
+http://commonstransition.org/feed/ "P2P/Commons"
+https://blog.p2pfoundation.net/feed "P2P/Commons"
+http://bollier.org/blog_entries/feed "P2P/Commons"
+http://www.guerrillatranslation.org/feed/ "P2P/Commons"
+https://feeds.feedburner.com/Torrentfreak "P2P/Commons"
+
+##############################################################################
+# Wage Labour
+##############################################################################
+https://community.coops.tech/c/jobs.rss "Wage Labour"
+https://static.fsf.org/fsforg/rss/jobs.xml "Wage Labour"
+
+##############################################################################
+# Stackage Packages
+##############################################################################
+http://packdeps.haskellers.com/feed/packunused "Stackage Packages"
+http://packdeps.haskellers.com/feed/tasty-discover "Stackage Packages"
+http://packdeps.haskellers.com/feed/lentil "Stackage Packages"
