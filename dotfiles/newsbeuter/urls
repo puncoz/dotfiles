@@ -35,7 +35,6 @@ http://www.crimethinc.com/blog/feed/ "News: Anarchist"
 # News: Europe
 ##############################################################################
 http://www.economist.com/topics/european-union/index.xml "News: Europe"
-https://www.openrightsgroup.org/feed.rss "News: Europe"
 https://blockupy.org/feed "News: Europe"
 https://stop-ttip.org/feed/ "News: Europe"
 
@@ -65,6 +64,12 @@ https://bdsmovement.net/rss-feed.xml "News: Palestine"
 http://www.pacbi.org/rss.php "News: Palestine"
 
 ##############################################################################
+# News: UK
+##############################################################################
+http://anotherangryvoice.blogspot.com/feeds/posts/default?alt=rss "News: UK"
+https://www.openrightsgroup.org/feed.rss "News: UK"
+
+##############################################################################
 # News: USA
 ##############################################################################
 http://feeds.feedblitz.com/alternet "~Alternet" "News: USA"
@@ -82,7 +87,7 @@ http://www.who.int/feeds/entity/mediacentre/news/en/rss.xml "News: World"
 ##############################################################################
 # News: Technology
 ##############################################################################
-http://www.economist.com/topics/computer-technology/index.xml "News: Technology"
+http://www.economist.com/topics/computer-technology/index.xml "~The Economist: Technology" "News: Technology"
 https://events.ccc.de/feed/ "News: Technology"
 
 ##############################################################################
