@@ -11,7 +11,7 @@ show-read-feeds no
 download-retries 4
 refresh-on-startup yes
 reload-time 20
-reload-threads 2
+reload-threads 4
 
 # display
 article-sort-order date-asc
