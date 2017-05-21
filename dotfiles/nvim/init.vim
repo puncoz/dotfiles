@@ -46,6 +46,7 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-unimpaired'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Raimondi/delimitMate'
+Plug 'godlygeek/tabular'
 
 " Writing
 Plug 'reedes/vim-pencil'
