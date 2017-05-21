@@ -44,3 +44,16 @@ cleanup-on-quit yes
 max-items 200
 confirm-exit no
 goto-next-feed no
+
+# color scheme
+color background           color255 color0
+color listnormal           color255 color0
+color listfocus            color255 color88 bold
+color listnormal_unread    color255 color0 bold
+color listfocus_unread     color255 color88 bold
+color info                 color255 color31
+color article              color255 color0
+
+# highlights
+highlight article "^(Feed|Title|Link|Date|Author):.*$" color31 color0
+highlight article "https?://[^ ]+" color9 color0 protect
