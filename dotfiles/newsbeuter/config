@@ -23,12 +23,15 @@ text-width 80
 
 # key bindings
 bind-key O open-in-browser-and-mark-read
-bind-key k up
-bind-key k prev
+
 bind-key j down
-bind-key j next
-bind-key T home
-bind-key G end
+bind-key k up
+
+bind-key J next
+bind-key K prev
+
+bind-key ^U pageup
+bind-key ^D pagedown
 
 # feed item ignores
 ignore-article "*" "title =~ \"Sponsor\""
