@@ -1,27 +1,55 @@
-# automatic reloading
-refresh-on-startup yes
-auto-reload yes
-reload-time 360 # minutes
+# notifications
+notify-program notify-send
+notify-xterm yes
+notify-screen yes
+notify-always yes
 
 # reloading
-reload-threads 4
-reload-only-visible-feeds no
+auto-reload yes
+reload-only-visible-feeds yes
 show-read-feeds no
 download-retries 4
-
-# storage
-max-items 200
-
-# external programs
-browser firefox
+refresh-on-startup yes
+reload-time 20
+reload-threads 2
 
 # display
-article-sort-order date-desc
+article-sort-order date-asc
+feed-sort-order unreadarticlecount-asc
 feedlist-format "%S%n %11u %t"
 articlelist-format "%D %f %?T?;%-17T; ?%t"
 datetime-format %m-%d
+text-width 80
 
-# interface
-bind-key k up
-bind-key j down
+# key bindings
 bind-key O open-in-browser-and-mark-read
+
+bind-key j down feedlist
+bind-key k up feedlist
+
+bind-key j next articlelist
+bind-key k prev articlelist
+
+# FIXME
+# bind-key j next tag
+# bind-key k prev tag
+
+bind-key j down article
+bind-key k up article
+
+bind-key T home articlelist
+bind-key G end articlelist
+bind-key T home feedlist
+bind-key G end feedlist
+
+# feed item ignores
+ignore-article "*" "title =~ \"Sponsor\""
+ignore-article "*" "title =~ \"Advertisement\""
+ignore-mode "display"
+
+# misc
+browser firefox
+cleanup-on-quit yes
+max-items 200
+confirm-exit no
+goto-next-feed no
