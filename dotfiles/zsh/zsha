@@ -124,10 +124,10 @@ alias gp='git push'
 alias gfu='git push -f'
 alias gpo='git push origin master'
 alias gPu='git push upstream master'
-
-# git-pull
 alias gpb='git push upstream $(git symbolic-ref --short -q HEAD)'
 alias gpfb='git push -f upstream $(git symbolic-ref --short -q HEAD)'
+
+# git-pull
 alias guo='git pull upstream master --tags && git push origin master --tags'
 alias gpl='git pull --rebase'
 
