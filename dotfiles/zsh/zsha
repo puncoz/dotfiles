@@ -239,3 +239,6 @@ alias hcl='hub clone'
 
 # fonts
 alias newf='sudo fc-cache -vf'
+
+# docker-compose
+alias dcp='docker-compose'
