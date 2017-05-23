@@ -125,6 +125,7 @@ alias gfu='git push -f'
 alias gpo='git push origin master'
 alias gPu='git push upstream master'
 alias gpb='git push upstream $(git symbolic-ref --short -q HEAD)'
+alias gpbd='git push upstream $(git symbolic-ref --short -q HEAD) --delete'
 alias gpfb='git push -f upstream $(git symbolic-ref --short -q HEAD)'
 
 # git-pull
@@ -226,6 +227,7 @@ alias pe='pipenv'
 
 # pip-tools
 alias pc='pip-compile'
+alias pup='pip install -U pip'
 
 # ansible
 alias ap='ansible-playbook'
