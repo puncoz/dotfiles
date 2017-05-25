@@ -79,3 +79,15 @@ function glf(){
   # Check history of a file
   git log -p --follow "$1"
 }
+
+function gback(){
+  # Flow for rebasing and cleaning up branch
+  BRANCH=$(git symbolic-ref --short -q HEAD)
+  git checkout master
+  git rebase $BRANCH
+  git push upstream master
+  git checkout $BRANCH
+  git push upstream $BRANCH --delete
+  git checkout master
+  git branch -D $BRANCH
+}
