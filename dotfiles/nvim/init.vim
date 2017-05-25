@@ -20,6 +20,8 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -249,3 +251,9 @@ function! MyFollowSymlink(...)
     echomsg 'Resolved symlink: =>' resolvedfile
   endif
 endfunction
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
