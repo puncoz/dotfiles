@@ -5,3 +5,4 @@ newsbeuter
 mutt
 gpg2
 git
+remind
