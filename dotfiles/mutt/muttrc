@@ -20,6 +20,7 @@ set spoolfile=~/mail/inbox
 set alias_file=~/.mutt/aliases
 set header_cache=~/.cache/mutt
 
+set timeout="30"
 set pgp_timeout="3600"
 set pop_checkinterval="150"
 
