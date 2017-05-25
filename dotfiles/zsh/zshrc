@@ -1,8 +1,7 @@
 PATH+="$PATH"
-PYENV_ROOT="$HOME/.pyenv"
-if [ -d "$PYENV_ROOT" ]; then PATH+=$PYENV_ROOT; fi
-PATH+=:$HOME/.local/bin
-PATH+=:$HOME/bin
+PATH+=:"$HOME/.pyenv"
+PATH+=:"$HOME/.local/bin"
+PATH+=:"$HOME/bin"
 export PATH
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -17,16 +16,17 @@ export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
 export PYENV_VERSION='3.5.2'
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export $(gnome-keyring-daemon -s)
-
-[[ $TMUX = "" ]] && export TERM="xterm-256color"
-
-plugins=(git vi-mode stack python autoenv)
+export DISABLE_AUTO_TITLE="true"
 
 source ~/.zsha
 source ~/.zshf
 source ~/.fzf.zsh
 source ~/.autoenv/activate.sh
 source $ZSH/oh-my-zsh.sh
+
+[[ $TMUX = "" ]] && export TERM="xterm-256color"
+
+plugins=(git vi-mode stack python autoenv)
 
 bindkey -v
 bindkey -M viins '^r' history-incremental-search-backward
