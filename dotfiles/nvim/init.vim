@@ -144,6 +144,7 @@ nn <Leader>ct :CtrlPTag<cr>
 
 map <space>j <Plug>(easymotion-j)
 map <space>k <Plug>(easymotion-k)
+map <space>s <Plug>(easymotion-s)
 
 nn <Leader><C-n> :NERDTreeToggle<cr>
 
@@ -269,3 +270,5 @@ command! -bang -nargs=* -complete=file Make Neomake <args>
 
 command! Gp  :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
 command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
+
+autocmd User NeomakeFinished cclose
