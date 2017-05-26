@@ -105,6 +105,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsListSnippets="<c-k>"
 let g:EasyMotion_smartcase=1
 let g:EasyMotion_use_upper=1
+let g:EasyMotion_startofline=1
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 let g:ansible_options={'ignore_blank_lines': 0}
@@ -138,10 +139,10 @@ nn <Leader>pg :PlugUpgrade<cr>
 nn <Leader>pc :PlugClean<cr>
 nn <Leader>cf :CtrlPFunky<cr>
 nn <Leader>ct :CtrlPTag<cr>
-nn <Leader>qc :lclose<cr>
-nn <Leader>qo :lopen<cr>
-nn <C-t> :tabnew<cr>
-nn <space> <Plug>(easymotion-s)
+
+map <space>j <Plug>(easymotion-j)
+map <space>k <Plug>(easymotion-k)
+
 nn <Leader><C-n> :NERDTreeToggle<cr>
 nn <C-j> <C-w>j
 nn <C-k> <C-w>k
