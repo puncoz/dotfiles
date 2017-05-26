@@ -128,15 +128,17 @@ imap jk <Esc>
 
 ino <C-e> <C-o>a
 ino <C-d> <C-o>A
-ino <C-t> <Esc>:tabnew<cr>
 
 nn <Leader>Z 1z=
+nn <C-t> :tabnew<cr>
 nn <Leader>ev :split $MYVIMRC<cr>
 nn <Leader>sv :source $MYVIMRC<cr>
+
 nn <Leader>pi :PlugInstall<cr>
 nn <Leader>pu :PlugUpdate<cr>
 nn <Leader>pg :PlugUpgrade<cr>
 nn <Leader>pc :PlugClean<cr>
+
 nn <Leader>cf :CtrlPFunky<cr>
 nn <Leader>ct :CtrlPTag<cr>
 
@@ -144,10 +146,12 @@ map <space>j <Plug>(easymotion-j)
 map <space>k <Plug>(easymotion-k)
 
 nn <Leader><C-n> :NERDTreeToggle<cr>
+
 nn <C-j> <C-w>j
 nn <C-k> <C-w>k
 nn <C-l> <C-w>l
 nn <C-h> <C-w>h
+
 nn <Leader>hio :InteroOpen<cr>
 nn <Leader>hik :InteroKill<cr>
 nn <Leader>hic :InteroHide<cr>
@@ -159,7 +163,9 @@ nn <Leader>hii :InteroInfo<cr>
 nn <Leader>hiI :InteroTypeInsert<cr>
 nn <Leader>hid :InteroGoToDef<cr>
 nn <Leader>hiu :InteroUses<cr>
+
 nn <Leader>pp :10Term ipython --profile=lwm<cr>
+nn <Leader>p :VTerm pytest -sv --pdb<cr>
 nn <Leader>gd :Git diff<cr>
 
 tno <C-h> <C-\><C-n><C-w>h
