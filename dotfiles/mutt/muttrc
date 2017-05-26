@@ -5,9 +5,7 @@ set editor="nvim -c 'set ft=mail noautoindent spell spelllang=en_gb'"
 set pgp_sign_as=3E3718CC
 set pop_user=lukewm
 set pop_host="mail.riseup.net"
-set imap_check_subscribed
-set smtp_url="smtps://lukewm@riseup.net@mail.riseup.net/"
-set sort=reverse-date-received
+set sort=threads
 set sort_aux=reverse-date-received
 set charset="utf-8"
 set send_charset="utf-8"
@@ -19,11 +17,17 @@ set postponed=~/mail/postponed.mbox
 set spoolfile=~/mail/inbox
 set alias_file=~/.mutt/aliases
 set header_cache=~/.cache/mutt
+set message_cachedir = ~/.cache/messagecache
 
-set timeout="30"
-set pgp_timeout="3600"
-set pop_checkinterval="150"
+set pgp_timeout=30
+set timeout=30
+set pop_checkinterval=30
+set mail_check=30
 
+set mark_old=no
+set mail_check_recent=yes
+set check_new=yes
+set quit=yes
 set reverse_alias=yes
 set crypt_replysignencrypted=yes
 set pop_delete=yes
@@ -34,6 +38,9 @@ set text_flowed=yes
 set fast_reply=yes
 set include=yes
 set pgp_use_gpg_agent=yes
+set copy=yes
+set envelope_from=yes
+set collapse_unread=yes
 
 bind index d delete-message
 bind index j next-entry
@@ -54,4 +61,5 @@ bind attach,index,pager \CU previous-page
 
 source ~/.mutt/gpg.rc
 source ~/.mutt/aliases
-source "gpg2 -d ~/.mutt/passwd.gpg |"
+source "/usr/bin/gpg2 -d --quiet  ~/.mutt/passwd.gpg |"
+source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
