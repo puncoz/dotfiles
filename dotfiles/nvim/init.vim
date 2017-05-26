@@ -226,6 +226,7 @@ set softtabstop=2
 set tabstop=2
 set splitbelow
 set splitright
+set inccommand=split
 
 function! MyFollowSymlink(...)
   if exists('w:no_resolve_symlink') && w:no_resolve_symlink
@@ -258,7 +259,15 @@ function! MyFollowSymlink(...)
 endfunction
 
 command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>,
-  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \                 <bang>0)
+  \ call fzf#vim#ag(
+  \     <q-args>,
+  \     <bang>0 ? fzf#vim#with_preview('up:60%')
+  \             : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \     <bang>0)
+
+command! -bang -nargs=* -complete=file Make Neomake <args>
+
+command! Gp  :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
+command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
+
+autocmd User NeomakeFinished if !g:neomake_hook_context.file_mode | cwindow | endif
