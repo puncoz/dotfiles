@@ -269,5 +269,3 @@ command! -bang -nargs=* -complete=file Make Neomake <args>
 
 command! Gp  :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
 command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
-
-autocmd User NeomakeFinished if !g:neomake_hook_context.file_mode | cwindow | endif
