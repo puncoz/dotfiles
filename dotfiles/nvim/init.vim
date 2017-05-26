@@ -42,7 +42,7 @@ Plug 'Lokaltog/vim-easymotion'
 " Linting
 Plug 'neomake/neomake'
 
-" NVim Enhancements
+" Enhancements
 Plug 'vimlab/split-term.vim'
 Plug 'rafi/vim-tinyline'
 Plug 'ervandew/supertab'
@@ -55,7 +55,7 @@ Plug 'godlygeek/tabular'
 Plug 'reedes/vim-pencil'
 Plug 'reedes/vim-wordy'
 
-" Syntax highlighting
+" Syntax
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
 
