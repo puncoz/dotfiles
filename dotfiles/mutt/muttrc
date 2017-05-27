@@ -29,6 +29,7 @@ set mark_old=no
 set mail_check_recent=yes
 set check_new=yes
 set quit=yes
+set delete=yes
 set reverse_alias=yes
 set crypt_replysignencrypted=yes
 set pop_delete=yes
