@@ -5,10 +5,11 @@ set editor="nvim -c 'set ft=mail noautoindent spell spelllang=en_gb'"
 set pgp_sign_as=3E3718CC
 set pop_user=lukewm
 set pop_host="mail.riseup.net"
-set sort=threads
-set sort_aux=reverse-date-received
+set sort="threads"
+set sort_aux="reverse-date-received"
 set charset="utf-8"
 set send_charset="utf-8"
+set smtp_url="smtps://lukewm@riseup.net@mail.riseup.net/"
 
 set folder=~/mail
 set mbox=~/mail/in.mbox
@@ -63,3 +64,5 @@ source ~/.mutt/gpg.rc
 source ~/.mutt/aliases
 source "/usr/bin/gpg2 -d --quiet  ~/.mutt/passwd.gpg |"
 source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+
+macro index,pager + <save-message>=TODO<enter><enter> "Mark as Important"
