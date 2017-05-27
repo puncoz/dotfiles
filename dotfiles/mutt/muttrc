@@ -10,6 +10,8 @@ set sort_aux="reverse-date-received"
 set charset="utf-8"
 set send_charset="utf-8"
 set smtp_url="smtps://lukewm@riseup.net@mail.riseup.net/"
+set attribution="On %M %N, %f wrote:"
+set forw_format="Fwd: %s"
 
 set folder=~/mail
 set mbox=~/mail/in.mbox
@@ -20,29 +22,24 @@ set alias_file=~/.mutt/aliases
 set header_cache=~/.cache/mutt
 set message_cachedir = ~/.cache/messagecache
 
-set pgp_timeout=30
-set timeout=30
-set pop_checkinterval=30
-set mail_check=30
+set timeout="10"
+set pop_checkinterval="15"
+set mail_check="15"
 
 set mark_old=no
-set mail_check_recent=yes
-set check_new=yes
 set quit=yes
 set delete=yes
 set reverse_alias=yes
-set crypt_replysignencrypted=yes
 set pop_delete=yes
 set ssl_force_tls=yes
 set ssl_starttls=yes
-set pop_last=yes
 set text_flowed=yes
 set fast_reply=yes
 set include=yes
-set pgp_use_gpg_agent=yes
 set copy=yes
 set envelope_from=yes
 set collapse_unread=yes
+set check_new=yes
 
 bind index d delete-message
 bind index j next-entry
@@ -54,9 +51,11 @@ bind index n search-next
 bind index N search-opposite
 bind index gg first-entry
 bind index G last-entry
+bind index F fetch-mail
+
 bind pager j next-line
 bind pager k previous-line
-bind index F fetch-mail
+bind pager R  group-reply
 
 bind attach,index,pager \CD next-page
 bind attach,index,pager \CU previous-page
@@ -66,4 +65,12 @@ source ~/.mutt/aliases
 source "/usr/bin/gpg2 -d --quiet  ~/.mutt/passwd.gpg |"
 source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
 
-macro index,pager + <save-message>=TODO<enter><enter> "Mark as Important"
+macro index,pager + <save-message>=TODO<enter><enter> "Mark as important"
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "Mark all messages as read"
+
+set noconfirmappend
+set beep_new
+set tilde
+
+unset help
+unset markers

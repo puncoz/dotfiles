@@ -242,3 +242,6 @@ alias newf='sudo fc-cache -vf'
 
 # docker-compose
 alias dcp='docker-compose'
+
+# mutt
+alias mutt='mutt -f pop://lukewm@mail.riseup.net'
