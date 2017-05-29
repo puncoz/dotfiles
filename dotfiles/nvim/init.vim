@@ -5,7 +5,6 @@ Plug 'morhetz/gruvbox'
 
 " Haskell
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
-Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
 Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
 Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 
