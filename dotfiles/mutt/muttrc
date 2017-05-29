@@ -43,6 +43,7 @@ set check_new=yes
 
 bind index d delete-message
 bind index j next-entry
+bind index U next-unread
 bind index k previous-entry
 bind index J next-thread
 bind index K previous-thread
