@@ -1,3 +1,7 @@
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+
 call plug#begin('~/.config/nvim/plugged')
 
 " Colorschemes
@@ -17,7 +21,7 @@ Plug 'lambdalisue/vim-pyenv', {'for': 'python'}
 " Auto-complete
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -157,21 +161,17 @@ nn <C-k> <C-w>k
 nn <C-l> <C-w>l
 nn <C-h> <C-w>h
 
-nn <Leader>hio :InteroOpen<cr>
-nn <Leader>hik :InteroKill<cr>
-nn <Leader>hic :InteroHide<cr>
-nn <Leader>hil :InteroLoadCurrentModule<cr>
-nn <Leader>hie :InteroEval<cr>
-nn <Leader>hit :InteroGenericType<cr>
-nn <Leader>hiT :InteroType<cr>
-nn <Leader>hii :InteroInfo<cr>
-nn <Leader>hiI :InteroTypeInsert<cr>
-nn <Leader>hid :InteroGoToDef<cr>
-nn <Leader>hiu :InteroUses<cr>
+nn <Leader>ho :InteroOpen<cr>
+nn <Leader>hk :InteroKill<cr>
+nn <Leader>hh :InteroHide<cr>
+nn <Leader>hl :InteroLoadCurrentModule<cr>
+nn <Leader>ht :InteroGenericType<cr>
+nn <Leader>hT :InteroType<cr>
+nn <Leader>hi :InteroInfo<cr>
+nn <Leader>hI :InteroTypeInsert<cr>
 
 nn <Leader>pp :10Term ipython --profile=lwm<cr>
 nn <Leader>p :VTerm pytest -sv --pdb<cr>
-nn <Leader>gd :Git diff<cr>
 
 tno <C-h> <C-\><C-n><C-w>h
 tno <C-j> <C-\><C-n><C-w>j
@@ -276,4 +276,5 @@ command! Gp  :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEA
 command! Gc  :Gcommit -v
 command! Gw  :Gwrite
 command! Gap :Git add --patch
+command! Gd  :Git diff
 command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
