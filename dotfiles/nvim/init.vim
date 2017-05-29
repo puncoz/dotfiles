@@ -7,6 +7,7 @@ Plug 'morhetz/gruvbox'
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
 Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
 Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
+Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 
 " Python
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
@@ -113,6 +114,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:terminal_scrollback_buffer_size=100000
+let g:necoghc_enable_detailed_browse=1
 
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
 au FileType python let b:delimitMate_nesting_quotes=['"', '`']
@@ -123,6 +125,8 @@ autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost *.hs InteroReload
 autocmd! BufWritePost *.py Isort
 autocmd! BufWritePost * Neomake
+autocmd! User NeomakeFinished cclose
+autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 imap jk <Esc>
 
@@ -273,5 +277,3 @@ command! Gc  :Gcommit -v
 command! Gw  :Gwrite
 command! Gap :Git add --patch
 command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
-
-autocmd User NeomakeFinished cclose
