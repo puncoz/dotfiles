@@ -8,7 +8,7 @@ windows:
   panes:
   - focus: "true"
     shell_command:
-    - "$EDITOR ~/notes/TODO.md"
+    - "$EDITOR ~/wages/fsfe/TODO.md"
   - shell_command:
     - "mutt"
   window_name: "todo"
