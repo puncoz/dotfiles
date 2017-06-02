@@ -190,7 +190,7 @@ filetype plugin indent on
 set spell spelllang=en_gb
 set number
 set cursorline
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc,/.venv/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc*,*/.venv/*
 set completeopt=menuone,preview
 set wrap!
 set incsearch
