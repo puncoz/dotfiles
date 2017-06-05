@@ -70,7 +70,8 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
 
 " Markdown
-Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+" Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+" https://github.com/euclio/vim-markdown-composer/issues/33
 
 call plug#end()
 
