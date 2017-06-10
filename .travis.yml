@@ -4,6 +4,7 @@ language: python
 
 before_install:
   - sudo apt-get update
+  - sudo apt-get install make
   - curl -L http://bootstrap.saltstack.org | sudo sh -s -- git develop
 
 install:
@@ -13,4 +14,5 @@ install:
   - sudo service salt-minion restart
 
 script:
-  - sudo salt-call state.show_highstate --local --retcode-passthrough
+  - sudo salt-call state.highstate --local --retcode-passthrough
+  - make test
