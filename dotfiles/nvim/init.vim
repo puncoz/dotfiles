@@ -2,12 +2,6 @@ function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
 
-function! BuildComposer(arg)
-  if a:arg.status != 'unchanged' || a:arg.force
-    !cargo build --release
-  endif
-endfunction
-
 call plug#begin('~/.config/nvim/plugged')
 
 " Colorschemes
@@ -68,10 +62,6 @@ Plug 'reedes/vim-wordy'
 " Syntax
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
-
-" Markdown
-" Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
-" https://github.com/euclio/vim-markdown-composer/issues/33
 
 call plug#end()
 
