@@ -1,5 +1,4 @@
 # defaults
-.env
 .cache/
 tags
 *.class
