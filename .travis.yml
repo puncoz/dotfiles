@@ -1,21 +1,20 @@
 sudo: required
 
-language: python
+language: generic
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install make
-  - curl -L http://bootstrap.saltstack.org | sudo sh -s -- git develop
+  - |
+    curl -L http://bootstrap.saltstack.org | sudo sh -s -- git develop
+    sudo mkdir -p /srv/salt/states
+    sudo cp -r states/* /srv/salt/states
+    sudo cp .travis/minion /etc/salt/minion
+    sudo service salt-minion restart
 
 install:
-  - sudo mkdir -p /srv/salt/states
-  - sudo cp -r states/* /srv/salt/states
-  - sudo cp .travis/minion /etc/salt/minion
-  - sudo service salt-minion restart
+  - docker build -t lwm/dotfiles .
 
 script:
-  - sudo salt-call state.highstate --local --retcode-passthrough
-  - make test
+  - sudo salt-call --local --retcode-passthrough dockerng.highstate lwm/dotfiles
 
 notifications:
   email: false
