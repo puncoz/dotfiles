@@ -16,3 +16,6 @@ install:
 script:
   - sudo salt-call state.highstate --local --retcode-passthrough
   - make test
+
+notifications:
+  email: false
