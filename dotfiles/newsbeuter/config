@@ -46,14 +46,13 @@ confirm-exit no
 goto-next-feed no
 
 # color scheme
-color background           color255 color0
-color listnormal           color255 color0
-color listfocus            color255 color88 bold
-color listnormal_unread    color255 color0 bold
-color listfocus_unread     color255 color88 bold
-color info                 color255 color31
-color article              color255 color0
+color background   default   default
+color listnormal   default   default
+color listfocus    white     yellow
+color info         default   white
+color article      default   default
 
 # highlights
-highlight article "^(Feed|Title|Link|Date|Author):.*$" color31 color0
-highlight article "https?://[^ ]+" color9 color0 protect
+highlight article "^(Title):.*$" blue default
+highlight article "https?://[^ ]+" red default
+highlight article "\\[image\\ [0-9]+\\]" green default
