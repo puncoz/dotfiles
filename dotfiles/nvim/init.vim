@@ -17,6 +17,7 @@ Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'lambdalisue/vim-pyenv', {'for': 'python'}
+Plug 'jmcantrell/vim-virtualenv', {'for': 'python'}
 
 " Auto-complete
 Plug 'SirVer/ultisnips'
@@ -278,3 +279,5 @@ command! Gap :Git add --patch
 command! Gd  :Git diff
 command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
 command! Gs  :Gstatus
+
+let g:vim_isort_python_version = 'python3'
