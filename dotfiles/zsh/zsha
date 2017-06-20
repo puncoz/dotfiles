@@ -1,9 +1,6 @@
 # python
-alias 2cv='virtualenv .venv'
-alias 3cv='python -m venv .venv'
-alias aav='echo ". .venv/bin/activate" >> .env && source .env'
-alias av='source .env'
-alias psv='source .venv/bin/activate'
+alias aenv='source .env'
+alias pe='pipenv'
 
 # ipython
 alias ipython='ipython --profile=lwm'
