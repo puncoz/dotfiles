@@ -6,3 +6,5 @@ mutt
 gpg2
 git
 remind
+pipsi -> pew, pipenv
+pip (install --user neovim (for 2 + 3))
