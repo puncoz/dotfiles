@@ -1,5 +1,4 @@
 PATH+="$PATH"
-PATH+=:"$HOME/.pyenv"
 PATH+=:"$HOME/.local/bin"
 PATH+=:"$HOME/bin"
 export PATH
@@ -13,8 +12,6 @@ export PYTHONASYNCIODEBUG=1
 export PYTHONDONTWRITEBYTECODE=True
 export FZF_COMPLETION_TRIGGER='X'
 export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
-export PYENV_VERSION='3.5.2'
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export $(gnome-keyring-daemon -s)
 export DISABLE_AUTO_TITLE="true"
 
@@ -31,9 +28,6 @@ bindkey -v
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 bindkey -M viins 'jk' vi-cmd-mode
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 remind -h ~/remind/reminders.txt
 

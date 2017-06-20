@@ -279,5 +279,3 @@ command! Gap :Git add --patch
 command! Gd  :Git diff
 command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
 command! Gs  :Gstatus
-
-let g:vim_isort_python_version = 'python3'
