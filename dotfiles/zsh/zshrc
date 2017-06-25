@@ -1,4 +1,5 @@
 PATH+="$PATH"
+PATH+=:"$HOME/.nvm"
 PATH+=:"$HOME/.local/bin"
 PATH+=:"$HOME/bin"
 export PATH
@@ -14,6 +15,7 @@ export FZF_COMPLETION_TRIGGER='X'
 export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
 export $(gnome-keyring-daemon -s)
 export DISABLE_AUTO_TITLE="true"
+export NVM_DIR="$HOME/.nvm"
 
 source ~/.zsha
 source ~/.zshf
@@ -21,6 +23,8 @@ source ~/.fzf.zsh
 source $ZSH/oh-my-zsh.sh
 
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 plugins=(git vi-mode stack python autoenv)
 
