@@ -1,6 +1,7 @@
 # python
 alias aenv='source .env'
 alias pe='pipenv'
+alias psh='pipenv shell'
 
 # ipython
 alias ipython='ipython --profile=lwm'
