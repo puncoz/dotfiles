@@ -16,11 +16,14 @@ export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
 export $(gnome-keyring-daemon -s)
 export DISABLE_AUTO_TITLE="true"
 export NVM_DIR="$HOME/.nvm"
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
 
 source ~/.zsha
 source ~/.zshf
 source ~/.fzf.zsh
 source $ZSH/oh-my-zsh.sh
+source ~/.autoenv/activate.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
 
@@ -32,7 +35,6 @@ bindkey -v
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 bindkey -M viins 'jk' vi-cmd-mode
+bindkey '^L' autosuggest-accept
 
 remind -h ~/remind/reminders.txt
-
-source ~/.autoenv/activate.sh
