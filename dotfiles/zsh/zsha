@@ -6,7 +6,7 @@ alias 3cv='python3 -m venv .venv'
 alias av='source .venv/bin/activate'
 alias ipython='ipython --profile=lwm'
 alias ipy='ipython'
-alias py='bypthon'
+alias py='bpython'
 
 # stack
 alias stw='stack test --file-watch --fast'
