@@ -118,6 +118,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:terminal_scrollback_buffer_size=100000
 let g:necoghc_enable_detailed_browse=1
+let g:deepspace_italics=1
 
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
 au FileType python let b:delimitMate_nesting_quotes=['"', '`']
@@ -280,5 +281,3 @@ command! Gap :Git add --patch
 command! Gd  :Git diff
 command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
 command! Gs  :Gstatus
-
-let g:deepspace_italics=1
