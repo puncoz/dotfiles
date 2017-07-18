@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
+Plug 'tyrannicaltoucan/vim-deep-space'
 
 " Haskell
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
@@ -184,7 +185,7 @@ augroup vimrc_term
 augroup END
 
 set background=dark
-colorscheme gruvbox
+colorscheme deep-space
 syntax on
 filetype plugin indent on
 set spell spelllang=en_gb
@@ -231,6 +232,7 @@ set tabstop=2
 set splitbelow
 set splitright
 set inccommand=split
+set termguicolors
 
 function! MyFollowSymlink(...)
   if exists('w:no_resolve_symlink') && w:no_resolve_symlink
@@ -278,3 +280,5 @@ command! Gap :Git add --patch
 command! Gd  :Git diff
 command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
 command! Gs  :Gstatus
+
+let g:deepspace_italics=1
