@@ -1,5 +1,5 @@
 [gtimelog]
-list-email = activity-list@example.com
+list-email = lukewm@riseup.net
 name = b'Luke Murphy'
 editor = xdg-open
 mailer = vim %s

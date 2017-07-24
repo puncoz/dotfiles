@@ -186,7 +186,7 @@ augroup vimrc_term
 augroup END
 
 set background=dark
-colorscheme deep-space
+colorscheme gruvbox
 syntax on
 filetype plugin indent on
 set spell spelllang=en_gb
