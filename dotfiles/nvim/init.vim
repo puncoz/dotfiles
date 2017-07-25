@@ -91,6 +91,7 @@ let g:deoplete#enable_at_startup=1
 let g:deoplete#enable_ignore_case=1
 let g:deoplete#enable_smart_case=1
 let g:neomake_python_enabled_makers=['pylama']
+let g:neomake_vim_enabled_makers=['vint']
 let g:neomake_haskell_enabled_makers=['hlint']
 let g:neomake_markdown_enabled_makers=['proselint']
 let g:neomake_open_list=2
