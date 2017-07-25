@@ -1,28 +1,12 @@
--- Multiple line input
 :set +m
-
--- Show type of last evaluated expression
--- :set +t
-
--- http://chrisdone.com/posts/making-ghci-fast
-:set -fobject-code
--- :set -fno-code
-
--- Make suggestions for misspelled names
-:set -fhelpful-errors
-
--- Convert typed hole errors into warnings
-:set -XPartialTypeSignatures
-:set -fdefer-typed-holes
-
--- Polymorphic Strings (please!)
--- :set -XOverloadedStrings
-
--- Standard lambda prompt
+:set -v0
 :set prompt "\x03BB "
 
--- Turn off crazy `:r` import listing
-:set -v0
+:set -fobject-code
+:set -fhelpful-errors
+:set -fdefer-typed-holes
 
--- Add Hoogle support
+:set -XPartialTypeSignatures
+:set -XOverloadedStrings
+
 :def hg \x -> return $ ":!stack hoogle -- -i \"" ++ x ++ "\""
