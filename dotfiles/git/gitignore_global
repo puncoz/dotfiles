@@ -1,42 +1,17 @@
-# defaults
+# Defaults
 .cache/
-tags
-*.class
-*.com
-*.dll
-*.exe
-*.o
-*.so
-*.pyc
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.log
-*.sql
-*.sqlite
-._*
 
-# javascript (eek!)
+# Javascript
 node_modules/
 
-# python
-.ropeproject/
-dev_*.py
-.env/
+# Python
 .venv/
+Pipfile
+Pipefile.lock
 
-# elm
+# Elm
 elm-stuff/
 
-# haskell
-report.html
+# Haskell
 *.hi
 *.o
-
-# freelance
-FREE.md
