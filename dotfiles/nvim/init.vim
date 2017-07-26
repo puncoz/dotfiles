@@ -120,6 +120,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:terminal_scrollback_buffer_size=100000
 let g:necoghc_enable_detailed_browse=1
 let g:deepspace_italics=1
+let g:intero_ghci_options="-fobject-code"
 
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
 au FileType python let b:delimitMate_nesting_quotes=['"', '`']
