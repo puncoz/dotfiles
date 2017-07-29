@@ -132,6 +132,7 @@ autocmd! BufWritePost * Neomake
 autocmd! BufWritePost package.yaml silent !hpack --silent
 autocmd! User NeomakeFinished cclose
 autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
+autocmd! FileType haskell setlocal formatprg=stylish-haskell
 
 imap jk <Esc>
 
