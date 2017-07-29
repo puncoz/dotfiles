@@ -276,10 +276,8 @@ command! -bang -nargs=* Ag
 
 command! -bang -nargs=* -complete=file Make Neomake <args>
 
-command! Gp  :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
 command! Gc  :Gcommit -v
 command! Gw  :Gwrite
 command! Gap :Git add --patch
 command! Gd  :Git diff
-command! Gpf :NeomakeSh git push $(git remote) $(git symbolic-ref --short -q HEAD)
 command! Gs  :Gstatus
