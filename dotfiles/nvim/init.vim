@@ -186,7 +186,8 @@ augroup vimrc_term
   autocmd! BufEnter term://* startinsert
 augroup END
 
-colorscheme 1989
+set background=dark
+colorscheme gruvbox
 syntax on
 filetype plugin indent on
 set spell spelllang=en_gb
