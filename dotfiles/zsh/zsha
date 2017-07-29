@@ -241,3 +241,6 @@ alias newf='sudo fc-cache -vf'
 
 # docker-compose
 alias dcp='docker-compose'
+
+# vint
+alias vint='vint --enable-neovim'
