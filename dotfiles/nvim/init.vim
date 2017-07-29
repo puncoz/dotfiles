@@ -5,8 +5,7 @@ endfunction
 call plug#begin('~/.config/nvim/plugged')
 
 " Colorschemes
-Plug 'morhetz/gruvbox'
-Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'flazz/vim-colorschemes'
 
 " Haskell
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
@@ -187,8 +186,7 @@ augroup vimrc_term
   autocmd! BufEnter term://* startinsert
 augroup END
 
-set background=dark
-colorscheme gruvbox
+colorscheme 1989
 syntax on
 filetype plugin indent on
 set spell spelllang=en_gb
