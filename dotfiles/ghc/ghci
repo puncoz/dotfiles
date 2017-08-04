@@ -1,6 +1,6 @@
 :set +m
 :set -v0
-:set prompt "\x03BB "
+:set prompt "λ "
 
 :set -fobject-code
 :set -fhelpful-errors
