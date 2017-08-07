@@ -124,7 +124,7 @@ let g:intero_start_immediately = 0
 let g:intero_prompt_regex="λ> "
 
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
-au FileType python let b:delimitMate_nesting_quotes=['"', '`']
+au FileType python let b:delimitMate_nesting_quotes=['"', '`', "'"]
 au FileType nerdtree setlocal relativenumber
 au FileType qf set wrap
 
