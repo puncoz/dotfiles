@@ -121,7 +121,7 @@ let g:necoghc_enable_detailed_browse=1
 let g:deepspace_italics=1
 let g:intero_ghci_options="-fobject-code"
 let g:intero_start_immediately = 0
-let g:intero_prompt_regex="'[^-]λ'"
+let g:intero_prompt_regex="λ> "
 
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
 au FileType python let b:delimitMate_nesting_quotes=['"', '`']
