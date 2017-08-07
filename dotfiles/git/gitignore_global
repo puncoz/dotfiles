@@ -1,13 +1,12 @@
 # Defaults
 .cache/
+tags
 
 # Javascript
 node_modules/
 
 # Python
 .venv/
-Pipfile
-Pipfile.lock
 
 # Elm
 elm-stuff/
