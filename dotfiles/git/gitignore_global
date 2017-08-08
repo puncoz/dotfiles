@@ -7,6 +7,7 @@ node_modules/
 
 # Python
 .venv/
+.env
 
 # Elm
 elm-stuff/
