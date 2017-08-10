@@ -22,9 +22,9 @@ set alias_file=~/.mutt/aliases
 set header_cache=~/.cache/mutt
 set message_cachedir = ~/.cache/messagecache
 
-set timeout="60"
-set pop_checkinterval="60"
-set mail_check="60"
+set timeout="30"
+set pop_checkinterval="30"
+set mail_check="30"
 
 set mark_old=no
 set quit=yes
