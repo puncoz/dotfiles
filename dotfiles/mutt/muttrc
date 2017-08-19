@@ -64,7 +64,7 @@ bind attach,index,pager \CU previous-page
 source ~/.mutt/gpg.rc
 source ~/.mutt/aliases
 source "/usr/bin/gpg2 -d --quiet  ~/.mutt/passwd.gpg |"
-source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+source ~/.mutt/colors/color.muttrc
 
 macro index,pager + <save-message>=TODO<enter><enter> "Mark as important"
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "Mark all messages as read"
