@@ -37,6 +37,7 @@ alias prs='sudo service postgresql restart'
 # builtin
 alias s='ls'
 alias gR='grep -iR'
+alias gI='grep -i'
 alias xclip='xclip -selection c'
 alias -g L='| less'
 alias -g SO='1> /dev/null'
@@ -172,7 +173,6 @@ alias pt='pytest'
 alias pk='pytest -sk'
 alias ptx='pytest -x'
 alias ptq='pytest -q'
-alias ptw='ptw -- --testmon'
 
 # stackage
 alias sbs='ssh stackage-build'
