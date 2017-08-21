@@ -176,6 +176,7 @@ nn <Leader>hi :InteroInfo<cr>
 nn <Leader>hI :InteroTypeInsert<cr>
 
 nn <Leader>pp :10Term ipython --profile=lwm<cr>
+nn <Leader>dp :10Term python manage.py shell_plus --ipython --quiet-load<cr>
 nn <Leader>p :VTerm pytest -sv --pdb<cr>
 
 tno <C-h> <C-\><C-n><C-w>h
