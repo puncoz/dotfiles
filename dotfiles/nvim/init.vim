@@ -284,3 +284,4 @@ command! Gw  :Gwrite
 command! Gap :Git add --patch
 command! Gd  :Git diff
 command! Gs  :Gstatus
+command! Gp  :Git push
