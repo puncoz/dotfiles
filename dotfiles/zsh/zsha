@@ -246,3 +246,6 @@ alias dcp='docker-compose'
 
 # vint
 alias vint='vint --enable-neovim'
+
+# ctags
+alias cR='ctags -R .'
