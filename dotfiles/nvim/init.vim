@@ -176,7 +176,8 @@ nn <Leader>ii :InteroInfo<cr>
 nn <Leader>if :InteroLoadCurrentFile<CR>
 
 nn <Leader>pp :10Term ipython --profile=lwm<cr>
-nn <Leader>dp :10Term python manage.py shell_plus --ipython --quiet-load<cr>
+nn <Leader>dsp :10Term python manage.py shell_plus --ipython --quiet-load<cr>
+nn <Leader>ds :10Term python manage.py shell<cr>
 nn <Leader>p :VTerm pytest -sv --pdb<cr>
 
 tno <C-h> <C-\><C-n><C-w>h
