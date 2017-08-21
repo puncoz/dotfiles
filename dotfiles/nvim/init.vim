@@ -131,7 +131,7 @@ autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost *.py Isort
 autocmd! BufWritePost * Neomake
 autocmd! BufWritePost package.yaml silent !hpack --silent
-autocmd! BufWritePost *.hs InteroReload
+" autocmd! BufWritePost *.hs InteroReload
 autocmd! User NeomakeFinished cclose
 autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd! FileType haskell setlocal formatprg=stylish-haskell
