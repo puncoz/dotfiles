@@ -121,7 +121,6 @@ let g:necoghc_enable_detailed_browse=1
 let g:deepspace_italics=1
 let g:intero_ghci_options="-fobject-code"
 let g:intero_start_immediately = 0
-let g:intero_prompt_regex="λ> "
 
 au BufReadPost * nested call MyFollowSymlink(expand('%'))
 au FileType python let b:delimitMate_nesting_quotes=['"', '`', "'"]
@@ -132,6 +131,7 @@ autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost *.py Isort
 autocmd! BufWritePost * Neomake
 autocmd! BufWritePost package.yaml silent !hpack --silent
+autocmd! BufWritePost *.hs InteroReload
 autocmd! User NeomakeFinished cclose
 autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd! FileType haskell setlocal formatprg=stylish-haskell
@@ -166,14 +166,14 @@ nn <C-k> <C-w>k
 nn <C-l> <C-w>l
 nn <C-h> <C-w>h
 
-nn <Leader>ho :InteroOpen<cr>
-nn <Leader>hk :InteroKill<cr>
-nn <Leader>hh :InteroHide<cr>
-nn <Leader>hl :InteroLoadCurrentModule<cr>
-nn <Leader>ht :InteroGenericType<cr>
-nn <Leader>hT :InteroType<cr>
-nn <Leader>hi :InteroInfo<cr>
-nn <Leader>hI :InteroTypeInsert<cr>
+nn <Leader>io :InteroOpen<cr>
+nn <Leader>ik :InteroKill<cr>
+nn <Leader>ih :InteroHide<cr>
+nn <Leader>il :InteroLoadCurrentModule<cr>
+nn <Leader>it :InteroGenericType<cr>
+nn <Leader>iT :InteroType<cr>
+nn <Leader>ii :InteroInfo<cr>
+nn <Leader>if :InteroLoadCurrentFile<CR>
 
 nn <Leader>pp :10Term ipython --profile=lwm<cr>
 nn <Leader>dp :10Term python manage.py shell_plus --ipython --quiet-load<cr>
