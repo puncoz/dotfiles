@@ -12,13 +12,6 @@ alias bpy='bpython'
 
 # stack
 alias stw='stack test --file-watch --fast'
-alias sg='stack ghci'
-alias sb='stack build'
-alias whv='stack exec ghc-pkg latest'
-alias gpk='stack exec ghc-pkg'
-alias sld='stack list-dependencies'
-alias ghc='stack exec -- ghc'
-alias ghci='stack exec -- ghci'
 
 # editor
 alias v='nvim'
