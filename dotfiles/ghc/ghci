@@ -8,5 +8,3 @@
 
 :set -XPartialTypeSignatures
 :set -XOverloadedStrings
-
-:def hg \x -> return $ ":!stack hoogle -- -i \"" ++ x ++ "\""
