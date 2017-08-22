@@ -122,20 +122,23 @@ let g:deepspace_italics=1
 let g:intero_ghci_options="-fobject-code"
 let g:intero_start_immediately = 0
 
-au BufReadPost * nested call MyFollowSymlink(expand('%'))
-au FileType python let b:delimitMate_nesting_quotes=['"', '`', "'"]
-au FileType nerdtree setlocal relativenumber
-au FileType qf set wrap
 
+autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
 autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost *.py Isort
 autocmd! BufWritePost * Neomake
 autocmd! BufWritePost package.yaml silent !hpack --silent
 " autocmd! BufWritePost *.hs InteroReload
+
 autocmd! User NeomakeFinished cclose
+
 autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd! FileType haskell setlocal formatprg=stylish-haskell
 autocmd! FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd! FileType javascript set formatprg=prettier\ --stdin
+autocmd! FileType python let b:delimitMate_nesting_quotes=['"', '`', "'"]
+autocmd! FileType nerdtree setlocal relativenumber
+autocmd! FileType qf set wrap
 
 imap jk <Esc>
 
