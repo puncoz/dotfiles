@@ -93,6 +93,7 @@ let g:neomake_python_enabled_makers=['pylama']
 let g:neomake_vim_enabled_makers=['vint']
 let g:neomake_haskell_enabled_makers=['hlint']
 let g:neomake_markdown_enabled_makers=['proselint']
+let g:neomake_javascript_enabled_makers=['jshint']
 let g:neomake_open_list=2
 let g:neomake_list_height=6
 let g:neomake_verbose=1
