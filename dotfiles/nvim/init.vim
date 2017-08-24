@@ -184,7 +184,8 @@ nn <Leader>iT :InteroType<cr>
 nn <Leader>ii :InteroInfo<cr>
 nn <Leader>if :InteroLoadCurrentFile<CR>
 
-nn <Leader>pp :10Term ipython --profile=lwm<cr>
+nn <Leader>pp :10Term python<cr>
+nn <Leader>ip :10Term ipython<cr>
 nn <Leader>dsp :10Term python manage.py shell_plus --ipython --quiet-load<cr>
 nn <Leader>ds :10Term python manage.py shell<cr>
 nn <Leader>p :VTerm pytest -sv --pdb<cr>
