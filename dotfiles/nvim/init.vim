@@ -291,6 +291,7 @@ command! -bang -nargs=* Ag
 command! -bang -nargs=* -complete=file Make Neomake <args>
 
 command! Gc  :Gcommit -v
+command! Gcf :Gcommit --fixup
 command! Gw  :Gwrite
 command! Gap :Git add --patch
 command! Gd  :Git diff
