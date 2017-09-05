@@ -100,7 +100,6 @@ let g:neomake_haskell_enabled_makers=['hlint']
 let g:neomake_markdown_enabled_makers=['proselint']
 let g:neomake_javascript_enabled_makers=['jshint']
 let g:neomake_open_list=2
-let g:neomake_list_height=6
 let g:neomake_verbose=1
 let g:neomake_logfile='/tmp/neomake.log'
 let g:SuperTabDefaultCompletionType="<c-n>"
@@ -126,17 +125,14 @@ let g:terminal_scrollback_buffer_size=100000
 let g:necoghc_enable_detailed_browse=1
 let g:deepspace_italics=1
 let g:intero_ghci_options="-fobject-code"
-let g:intero_start_immediately = 0
-
+let g:intero_start_immediately=0
 
 autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
 autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost *.py Isort
 autocmd! BufWritePost * Neomake
 autocmd! BufWritePost package.yaml silent !hpack --silent
-" autocmd! BufWritePost *.hs InteroReload
-
-autocmd! User NeomakeFinished cclose
+autocmd! BufWritePost *.hs InteroReload
 
 autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd! FileType haskell setlocal formatprg=stylish-haskell
