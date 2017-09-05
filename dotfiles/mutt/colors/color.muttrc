@@ -1,7 +1,7 @@
 # https://gist.github.com/darnir/0c3cedf42c7684c8f6ae50a765edb066
 
 # basic colors ---------------------------------------------------------
-# color normal        brightyellow    default
+
 color error         color196        color235                        # message line error text
 color tilde         color81         color233                        # vi-like tildes marking blank lines
 color message       color82         color235
@@ -32,10 +32,6 @@ color index         brightcolor154  color233        "~U"            # unread mes
 color index         brightcolor154  color233        "~U~$"          # unread, unreferenced messages
 color index         color222        color233        "~v"            # messages part of a collapsed thread
 color index         color222        color233        "~P"            # messages from me
-#color index         color39         color233        "~p!~F"        # messages to me
-#color index         color39         color233        "~N~p!~F"      # new messages to me
-#color index         color39         color233        "~U~p!~F"      # unread messages to me
-#color index         color244        color233        "~R~p!~F"      # messages to me
 color index         brightcolor165  color233        "~F"            # flagged messages
 color index         brightcolor165  color233        "~F~p"          # flagged messages to me
 color index         brightcolor165  color233        "~N~F"          # new flagged messages
@@ -46,8 +42,6 @@ color index         color232        color196        "~N ~D"         # deleted ne
 color index         color244        color233        "~v~(!~N)"      # collapsed thread with no unread
 color index         color81         color233        "~v~(~N)"       # collapsed thread with some unread
 color index         color81         color233        "~N~v~(~N)"     # collapsed thread with unread parent
-# statusbg used to indicated flagged when foreground color shows other status
-# for collapsed thread
 color index         color160        color233        "~v~(~F)!~N"    # collapsed thread with flagged, no unread
 color index         color81         color233        "~v~(~F~N)"     # collapsed thread with some unread & flagged
 color index         color81         color233        "~N~v~(~F~N)"   # collapsed thread with unread parent & flagged
@@ -59,11 +53,6 @@ color index         brightcolor222  color233        "~T~F"          # tagged, fl
 color index         brightcolor222  color233        "~T~N"          # tagged, new messages
 color index         brightcolor222  color233        "~T~U"          # tagged, unread messages
 
-# color index         red             default         "~D(!~p|~p)"               # deleted
-# color index         black           default         ~F                         # flagged
-# color index         brightred       default         ~=                         # duplicate messages
-# color index         brightgreen     default         "~A!~N!~T!~p!~Q!~F!~D!~P"  # the rest
-# color index         brightgreen		default         "~A~N!~T!~p!~Q!~F!~D"      # the rest, new
 color index         black           red             "~D"                        # deleted messages
 color index         yellow          default         "~(~N)"                    # messages in threads with some unread
 color index         green           default         "~S"                       # superseded messages
@@ -103,10 +92,6 @@ color body          brightcolor39   color233        "([a-z][a-z0-9+-]*://(((([a-
 
 # and a heavy handed email regex
 color body          brightcolor39   color233        "((@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]),)*@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]):)?[0-9a-z_.+%$-]+@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\])"
-
-# simplified regex for URL & email
-#color body		magenta		default	"(ftp|https?|gopher|news|telnet|finger)://[^ \"\t\r\n]+"
-#color body		magenta		default	"[-a-z_0-9.]+@[-a-z_0-9.]+"
 
 # _underline_
 color body          blue            default         "(^|[[:space:][:punct:]])_[^_]+_([[:space:][:punct:]]|$)"
