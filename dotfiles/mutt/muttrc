@@ -1,7 +1,7 @@
 set from="lukewm@riseup.net"
 set realname="Luke Murphy"
 set mbox_type=Maildir
-set editor="nvim -c 'set ft=mail noautoindent spell spelllang=en_gb'"
+set editor="nvim -c 'set ft=mail'"
 set pgp_sign_as=3E3718CC
 set pop_user=lukewm
 set pop_host="mail.riseup.net"
