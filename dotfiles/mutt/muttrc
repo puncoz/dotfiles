@@ -43,7 +43,7 @@ set check_new=yes
 
 bind index d delete-message
 bind index j next-entry
-bind index U next-unread
+bind index u next-unread
 bind index k previous-entry
 bind index J next-thread
 bind index K previous-thread
@@ -56,7 +56,7 @@ bind index F fetch-mail
 
 bind pager j next-line
 bind pager k previous-line
-bind pager R  group-reply
+bind pager R group-reply
 
 bind attach,index,pager \CD next-page
 bind attach,index,pager \CU previous-page
