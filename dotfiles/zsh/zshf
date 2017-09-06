@@ -68,3 +68,8 @@ function glf(){
   # Check history of a file
   git log -p --follow "$1"
 }
+
+function givemeentropy(){
+  # Generate some random noise for GPG key generation
+  find / > /dev/null
+}
