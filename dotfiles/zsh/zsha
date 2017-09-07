@@ -29,6 +29,7 @@ alias prs='sudo service postgresql restart'
 
 # builtin
 alias s='ls'
+alias sl='ls'
 alias gR='grep -iR'
 alias gI='grep -i'
 alias xclip='xclip -selection c'
