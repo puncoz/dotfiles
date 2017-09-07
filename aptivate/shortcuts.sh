@@ -1,8 +1,39 @@
 #!/bin/bash
 
-function sshv(){
-  # An SSH that knows Aptivate DNS provider IPs
-  # FIXME: Dynamically configure the DNS when in VPN
-  IP=$(dig @ns1.linode.com "$1" +short)
-  ssh lukem@"$IP"
+function vpn(){
+  # This function takes care of running an OpenVPN
+  # connection, updating the resolv.conf and making
+  # sure it gets reset correctly.
+
+  RESOLV=/etc/resolv.conf
+  TMP_RESOLV=/tmp/dnsresolv
+  cat $RESOLV > $TMP_RESOLV
+
+  sudo ip addr flush dev tun0
+
+  BASE=~/aptivate/vpn-stuff/lukem
+  CONFIG=$BASE/aptivate.ovpn
+  CA=$BASE/aptivate.ca.crt
+  CERT=$BASE/lukem.crt
+  KEY=$BASE/lukem.key
+  AUTHKEY=$BASE/aptivate.ta.key
+
+  sudo openvpn \
+    --config "$CONFIG" \
+    --ca "$CA" \
+    --cert "$CERT" \
+    --key "$KEY" \
+    --tls-auth "$AUTHKEY"
+
+  DIFF=$(diff $TMP_RESOLV $RESOLV)
+  if [ "$DIFF" != "" ]
+  then
+    echo ""
+    echo "-----------------------------------------"
+    echo "The resolv.conf hasn't been changed back!"
+    echo "-----------------------------------------"
+    echo ""
+  fi
+
+  rm -rf $TMP_RESOLV
 }
