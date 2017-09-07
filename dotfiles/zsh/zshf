@@ -21,6 +21,13 @@ function x (){
     fi
 }
 
+function docker-stop(){
+    # Kill all the running containers
+    # But don't nuke the images that have been downloaded
+    docker stop $(docker ps -qa)
+    docker rm -f $(docker ps -qa)
+}
+
 function docker-cleanup(){
     # Nuke all docker images and containers.
     docker stop $(docker ps -qa)
