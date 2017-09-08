@@ -35,6 +35,11 @@ function docker-cleanup(){
     docker rmi -f $(docker images -qa)
 }
 
+function dbash(){
+  # Jump into a bash session in a Docker container
+  docker exec -it "$(docker ps -aqf "name=$1")" /bin/bash
+}
+
 function getpr(){
     # Get a Git remote fast.
     git fetch upstream pull/$1/head:"pr_$1"
