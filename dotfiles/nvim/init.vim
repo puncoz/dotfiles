@@ -55,6 +55,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'godlygeek/tabular'
 
+" Neovim Terminal Utilities
+Plug 'mhinz/neovim-remote'
+
 " Writing
 Plug 'reedes/vim-pencil'
 Plug 'reedes/vim-wordy'
@@ -70,6 +73,8 @@ Plug 'nelstrom/vim-markdown-folding'
 Plug 'carlitux/deoplete-ternjs', {'for': 'javascript'}
 
 call plug#end()
+
+let $VISUAL = 'nvr -cc split --remote-wait'
 
 let mapleader=","
 let g:gitgutter_max_signs=10000
