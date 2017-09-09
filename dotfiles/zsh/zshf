@@ -40,6 +40,17 @@ function dbash(){
   docker exec -it "$(docker ps -aqf "name=$1")" /bin/bash
 }
 
+function dockid(){
+  # Get the identifier for a Docker container
+  docker ps -aqf "name=$1"
+}
+
+function reup(){
+  # Get a docker container back up inside a docker-compose managed group
+  docker kill "$1" && docker rm -f "$1"
+  docker-compose up -d --no-deps --build "$1"
+}
+
 function getpr(){
     # Get a Git remote fast.
     git fetch upstream pull/$1/head:"pr_$1"
