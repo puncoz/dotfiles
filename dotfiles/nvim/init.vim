@@ -63,6 +63,9 @@ Plug 'reedes/vim-wordy'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
 
+" Markdown
+Plug 'nelstrom/vim-markdown-folding'
+
 " Javascript
 Plug 'carlitux/deoplete-ternjs', {'for': 'javascript'}
 
