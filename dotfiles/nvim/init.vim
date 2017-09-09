@@ -135,6 +135,7 @@ let g:deepspace_italics=1
 let g:intero_ghci_options="-fobject-code"
 let g:intero_start_immediately=0
 
+autocmd! BufEnter * if &buftype == 'terminal' | :startinsert | endif
 autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
 autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost *.py Isort
@@ -199,11 +200,6 @@ tno <C-j> <C-\><C-n><C-w>j
 tno <C-k> <C-\><C-n><C-w>k
 tno <C-l> <C-\><C-n><C-w>l
 tno jk <C-\><C-n>
-
-augroup vimrc_term
-  au!
-  autocmd! BufEnter term://* startinsert
-augroup END
 
 set background=dark
 colorscheme gruvbox
