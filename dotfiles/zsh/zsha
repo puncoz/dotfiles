@@ -45,7 +45,7 @@ alias ez='$EDITOR ~/.zshrc'
 alias ea='$EDITOR ~/.zsha'
 alias ef='$EDITOR ~/.zshf'
 alias et='$EDITOR ~/.tmux.conf'
-alias en='$EDITOR ~/notes/TODO.md'
+alias en='$EDITOR -c "set foldlevel=0" ~/notes/TODO.md'
 alias sz='source ~/.zshrc'
 alias dotf='cd ~/dotfiles'
 
