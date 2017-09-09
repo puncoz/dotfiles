@@ -6,7 +6,7 @@
     autocrlf = false
     safecrlf = true
     excludesfile = ~/.gitignore_global
-    editor = nvim
+    editor = nvr --remote-wait-silent
 
 [merge]
     tool = meld
