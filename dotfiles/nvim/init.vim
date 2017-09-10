@@ -74,8 +74,6 @@ Plug 'carlitux/deoplete-ternjs', {'for': 'javascript'}
 
 call plug#end()
 
-let $VISUAL = 'nvr -cc split --remote-wait'
-
 let mapleader=","
 let g:gitgutter_max_signs=10000
 let g:gitgutter_realtime=1
