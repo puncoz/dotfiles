@@ -143,10 +143,7 @@ augroup neovim
   autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
   autocmd! BufWritePre  * StripWhitespace
   autocmd! BufWritePost * Neomake
-augroup END
-
-augroup neoterminal
-  autocmd!
+  autocmd! BufEnter term://* startinsert
   autocmd! BufEnter * if &buftype == 'terminal' | :startinsert | endif
 augroup END
 
