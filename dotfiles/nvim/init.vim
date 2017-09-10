@@ -9,7 +9,6 @@ Plug 'flazz/vim-colorschemes'
 
 " Haskell
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
-Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
 Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 
 " Python
@@ -57,6 +56,7 @@ Plug 'godlygeek/tabular'
 
 " Neovim Terminal Utilities
 Plug 'mhinz/neovim-remote'
+Plug 'kassio/neoterm'
 
 " Writing
 Plug 'reedes/vim-pencil'
@@ -132,8 +132,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:terminal_scrollback_buffer_size=100000
 let g:necoghc_enable_detailed_browse=1
 let g:deepspace_italics=1
-let g:intero_ghci_options="-fobject-code"
-let g:intero_start_immediately=0
+let g:neoterm_position="horizontal"
+let g:neoterm_size=10
+let g:neoterm_autoinsert=1
 
 autocmd! BufEnter * if &buftype == 'terminal' | :startinsert | endif
 autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
@@ -141,7 +142,7 @@ autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost *.py Isort
 autocmd! BufWritePost * Neomake
 autocmd! BufWritePost package.yaml silent !hpack --silent
-autocmd! BufWritePost *.hs InteroReload
+autocmd! WinLeave * :Tclose
 
 autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd! FileType haskell setlocal formatprg=stylish-haskell
