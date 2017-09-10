@@ -139,7 +139,6 @@ autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
 autocmd! BufWritePre  * StripWhitespace
 autocmd! BufWritePost * Neomake
 autocmd! BufWritePost package.yaml silent !hpack --silent
-autocmd! WinLeave * :Tclose
 
 autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd! FileType haskell setlocal formatprg=stylish-haskell
