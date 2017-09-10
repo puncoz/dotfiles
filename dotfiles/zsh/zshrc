@@ -10,7 +10,6 @@ export EDITOR="nvim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 export PYTHONASYNCIODEBUG=1
-export PYTHONDONTWRITEBYTECODE=True
 export FZF_COMPLETION_TRIGGER='X'
 export FZF_DEFAULT_OPTS='--black --no-256 --no-color'
 export $(gnome-keyring-daemon -s)
