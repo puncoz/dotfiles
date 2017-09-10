@@ -145,7 +145,7 @@ autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd! FileType haskell setlocal formatprg=stylish-haskell
 autocmd! FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd! FileType javascript set formatprg=prettier\ --stdin
-autocmd! FileType python let b:delimitMate_nesting_quotes=['"', '`', "'"]
+autocmd! FileType python,markdown let b:delimitMate_nesting_quotes=['"', '`', "'"]
 autocmd! FileType nerdtree setlocal relativenumber
 autocmd! FileType qf set wrap
 
