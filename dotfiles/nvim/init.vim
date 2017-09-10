@@ -46,7 +46,6 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'neomake/neomake'
 
 " Enhancements
-Plug 'vimlab/split-term.vim'
 Plug 'rafi/vim-tinyline'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-unimpaired'
@@ -186,11 +185,11 @@ nn <Leader>iT :InteroType<cr>
 nn <Leader>ii :InteroInfo<cr>
 nn <Leader>if :InteroLoadCurrentFile<CR>
 
-nn <Leader>pp :10Term python<cr>
-nn <Leader>ip :10Term ipython<cr>
-nn <Leader>dsp :10Term python manage.py shell_plus --ipython --quiet-load<cr>
-nn <Leader>ds :10Term python manage.py shell<cr>
-nn <Leader>p :VTerm pytest -sv --pdb<cr>
+nn <Leader>pp :T python<cr>
+nn <Leader>ip :T ipython<cr>
+nn <Leader>dsp :T python manage.py shell_plus --ipython --quiet-load<cr>
+nn <Leader>ds :T python manage.py shell<cr>
+nn <Leader>p :T pytest -sv --pdb<cr>
 
 tno <C-h> <C-\><C-n><C-w>h
 tno <C-j> <C-\><C-n><C-w>j
