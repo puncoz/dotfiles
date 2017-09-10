@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
@@ -73,7 +75,7 @@ Plug 'carlitux/deoplete-ternjs', {'for': 'javascript'}
 
 call plug#end()
 
-let mapleader=","
+let g:mapleader=','
 let g:gitgutter_max_signs=10000
 let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
@@ -107,45 +109,59 @@ let g:neomake_javascript_enabled_makers=['jshint']
 let g:neomake_open_list=2
 let g:neomake_verbose=1
 let g:neomake_logfile='/tmp/neomake.log'
-let g:SuperTabDefaultCompletionType="<c-n>"
+let g:SuperTabDefaultCompletionType='<c-n>'
 let g:SuperTabLongestHighlight=1
-let g:jedi#usages_command=""
+let g:jedi#usages_command=''
 let g:jedi#popup_select_first=1
 let g:jedi#use_tabs_not_buffers=1
-let g:jedi#show_call_signatures="2"
+let g:jedi#show_call_signatures='2'
 let g:jedi#auto_close_doc=1
 let g:vim_isort_map='<C-i>'
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsListSnippets="<c-k>"
+let g:UltiSnipsExpandTrigger='<c-j>'
+let g:UltiSnipsJumpForwardTrigger='<c-b>'
+let g:UltiSnipsJumpBackwardTrigger='<c-z>'
+let g:UltiSnipsListSnippets='<c-k>'
 let g:EasyMotion_smartcase=1
 let g:EasyMotion_use_upper=1
 let g:EasyMotion_startofline=1
 let g:ansible_options={'ignore_blank_lines': 0}
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<c-b>'
+let g:UltiSnipsJumpBackwardTrigger='<c-z>'
 let g:terminal_scrollback_buffer_size=100000
 let g:necoghc_enable_detailed_browse=1
 let g:deepspace_italics=1
-let g:neoterm_position="horizontal"
+let g:neoterm_position='horizontal'
 let g:neoterm_size=10
 let g:neoterm_autoinsert=1
 
-autocmd! BufEnter * if &buftype == 'terminal' | :startinsert | endif
-autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
-autocmd! BufWritePre  * StripWhitespace
-autocmd! BufWritePost * Neomake
-autocmd! BufWritePost package.yaml silent !hpack --silent
+augroup neovim
+  autocmd!
+  autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
+  autocmd! BufWritePre  * StripWhitespace
+  autocmd! BufWritePost * Neomake
+augroup END
 
-autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
-autocmd! FileType haskell setlocal formatprg=stylish-haskell
-autocmd! FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-autocmd! FileType javascript set formatprg=prettier\ --stdin
-autocmd! FileType python,markdown let b:delimitMate_nesting_quotes=['"', '`', "'"]
-autocmd! FileType nerdtree setlocal relativenumber
-autocmd! FileType qf set wrap
+augroup neoterminal
+  autocmd!
+  autocmd! BufEnter * if &buftype == 'terminal' | :startinsert | endif
+augroup END
+
+augroup haskell
+  autocmd!
+  autocmd! BufWritePost package.yaml silent !hpack --silent
+  autocmd! FileType haskell setlocal omnifunc=necoghc#omnifunc
+  autocmd! FileType haskell setlocal formatprg=stylish-haskell
+augroup END
+
+augroup filetypemania
+  autocmd!
+  autocmd! FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+  autocmd! FileType javascript set formatprg=prettier\ --stdin
+  autocmd! FileType python,markdown let b:delimitMate_nesting_quotes=['"', '`', "'"]
+  autocmd! FileType nerdtree setlocal relativenumber
+  autocmd! FileType qf set wrap
+augroup END
 
 imap jk <Esc>
 
@@ -187,15 +203,21 @@ nn <Leader>if :InteroLoadCurrentFile<CR>
 
 nn <Leader>pp :T python<cr>
 nn <Leader>ip :T ipython<cr>
+
 nn <Leader>dsp :T python manage.py shell_plus --ipython --quiet-load<cr>
-nn <Leader>ds :T python manage.py shell<cr>
+nn <Leader>ds  :T python manage.py shell<cr>
+
 nn <Leader>p :T pytest -sv --pdb<cr>
 
-tno <C-h> <C-\><C-n><C-w>h
-tno <C-j> <C-\><C-n><C-w>j
-tno <C-k> <C-\><C-n><C-w>k
-tno <C-l> <C-\><C-n><C-w>l
-tno jk <C-\><C-n>
+nn <Leader>tc :Tclose<cr>
+nn <Leader>to :Topen<cr>
+
+if exists(':tnoremap')
+  tnoremap <C-h> <C-\><C-n><C-w>h
+  tnoremap <C-j> <C-\><C-n><C-w>j
+  tnoremap <C-k> <C-\><C-n><C-w>k
+  tnoremap <C-l> <C-\><C-n><C-w>l
+endif
 
 set background=dark
 colorscheme gruvbox
@@ -220,7 +242,7 @@ set ruler
 set showmode
 set laststatus=2
 set scrolloff=10
-set ch=2
+set cmdheight=2
 set hlsearch
 set gdefault
 set hidden
@@ -251,29 +273,29 @@ function! MyFollowSymlink(...)
   if exists('w:no_resolve_symlink') && w:no_resolve_symlink
     return
   endif
-  if &ft == 'help'
+  if &filetype ==# 'help'
     return
   endif
-  let fname=a:0 ? a:1 : expand('%')
-  if fname =~ '^\w\+:/'
+  let l:fname=a:0 ? a:1 : expand('%')
+  if l:fname =~# '^\w\+:/'
     return
   endif
-  let fname=simplify(fname)
-  let resolvedfile=resolve(fname)
-  if resolvedfile == fname
+  let l:fname=simplify(l:fname)
+  let l:resolvedfile=resolve(l:fname)
+  if l:resolvedfile == l:fname
     return
   endif
-  let resolvedfile=fnameescape(resolvedfile)
-  let sshm=&shm
+  let l:resolvedfile=fnameescape(l:resolvedfile)
+  let l:sshm=&shortmess
   set shortmess+=A
   redraw
-  exec 'file ' . resolvedfile
-  let &shm=sshm
+  exec 'file ' . l:resolvedfile
+  let &shortmess=l:sshm
   unlet! b:git_dir
-  call fugitive#detect(resolvedfile)
+  call fugitive#detect(l:resolvedfile)
   if &modifiable
     redraw
-    echomsg 'Resolved symlink: =>' resolvedfile
+    echomsg 'Resolved symlink: =>' l:resolvedfile
   endif
 endfunction
 
