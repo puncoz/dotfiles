@@ -11,6 +11,7 @@ Plug 'flazz/vim-colorschemes'
 
 " Haskell
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
+Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
 Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 
 " Python
@@ -134,6 +135,8 @@ let g:deepspace_italics=1
 let g:neoterm_position='horizontal'
 let g:neoterm_size=10
 let g:neoterm_autoinsert=1
+let g:intero_ghci_options='-fobject-code'
+let g:intero_start_immediately=0
 
 augroup neovim
   autocmd!
