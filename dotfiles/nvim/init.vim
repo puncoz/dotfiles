@@ -137,7 +137,6 @@ let g:neoterm_autoinsert=1
 autocmd! BufEnter * if &buftype == 'terminal' | :startinsert | endif
 autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
 autocmd! BufWritePre  * StripWhitespace
-autocmd! BufWritePost *.py Isort
 autocmd! BufWritePost * Neomake
 autocmd! BufWritePost package.yaml silent !hpack --silent
 autocmd! WinLeave * :Tclose
