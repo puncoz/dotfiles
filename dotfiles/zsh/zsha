@@ -37,6 +37,7 @@ alias -g L='| less'
 alias -g SO='1> /dev/null'
 alias -g SE='2> /dev/null'
 alias cnt='wc -l'
+alias du='du -h'
 
 # dotfiles
 alias erm='$EDITOR ~/remind/reminders.txt'
