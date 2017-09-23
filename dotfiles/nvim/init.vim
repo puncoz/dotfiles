@@ -199,6 +199,7 @@ nn <Leader>il :InteroLoadCurrentModule<cr>
 nn <Leader>it :InteroGenericType<cr>
 nn <Leader>iT :InteroType<cr>
 nn <Leader>ii :InteroInfo<cr>
+nn <Leader>iR :InteroReload<cr>
 nn <Leader>if :InteroLoadCurrentFile<CR>
 
 nn <Leader>pp :T python<cr>
