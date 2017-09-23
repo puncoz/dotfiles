@@ -11,7 +11,7 @@ function vpn(){
 
   sudo ip addr flush dev tun0
 
-  BASE=~/aptivate/vpn-stuff/lukem
+  BASE=$HOME/hacking/aptivate/vpn-stuff/lukem
   CONFIG=$BASE/aptivate.ovpn
   CA=$BASE/aptivate.ca.crt
   CERT=$BASE/lukem.crt
