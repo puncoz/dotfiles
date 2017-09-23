@@ -92,15 +92,6 @@ c.TerminalInteractiveShell.prompts_class = MyPrompt
 ## Automatically set the terminal title
 c.TerminalInteractiveShell.term_title = False
 
-## Experimental: restrict time (in milliseconds) during which Jedi can compute
-#  types. Set to 0 to stop computing types. Non-zero value lower than 100ms may
-#  hurt performance by preventing jedi to build its cache.
-c.Completer.jedi_compute_type_timeout = 400
-
-## Experimental: Use Jedi to generate autocompletions. Default to True if jedi is
-#  installed
-c.Completer.use_jedi = True
-
 ## Instruct the completer to omit private method names
 #
 #  Specifically, when completing on ``object.<tab>``.
