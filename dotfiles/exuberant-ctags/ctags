@@ -29,4 +29,5 @@
 --exclude=\*.tar.\*
 --exclude=.tox
 --exclude=.venv
+--exclude=.ve
 --exclude=build
