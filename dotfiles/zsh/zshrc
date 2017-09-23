@@ -2,6 +2,7 @@ PATH+="$PATH"
 PATH+=:"$HOME/.nvm"
 PATH+=:"$HOME/.local/bin"
 PATH+=:"$HOME/bin"
+PATH+=:"$HOME/.rvm/bin"
 export PATH
 
 export ZSH="$HOME/.oh-my-zsh"
