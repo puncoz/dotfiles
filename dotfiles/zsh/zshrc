@@ -40,4 +40,4 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 bindkey -M viins 'jk' vi-cmd-mode
 bindkey '^ ' autosuggest-accept
 
-remind -h ~/remind/reminders.txt
+remind -h ~/remind/reminders
