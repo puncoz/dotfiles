@@ -43,38 +43,36 @@ function vpn(){
 
   rm -rf $TMP_RESOLV
 }
+function aptivatesshmonitor(){
+  ssh lin-monitor.aptivate.org
+}
+##############################################################################
 
 ##############################################################################
 # PULA PHONES
 ##############################################################################
 DEPLOYFAB="$PROJECTBASE/PULA/pulaphones/deploy/fab.py"
 
-alias pmal='pulamalawi'
-function pulamalawi(){
+function pulasshmalawi(){
   ssh lin-pulaphones-malawi.aptivate.org
 }
 
-alias pzambia='pzambia'
-function pulazambia(){
+function pulasshzambia(){
   ssh lin-pulaphones-zambia.aptivate.org
 }
 
-alias pstage='pstage'
-function pulastage(){
+function pulasshstage(){
   ssh fen-vz-pulaphones-stage.fen.aptivate.org
 }
 
-alias dmal='puladeploymalawi'
 function puladeploymalawi(){
   python "$DEPLOYFAB" malawi deploy
 }
 
-alias dstage='puladeploystage'
 function puladeploystage(){
   python "$DEPLOYFAB" staging deploy
 }
 
-alias dzam='puladeployzambia'
 function puladeployzambia(){
   python "$DEPLOYFAB" zambia deploy
 }
