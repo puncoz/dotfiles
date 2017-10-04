@@ -40,6 +40,7 @@ alias cnt='wc -l'
 alias du='du -h'
 
 # dotfiles
+alias erb='$EDITOR ~/remind/birthdays.txt'
 alias erm='$EDITOR ~/remind/reminders.txt'
 alias ev='$EDITOR ~/.config/nvim/init.vim'
 alias ez='$EDITOR ~/.zshrc'
