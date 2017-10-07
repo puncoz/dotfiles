@@ -21,6 +21,7 @@ set spoolfile=~/mail/inbox
 set alias_file=~/.mutt/aliases
 set header_cache=~/.cache/mutt
 set message_cachedir = ~/.cache/messagecache
+set mailcap_path=~/.mailcap
 
 set timeout=30
 set pop_checkinterval=30
