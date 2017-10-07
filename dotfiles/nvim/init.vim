@@ -67,6 +67,7 @@ Plug 'reedes/vim-wordy'
 " Syntax
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
+Plug 'saltstack/salt-vim'
 
 " Markdown
 Plug 'nelstrom/vim-markdown-folding'
