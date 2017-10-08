@@ -72,9 +72,6 @@ Plug 'saltstack/salt-vim'
 " Markdown
 Plug 'nelstrom/vim-markdown-folding'
 
-" Javascript
-Plug 'carlitux/deoplete-ternjs', {'for': 'javascript'}
-
 call plug#end()
 
 let g:mapleader=','
@@ -101,13 +98,10 @@ let g:ctrlp_extensions=['funky', 'tag']
 let g:deoplete#enable_at_startup=1
 let g:deoplete#enable_ignore_case=1
 let g:deoplete#enable_smart_case=1
-let g:deoplete#sources#ternjs#docs=1
-let g:deoplete#sources#ternjs#types=1
 let g:neomake_python_enabled_makers=['pylama']
 let g:neomake_vim_enabled_makers=['vint']
 let g:neomake_haskell_enabled_makers=['hlint']
 let g:neomake_markdown_enabled_makers=['proselint']
-let g:neomake_javascript_enabled_makers=['jshint']
 let g:neomake_open_list=2
 let g:neomake_verbose=1
 let g:neomake_logfile='/tmp/neomake.log'
@@ -158,7 +152,6 @@ augroup END
 augroup filetypemania
   autocmd!
   autocmd! FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-  autocmd! FileType javascript set formatprg=prettier\ --stdin
   autocmd! FileType python,markdown let b:delimitMate_nesting_quotes=['"', '`', "'"]
   autocmd! FileType nerdtree setlocal relativenumber
   autocmd! FileType qf set wrap
