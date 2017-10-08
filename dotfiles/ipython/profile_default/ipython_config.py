@@ -1,7 +1,10 @@
 import os
+import warnings
 
 import IPython
 from IPython.terminal.prompts import Prompts, Token
+
+warnings.filterwarnings('ignore')
 
 ## lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = [
