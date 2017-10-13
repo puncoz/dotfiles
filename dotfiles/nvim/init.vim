@@ -208,6 +208,7 @@ nn <Leader>tc :Tclose<cr>
 nn <Leader>to :Topen<cr>
 
 if exists(':tnoremap')
+  tnoremap jk <C-\><C-n>
   tnoremap <C-h> <C-\><C-n><C-w>h
   tnoremap <C-j> <C-\><C-n><C-w>j
   tnoremap <C-k> <C-\><C-n><C-w>k
