@@ -70,6 +70,8 @@ source ~/.mutt/colors/color.muttrc
 macro index,pager + <save-message>=TODO<enter><enter> "Mark as important"
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "Mark all messages as read"
 
+macro index,pager X "s=.spam\n" "file as Spam"
+
 set noconfirmappend
 set beep_new
 set tilde
