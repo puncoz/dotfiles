@@ -24,8 +24,8 @@ set message_cachedir = ~/.cache/messagecache
 set mailcap_path=~/.mailcap
 
 set timeout=30
-set pop_checkinterval=30
-set mail_check=30
+set pop_checkinterval=5
+set mail_check=5
 
 set mark_old=no
 set quit=yes
