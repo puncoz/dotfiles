@@ -232,6 +232,7 @@ alias pup='pip install -U pip'
 alias ap='ansible-playbook'
 alias ad='ansible-doc'
 alias av='ansible-vault'
+alias ac='ansible-config'
 
 # hub
 alias hpr='hub pull-request'
@@ -251,3 +252,6 @@ alias cR='ctags -R .'
 
 # aptivate
 alias tap='tmuxp load aptivate'
+
+# gpg
+alias gpg='gpg2'
