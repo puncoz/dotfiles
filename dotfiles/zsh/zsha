@@ -231,6 +231,7 @@ alias pup='pip install -U pip'
 # ansible
 alias ap='ansible-playbook'
 alias ad='ansible-doc'
+alias av='ansible-vault'
 
 # hub
 alias hpr='hub pull-request'
