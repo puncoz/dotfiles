@@ -1,2 +1,3 @@
 text/html; /usr/bin/firefox %s;
 application/pdf; /usr/bin/evince %s;
+image/*; /usr/bin/eog %s;
