@@ -43,9 +43,15 @@ function vpn(){
 
   rm -rf $TMP_RESOLV
 }
+
 function aptivatesshmonitor(){
   ssh lin-monitor.aptivate.org
 }
+
+function aptivatesshweb(){
+  ssh lin-aptivateweb.aptivate.org
+}
+
 ##############################################################################
 
 ##############################################################################
