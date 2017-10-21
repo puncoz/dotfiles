@@ -34,7 +34,9 @@
     frag = magenta bold
     old = red bold
     new = green bold
+
 [commit]
-	gpgsign = true
+  gpgsign = true
+
 [gpg]
-	program = gpg2
+  program = gpg2
