@@ -8,6 +8,10 @@
     excludesfile = ~/.gitignore_global
     editor = nvr --remote-wait-silent
 
+[branch "master"]
+  remote = upstream
+  merge = refs/heads/master
+
 [merge]
     tool = meld
 
