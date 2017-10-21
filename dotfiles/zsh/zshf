@@ -96,3 +96,8 @@ function givemeentropy(){
   # Generate some random noise for GPG key generation
   find / > /dev/null
 }
+
+function varcheck(){
+  # Check if a variable is set for all hosts
+  ansible all -m debug -a "var=$1"
+}
