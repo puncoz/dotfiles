@@ -1,100 +1,101 @@
-https://freepeike.noblogs.org/feed/ "~Free Peike (G20 Prisoners Campaign)"
-https://poortgebouw.org/feed/ "~Poortgebouw"
-https://worm.org/feed/ "~WORM Rotterdam"
-http://ospublish.constantvzw.org/blog/feed "~Open Source Publishing"
-http://feeds.feedburner.com/ChurningAndChurning "~23Skidoo Blog"
-https://nrworkerspower.wordpress.com/feed/ "~NR Workers Power"
-https://www.community-exchange.org/home/feed/ "~CES"
-https://coopfunding.net/en/feed/ "~CoopFunding"
-https://www.unicornriot.ninja/feed/ "~Unicorn Riot"
-http://libcom.org/news "~Libcom (News feed)"
-http://libcom.org/library-latest/feed "~Libcom (Library feed)"
-http://libcom.org/blog/feed "~Libcom Blog"
-http://libcom.org/forums/events-and-announcements/feed "~Libcom Announcements Forum"
-http://libcom.org/forums/international/feed "~Libcom General Forum"
-http://libcom.org/forums/history-0/feed "~Libcom History Forum"
-http://libcom.org/forums/organise-0/feed "~Libcom Organise Forum"
-http://libcom.org/forums/thought-0/feed "~Libcom Theory Forum"
-http://libcom.org/taxonomy/term/725/0/feed "~Libcom News Forum"
-https://aintwhereyafrom.wordpress.com/feed/ "~AintWhereYaFrom (IWW)"
-https://revolutionary-iww.org/feed "~Revolutionary IWW"
-https://industrialunionism.org/feed/ "~Industrial Unionism"
-https://sub.media/feed/ "~Trouble"
-https://ghc.haskell.org/trac/ghc/blog?format=rss "~GHC blog"
-https://adm.amsterdam/rss.xml "~ADM Amsterdam"
-http://imal.org/en/rss.xml "~IMAL"
-http://networkcultures.org/outofink/feed/ "~Network Cultures"
-https://umsganze.org/feed/ "~Ums Ganze"
-http://www.cartoonkate.co.uk/feed/ "~Kate Evans"
-http://www.internationalviewpoint.org/spip.php?page=backend "~International Viewpoint"
-https://www.pixelbar.nl/atom.xml "~PixelBar Rotterdam"
-https://jacobinmag.com/feed/ "~Jacobin Magazine"
-https://redflag.org.au/all/rss "~Red Flag"
-https://en.squat.net/tag/rotterdam/feed/ "~Squat.net - Rotterdam"
-https://socialistworker.org/recent/feed "~Socialist Worker"
-http://novaramedia.com/feed/ "~Novara Media"
-http://workers-power.org/feed/ "~Workers Power"
-https://incarceratedworkers.org/rss "~IWOC"
-https://cyberunions.org/feed/ "~CyberUnions"
-https://www.solidarityeconomy.coop/feed "~Solidarity Economy"
-http://breakingtheframe.org.uk/feed/ "~Breaking the Frame"
-http://recomposition.info/feed/ "~Recomposition"
-https://newsyndicalist.org/feed/ "~New Syndicalist"
-https://sabcat.com/feed/ "~SabCat"
-http://irishhousingnetwork.org/feed/ "~Irish Housing Network"
-https://beyondeurope.net/feed/ "~Beyond Europe"
-https://libcom.org/blog/fredo-corvo/feed "~Fredo Corvo"
-https://tescoworkers.com/feed/ "~Tesco Workers Ireland"
-https://creativeclassstruggle.wordpress.com/feed/ "~Creative Class Struggle"
-http://www.rabble.ie/feed/ "~The Rabble"
-http://tavisharmstrong.com/index.xml "~Tavish Armstrong"
-https://joeyh.name/blog/index.rss "~Joey Hess"
-https://holgerkrekel.net/feed/ "~Holger Kregel"
-http://cs-syd.eu/rss.xml "~Tom Kerckhove"
-https://ocharles.org.uk/blog/posts.rss "~Oliver Charles"
-http://feeds.feedburner.com/EricsThoughts "~Eric Holscher"
-http://booktwo.org/feed/ "~James Bridle"
-http://telekommunisten.net/feed/ "~Telekommunisten"
-https://robertgraham.wordpress.com/feed/ "~Anarchist Weblog"
-http://www.crimethinc.com/blog/feed/ "~Crimethinc"
-http://www.socialistworkeronline.net/feed/ "~Socialist Workers' Party Ireland"
-http://www.peoplebeforeprofit.ie/feed/ "~People Before Profit Ireland"
-https://peoplebeforeprofitcork.com/feed/ "~People Before Profit Cork"
-http://economicupdate.libsyn.com/rss "~Democracy At Work"
-http://iww.international/feed/ "~WWW International"
-https://workerswildwest.wordpress.com/feed/ "~Workers Wild West"
-https://angryworkersworld.wordpress.com/feed/ "~Angry Workers World"
-http://www.weareplanc.org/feed/ "~PlanC"
-https://bdsmovement.net/rss-feed.xml "~BDS Movement"
-http://anotherangryvoice.blogspot.com/feeds/posts/default?alt=rss "~Another Angry Voice"
-https://www.openrightsgroup.org/feed.rss "~Open Rights Group"
-https://events.ccc.de/feed/ "~CCC Events"
-http://fsfe.org/news/news.en.rss "~Free Software Foundation Europe"
-http://www.ifso.ie/wordpress/feed "~Irish Free Software Organisation"
-https://www.idris-lang.org/feed/ "~The Idris Programming Language"
-https://community.coops.tech/c/jobs.rss "~Coops.tech Jobs"
+# Interesting Humans
+http://bollier.org/blog_entries/feed "~David Bollier" "Interesting Humans"
+https://joeyh.name/blog/index.rss "~Joey Hess" "Interesting Humans"
+https://holgerkrekel.net/feed/ "~Holger Kregel" "Interesting Humans"
+http://booktwo.org/feed/ "~James Bridle" "Interesting Humans"
+http://www.dmytri.info/feed/ "~Dmytri Kleiner" "Interesting Humans"
+http://ascii.textfiles.com/feed "~Jason Scott" "Interesting Humans"
+https://anarc.at/blog/index.rss "~Anarcat" "Interesting Humans"
+
+# Netherlands
+https://poortgebouw.org/feed/ "~Poortgebouw" Netherlands
+https://worm.org/feed/ "~WORM" Netherlands
+https://en.squat.net/tag/rotterdam/feed/ "~Squat.net Rdam feed" Netherlands
+https://www.pixelbar.nl/atom.xml "~PixelBar" Netherlands
+https://adm.amsterdam/rss.xml "~ADM" Netherlands
+http://imal.org/en/rss.xml "~IMAL" Netherlands
+http://networkcultures.org/outofink/feed/ "~Network Cultures" Netherlands
+http://www.dijkstrascry.com/rss.xml "~Dijkstra's Cry" Netherlands
+http://ospublish.constantvzw.org/blog/feed "~Open Source Publishing" Netherlands
+
+# Ireland
+https://tescoworkers.com/feed/ "~Tesco Workers" Ireland
+http://www.socialistworkeronline.net/feed/ "~SWP" Ireland
+http://www.peoplebeforeprofit.ie/feed/ "~PBP National" Ireland
+https://peoplebeforeprofitcork.com/feed/ "~PBP Cork" Ireland
+http://irishhousingnetwork.org/feed/ "~Irish Housing Network" Ireland
+http://www.ifso.ie/wordpress/feed "~IFSO" Ireland
+http://www.rabble.ie/feed/ "~The Rabble" Ireland
+https://www.dublininquirer.com/feed/ "~Dublin Inquirer" Ireland
+
+# Stackage Maintenance
 http://packdeps.haskellers.com/feed/packunused "~Stackage: packunused"
 http://packdeps.haskellers.com/feed/tasty-discover "~Stackage: tasty-discover"
 http://packdeps.haskellers.com/feed/lentil "~Stackage: lentil"
-https://neovim.io/news.xml "~Neovim"
-http://dimlylitmealsforone.tumblr.com/rss "~Dimly Lit Meals For One"
-http://www.openstreetmap.ie/feed/ "~Open Street Maps Ireland"
-https://anarc.at/blog/index.rss "~Anarcat"
-https://ar.al/rss.xml "~Aral Balkan"
-http://www.dmytri.info/feed/ "~Dmytri Kleiner"
-https://engineuring.wordpress.com/feed/ "~Alexandra Elbakyan"
-http://www.dijkstrascry.com/rss.xml "~Dijkstra's Cry"
-http://ascii.textfiles.com/feed "~Jason Scott"
-https://queertypes.com/atom.xml "~Queer Types"
-https://planet.haskell.org/rss20.xml "~Planet Haskell"
-http://www.haskellforall.com/feeds/posts/default "~Haskell For All"
-http://notes-on-haskell.blogspot.com/feeds/posts/default "~Notes on Haskell"
-https://begriffs.com/atom.xml "~Joe Nelson"
-http://taylor.fausak.me/sitemap.rss "~Taylor Fausak"
-http://paolocapriotti.com/atom.xml "~Paolo capriotti"
-http://commonsstrategies.org/feed/ "~Common Strategies"
-https://p2pvalue.eu/feed/ "~P2P Value"
-http://commonstransition.org/feed/ "~Commons Transition"
-https://blog.p2pfoundation.net/feed "~P2P Foundation"
-http://bollier.org/blog_entries/feed "~David Bollier"
-http://www.guerrillatranslation.org/feed/ "~Guerilla Translation"
+
+# Haskell
+http://feeds.feedburner.com/ChurningAndChurning "~23Skidoo Blog" Haskell
+https://planet.haskell.org/rss20.xml "~Planet Haskell" Haskell
+http://www.haskellforall.com/feeds/posts/default "~Haskell For All" Haskell
+http://notes-on-haskell.blogspot.com/feeds/posts/default "~Notes on Haskell" Haskell
+https://begriffs.com/atom.xml "~Joe Nelson's Blog" Haskell
+http://taylor.fausak.me/sitemap.rss "~Taylor Fausak's Blog" Haskell
+https://www.idris-lang.org/feed/ "~Idris" Haskell
+https://queertypes.com/atom.xml "~Queer Types" Haskell
+https://ghc.haskell.org/trac/ghc/blog?format=rss "~GHC blog" Haskell
+http://paolocapriotti.com/atom.xml "~Paolo capriotti" Haskell
+
+# LibCom Forum
+http://libcom.org/forums/events-and-announcements/feed "~Announcements" LibCom
+http://libcom.org/forums/international/feed "~General" LibCom
+http://libcom.org/forums/history-0/feed "~History" LibCom
+http://libcom.org/forums/organise-0/feed "~Organise" LibCom
+http://libcom.org/forums/thought-0/feed "~Theory" LibCom
+http://libcom.org/news "~News" LibCom
+http://libcom.org/library-latest/feed "~Library" LibCom
+http://libcom.org/blog/feed "~Blog" LibCom
+
+# Palestine
+https://bdsmovement.net/rss-feed.xml "~BDS Movement" Palestine
+
+# Free Software Foundation Europe
+http://fsfe.org/news/news.en.rss "~Free Software Foundation Europe" FSFE
+
+# Labour News
+https://freepeike.noblogs.org/feed/ "~Free Peike (G20 Prisoners Campaign)" "Labour News"
+https://nrworkerspower.wordpress.com/feed/ "~NR Workers Power" "Labour News"
+https://revolutionary-iww.org/feed "~Revolutionary IWW" "Labour News"
+https://industrialunionism.org/feed/ "~Industrial Unionism" "Labour News"
+https://sub.media/feed/ "~Trouble" "Labour News"
+https://umsganze.org/feed/ "~Ums Ganze" "Labour News"
+https://www.unicornriot.ninja/feed/ "~Unicorn Riot" "Labour News"
+http://www.internationalviewpoint.org/spip.php?page=backend "~International Viewpoint" "Labour News"
+https://jacobinmag.com/feed/ "~Jacobin Magazine" "Labour News"
+https://redflag.org.au/all/rss "~Red Flag" "Labour News"
+https://socialistworker.org/recent/feed "~Socialist Worker" "Labour News"
+http://novaramedia.com/feed/ "~Novara Media" "Labour News"
+http://workers-power.org/feed/ "~Workers Power" "Labour News"
+https://incarceratedworkers.org/rss "~IWOC" "Labour News"
+https://libcom.org/blog/fredo-corvo/feed "~Fredo Corvo" "Labour News"
+http://iww.international/feed/ "~WWW International" "Labour News"
+https://workerswildwest.wordpress.com/feed/ "~Workers Wild West" "Labour News"
+https://angryworkersworld.wordpress.com/feed/ "~Angry Workers World" "Labour News"
+http://www.weareplanc.org/feed/ "~PlanC" "Labour News"
+http://anotherangryvoice.blogspot.com/feeds/posts/default?alt=rss "~Another Angry Voice" "Labour News"
+https://newsyndicalist.org/feed/ "~New Syndicalist" "Labour News"
+https://sabcat.com/feed/ "~SabCat" "Labour News"
+https://creativeclassstruggle.wordpress.com/feed/ "~Creative Class Struggle"
+http://economicupdate.libsyn.com/rss "~Democracy At Work" "Labour News"
+https://aintwhereyafrom.wordpress.com/feed/ "~AintWhereYaFrom" "Labour News"
+https://cyberunions.org/feed/ "~CyberUnions" "Labour News"
+http://breakingtheframe.org.uk/feed/ "~Breaking the Frame" "Labour News"
+http://recomposition.info/feed/ "~Recomposition" "Labour News"
+https://beyondeurope.net/feed/ "~Beyond Europe" "Labour News"
+http://www.crimethinc.com/blog/feed/ "~Crimethinc" "Labour News"
+
+# Commons Movement
+http://telekommunisten.net/feed/ "~Telekommunisten" "Commons Movement"
+http://www.guerrillatranslation.org/feed/ "~Guerilla Translation" "Commons Movement"
+
+# Illustration
+http://www.cartoonkate.co.uk/feed/ "~Kate Evans"
