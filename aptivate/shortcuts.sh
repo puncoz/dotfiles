@@ -52,6 +52,10 @@ function aptivatesshweb(){
   ssh lin-aptivateweb.aptivate.org
 }
 
+function aptivatesshpuppet(){
+  ssh fen-vz-puppet2.fen.aptivate.org
+}
+
 ##############################################################################
 
 ##############################################################################
