@@ -4,10 +4,10 @@ Host *.autonomic.zone
 Host *.ojuso.org
   User luke
 
+Host *.fen.aptivate.org
+  User lukem
+  Port 22
+
 Host *.aptivate.org
   User lukem
   Port 48001
-
-Host fen.*.aptivate.org
-  User lukem
-  Port 22
