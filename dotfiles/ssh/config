@@ -1,0 +1,13 @@
+Host *.autonomic.zone
+  User luke
+
+Host *.ojuso.org
+  User luke
+
+Host *.aptivate.org
+  User lukem
+  Port 48001
+
+Host fen.*.aptivate.org
+  User lukem
+  Port 22
