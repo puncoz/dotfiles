@@ -233,6 +233,7 @@ alias ap='ansible-playbook'
 alias ad='ansible-doc'
 alias av='ansible-vault'
 alias ac='ansible-config'
+alias ag='ansible-galaxy'
 
 # hub
 alias hpr='hub pull-request'
