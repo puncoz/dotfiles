@@ -28,6 +28,11 @@ function docker-stop(){
     docker rm -f $(docker ps -qa)
 }
 
+function docker-savespace(){
+  # Dont delete images, just the dangling ones
+  docker rmi $(docker images -f "dangling=true" -q)
+}
+
 function docker-cleanup(){
     # Nuke all docker images and containers.
     docker stop $(docker ps -qa)
