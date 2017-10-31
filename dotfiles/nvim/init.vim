@@ -140,8 +140,7 @@ augroup neovim
   autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
   autocmd! BufWritePre  * StripWhitespace
   autocmd! BufWritePost * Neomake
-  autocmd! BufEnter term://* startinsert
-  autocmd! BufEnter * if &buftype == 'terminal' | :startinsert | endif
+  autocmd! * term://* startinsert
 augroup END
 
 augroup haskell
