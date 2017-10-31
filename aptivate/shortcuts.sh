@@ -56,6 +56,10 @@ function aptivatesshpuppet(){
   ssh fen-vz-puppet2.fen.aptivate.org
 }
 
+function aptivatesshrepo(){
+  ssh fen-vz-repo.fen.aptivate.org
+}
+
 ##############################################################################
 
 ##############################################################################
