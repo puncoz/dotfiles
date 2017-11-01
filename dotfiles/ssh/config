@@ -11,3 +11,7 @@ Host *.fen.aptivate.org
 Host *.aptivate.org
   User lukem
   Port 48001
+
+Host stackage-build
+  User curators
+  Hostname build.stackage.org
