@@ -33,7 +33,7 @@ source ~/dotfiles/aptivate/shortcuts.sh
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-plugins=(git vi-mode stack python autoenv)
+plugins=(git vi-mode stack python autoenv pass)
 
 bindkey -v
 bindkey -M viins '^r' history-incremental-search-backward
