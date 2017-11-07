@@ -60,6 +60,14 @@ function aptivatesshrepo(){
   ssh fen-vz-repo.fen.aptivate.org
 }
 
+function aptivatesshfenvz3(){
+  ssh fen-vz3.fen.aptivate.org
+}
+
+function aptivatesshfenvz2(){
+  ssh fen-vz2.fen.aptivate.org
+}
+
 ##############################################################################
 
 ##############################################################################
