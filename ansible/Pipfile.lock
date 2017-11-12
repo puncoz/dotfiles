@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7bef4ed4305007d29f71fa02dc5e7b83afc8c428f200b8e0634a3d7b9fa7156e"
+            "sha256": "03992d0e1d4fcc27d505a1f78e0eed560248854da23fd614c4d5a56a1cd698b1"
         },
         "requires": {},
         "sources": [
@@ -58,5 +58,15 @@
             "version": "==1.11.0"
         }
     },
-    "develop": {}
+    "develop": {
+        "greenlet": {
+            "version": "==0.4.12"
+        },
+        "msgpack-python": {
+            "version": "==0.4.8"
+        },
+        "neovim": {
+            "version": "==0.2.0"
+        }
+    }
 }
