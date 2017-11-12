@@ -1,0 +1,10 @@
+---
+- name: Install tmux
+  apt:
+    name: tmux
+
+- name: Symlink the tmux configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/tmux/tmux.conf"
+    dest: "{{ home }}/.tmux.conf"
+    state: link

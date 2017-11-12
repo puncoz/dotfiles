@@ -1,2 +1,25 @@
 ---
-# TODO: Install ohmyzsh
+- name: Install curl
+  apt:
+    name: curl
+
+- name: Install ohmyzsh
+  command: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
+
+- name: Symlink the zsh configuration file
+  file:
+    src: "{{ dotfiles }}/dotfiles/zsh/zshrc"
+    dest: "{{ home }}/.zshrc"
+    state: link
+
+- name: Symlink the zsh aliases
+  file:
+    src: "{{ dotfiles }}/dotfiles/zsh/zsha"
+    dest: "{{ home }}/.zsha"
+    state: link
+
+- name: Symlink the zsh functions
+  file:
+    src: "{{ dotfiles }}/dotfiles/zsh/zshf"
+    dest: "{{ home }}/.zshf"
+    state: link

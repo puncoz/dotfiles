@@ -1,0 +1,28 @@
+---
+- name: Install mutt
+  apt:
+    name: mutt
+
+- name: Symlink the mutt password file
+  file:
+    src: "{{ dotfiles }}/dotfiles/mutt/passwd.gpg"
+    dest: "{{ home }}/.mutt/passwd.gpg"
+    state: link
+
+- name: Symlink the mutt configuration file
+  file:
+    src: "{{ dotfiles }}/dotfiles/mutt/muttrc"
+    dest: "{{ home }}/.mutt/muttrc"
+    state: link
+
+- name: Symlink the mutt main colors
+  file:
+    src: "{{ dotfiles }}/dotfiles/mutt/colors"
+    dest: "{{ home }}/.mutt/colors"
+    state: link
+
+- name: Symlink the mutt GPG configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/mutt/gpg.rc"
+    dest: "{{ home }}/.mutt/gpg.rc"
+    state: link

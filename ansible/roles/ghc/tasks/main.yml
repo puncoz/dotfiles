@@ -1,0 +1,6 @@
+---
+- name: Symlink GHC configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/ghc/ghci"
+    dest: "{{ home }}/.ghci"
+    state: link

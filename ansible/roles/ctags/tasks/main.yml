@@ -1,0 +1,10 @@
+---
+- name: Install ctags
+  apt:
+    name: excuberant-ctags
+
+- name: Symlink excuberant-ctags configuration
+  file:
+    src: "{{ dotfiles }}"/dotfiles/exuberant-ctags/ctags
+    dest: "{{ lookup('env', 'HOME') }}"/.ctags
+    state: link

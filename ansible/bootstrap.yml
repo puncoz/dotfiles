@@ -3,12 +3,25 @@
   roles:
     - { role: git }
     - { role: dotfiles }
+    - { role: ctags }
+    - { role: neovim }
     - { role: zsh }
     - { role: ohmyzsh }
-    - { role: neovim }
-    # TODO: fzf
-    # TODO: mutt
-    # TODO: gpg
-    # TODO: tmux
-    # TODO: newsbeuter
-    # TODO: ??? (check dotfiles/dotfiles)
+    - { role: fzf }
+    - { role: gpg }
+    - { role: mutt }
+    - { role: tmux }
+    - { role: newsbeuter }
+    - { role: stack }
+    - { role: ghc }
+
+    # TODO
+    # - { role: gtimelog }
+    # - { role: ipython }
+    # - { role: mailcap }
+    # - { role: msmtp }
+    # - { role: nvm }
+    # - { role: proselint }
+    # - { role: ssh }
+    # - { role: vint }
+    # - { role: tmuxp }

@@ -2,3 +2,15 @@
 - name: Install Git
   apt:
     name: git
+
+- name: Symlink the Git configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/git/gitconfig"
+    dest: "{{ home }}/.gitconfig"
+    state: link
+
+- name: Symlink the Git ignore configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/git/gitignore_global"
+    dest: "{{ home }}/.gitignore_global"
+    state: link

@@ -1,0 +1,16 @@
+---
+- name: Install newsbeuter
+  apt:
+    name: newsbeuter
+
+- name: Symlink the newsbeuter configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/newsbeuter/config"
+    dest: "{{ home }}/.newsbeuter/config"
+    state: link
+
+- name: Symlink the newsbeuter URLs
+  file:
+    src: "{{ dotfiles }}/dotfiles/newsbeuter/urls"
+    dest: "{{ home }}/.newsbeuter/urls"
+    state: link

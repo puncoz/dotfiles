@@ -2,14 +2,14 @@
 - name: Clone the dotfiles repository
   git:
     repo: "https://github.com/lwm/dotfiles.git"
-    dest: "{{ lookup('ENV', 'HOME') }}/dotfiles"
+    dest: "{{ dotfiles }}"
 
 - name: Delete the existing HTTPS remote URL
   command: "git remote rm origin"
-  chdir: "{{ lookup('ENV', 'HOME') }}/dotfiles"
+  args:
+    chdir: "{{ dotfiles }}"
 
 - name: Set a new SSH style remote URL
   command: "git remote add origin git@github.com:lwm/dotfiles.git"
-  chdir: "{{ lookup('ENV', 'HOME') }}/dotfiles"
-
-# TODO: Symlink all those files
+  args:
+    chdir: "{{ dotfiles }}"
