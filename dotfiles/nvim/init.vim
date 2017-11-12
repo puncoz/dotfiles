@@ -137,7 +137,7 @@ augroup neovim
   autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
   autocmd! BufWritePre  * StripWhitespace
   autocmd! BufWritePost * Neomake
-  autocmd! BufWinEnter,WinEnter term://* startinsert
+  autocmd! BufWinEnter,WinEnter,TermOpen,BufEnter term://* startinsert
   autocmd! BufLeave term://* stopinsert
 augroup END
 
