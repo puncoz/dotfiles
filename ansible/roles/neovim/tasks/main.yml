@@ -1,1 +1,13 @@
 ---
+- name: Install Neovim
+  apt:
+    name: neovim
+
+- name: Check Neovim is installed correctly
+  stat:
+    path: /usr/bin/neovim
+  register: neovim_executable
+
+- name: Fail if Neovim is not installed correctly
+  fail: msg="Neovim was not found in /usr/bin - not installed!"
+  failed_when: neovim_executable is not defined

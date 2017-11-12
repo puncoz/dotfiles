@@ -1,4 +1,14 @@
 ---
 - hosts: localhost
   roles:
+    - { role: git }
+    - { role: dotfiles }
+    - { role: zsh }
+    - { role: ohmyzsh }
     - { role: neovim }
+    # TODO: fzf
+    # TODO: mutt
+    # TODO: gpg
+    # TODO: tmux
+    # TODO: newsbeuter
+    # TODO: ??? (check dotfiles/dotfiles)
