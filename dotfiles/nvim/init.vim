@@ -69,9 +69,6 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
 Plug 'saltstack/salt-vim'
 
-" Markdown
-Plug 'nelstrom/vim-markdown-folding'
-
 call plug#end()
 
 let g:mapleader=','
