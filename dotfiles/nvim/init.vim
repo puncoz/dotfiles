@@ -206,6 +206,8 @@ nn <Leader>p :T pytest -sv --pdb<cr>
 nn <Leader>tc :Tclose<cr>
 nn <Leader>to :Topen<cr>
 
+nn <Leader>tv :VTerm<cr>
+
 if exists(':tnoremap')
   tnoremap jk <C-\><C-n>
   tnoremap <C-h> <C-\><C-n><C-w>h
