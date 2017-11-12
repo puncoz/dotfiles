@@ -1,42 +1,37 @@
 #!/bin/bash
 
+# Setup the VPN for connecting to Aptivate machines
+
+RESOLV=/etc/resolv.conf
+TMP_RESOLV=/tmp/dnsresolv
+
+cat $RESOLV > $TMP_RESOLV
+
+sudo ip addr flush dev tun0
+
 BASE="$HOME/hacking/aptivate"
-PROJECTBASE="$BASE/projects"
+VPNBASE=$BASE/vpn-stuff/lukem
+CONFIG=$VPNBASE/aptivate.ovpn
+CA=$VPNBASE/aptivate.ca.crt
+CERT=$VPNBASE/lukem.crt
+KEY=$VPNBASE/lukem.key
+AUTHKEY=$VPNBASE/aptivate.ta.key
 
-function vpn(){
-  # This function takes care of running an OpenVPN
-  # connection, updating the resolv.conf and making
-  # sure it gets reset correctly.
+sudo openvpn \
+  --config "$CONFIG" \
+  --ca "$CA" \
+  --cert "$CERT" \
+  --key "$KEY" \
+  --tls-auth "$AUTHKEY"
 
-  RESOLV=/etc/resolv.conf
-  TMP_RESOLV=/tmp/dnsresolv
-  cat $RESOLV > $TMP_RESOLV
+DIFF=$(diff $TMP_RESOLV $RESOLV)
+if [ "$DIFF" != "" ]
+then
+  echo ""
+  echo "-----------------------------------------"
+  echo "The resolv.conf hasn't been changed back!"
+  echo "-----------------------------------------"
+  echo ""
+fi
 
-  sudo ip addr flush dev tun0
-
-  VPNBASE=$BASE/vpn-stuff/lukem
-  CONFIG=$VPNBASE/aptivate.ovpn
-  CA=$VPNBASE/aptivate.ca.crt
-  CERT=$VPNBASE/lukem.crt
-  KEY=$VPNBASE/lukem.key
-  AUTHKEY=$VPNBASE/aptivate.ta.key
-
-  sudo openvpn \
-    --config "$CONFIG" \
-    --ca "$CA" \
-    --cert "$CERT" \
-    --key "$KEY" \
-    --tls-auth "$AUTHKEY"
-
-  DIFF=$(diff $TMP_RESOLV $RESOLV)
-  if [ "$DIFF" != "" ]
-  then
-    echo ""
-    echo "-----------------------------------------"
-    echo "The resolv.conf hasn't been changed back!"
-    echo "-----------------------------------------"
-    echo ""
-  fi
-
-  rm -rf $TMP_RESOLV
-}
+rm -rf $TMP_RESOLV
