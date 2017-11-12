@@ -1,17 +1,66 @@
-Host *.autonomic.zone
+IdentityFile ~/.ssh/id_rsa.pub
+
+Host thebunk
+  Hostname thebunk.autonomic.zone
   User luke
+  port 22
 
-Host *.ojuso.org
+Host mcnulty
+  Hostname mcnulty.autonomic.zone
   User luke
+  port 22
 
-Host *.fen.aptivate.org
-  User lukem
-  Port 22
+Host renewable
+  Hostname renewable.ojuso.zone
+  User luke
+  port 22
 
-Host *.aptivate.org
+Host commons
+  Hostname commons.ojuso.zone
+  User luke
+  port 22
+
+Host web-lin
+  Hostname lin-aptivateweb.aptivate.org
   User lukem
   Port 48001
 
-Host stackage-build
-  User curators
+Host pula-malawi-lin
+  Hostname lin-pulaphones-malawi.aptivate.org
+  User lukem
+  Port 48001
+
+Host pula-zambia-lin
+  Hostname lin-pulaphones-zambia.aptivate.org
+  User lukem
+  Port 48001
+
+Host puppet-fen
+  Hostname fen-vz-puppet2.fen.aptivate.org
+  User lukem
+  Port 22
+
+Host repo-fen
+  Hostname fen-vz-repo.fen.aptivate.org
+  User lukem
+  Port 22
+
+Host vz3-fen
+  Hostname fen-vz3.fen.aptivate.org
+  User lukem
+  Port 22
+
+Host vz2-fen
+  Hostname fen-vz2.fen.aptivate.org
+  User lukem
+  Port 22
+
+Host pula-stage-fen
+  Hostname fen-vz-pulaphones-stage.fen.aptivate.org
+  User lukem
+  Port 22
+
+Host stackage
   Hostname build.stackage.org
+  User curators
+  port 22
