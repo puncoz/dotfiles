@@ -173,7 +173,6 @@ alias ptx='pytest -x'
 alias ptq='pytest -q'
 
 # stackage
-alias sbs='ssh stackage-build'
 alias sck='stack exec --resolver nightly -- stackage-curator check'
 
 # pyenv
