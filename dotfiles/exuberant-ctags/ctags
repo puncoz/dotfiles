@@ -31,3 +31,4 @@
 --exclude=.venv
 --exclude=.ve
 --exclude=build
+--exclude=venv
