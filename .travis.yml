@@ -1,7 +1,9 @@
 language: generic
 
 script:
-  - echo 'TODO'
+  - pip install pipenv
+  - cd ansible && pipenv install --dev --three
+  - cd ansible && make ansiblerun
 
 notifications:
   email: false
