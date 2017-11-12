@@ -19,6 +19,7 @@ Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'jmcantrell/vim-virtualenv', {'for': 'python'}
+Plug 'vimlab/split-term.vim', {'for': 'python'}
 
 " Auto-complete
 Plug 'SirVer/ultisnips'
