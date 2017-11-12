@@ -211,7 +211,6 @@ if exists(':tnoremap')
   tnoremap <C-h> <C-\><C-n><C-w>h
   tnoremap <C-j> <C-\><C-n><C-w>j
   tnoremap <C-k> <C-\><C-n><C-w>k
-  tnoremap <C-l> <C-\><C-n><C-w>l
 endif
 
 set background=dark
@@ -310,3 +309,5 @@ command! Gap :Git add --patch
 command! Gd  :Git diff
 command! Gs  :Gstatus
 command! Gp  :Git push
+command! Gb  :Git checkout -b
+command! Go  :Git checkout .
