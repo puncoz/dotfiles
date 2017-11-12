@@ -1,9 +1,15 @@
 language: generic
 
+sudo: required
+
+services:
+  - docker
+
 script:
-  - pip install pipenv
-  - cd ansible && pipenv install --dev --three
-  - cd ansible && make ansiblerun
+  - |
+    cd ansible
+    make dockerbuild
+    make ansiblerun
 
 notifications:
   email: false
