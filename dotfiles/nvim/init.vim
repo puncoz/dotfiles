@@ -195,8 +195,7 @@ nn <Leader>ii :InteroInfo<cr>
 nn <Leader>iR :InteroReload<cr>
 nn <Leader>if :InteroLoadCurrentFile<CR>
 
-nn <Leader>pp :T python<cr>
-nn <Leader>ip :T ipython<cr>
+nn <Leader>pp :T ipython<cr>
 
 nn <Leader>dsp :T python manage.py shell_plus --ipython --quiet-load<cr>
 nn <Leader>ds  :T python manage.py shell<cr>
