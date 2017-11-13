@@ -14,14 +14,11 @@
     - { role: newsbeuter }
     - { role: stack }
     - { role: ghc }
-
-    # TODO
-    # - { role: gtimelog }
-    # - { role: ipython }
-    # - { role: mailcap }
-    # - { role: msmtp }
-    # - { role: nvm }
-    # - { role: proselint }
-    # - { role: ssh }
-    # - { role: vint }
-    # - { role: tmuxp }
+    - { role: gtimelog }
+    - { role: ipython }
+    - { role: mailcap }
+    - { role: msmtp }
+    - { role: nvm }
+    - { role: proselint }
+    - { role: ssh }
+    - { role: vint }

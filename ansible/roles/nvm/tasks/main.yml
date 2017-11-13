@@ -1,0 +1,21 @@
+---
+- name: Clone the nvm repository
+  git:
+    repo: "https://github.com/creationix/nvm.git"
+    dest: "{{ home }}/.nvm"
+
+- name: Checkout the latest nvm release tag
+  command: "git checkout v0.33.6"
+  args:
+    chdir: "{{ home }}/.nvm"
+
+- name: Symlink the nvm configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/nvm/nvmrc"
+    dest: "{{ home }}/.nvmrc"
+    state: link
+
+- name: Install the latest node with nvm
+  command: "nvm install"
+  args:
+    chdir: "{{ home }}"

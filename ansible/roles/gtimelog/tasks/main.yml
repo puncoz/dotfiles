@@ -1,0 +1,16 @@
+---
+- name: Install gtimelog
+  apt:
+    name: gtimelog
+
+- name: Make sure the gtimelog configuration folder is created
+  file:
+    path: "{{ home }}/.gtimelog"
+    state: directory
+    mode: 0755
+
+- name: Symlink the gtimelog configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/gtimelog/gtimelogrc"
+    dest: "{{ home }}/.gtimelog/gtimelogrc"
+    state: link

@@ -1,0 +1,16 @@
+---
+- name: Install IPython
+  apt:
+    name: ipython3
+
+- name: Make sure the ipython configuration folder is created
+  file:
+    path: "{{ home }}/.ipython"
+    state: directory
+    mode: 0755
+
+- name: Symlink the ipython configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/ipython/profile_default"
+    dest: "{{ home }}/.ipython/profile_default"
+    state: link

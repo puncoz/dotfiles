@@ -1,0 +1,6 @@
+---
+- name: Symlink the vint configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/vint/vintrc.yaml"
+    dest: "{{ home }}/.vintrc.yaml"
+    state: link

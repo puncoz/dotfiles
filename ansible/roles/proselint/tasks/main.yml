@@ -1,0 +1,6 @@
+---
+- name: Symlink the proselint configuration
+  file:
+    src: "{{ dotfiles}}/dotfiles/proselint/proselintrc"
+    dest: "{{ home }}/.proselintrc"
+    state: link

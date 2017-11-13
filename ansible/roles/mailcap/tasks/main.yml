@@ -1,0 +1,6 @@
+---
+- name: Symlink the mailcap configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/mailcap/mailcap"
+    dest: "{{ home }}/.mailcap"
+    state: link

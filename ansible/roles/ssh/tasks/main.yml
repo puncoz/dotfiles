@@ -1,0 +1,12 @@
+---
+- name: Make sure the SSH configuration folder is created
+  file:
+    path: "{{ home }}/.ssh"
+    state: directory
+    mode: 0755
+
+- name: Symlink the SSH configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/ssh/config"
+    dest: "{{ home }}/.ssh/config"
+    state: link

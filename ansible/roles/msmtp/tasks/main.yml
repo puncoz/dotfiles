@@ -1,0 +1,10 @@
+---
+- name: Install msmtp
+  apt:
+    name: msmtp
+
+- name: Symlink the msmtp configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/msmtp/msmtprc"
+    dest: "{{ home }}/.msmtprc"
+    state: link
