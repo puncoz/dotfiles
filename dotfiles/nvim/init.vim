@@ -70,6 +70,8 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
 Plug 'saltstack/salt-vim'
 
+colorscheme gruvbox
+
 call plug#end()
 
 let g:mapleader=','
@@ -215,10 +217,10 @@ if exists(':tnoremap')
   tnoremap <C-k> <C-\><C-n><C-w>k
 endif
 
-set background=dark
-colorscheme gruvbox
 syntax on
 filetype plugin indent on
+
+set background=dark
 set spell spelllang=en_gb
 set number
 set cursorline
