@@ -1,4 +1,8 @@
 ---
+- name: Install Git
+  apt:
+    name: git
+
 - name: Clone the dotfiles repository
   git:
     repo: "https://github.com/lwm/dotfiles.git"

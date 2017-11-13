@@ -3,20 +3,34 @@
   apt:
     name: neovim
 
+- name: Make sure the configuration folder is created
+  file:
+    path: "{{ home }}/.config"
+    state: directory
+    mode: 0755
+
 - name: Make sure the neovim configuration folder is created
   file:
-    path: "{{ nvim }}"
+    path: "{{ home }}/.config/nvim"
     state: directory
     mode: 0755
 
 - name: Symlink neovim configuration
   file:
-    src: "{{ dotfiles }}/dofiles/nvim/init.vim"
-    dest: "{{ nvim }}/init.vim"
+    src: "{{ dotfiles }}/dotfiles/nvim/init.vim"
+    dest: "{{ home }}/.config/nvim/init.vim"
     state: link
 
+- name: Make sure the neovim autoload folder is created
+  file:
+    path: "{{ home }}/.config/nvim/autoload"
+    state: directory
+    mode: 0755
+
 - name: Install neovim plugin manager
-  command: "curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+  get_url:
+    url: "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+    dest: "{{ home }}/.config/nvim/autoload"
 
 - name: Install neovim plugins
-  command: "vim +PlugInstall +qall"
+  command: "nvim +PlugInstall +qall"

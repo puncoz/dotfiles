@@ -1,4 +1,3 @@
 ---
 home: "{{ lookup('env', 'HOME') }}"
 dotfiles: "{{ home }}/dotfiles"
-nvim: "{{ home }}/.config/nvim"

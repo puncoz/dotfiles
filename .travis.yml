@@ -10,6 +10,3 @@ script:
     cd ansible
     make dockerbuild
     make ansiblerun
-
-notifications:
-  email: false

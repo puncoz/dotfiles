@@ -1,9 +1,9 @@
 ---
 - hosts: localhost
   roles:
-    - { role: git }
     - { role: dotfiles }
-    - { role: ctags }
+    # - { role: git }
+    # - { role: ctags }
     - { role: neovim }
     - { role: zsh }
     - { role: ohmyzsh }
