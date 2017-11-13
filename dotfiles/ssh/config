@@ -35,6 +35,11 @@ Host pula-zambia-lin
   User lukem
   Port 48001
 
+Host monitor-lin
+  Hostname lin-monitor.aptivate.org
+  User lukem
+  Port 48001
+
 Host puppet-fen
   Hostname fen-vz-puppet2.fen.aptivate.org
   User lukem
