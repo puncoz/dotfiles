@@ -3,21 +3,15 @@
   apt:
     name: haskell-stack
 
-- name: Make sure the stack configuration folder is created
-  file:
-    path: "{{ home }}/.stack"
-    state: directory
-    mode: 0755
-
-- name: Symlink the stack configuration
-  file:
-    src: "{{ dotfiles }}/dotfiles/stack/config.yaml"
-    dest: "{{ home }}/.stack"
-
-- name: Upgrade stack
-  command: "stack upgrade --git"
-
 - name: Install a global GHC
   command: "stack setup --install-ghc"
   args:
     chdir: "{{ home }}"
+
+- name: Upgrade stack
+  command: "stack upgrade --git"
+
+- name: Symlink the stack configuration
+  file:
+    src: "{{ dotfiles }}/dotfiles/stack/config.yaml"
+    dest: "{{ home }}/.stack/config.yaml"

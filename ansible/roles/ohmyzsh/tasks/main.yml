@@ -1,10 +1,8 @@
 ---
-- name: Install curl
-  apt:
-    name: curl
-
-- name: Install ohmyzsh
-  command: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
+- name: Clone the ohmyzsh repository
+  git:
+    repo: "https://github.com/robbyrussell/oh-my-zsh.git"
+    dest: "{{ home }}/.oh-my-zsh"
 
 - name: Symlink the zsh configuration file
   file:

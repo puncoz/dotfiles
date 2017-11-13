@@ -3,6 +3,12 @@
   apt:
     name: mutt
 
+- name: Make sure the mutt configuration folder is created
+  file:
+    path: "{{ home }}/.mutt"
+    state: directory
+    mode: 0755
+
 - name: Symlink the mutt password file
   file:
     src: "{{ dotfiles }}/dotfiles/mutt/passwd.gpg"
@@ -23,6 +29,6 @@
 
 - name: Symlink the mutt GPG configuration
   file:
-    src: "{{ dotfiles }}/dotfiles/mutt/gpg.rc"
+    src: "{{ dotfiles }}/dotfiles/gpg/gpg.rc"
     dest: "{{ home }}/.mutt/gpg.rc"
     state: link

@@ -3,6 +3,12 @@
   apt:
     name: newsbeuter
 
+- name: Make sure the newsbeuter configuration folder is created
+  file:
+    path: "{{ home }}/.newsbeuter"
+    state: directory
+    mode: 0755
+
 - name: Symlink the newsbeuter configuration
   file:
     src: "{{ dotfiles }}/dotfiles/newsbeuter/config"
