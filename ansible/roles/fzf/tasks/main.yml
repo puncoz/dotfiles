@@ -4,10 +4,6 @@
     repo: "https://github.com/junegunn/fzf.git"
     dest: "{{ home }}/.fzf"
 
-- name: Install curl
-  apt:
-    name: curl
-
 - name: Run the fzf install script
   command: "./install --all --no-bash --no-fish"
   args:

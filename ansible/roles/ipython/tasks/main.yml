@@ -2,6 +2,8 @@
 - name: Install IPython
   apt:
     name: ipython3
+  tags:
+    - install
 
 - name: Make sure the ipython configuration folder is created
   file:

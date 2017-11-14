@@ -2,6 +2,8 @@
 - name: Install msmtp
   apt:
     name: msmtp
+  tags:
+    - install
 
 - name: Symlink the msmtp configuration
   file:

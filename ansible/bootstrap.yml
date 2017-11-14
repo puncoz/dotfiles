@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   roles:
+    - { role: curl }
     - { role: dotfiles }
     - { role: git }
     - { role: ctags }

@@ -2,3 +2,5 @@
 - name: Install gpg
   apt:
     name: gnupg
+  tags:
+    - install

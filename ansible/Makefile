@@ -15,5 +15,5 @@ ansiblerun:
 	@docker run \
 	-v $$(pwd):$(WORKDIR) \
 	-ti $(IMAGE) \
-	ansible-playbook -i "localhost" bootstrap.yml
+	ansible-playbook -i "localhost" bootstrap.yml --skip-tags="install"
 .PHONY: ansiblerun

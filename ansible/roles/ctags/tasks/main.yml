@@ -2,6 +2,8 @@
 - name: Install ctags
   apt:
     name: exuberant-ctags
+  tags:
+    - install
 
 - name: Symlink exuberant-ctags configuration
   file:

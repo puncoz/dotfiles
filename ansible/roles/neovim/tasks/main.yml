@@ -2,6 +2,8 @@
 - name: Install neovim
   apt:
     name: neovim
+  tags:
+    - install
 
 - name: Make sure the configuration folder is created
   file:

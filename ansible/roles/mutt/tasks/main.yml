@@ -2,6 +2,8 @@
 - name: Install mutt
   apt:
     name: mutt
+  tags:
+    - install
 
 - name: Make sure the mutt configuration folder is created
   file:

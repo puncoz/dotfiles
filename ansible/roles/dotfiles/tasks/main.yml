@@ -2,6 +2,8 @@
 - name: Install Git
   apt:
     name: git
+  tags:
+    - install
 
 - name: Clone the dotfiles repository
   git:

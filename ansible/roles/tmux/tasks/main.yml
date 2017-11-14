@@ -2,6 +2,8 @@
 - name: Install tmux
   apt:
     name: tmux
+  tags:
+    - install
 
 - name: Symlink the tmux configuration
   file:

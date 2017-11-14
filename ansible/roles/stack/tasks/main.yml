@@ -2,6 +2,8 @@
 - name: Install stack
   apt:
     name: haskell-stack
+  tags:
+    - install
 
 - name: Install a global GHC
   command: "stack setup --install-ghc"
