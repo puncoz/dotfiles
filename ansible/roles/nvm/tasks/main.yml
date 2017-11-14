@@ -14,8 +14,3 @@
     src: "{{ dotfiles }}/dotfiles/nvm/nvmrc"
     dest: "{{ home }}/.nvmrc"
     state: link
-
-- name: Install the latest node with nvm
-  command: "nvm install"
-  args:
-    chdir: "{{ home }}"
