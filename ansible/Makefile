@@ -15,5 +15,10 @@ ansiblerun:
 	@docker run \
 	-v $$(pwd):$(WORKDIR) \
 	-ti $(IMAGE) \
-	ansible-playbook -i "localhost" bootstrap.yml --skip-tags="install" --skip-tags="longrun"
+	ansible-playbook bootstrap.yml \
+	-i "localhost" \
+	--skip-tags="install" \
+	--skip-tags="longrun" \
+	--skip-tags="encrypted" \
+	--vault-password-file=vault/dummyvault
 .PHONY: ansiblerun

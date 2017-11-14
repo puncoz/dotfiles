@@ -16,6 +16,8 @@
     src: "birthday.txt"
     dest: "{{ home }}/remind/birthdays.txt"
     state: file
+  tags:
+    - encrypted
 
 - name: Copy over the remind reminders file
   copy:
