@@ -27,6 +27,7 @@ RUN apt-get install -y \
   newsbeuter \
   python3 \
   python3-pip \
+  remind \
   tmux \
   wget \
   xz-utils \
