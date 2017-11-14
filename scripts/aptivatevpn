@@ -9,8 +9,8 @@ cat $RESOLV > $TMP_RESOLV
 
 sudo ip addr flush dev tun0
 
-BASE="$HOME/hacking/aptivate"
-VPNBASE=$BASE/vpn-stuff/lukem
+BASE="$HOME/aptivate"
+VPNBASE=$BASE/vpn/lukem
 CONFIG=$VPNBASE/aptivate.ovpn
 CA=$VPNBASE/aptivate.ca.crt
 CERT=$VPNBASE/lukem.crt
