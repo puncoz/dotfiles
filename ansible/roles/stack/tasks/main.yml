@@ -24,6 +24,8 @@
 
 - name: Upgrade stack
   command: "stack upgrade --git"
+  tags:
+    - longrun
 
 - name: Symlink the stack configuration
   file:
