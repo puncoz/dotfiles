@@ -24,6 +24,14 @@ You can see what the system feels like by running:
 $ cd ansible && make dockerbuild && make ansiblerun
 ```
 
+This will run the Ansible provisioning on a Debian docker container.
+
+You can always check if things are working by dropping into the container:
+
+```bash
+$ docker run -ti dotfiles /bin/zsh
+```
+
 # Provision It
 
 To get a system configured, install [pipenv] and:
