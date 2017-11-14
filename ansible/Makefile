@@ -18,5 +18,5 @@ ansiblerun:
 	ansible-playbook bootstrap.yml \
 	--inventory "localhost" \
 	--skip-tags="install" \
-	--skip-tags="longrun" \
+	--skip-tags="longrun"
 .PHONY: ansiblerun
