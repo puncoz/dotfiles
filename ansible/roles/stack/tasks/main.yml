@@ -1,9 +1,21 @@
 ---
 - name: Install stack
   apt:
-    name: haskell-stack
+    name: "{{ item }}"
   tags:
     - install
+  with_items:
+    - "haskell-stack"
+    - "g++"
+    - "gcc"
+    - "git"
+    - "gnupg"
+    - "libc6-dev"
+    - "libffi-dev"
+    - "libgmp-dev"
+    - "make"
+    - "xz-utils"
+    - "zlib1g-dev"
 
 - name: Install a global GHC
   command: "stack setup --install-ghc"

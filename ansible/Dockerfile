@@ -10,19 +10,27 @@ RUN apt-get upgrade -y
 RUN apt-get install -y \
   ctags \
   curl \
+  gcc \
   git \
+  g++ \
   gnupg \
   gtimelog \
   haskell-stack \
   ipython3 \
+  make \
   msmtp \
   mutt \
+  libc6-dev \
+  libffi-dev \
+  libgmp-dev \
   neovim \
   newsbeuter \
   python3 \
   python3-pip \
   tmux \
   wget \
+  xz-utils \
+  zlib1g-dev \
   zsh
 
 RUN pip3 install ansible
