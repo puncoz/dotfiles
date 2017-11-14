@@ -4,29 +4,3 @@
     name: remind
   tags:
     - install
-
-- name: Make sure the remind configuration folder is created
-  file:
-    path: "{{ home }}/remind"
-    state: directory
-    mode: 0755
-
-- name: Copy over the remind birthday file
-  copy:
-    src: "birthday.txt"
-    dest: "{{ home }}/remind/birthdays.txt"
-    state: file
-  tags:
-    - encrypted
-
-- name: Copy over the remind reminders file
-  copy:
-    src: "reminders.txt"
-    dest: "{{ home }}/remind/reminders.txt"
-    state: file
-
-- name: Copy over the remind main file
-  copy:
-    src: "reminders"
-    dest: "{{ home }}/remind/reminders"
-    state: file

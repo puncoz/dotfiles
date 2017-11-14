@@ -19,6 +19,4 @@ ansiblerun:
 	--inventory "localhost" \
 	--skip-tags="install" \
 	--skip-tags="longrun" \
-	--skip-tags="encrypted" \
-	--vault-password-file=vault/dummyvault
 .PHONY: ansiblerun
