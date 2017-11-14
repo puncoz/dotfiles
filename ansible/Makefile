@@ -16,7 +16,7 @@ ansiblerun:
 	-v $$(pwd):$(WORKDIR) \
 	-ti $(IMAGE) \
 	ansible-playbook bootstrap.yml \
-	-i "localhost" \
+	--inventory "localhost" \
 	--skip-tags="install" \
 	--skip-tags="longrun" \
 	--skip-tags="encrypted" \
