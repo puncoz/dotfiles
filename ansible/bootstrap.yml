@@ -16,6 +16,7 @@
     - { role: stack }
     - { role: ghc }
     - { role: gtimelog }
+    - { role: python }
     - { role: ipython }
     - { role: mailcap }
     - { role: msmtp }
