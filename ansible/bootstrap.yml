@@ -26,3 +26,4 @@
     - { role: vint }
     - { role: remind }
     - { role: docker }
+    - { role: pass }

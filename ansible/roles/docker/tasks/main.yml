@@ -5,6 +5,8 @@
   with_items:
     - apt-transport-https
     - dirmngr
+  tags:
+    - install
 
 - name: Add docker repository list
   lineinfile:
@@ -20,3 +22,5 @@
   apt:
     namae: docker-engine
     update_cache: True
+  tags:
+    - install

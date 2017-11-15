@@ -25,6 +25,7 @@ RUN apt-get install -y \
   libgmp-dev \
   neovim \
   newsbeuter \
+  pass \
   python3 \
   python3-pip \
   remind \

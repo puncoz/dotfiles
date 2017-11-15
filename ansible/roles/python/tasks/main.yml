@@ -2,3 +2,5 @@
 - name: "Install Python 3"
   apt:
     name: python3
+  tags:
+    - install

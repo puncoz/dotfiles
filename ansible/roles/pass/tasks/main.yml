@@ -1,0 +1,6 @@
+---
+- name: Install pass
+  apt:
+    name: pass
+  tags:
+    - install
