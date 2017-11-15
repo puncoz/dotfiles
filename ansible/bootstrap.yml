@@ -25,3 +25,4 @@
     - { role: ssh }
     - { role: vint }
     - { role: remind }
+    - { role: docker }
