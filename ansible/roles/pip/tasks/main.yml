@@ -1,0 +1,9 @@
+---
+- name: Install pip
+  apt:
+    name: "{{ item }}" 
+  with_items:
+    - python2-pip
+    - python3-pip
+  tags:
+    - install

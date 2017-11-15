@@ -17,7 +17,9 @@
     - { role: ghc }
     - { role: gtimelog }
     - { role: python }
+    - [ role: pip }
     - { role: ipython }
+    - { role: pipenv }
     - { role: mailcap }
     - { role: msmtp }
     - { role: nvm }

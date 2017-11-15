@@ -27,6 +27,7 @@ RUN apt-get install -y \
   newsbeuter \
   pass \
   python3 \
+  python2-pip \
   python3-pip \
   remind \
   tmux \
@@ -35,6 +36,6 @@ RUN apt-get install -y \
   zlib1g-dev \
   zsh
 
-RUN pip3 install ansible
+RUN pip3 install pipenv ansible
 
 WORKDIR /var/dotfiles
