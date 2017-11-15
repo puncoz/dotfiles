@@ -8,9 +8,6 @@ My [Debian Stretch] system configuration files.
 
 Mostly plundered on the high seas of the internet.
 
-Get a system configured with:
-
 ```bash
-$ sudo apt-get install ansible
-$ cd ansible && ansible-playbook -i localhost bootstrap.yml
+$ make bootstrap
 ```
