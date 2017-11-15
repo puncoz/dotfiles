@@ -8,38 +8,9 @@ My [Debian Stretch] system configuration files.
 
 Mostly plundered on the high seas of the internet.
 
-# Test It
-
-I provision my system with [Ansible].
-
-[Ansible]: https://docs.ansible.com/
-
-This is tested on a per commit basis with [Travis CI].
-
-[Travis CI]: https://travis-ci.org/lwm/dotfiles/builds/
-
-You can see what the system feels like by running:
+Get a system configured with:
 
 ```bash
-$ cd ansible && make dockerbuild && make ansiblerun
-```
-
-This will run the Ansible provisioning on a Debian docker container.
-
-You can always check if things are working by dropping into the container:
-
-```bash
-$ docker run -ti dotfiles /bin/zsh
-```
-
-# Provision It
-
-To get a system configured, install [pipenv] and:
-
-[pipenv]: https://docs.pipenv.org/install.html#fancy-installation-of-pipenv
-
-```bash
-$ cd ansible
-$ pipenv install --dev --three
-$ pipenv run ansible-playbook -i localhost
+$ sudo apt-get install ansible
+$ cd ansible && ansible-playbook -i localhost bootstrap.yml
 ```
