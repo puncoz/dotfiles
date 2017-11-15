@@ -11,7 +11,7 @@
 - name: Add docker repository list
   lineinfile:
     path: "/etc/apt/sources.list"
-    line: "deb https://apt.dockerproject.org/repo debian-stretch main"2
+    line: "deb https://apt.dockerproject.org/repo debian-stretch main"
 
 - name: Add docker repository key
   apt_key:
