@@ -2,13 +2,16 @@
 
 # dotfiles
 
-My [Debian Stretch] system configuration files.
+My [Debian Stretch] system configuration files, managed with [Ansible].
 
 [Debian Stretch]: https://www.debian.org/
+[Ansible]: https://www.ansible.com/
 
 Mostly plundered on the high seas of the internet.
 
+# Install
+
 ```bash
 $ sudo apt-get install ansible
-$ cd ansible && make bootstrap
+$ make bootstrap
 ```

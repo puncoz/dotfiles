@@ -1,15 +1,15 @@
 IMAGE      := dotfiles
 WORKDIR    := /var/dotfiles
 
-dockerbuild:
+build:
 	@docker build -t $(IMAGE) .
-.PHONY: dockerbuild
+.PHONY: build
 
-dockerrun:
+run:
 	@docker run -ti $(IMAGE) bash
-.PHONY: dockerrun
+.PHONY: run
 
-ansiblerun:
+test:
 	@docker run \
 	-v $$(pwd):$(WORKDIR) \
 	-ti $(IMAGE) \
@@ -17,7 +17,7 @@ ansiblerun:
 	--inventory "localhost" \
 	--skip-tags="install" \
 	--skip-tags="longrun"
-.PHONY: ansiblerun
+.PHONY: test
 
 bootstrap:
 	@ansible-playbook --inventory localhost bootstrap.yml

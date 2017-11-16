@@ -6,7 +6,5 @@ services:
   - docker
 
 script:
-  - |
-    cd ansible
-    make dockerbuild
-    make ansiblerun
+  - make build
+  - make test

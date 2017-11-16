@@ -4,9 +4,7 @@ ENV LANG C.UTF-8
 ENV SHELL /bin/bash
 
 RUN apt-get update -y
-
 RUN apt-get upgrade -y
-
 RUN apt-get install -y \
   ctags \
   curl \
@@ -36,6 +34,9 @@ RUN apt-get install -y \
   zlib1g-dev \
   zsh
 
-RUN pip3 install pipenv ansible proselint
+RUN pip3 install \
+  ansible \
+  pipenv \
+  proselint
 
 WORKDIR /var/dotfiles
