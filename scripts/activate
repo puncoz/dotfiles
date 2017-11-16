@@ -3,3 +3,5 @@
 # Finish up the bootstrap process
 
 chsh -s /bin/zsh
+
+nvm install "lts/*"
