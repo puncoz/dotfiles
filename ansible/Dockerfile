@@ -36,6 +36,6 @@ RUN apt-get install -y \
   zlib1g-dev \
   zsh
 
-RUN pip3 install pipenv ansible
+RUN pip3 install pipenv ansible proselint
 
 WORKDIR /var/dotfiles

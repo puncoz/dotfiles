@@ -5,3 +5,11 @@
     dest: "{{ home }}/.proselintrc"
     state: link
     force: True
+
+- name: Install proselint
+  pip:
+    name: proselint
+    extra_args: "--user"
+    executable: pip3
+  tags:
+    - install
