@@ -3,21 +3,25 @@
   git:
     repo: "https://github.com/robbyrussell/oh-my-zsh.git"
     dest: "{{ home }}/.oh-my-zsh"
+    update: False
 
 - name: Symlink the zsh configuration file
   file:
     src: "{{ dotfiles }}/dotfiles/zsh/zshrc"
     dest: "{{ home }}/.zshrc"
     state: link
+    force: True
 
 - name: Symlink the zsh aliases
   file:
     src: "{{ dotfiles }}/dotfiles/zsh/zsha"
     dest: "{{ home }}/.zsha"
     state: link
+    force: True
 
 - name: Symlink the zsh functions
   file:
     src: "{{ dotfiles }}/dotfiles/zsh/zshf"
     dest: "{{ home }}/.zshf"
     state: link
+    force: True

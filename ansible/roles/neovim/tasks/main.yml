@@ -22,6 +22,7 @@
     src: "{{ dotfiles }}/dotfiles/nvim/init.vim"
     dest: "{{ home }}/.config/nvim/init.vim"
     state: link
+    force: True
 
 - name: Make sure the neovim autoload folder is created
   file:

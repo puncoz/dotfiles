@@ -4,3 +4,4 @@
     src: "{{ dotfiles }}/dotfiles/vint/vintrc.yaml"
     dest: "{{ home }}/.vintrc.yaml"
     state: link
+    force: True

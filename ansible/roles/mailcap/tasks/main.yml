@@ -4,3 +4,4 @@
     src: "{{ dotfiles }}/dotfiles/mailcap/mailcap"
     dest: "{{ home }}/.mailcap"
     state: link
+    force: True

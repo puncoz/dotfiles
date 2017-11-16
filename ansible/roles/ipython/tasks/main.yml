@@ -16,3 +16,4 @@
     src: "{{ dotfiles }}/dotfiles/ipython/profile_default"
     dest: "{{ home }}/.ipython/profile_default"
     state: link
+    force: True

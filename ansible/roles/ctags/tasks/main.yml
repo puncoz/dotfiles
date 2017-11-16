@@ -10,3 +10,4 @@
     src: "{{ dotfiles }}/dotfiles/exuberant-ctags/ctags"
     dest: "{{ lookup('env', 'HOME') }}/.ctags"
     state: link
+    force: True

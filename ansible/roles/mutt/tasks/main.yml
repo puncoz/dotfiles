@@ -16,21 +16,25 @@
     src: "{{ dotfiles }}/dotfiles/mutt/passwd.gpg"
     dest: "{{ home }}/.mutt/passwd.gpg"
     state: link
+    force: True
 
 - name: Symlink the mutt configuration file
   file:
     src: "{{ dotfiles }}/dotfiles/mutt/muttrc"
     dest: "{{ home }}/.mutt/muttrc"
     state: link
+    force: True
 
 - name: Symlink the mutt main colors
   file:
     src: "{{ dotfiles }}/dotfiles/mutt/colors"
     dest: "{{ home }}/.mutt/colors"
     state: link
+    force: True
 
 - name: Symlink the mutt GPG configuration
   file:
     src: "{{ dotfiles }}/dotfiles/gpg/gpg.rc"
     dest: "{{ home }}/.mutt/gpg.rc"
     state: link
+    force: True

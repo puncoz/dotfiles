@@ -4,9 +4,11 @@
     src: "{{ dotfiles }}/dotfiles/git/gitconfig"
     dest: "{{ home }}/.gitconfig"
     state: link
+    force: True
 
 - name: Symlink the Git ignore configuration
   file:
     src: "{{ dotfiles }}/dotfiles/git/gitignore_global"
     dest: "{{ home }}/.gitignore_global"
     state: link
+    force: True

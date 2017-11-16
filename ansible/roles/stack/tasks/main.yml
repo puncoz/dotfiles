@@ -35,3 +35,4 @@
   file:
     src: "{{ dotfiles }}/dotfiles/stack/config.yaml"
     dest: "{{ home }}/.stack/config.yaml"
+    force: True

@@ -10,3 +10,4 @@
     src: "{{ dotfiles }}/dotfiles/ssh/config"
     dest: "{{ home }}/.ssh/config"
     state: link
+    force: True

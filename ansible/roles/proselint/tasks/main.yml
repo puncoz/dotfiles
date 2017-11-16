@@ -4,3 +4,4 @@
     src: "{{ dotfiles}}/dotfiles/proselint/proselintrc"
     dest: "{{ home }}/.proselintrc"
     state: link
+    force: True

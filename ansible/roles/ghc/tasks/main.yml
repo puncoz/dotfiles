@@ -4,3 +4,4 @@
     src: "{{ dotfiles }}/dotfiles/ghc/ghci"
     dest: "{{ home }}/.ghci"
     state: link
+    force: True

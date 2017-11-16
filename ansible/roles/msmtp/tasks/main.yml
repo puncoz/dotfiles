@@ -10,3 +10,4 @@
     src: "{{ dotfiles }}/dotfiles/msmtp/msmtprc"
     dest: "{{ home }}/.msmtprc"
     state: link
+    force: True

@@ -16,9 +16,11 @@
     src: "{{ dotfiles }}/dotfiles/newsbeuter/config"
     dest: "{{ home }}/.newsbeuter/config"
     state: link
+    force: True
 
 - name: Symlink the newsbeuter URLs
   file:
     src: "{{ dotfiles }}/dotfiles/newsbeuter/urls"
     dest: "{{ home }}/.newsbeuter/urls"
     state: link
+    force: True

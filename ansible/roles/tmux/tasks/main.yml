@@ -10,3 +10,4 @@
     src: "{{ dotfiles }}/dotfiles/tmux/tmux.conf"
     dest: "{{ home }}/.tmux.conf"
     state: link
+    force: True

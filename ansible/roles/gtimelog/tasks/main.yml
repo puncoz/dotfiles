@@ -16,3 +16,4 @@
     src: "{{ dotfiles }}/dotfiles/gtimelog/gtimelogrc"
     dest: "{{ home }}/.gtimelog/gtimelogrc"
     state: link
+    force: True
