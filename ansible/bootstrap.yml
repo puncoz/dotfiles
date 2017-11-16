@@ -9,6 +9,7 @@
     - { role: zsh }
     - { role: ohmyzsh }
     - { role: autosuggestions }
+    - { role: syntaxhighlight }
     - { role: fzf }
     - { role: gpg }
     - { role: mutt }
