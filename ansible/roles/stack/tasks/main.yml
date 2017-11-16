@@ -1,5 +1,6 @@
 ---
 - name: Install stack
+  become: True
   apt:
     name: "{{ item }}"
   with_items:

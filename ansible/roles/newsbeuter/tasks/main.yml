@@ -1,5 +1,6 @@
 ---
 - name: Install newsbeuter
+  become: True
   apt:
     name: newsbeuter
   tags:

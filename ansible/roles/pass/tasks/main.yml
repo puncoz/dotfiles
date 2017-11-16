@@ -1,5 +1,6 @@
 ---
 - name: Install pass
+  become: True
   apt:
     name: pass
   tags:

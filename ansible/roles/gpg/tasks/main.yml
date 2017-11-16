@@ -1,5 +1,6 @@
 ---
 - name: Install gpg
+  become: True
   apt:
     name: gnupg
   tags:

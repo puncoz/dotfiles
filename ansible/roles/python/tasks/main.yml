@@ -1,5 +1,6 @@
 ---
 - name: "Install Python 3"
+  become: True
   apt:
     name: python3
   tags:

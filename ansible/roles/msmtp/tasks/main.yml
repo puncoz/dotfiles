@@ -1,5 +1,6 @@
 ---
 - name: Install msmtp
+  become: True
   apt:
     name: msmtp
   tags:

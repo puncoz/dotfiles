@@ -1,5 +1,6 @@
 ---
 - name: Install ctags
+  become: True
   apt:
     name: exuberant-ctags
   tags:

@@ -1,5 +1,6 @@
 ---
 - name: Install docker dependencies
+  become: True
   apt:
     name: "{{ item }}"
   with_items:
@@ -9,16 +10,19 @@
     - install
 
 - name: Add docker repository list
+  become: True
   lineinfile:
     path: "/etc/apt/sources.list"
     line: "deb https://apt.dockerproject.org/repo debian-stretch main"
 
 - name: Add docker repository key
+  become: True
   apt_key:
     keyserver: "hkp://p80.pool.sks-keyservers.net:80"
     id: "58118E89F3A912897C070ADBF76221572C52609D"
 
 - name: Install docker engine
+  become: True
   apt:
     namae: docker-engine
     update_cache: True

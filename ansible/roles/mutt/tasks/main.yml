@@ -1,5 +1,6 @@
 ---
 - name: Install mutt
+  become: True
   apt:
     name: mutt
   tags:

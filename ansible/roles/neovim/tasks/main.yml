@@ -1,5 +1,6 @@
 ---
 - name: Install neovim
+  become: True
   apt:
     name: neovim
   tags:

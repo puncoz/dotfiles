@@ -1,5 +1,6 @@
 ---
 - name: Install remind
+  become: True
   apt:
     name: remind
   tags:

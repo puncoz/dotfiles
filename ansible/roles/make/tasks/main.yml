@@ -1,5 +1,6 @@
 ---
 - name: Install make
+  become: True
   apt:
     name: make
   tags:

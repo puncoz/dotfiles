@@ -1,5 +1,6 @@
 ---
 - name: Install curl
+  become: True
   apt:
     name: curl
   tags:

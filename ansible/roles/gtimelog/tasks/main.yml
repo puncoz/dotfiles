@@ -1,5 +1,6 @@
 ---
 - name: Install gtimelog
+  become: True
   apt:
     name: gtimelog
   tags:

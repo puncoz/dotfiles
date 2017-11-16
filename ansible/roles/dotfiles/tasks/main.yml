@@ -1,5 +1,6 @@
 ---
 - name: Install Git
+  become: True
   apt:
     name: git
   tags:
