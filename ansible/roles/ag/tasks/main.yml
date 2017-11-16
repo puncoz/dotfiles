@@ -1,0 +1,6 @@
+---
+- name: Install the silversearcher-ag package
+  apt:
+    name: silversearcher-ag
+  tags:
+    - install

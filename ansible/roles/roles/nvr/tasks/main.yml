@@ -1,0 +1,8 @@
+---
+- name: "Install the neovim-remote package"
+  pip:
+    name: "neovim-remote"
+    extra_args: "--user"
+    executable: pip3
+  tags:
+    - install
