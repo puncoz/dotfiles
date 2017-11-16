@@ -13,6 +13,7 @@
     - { role: gpg }
     - { role: mutt }
     - { role: tmux }
+    - { role: tpm }
     - { role: newsbeuter }
     - { role: stack }
     - { role: ghc }

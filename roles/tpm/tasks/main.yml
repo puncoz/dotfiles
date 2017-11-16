@@ -1,0 +1,13 @@
+---
+- name: Make sure the tmux plugin folder is created
+  file:
+    path: "{{ home }}/.tmux/plugins"
+    state: directory
+    mode: 0755
+
+- name: Clone the tpm repository
+  git:
+    repo: "https://github.com/tmux-plugins/tpm"
+    dest: "{{ home }}/.tmux/plugins/tpm"
+    update: False
+
