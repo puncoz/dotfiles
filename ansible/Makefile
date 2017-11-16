@@ -1,7 +1,5 @@
-ROLES      := roles
 IMAGE      := dotfiles
 WORKDIR    := /var/dotfiles
-DOCKERHOME := /root
 
 dockerbuild:
 	@docker build -t $(IMAGE) .
