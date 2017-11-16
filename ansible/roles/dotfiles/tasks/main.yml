@@ -9,6 +9,7 @@
   git:
     repo: "https://github.com/lwm/dotfiles.git"
     dest: "{{ dotfiles }}"
+    update: False
 
 - name: Delete the existing HTTPS remote URL
   command: "git remote rm origin"
