@@ -28,3 +28,10 @@
     update_cache: True
   tags:
     - install
+
+- name: Add current user to the docker group
+  become: True
+  user:
+    name: "{{ ansible_user }}"
+    group: docker
+    state: present
