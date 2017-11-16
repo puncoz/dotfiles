@@ -8,6 +8,7 @@
     - { role: neovim }
     - { role: zsh }
     - { role: ohmyzsh }
+    - { role: autosuggestions }
     - { role: fzf }
     - { role: gpg }
     - { role: mutt }
@@ -29,3 +30,4 @@
     - { role: remind }
     - { role: docker }
     - { role: pass }
+    - { role: autoenv }
