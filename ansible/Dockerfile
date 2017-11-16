@@ -27,7 +27,7 @@ RUN apt-get install -y \
   newsbeuter \
   pass \
   python3 \
-  python2-pip \
+  python-pip \
   python3-pip \
   remind \
   tmux \
