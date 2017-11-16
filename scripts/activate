@@ -5,3 +5,5 @@
 chsh -s /bin/zsh
 
 nvm install "lts/*"
+
+sudo shutdown -r now
