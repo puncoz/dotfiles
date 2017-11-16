@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Finish up the bootstrap process
+
+chsh -s /bin/zsh
