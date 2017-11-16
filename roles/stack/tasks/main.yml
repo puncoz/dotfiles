@@ -24,15 +24,3 @@
     chdir: "{{ home }}"
   tags:
     - longrun
-
-- name: Make sure the stack configuration folder is created
-  file:
-    path: "{{ home }}/.stack"
-    state: directory
-    mode: 0755
-
-- name: Symlink the stack configuration
-  file:
-    src: "{{ dotfiles }}/dotfiles/stack/config.yaml"
-    dest: "{{ home }}/.stack/config.yaml"
-    force: True
