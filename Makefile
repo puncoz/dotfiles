@@ -16,6 +16,7 @@ test:
 	ansible-playbook bootstrap.yml \
 	--inventory "localhost" \
 	--skip-tags="install" \
+	--skip-tags="depends_on_install" \
 	--skip-tags="longrun"
 .PHONY: test
 

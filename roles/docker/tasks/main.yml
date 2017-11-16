@@ -35,3 +35,5 @@
     name: "{{ ansible_user }}"
     group: docker
     state: present
+  tags:
+    - depends_on_install
