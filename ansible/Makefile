@@ -22,5 +22,5 @@ ansiblerun:
 .PHONY: ansiblerun
 
 bootstrap:
-	@ansible-playbook --ask-become-pass --inventory localhost bootstrap.yml
+	@sudo ansible-playbook --inventory localhost bootstrap.yml
 .PHONY: bootstrap
