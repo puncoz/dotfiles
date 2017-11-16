@@ -12,7 +12,7 @@
 - name: Add docker repository list
   become: True
   lineinfile:
-    path: "/etc/apt/sources.list"
+    dest: "/etc/apt/sources.list"
     line: "deb https://apt.dockerproject.org/repo debian-stretch main"
 
 - name: Add docker repository key
@@ -24,7 +24,7 @@
 - name: Install docker engine
   become: True
   apt:
-    namae: docker-engine
+    name: docker-engine
     update_cache: True
   tags:
     - install
