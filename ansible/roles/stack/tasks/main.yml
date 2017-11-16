@@ -25,13 +25,6 @@
   tags:
     - longrun
 
-- name: Upgrade stack
-  command: "stack upgrade"
-  args:
-    chdir: "{{ home }}"
-  tags:
-    - longrun
-
 - name: Make sure the stack configuration folder is created
   file:
     path: "{{ home }}/.stack"
