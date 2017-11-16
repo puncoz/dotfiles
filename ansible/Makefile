@@ -22,5 +22,5 @@ ansiblerun:
 .PHONY: ansiblerun
 
 bootstrap:
-	@sudo ansible-playbook --inventory localhost bootstrap.yml -vv
+	@ansible-playbook --inventory localhost bootstrap.yml -vv
 .PHONY: bootstrap
