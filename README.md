@@ -9,5 +9,6 @@ My [Debian Stretch] system configuration files.
 Mostly plundered on the high seas of the internet.
 
 ```bash
-$ make bootstrap
+$ sudo apt-get install ansible
+$ cd ansible && make bootstrap
 ```
