@@ -32,3 +32,4 @@
 --exclude=.ve
 --exclude=build
 --exclude=venv
+--exclude=static
