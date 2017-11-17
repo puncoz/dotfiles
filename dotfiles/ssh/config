@@ -60,6 +60,11 @@ Host vz2-fen
   User lukem
   Port 22
 
+Host ovh-vzhost
+  Hostname ovh-vzhost.aptivate.org
+  User lukem
+  Port 22
+
 Host pula-stage-fen
   Hostname fen-vz-pulaphones-stage.fen.aptivate.org
   User lukem
