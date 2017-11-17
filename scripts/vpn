@@ -10,12 +10,12 @@ cat $RESOLV > $TMP_RESOLV
 sudo ip addr flush dev tun0
 
 BASE="$HOME/aptivate"
-VPNBASE=$BASE/vpn/lukem
-CONFIG=$VPNBASE/aptivate.ovpn
-CA=$VPNBASE/aptivate.ca.crt
-CERT=$VPNBASE/lukem.crt
-KEY=$VPNBASE/lukem.key
-AUTHKEY=$VPNBASE/aptivate.ta.key
+VPNBASE="$BASE/vpn"
+CONFIG="$VPNBASE/aptivate.ovpn"
+CA="$VPNBASE/aptivate.ca.crt"
+CERT="$VPNBASE/lukem.crt"
+KEY="$VPNBASE/lukem.key"
+AUTHKEY="$VPNBASE/aptivate.ta.key"
 
 sudo openvpn \
   --config "$CONFIG" \
