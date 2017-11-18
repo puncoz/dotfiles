@@ -15,12 +15,8 @@
     - "make"
     - "xz-utils"
     - "zlib1g-dev"
-  tags:
-    - install
 
 - name: Install a global GHC
   command: "stack setup --install-ghc"
   args:
     chdir: "{{ home }}"
-  tags:
-    - longrun

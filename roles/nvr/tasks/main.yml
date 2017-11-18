@@ -4,5 +4,3 @@
     name: "neovim-remote"
     extra_args: "--user"
     executable: pip3
-  tags:
-    - install

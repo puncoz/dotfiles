@@ -3,20 +3,20 @@
   become: True
   apt:
     name: neovim
-  tags:
-    - install
 
 - name: Make sure the configuration folder is created
   file:
     path: "{{ home }}/.config"
     state: directory
     mode: 0755
+    owner: "{{ ansible_user }}"
 
 - name: Make sure the neovim configuration folder is created
   file:
     path: "{{ home }}/.config/nvim"
     state: directory
     mode: 0755
+    owner: "{{ ansible_user }}"
 
 - name: Symlink neovim configuration
   file:
@@ -30,6 +30,7 @@
     path: "{{ home }}/.config/nvim/autoload"
     state: directory
     mode: 0755
+    owner: "{{ ansible_user }}"
 
 - name: Install neovim plugin manager
   get_url:
@@ -41,5 +42,3 @@
     name: neovim
     extra_args: "--user"
     executable: pip3
-  tags:
-    - install

@@ -3,8 +3,6 @@
   become: True
   apt:
     name: msmtp
-  tags:
-    - install
 
 - name: Symlink the msmtp configuration
   file:
@@ -12,3 +10,4 @@
     dest: "{{ home }}/.msmtprc"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

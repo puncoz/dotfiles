@@ -3,8 +3,6 @@
   become: True
   apt:
     name: git
-  tags:
-    - install
 
 - name: Clone the dotfiles repository
   git:

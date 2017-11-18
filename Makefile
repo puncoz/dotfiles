@@ -14,10 +14,7 @@ test:
 	-v $$(pwd):$(WORKDIR) \
 	-ti $(IMAGE) \
 	ansible-playbook bootstrap.yml \
-	--inventory "localhost" \
-	--skip-tags="install" \
-	--skip-tags="depends_on_install" \
-	--skip-tags="longrun"
+	--inventory "localhost"
 .PHONY: test
 
 bootstrap:

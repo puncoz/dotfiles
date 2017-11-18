@@ -3,8 +3,6 @@
   become: True
   apt:
     name: exuberant-ctags
-  tags:
-    - install
 
 - name: Symlink exuberant-ctags configuration
   file:
@@ -12,3 +10,4 @@
     dest: "{{ lookup('env', 'HOME') }}/.ctags"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

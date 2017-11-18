@@ -2,9 +2,7 @@
 - name: Install pip
   become: True
   apt:
-    name: "{{ item }}" 
+    name: "{{ item }}"
   with_items:
     - python-pip
     - python3-pip
-  tags:
-    - install

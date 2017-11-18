@@ -16,3 +16,4 @@
     dest: "{{ home }}/.nvmrc"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

@@ -5,3 +5,4 @@
     dest: "{{ home }}/.mailcap"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

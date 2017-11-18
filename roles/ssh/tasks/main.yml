@@ -4,6 +4,7 @@
     path: "{{ home }}/.ssh"
     state: directory
     mode: 0755
+    owner: "{{ ansible_user }}"
 
 - name: Symlink the SSH configuration
   file:
@@ -11,3 +12,4 @@
     dest: "{{ home }}/.ssh/config"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

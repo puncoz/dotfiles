@@ -3,8 +3,6 @@
   become: True
   apt:
     name: tmux
-  tags:
-    - install
 
 - name: Symlink the tmux configuration
   file:
@@ -12,3 +10,4 @@
     dest: "{{ home }}/.tmux.conf"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

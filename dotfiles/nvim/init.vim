@@ -23,7 +23,7 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-bash --no-fish' }
 Plug 'junegunn/fzf.vim'
 
 " Git

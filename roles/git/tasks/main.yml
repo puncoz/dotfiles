@@ -5,6 +5,7 @@
     dest: "{{ home }}/.gitconfig"
     state: link
     force: True
+    owner: "{{ ansible_user }}"
 
 - name: Symlink the Git ignore configuration
   file:
@@ -12,3 +13,4 @@
     dest: "{{ home }}/.gitignore_global"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

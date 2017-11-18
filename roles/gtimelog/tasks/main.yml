@@ -3,14 +3,13 @@
   become: True
   apt:
     name: gtimelog
-  tags:
-    - install
 
 - name: Make sure the gtimelog configuration folder is created
   file:
     path: "{{ home }}/.gtimelog"
     state: directory
     mode: 0755
+    owner: "{{ ansible_user }}"
 
 - name: Symlink the gtimelog configuration
   file:
@@ -18,3 +17,4 @@
     dest: "{{ home }}/.gtimelog/gtimelogrc"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

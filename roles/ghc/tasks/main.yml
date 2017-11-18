@@ -5,3 +5,4 @@
     dest: "{{ home }}/.ghci"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

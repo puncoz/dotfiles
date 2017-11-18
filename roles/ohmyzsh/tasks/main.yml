@@ -11,6 +11,7 @@
     dest: "{{ home }}/.zshrc"
     state: link
     force: True
+    owner: "{{ ansible_user }}"
 
 - name: Symlink the zsh aliases
   file:
@@ -18,6 +19,7 @@
     dest: "{{ home }}/.zsha"
     state: link
     force: True
+    owner: "{{ ansible_user }}"
 
 - name: Symlink the zsh functions
   file:
@@ -25,3 +27,4 @@
     dest: "{{ home }}/.zshf"
     state: link
     force: True
+    owner: "{{ ansible_user }}"

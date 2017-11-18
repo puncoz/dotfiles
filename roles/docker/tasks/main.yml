@@ -6,8 +6,6 @@
   with_items:
     - apt-transport-https
     - dirmngr
-  tags:
-    - install
 
 - name: Add docker repository list
   become: True
@@ -26,8 +24,6 @@
   apt:
     name: docker-engine
     update_cache: True
-  tags:
-    - install
 
 - name: Add current user to the docker group
   become: True
@@ -35,5 +31,3 @@
     name: "{{ ansible_user }}"
     group: docker
     state: present
-  tags:
-    - depends_on_install

@@ -3,5 +3,3 @@
   become: True
   apt:
     name: make
-  tags:
-    - install

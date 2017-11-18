@@ -3,5 +3,9 @@
 # Finish up the bootstrap process
 
 chsh -s /bin/zsh
+
 nvm install "lts/*"
+
+source "$HOMEr.tmux/plugins/tpm/bin/install_plugins"
+
 sudo shutdown -r now
