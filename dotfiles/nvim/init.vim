@@ -6,6 +6,9 @@ endfunction
 
 call plug#begin('~/.config/nvim/plugged')
 
+" Color schemes
+Plug 'flazz/vim-colorschemes'
+
 " Haskell
 Plug 'mpickering/hlint-refactor-vim', {'for': 'haskell'}
 Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
@@ -68,6 +71,8 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'saltstack/salt-vim'
 
 call plug#end()
+
+colorscheme gruvbox
 
 let g:mapleader=','
 let g:gitgutter_max_signs=10000
