@@ -2,10 +2,12 @@
 
 # Backup the important stuff with Borg
 
-borg create ::ssh ~/.ssh
-borg create ::gpg ~/.gnupg
-borg create ::pass ~/.password-store
-borg create ::docs ~/docs
-borg create ::aliases ~/.mutt/aliases
-borg create ::notes ~/notes
-borg create ::aptivate ~/aptivate/vpn
+borg create ::ssh-$(date --iso-8601=date) ~/.ssh
+borg create ::gpg-$(date --iso-8601=date) ~/.gnupg
+borg create ::pass-$(date --iso-8601=date) ~/.password-store
+borg create ::docs-$(date --iso-8601=date) ~/docs
+borg create ::aliases-$(date --iso-8601=date) ~/.mutt/aliases
+borg create ::notes-$(date --iso-8601=date) ~/notes
+borg create ::aptivate-$(date --iso-8601=date) ~/aptivate/vpn
+
+borg prune --keep-within 1d
