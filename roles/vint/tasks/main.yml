@@ -1,4 +1,12 @@
 ---
+- name: "Install vim-vint"
+  pip:
+    name: "vim-vint"
+    extra_args: "--user"
+    executable: pip3
+  tags:
+    - install
+
 - name: Symlink the vint configuration
   file:
     src: "{{ dotfiles }}/dotfiles/vint/vintrc.yaml"
