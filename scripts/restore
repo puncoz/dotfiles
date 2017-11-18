@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Restore the important stuff with Borg
+
+cd $HOME
+
+borg extract ::ssh
+borg extract ::gpg
+borg extract ::pass
+borg extract ::docs
+borg extract ::aliases
+borg extract ::notes
+borg extract ::aptivate
+
+cd -

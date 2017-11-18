@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Backup the important stuff with Borg
+
+borg create ::ssh ~/.ssh
+borg create ::gpg ~/.gnupg
+borg create ::pass ~/.password-store
+borg create ::docs ~/docs
+borg create ::aliases ~/.mutt/aliases
+borg create ::notes ~/notes
+borg create ::aptivate ~/aptivate/vpn
