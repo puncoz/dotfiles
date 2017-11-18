@@ -250,8 +250,5 @@ alias vint='vint --enable-neovim'
 # ctags
 alias cR='ctags -R .'
 
-# aptivate
-alias tap='tmuxp load aptivate'
-
 # gpg
 alias gpg='gpg2'
