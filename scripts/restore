@@ -4,12 +4,6 @@
 
 cd $HOME
 
-borg extract ::ssh
-borg extract ::gpg
-borg extract ::pass
-borg extract ::docs
-borg extract ::aliases
-borg extract ::notes
-borg extract ::aptivate
+borg list --short | xargs -I "{}" borg extract --strip-components=2 "backups::{}"
 
 cd -

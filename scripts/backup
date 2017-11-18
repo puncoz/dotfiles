@@ -2,12 +2,17 @@
 
 # Backup the important stuff with Borg
 
+cd $HOME
+
 borg create ::ssh-$(date --iso-8601=date) ~/.ssh
 borg create ::gpg-$(date --iso-8601=date) ~/.gnupg
 borg create ::pass-$(date --iso-8601=date) ~/.password-store
 borg create ::docs-$(date --iso-8601=date) ~/docs
 borg create ::aliases-$(date --iso-8601=date) ~/.mutt/aliases
 borg create ::notes-$(date --iso-8601=date) ~/notes
+borg create ::remind-$(date --iso-8601=date) ~/remind
 borg create ::aptivate-$(date --iso-8601=date) ~/aptivate/vpn
 
 borg prune --keep-within 1d
+
+cd -
