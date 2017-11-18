@@ -50,6 +50,7 @@ alias em='$EDITOR ~/.mutt/muttrc'
 alias et='$EDITOR ~/.tmux.conf'
 alias en='$EDITOR -c "set foldlevel=0" ~/notes/TODO.md'
 alias sz='source ~/.zshrc'
+alias st='tmux source ~/.tmux.conf'
 alias dotf='cd ~/dotfiles'
 
 # apt
@@ -150,9 +151,6 @@ alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias th='tnew hack'
 
-# tmuxinator
-alias tx='tmuxinator'
-
 # django
 alias dmg='python manage.py migrate'
 alias dmm='python manage.py makemigrations'
@@ -175,11 +173,6 @@ alias ptq='pytest -q'
 # stackage
 alias sck='stack exec --resolver nightly -- stackage-curator check'
 
-# pyenv
-alias pyv='pyenv virtualenvs'
-alias pya='pyenv activate'
-alias pys='pyenv shell'
-
 # jekyll
 alias js='jekyll clean && jekyll serve --incremental'
 
@@ -189,24 +182,12 @@ alias dt='dict -d moby-thesaurus'
 alias des='dict -d fd-eng-spa'
 alias dse='dict -d fd-spa-eng'
 
-# rainbowstream
-alias rbs='rainbowstream'
-
-# powertop
-alias pwt='sudo powertop --auto-tune && sudo powertop'
-
 # gtimelog
 alias ge='$EDITOR ~/.gtimelog/timelog.txt'
 
 # youtube-dl
 alias ytl='youtube-dl'
 alias ytx='youtube-dl -x'
-
-# syncthing
-alias st='sudo syncthing'
-
-# iftop
-alias ift='sudo iftop'
 
 # docker
 alias drn='docker run -it'
@@ -224,7 +205,6 @@ alias img='eog'
 alias pe='pipenv'
 
 # pip-tools
-alias pc='pip-compile'
 alias pup='pip install -U pip'
 
 # ansible
