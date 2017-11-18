@@ -21,6 +21,8 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=true
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 export MAIL=~/mail/inbox
 export PASSWORD_STORE_DIR=~/.password-store
+export BORG_REPO="$HOME/backups"
+export BORG_PASSPHRASE=$(pass show backups/password)
 
 source ~/.zsha
 source ~/.zshf
