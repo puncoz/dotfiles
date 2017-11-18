@@ -66,12 +66,15 @@ Plug 'reedes/vim-pencil'
 Plug 'reedes/vim-wordy'
 
 " Syntax
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'chase/vim-ansible-yaml'
-Plug 'saltstack/salt-vim'
+Plug 'sheerun/vim-polyglot'
+
+" Elm
+Plug 'elmcast/elm-vim'
+Plug 'pbogut/deoplete-elm'
 
 call plug#end()
 
+set background=dark
 colorscheme gruvbox
 
 let g:mapleader=','
@@ -134,6 +137,10 @@ let g:neoterm_size=10
 let g:neoterm_autoinsert=1
 let g:intero_ghci_options='-fobject-code'
 let g:intero_start_immediately=0
+let g:polyglot_disabled=['elm']
+let g:elm_detailed_complete=1
+let g:elm_format_autosave=1
+let g:elm_syntastic_show_warnings=1
 
 augroup neovim
   autocmd!
