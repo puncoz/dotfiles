@@ -307,6 +307,6 @@ command! Gw  :Gwrite
 command! Gap :Git add --patch
 command! Gd  :Git diff
 command! Gs  :Gstatus
-command! Gp  :Git push
+command! Gp  :Git push origin master
 command! Gb  :Git checkout -b
 command! Go  :Git checkout .
