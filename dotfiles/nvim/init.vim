@@ -65,12 +65,12 @@ Plug 'kassio/neoterm'
 Plug 'reedes/vim-pencil'
 Plug 'reedes/vim-wordy'
 
-" Syntax
-Plug 'sheerun/vim-polyglot'
-
 " Elm
 Plug 'elmcast/elm-vim'
 Plug 'pbogut/deoplete-elm'
+
+" Syntax
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
