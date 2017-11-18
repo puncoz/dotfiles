@@ -11,3 +11,5 @@
     dest: "{{ home }}/.tmux/plugins/tpm"
     update: False
 
+- name: Install the tpm plugins
+  command: "eval {{ home }}/.tmux/plugins/tpm/bin/install_plugins"
