@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Get backups of the really, really important stuff
+
+cd $HOME
+tar cfz gnupg.tgz .gnupg
+tar cfz borgkey.tgz .config/borg/
+echo "Back these up somewhere really safe now"
