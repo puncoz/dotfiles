@@ -66,7 +66,6 @@ Plug 'reedes/vim-pencil'
 Plug 'reedes/vim-wordy'
 
 " Elm
-Plug 'elmcast/elm-vim'
 Plug 'pbogut/deoplete-elm'
 
 " Syntax
@@ -107,9 +106,8 @@ let g:neomake_python_enabled_makers=['pylama']
 let g:neomake_vim_enabled_makers=['vint']
 let g:neomake_haskell_enabled_makers=['hlint']
 let g:neomake_markdown_enabled_makers=['proselint']
+let g:neomake_elm_enabled_makers=['elmMake']
 let g:neomake_open_list=2
-let g:neomake_verbose=1
-let g:neomake_logfile='/tmp/neomake.log'
 let g:SuperTabDefaultCompletionType='<c-n>'
 let g:SuperTabLongestHighlight=1
 let g:jedi#usages_command=''
@@ -125,7 +123,6 @@ let g:UltiSnipsListSnippets='<c-k>'
 let g:EasyMotion_smartcase=1
 let g:EasyMotion_use_upper=1
 let g:EasyMotion_startofline=1
-let g:ansible_options={'ignore_blank_lines': 0}
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<c-b>'
 let g:UltiSnipsJumpBackwardTrigger='<c-z>'
@@ -137,7 +134,6 @@ let g:neoterm_size=10
 let g:neoterm_autoinsert=1
 let g:intero_ghci_options='-fobject-code'
 let g:intero_start_immediately=0
-let g:polyglot_disabled=['elm']
 let g:elm_detailed_complete=1
 let g:elm_format_autosave=1
 let g:elm_syntastic_show_warnings=1
@@ -146,7 +142,6 @@ augroup neovim
   autocmd!
   autocmd! BufReadPost * nested call MyFollowSymlink(expand('%'))
   autocmd! BufWritePre  * StripWhitespace
-  autocmd! BufWritePost * Neomake
   autocmd! BufWinEnter,WinEnter,TermOpen,BufEnter term://* startinsert
   autocmd! BufLeave term://* stopinsert
 augroup END
@@ -311,8 +306,6 @@ command! -bang -nargs=* Ag
   \             : fzf#vim#with_preview('right:50%:hidden', '?'),
   \     <bang>0)
 
-command! -bang -nargs=* -complete=file Make Neomake <args>
-
 command! Gc  :Gcommit -v
 command! Gcf :Gcommit --fixup
 command! Gw  :Gwrite
@@ -322,3 +315,5 @@ command! Gs  :Gstatus
 command! Gp  :Git push origin master
 command! Gb  :Git checkout -b
 command! Go  :Git checkout .
+
+call neomake#configure#automake('w', 750)
