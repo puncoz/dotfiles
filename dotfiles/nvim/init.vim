@@ -70,6 +70,7 @@ Plug 'pbogut/deoplete-elm'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
