@@ -232,3 +232,6 @@ alias cR='ctags -R .'
 
 # gpg
 alias gpg='gpg2'
+
+# dpkg
+whicharch='dpkg --print-architecture'
