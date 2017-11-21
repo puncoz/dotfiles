@@ -65,6 +65,7 @@ Plug 'kassio/neoterm'
 Plug 'reedes/vim-pencil'
 Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-litecorrect'
+Plug 'dbmrq/vim-ditto'
 
 " Elm
 Plug 'pbogut/deoplete-elm'
@@ -165,7 +166,12 @@ augroup END
 
 augroup litecorrect
   autocmd!
-  autocmd FileType markdown,mkd call litecorrect#init()
+  autocmd! FileType markdown,mkd call litecorrect#init()
+augroup END
+
+augroup ditto
+  autocmd!
+  autocmd! FileType markdown DittoOn
 augroup END
 
 imap jk <Esc>
