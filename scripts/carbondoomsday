@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Keep the CarbonDoomsDay Heroku servers awake
+
+curl -X GET https://carbondoomsday-test.herokuapp.com/
+
+curl -X GET http://api.carbondoomsday.com/
