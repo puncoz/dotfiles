@@ -64,6 +64,7 @@ Plug 'kassio/neoterm'
 " Writing
 Plug 'reedes/vim-pencil'
 Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-litecorrect'
 
 " Elm
 Plug 'pbogut/deoplete-elm'
@@ -160,6 +161,11 @@ augroup filetypemania
   autocmd! FileType python,markdown let b:delimitMate_nesting_quotes=['"', '`', "'"]
   autocmd! FileType nerdtree setlocal relativenumber
   autocmd! FileType qf set wrap
+augroup END
+
+augroup litecorrect
+  autocmd!
+  autocmd FileType markdown,mkd call litecorrect#init()
 augroup END
 
 imap jk <Esc>
