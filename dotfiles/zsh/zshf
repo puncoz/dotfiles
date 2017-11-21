@@ -106,3 +106,8 @@ function varcheck(){
   # Check if a variable is set for all hosts
   ansible all -m debug -a "var=$1"
 }
+
+function gitolite(){
+  # Clone from the Aptivate gitolite repository
+  git clone "git@git.aptivate.org:$1.git"
+}
