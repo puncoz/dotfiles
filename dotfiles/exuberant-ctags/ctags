@@ -35,6 +35,7 @@
 --exclude=static
 --exclude=node_modules
 --exclude=elm-stuff
+--exclude=media
 
 --langdef=Elm
 --langmap=Elm:.elm
