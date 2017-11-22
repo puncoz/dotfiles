@@ -21,7 +21,7 @@ Host commons
   port 22
 
 Host inasp-authoraid-stage-fen
-  Hostname fen-vz-inaspauthoraid.stage.aptivate.org
+  Hostname fen-vz-inaspauthoraid-stage.fen.aptivate.org
   User lukem
   Port 48001
 
