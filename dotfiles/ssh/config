@@ -20,6 +20,16 @@ Host commons
   User luke
   port 22
 
+Host inasp-authoraid-stage
+  Hostname fen-vz-inaspauthoraid.stage.aptivate.org
+  User lukem
+  Port 48001
+
+Host inasp-authoraid-prod
+  Hostname lin-inaspauthoraid.aptivate.org
+  User lukem
+  Port 48001
+
 Host web-lin
   Hostname lin-aptivateweb.aptivate.org
   User lukem
