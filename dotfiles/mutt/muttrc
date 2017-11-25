@@ -23,6 +23,8 @@ set header_cache=~/.cache/mutt
 set message_cachedir = ~/.cache/messagecache
 set mailcap_path=~/.mailcap
 
+source "purge-mutt-cache '$message_cachedir'|"
+
 set timeout=30
 set pop_checkinterval=5
 set mail_check=5
