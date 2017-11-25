@@ -78,3 +78,5 @@ set tilde
 
 unset help
 unset markers
+
+auto_view text/html
