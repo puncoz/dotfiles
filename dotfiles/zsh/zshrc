@@ -4,6 +4,7 @@ PATH+=:"$HOME/.local/bin"
 PATH+=:"$HOME/bin"
 PATH+=:"$HOME/.rvm/bin"
 PATH+=:"$HOME/dotfiles/scripts"
+PATH+=:"/usr/local/go/bin/"
 export PATH
 
 export ZSH="$HOME/.oh-my-zsh"
