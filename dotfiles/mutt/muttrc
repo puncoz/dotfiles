@@ -25,9 +25,8 @@ set mailcap_path=~/.mailcap
 
 source "purge-mutt-cache '$message_cachedir'|"
 
-set timeout=30
-set pop_checkinterval=5
-set mail_check=5
+set timeout=10
+set mail_check=3
 
 set mark_old=no
 set quit=yes
@@ -75,7 +74,6 @@ macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "Ma
 macro index,pager X "s=.spam\n" "file as Spam"
 
 set noconfirmappend
-set beep_new
 set tilde
 
 unset help
