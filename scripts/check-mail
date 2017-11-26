@@ -1,0 +1,9 @@
+#!/bin/bash
+
+eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS "/proc/$(pgrep -u "$LOGNAME" gnome-session)/environ")";
+
+fetchmail -v
+
+if [ "$?" =  "0" ]; then
+  DISPLAY=:0.0 notify-send "Mutt: New Mail Received"
+fi
